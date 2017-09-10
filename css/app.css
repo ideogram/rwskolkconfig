@@ -1,0 +1,17 @@
+#toolbar, #diagram {
+  overflow: hidden;
+  outline: 1px solid silver; }
+  #toolbar ul, #diagram ul {
+    display: block; }
+  #toolbar li, #diagram li {
+    display: block;
+    float: left;
+    margin: 10px; }
+
+#diagram {
+  width: 100%;
+  height: 480px;
+  outline: 1px solid #ccc;
+  margin-top: 1rem; }
+
+/*# sourceMappingURL=app.css.map */

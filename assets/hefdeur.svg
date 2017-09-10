@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 72 480" height="480"
+     width="72">
+    <defs>
+        <symbol viewBox="0 0 36 25.5" id="a">
+            <path stroke-width="3" stroke-miterlimit="10" stroke="#7d7d7d" fill="none" d="M0 24h36"/>
+            <path d="M0 0h36v18H0z"/>
+            <path fill="#535353" d="M30 24H6l-6-6h36l-6 6z"/>
+        </symbol>
+    </defs>
+    <title>hefdeur</title>
+    <path d="M0 168v144h72V168z" fill="#d9ebf7"/>
+    <path fill="none" stroke="#9fceea" stroke-width="3" stroke-miterlimit="10" d="M72 168H0m0 144h72"/>
+    <use xlink:href="#a" transform="rotate(180 27 168)" height="25.5" width="36"/>
+    <use xlink:href="#a" transform="translate(18 144)" height="25.5" width="36"/>
+    <path fill="#ffb612" stroke="#000" stroke-miterlimit="10" d="M29 169.5h14v141H29z"/>
+</svg>
