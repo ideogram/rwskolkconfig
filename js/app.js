@@ -2,44 +2,60 @@
  * Created by maartenvandervelde on 08/09/2017.
  */
 
+// Configuration
 var folderAssets = "./assets/";
 var folderConfigs = "./config/";
 var $toolbar = $("#toolbar");
 var $diagram = $("#diagram");
 
+
 (function ($) {
+    var observer = new MutationObserver( removeSize );
 
     // Laad een lijst met de namen en eigenschappen van de sluis-elementen
-    $.getJSON(folderConfigs + "elements.json", function(data){
-        var items = [];
+    $.getJSON(folderConfigs + "elements.json", loadElements );
+
+    // Laad de SVG-file's met tekeningen van de sluis-componenten
+    function loadElements(data){
+
+        countElements = data.length;
 
         $.each(data, function (key, val) {
             id = val.name;
-            $element = $("<li id='" + id + "'>"+id+"</li>").appendTo($toolbar);
+            var $element = $("<li id='" + id + "'>"+id+"</li>").appendTo($toolbar);
             $element.load(folderAssets + id + ".svg" );
-            makeDuplicatable(id);
+
+            // When the SVG is rendered, rework the SVG
+            observer.observe( $element[0], { childList: true } );
+
+            $element.draggable({
+                connectToSortable: "#diagram",
+                helper: "clone",
+                revert: "invalid"
+            });
+
+
         });
-
-    });
-
-    // jQuery-UI interactions: allow for drag-and-drop and duplication of lock elements
-
-    function makeDuplicatable (id) {
-        $("#" + id).draggable({
-            helper: 'clone',
-            revert: "invalid"
-        }).css("outline","1px solid #eee");
     }
 
-    $diagram.droppable({
-        drop: function(event, ui) {
-            if (ui.draggable[0].id) {
-                $(this).append($(ui.helper).clone().draggable());
-                $(this).css("outline","1px solid green");
-            }
-        }
+    observer.disconnect();
+
+    // jQuery-UI interactions: allow for drag-and-drop and duplication of lock elements
+    $diagram.sortable({
+        revert: true
     });
 
-    $diagram.sortable();
+
+    $( "ul, li" ).disableSelection();
+
+    // remove size
+    function removeSize(mutationRecords){
+        var $li = $(mutationRecords["0"].target);
+        var $svg = $li.find("svg");
+        var w = $svg.attr("width");
+        $svg.attr('width',w/2);
+    }
+
+
 
 })(jQuery);
