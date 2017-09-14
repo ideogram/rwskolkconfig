@@ -1,17 +1,30 @@
-#toolbar li {
-  margin: 10px; }
+#toolbar {
+  height: auto;
+  margin-top: 10px; }
+  #toolbar li {
+    margin: 2px; }
+    #toolbar li:hover {
+      background-color: floralwhite;
+      cursor: move; }
+
+#diagram {
+  text-align: center;
+  height: 240px; }
+  #diagram li:hover {
+    cursor: ew-resize;
+    background-color: aliceblue; }
 
 #toolbar, #diagram {
   overflow: hidden;
   outline: 1px solid silver;
-  height: 45vh;
   display: block;
-  margin: 0;
   padding: 0; }
   #toolbar li, #diagram li {
-    outline: 1px solid green;
     height: auto;
-    display: block;
-    float: left; }
+    display: inline-block; }
+
+.ui-sortable-placeholder {
+  background-color: azure;
+  outline: 1px solid red; }
 
 /*# sourceMappingURL=app.css.map */

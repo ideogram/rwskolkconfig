@@ -1,20 +1,32 @@
 #toolbar
+  height: auto
+  margin-top: 10px
   li
-    margin: 10px
+    margin: 2px
+    &:hover
+      background-color: floralwhite
+      cursor: move
 
+#diagram
+  text-align: center
+  li
+    &:hover
+      cursor: ew-resize
+      background-color: aliceblue
+  height: 240px
 
 #toolbar, #diagram
   overflow: hidden
   outline: 1px solid silver
-  height: 45vh
   display: block
-  margin: 0
   padding: 0
 
   li
-    outline: 1px solid green
     height: auto
-    display: block
-    float: left
+    display: inline-block
 
   svg
+
+.ui-sortable-placeholder
+  background-color: azure
+  outline: 1px solid red

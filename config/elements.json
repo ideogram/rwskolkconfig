@@ -1,23 +1,31 @@
 [
-  {
-    "name": "binnenfrontkolk-kop"
-  },
-  {
-    "name": "draaideur"
-  },
-  {
-    "name": "gladde-kolk"
-  },
-  {
-    "name": "hangrol"
-  },
-  {
-    "name": "hefdeur"
-  },
-  {
-    "name": "kamerkolk-kop-b"
-  },
-  {
-    "name": "kolk-body"
-  }
+	{"name":"binnenfrontkolk-kop-links","shift":0},
+	{"name":"binnenfrontkolk-kop-rechts","shift":0},
+	{"name":"draaideur-lb","shift":0},
+	{"name":"draaideur-lo","shift":0},
+	{"name":"draaideur-rb","shift":0},
+	{"name":"draaideur-ro","shift":0},
+	{"name":"gladde-kolk","shift":0},
+	{"name":"hangrol","shift":0},
+	{"name":"hefdeur","shift":0},
+	{"name":"kamerkolk-kop-b","shift":2},
+	{"name":"kamerkolk-kop-d","shift":-2},
+	{"name":"kamerkolk-kop-p","shift":-2},
+	{"name":"kamerkolk-kop-q","shift":2},
+	{"name":"kolk-body","shift":0},
+	{"name":"komkolk-kop-links","shift":0},
+	{"name":"komkolk-kop-rechts","shift":0},
+	{"name":"punt-dubbelk-links","shift":0},
+	{"name":"punt-dubbelk-rechts","shift":0},
+	{"name":"punt-links","shift":0},
+	{"name":"punt-pin-links","shift":0},
+	{"name":"punt-pin-rechts","shift":0},
+	{"name":"punt-rechts","shift":0},
+	{"name":"rol-o","shift":0},
+	{"name":"rol-storm-onder","shift":0},
+	{"name":"rol-storm","shift":0},
+	{"name":"rol","shift":0},
+	{"name":"schut-storm-punt","shift":0},
+	{"name":"stormdeur","shift":0},
+	{"name":"waaier-links","shift":0}
 ]

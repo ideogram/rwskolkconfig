@@ -5019,9 +5019,9 @@ var widgetsSelectable = $.widget( "ui.selectable", $.ui.mouse, {
 			var selectee = $.data( this, "selectable-item" );
 			selectee.startselected = true;
 			if ( !event.metaKey && !event.ctrlKey ) {
-				that._removeClass( selectee.$element, "ui-selected" );
+				that._removeClass( selectee.$li, "ui-selected" );
 				selectee.selected = false;
-				that._addClass( selectee.$element, "ui-unselecting" );
+				that._addClass( selectee.$li, "ui-unselecting" );
 				selectee.unselecting = true;
 
 				// selectable UNSELECTING callback
@@ -5036,9 +5036,9 @@ var widgetsSelectable = $.widget( "ui.selectable", $.ui.mouse, {
 				selectee = $.data( this, "selectable-item" );
 			if ( selectee ) {
 				doSelect = ( !event.metaKey && !event.ctrlKey ) ||
-					!selectee.$element.hasClass( "ui-selected" );
-				that._removeClass( selectee.$element, doSelect ? "ui-unselecting" : "ui-selected" )
-					._addClass( selectee.$element, doSelect ? "ui-selecting" : "ui-unselecting" );
+					!selectee.$li.hasClass( "ui-selected" );
+				that._removeClass( selectee.$li, doSelect ? "ui-unselecting" : "ui-selected" )
+					._addClass( selectee.$li, doSelect ? "ui-selecting" : "ui-unselecting" );
 				selectee.unselecting = !doSelect;
 				selectee.selecting = doSelect;
 				selectee.selected = doSelect;
@@ -5106,15 +5106,15 @@ var widgetsSelectable = $.widget( "ui.selectable", $.ui.mouse, {
 
 				// SELECT
 				if ( selectee.selected ) {
-					that._removeClass( selectee.$element, "ui-selected" );
+					that._removeClass( selectee.$li, "ui-selected" );
 					selectee.selected = false;
 				}
 				if ( selectee.unselecting ) {
-					that._removeClass( selectee.$element, "ui-unselecting" );
+					that._removeClass( selectee.$li, "ui-unselecting" );
 					selectee.unselecting = false;
 				}
 				if ( !selectee.selecting ) {
-					that._addClass( selectee.$element, "ui-selecting" );
+					that._addClass( selectee.$li, "ui-selecting" );
 					selectee.selecting = true;
 
 					// selectable SELECTING callback
@@ -5127,15 +5127,15 @@ var widgetsSelectable = $.widget( "ui.selectable", $.ui.mouse, {
 				// UNSELECT
 				if ( selectee.selecting ) {
 					if ( ( event.metaKey || event.ctrlKey ) && selectee.startselected ) {
-						that._removeClass( selectee.$element, "ui-selecting" );
+						that._removeClass( selectee.$li, "ui-selecting" );
 						selectee.selecting = false;
-						that._addClass( selectee.$element, "ui-selected" );
+						that._addClass( selectee.$li, "ui-selected" );
 						selectee.selected = true;
 					} else {
-						that._removeClass( selectee.$element, "ui-selecting" );
+						that._removeClass( selectee.$li, "ui-selecting" );
 						selectee.selecting = false;
 						if ( selectee.startselected ) {
-							that._addClass( selectee.$element, "ui-unselecting" );
+							that._addClass( selectee.$li, "ui-unselecting" );
 							selectee.unselecting = true;
 						}
 
@@ -5147,10 +5147,10 @@ var widgetsSelectable = $.widget( "ui.selectable", $.ui.mouse, {
 				}
 				if ( selectee.selected ) {
 					if ( !event.metaKey && !event.ctrlKey && !selectee.startselected ) {
-						that._removeClass( selectee.$element, "ui-selected" );
+						that._removeClass( selectee.$li, "ui-selected" );
 						selectee.selected = false;
 
-						that._addClass( selectee.$element, "ui-unselecting" );
+						that._addClass( selectee.$li, "ui-unselecting" );
 						selectee.unselecting = true;
 
 						// selectable UNSELECTING callback
@@ -5172,7 +5172,7 @@ var widgetsSelectable = $.widget( "ui.selectable", $.ui.mouse, {
 
 		$( ".ui-unselecting", this.element[ 0 ] ).each( function() {
 			var selectee = $.data( this, "selectable-item" );
-			that._removeClass( selectee.$element, "ui-unselecting" );
+			that._removeClass( selectee.$li, "ui-unselecting" );
 			selectee.unselecting = false;
 			selectee.startselected = false;
 			that._trigger( "unselected", event, {
@@ -5181,8 +5181,8 @@ var widgetsSelectable = $.widget( "ui.selectable", $.ui.mouse, {
 		} );
 		$( ".ui-selecting", this.element[ 0 ] ).each( function() {
 			var selectee = $.data( this, "selectable-item" );
-			that._removeClass( selectee.$element, "ui-selecting" )
-				._addClass( selectee.$element, "ui-selected" );
+			that._removeClass( selectee.$li, "ui-selecting" )
+				._addClass( selectee.$li, "ui-selected" );
 			selectee.selecting = false;
 			selectee.selected = true;
 			selectee.startselected = true;
