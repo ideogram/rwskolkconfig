@@ -1,0 +1,64 @@
+[
+{ "name":"gladde-kolk",         "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"kolk-body",           "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"kamerkolk-kop-b",     "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"kamerkolk-kop-d",     "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"kamerkolk-kop-p",     "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"kamerkolk-kop-q",     "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"binnenfrontkolk-kop-links","deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"binnenfrontkolk-kop-rechts","deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"komkolk-kop-links",   "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"komkolk-kop-rechts",  "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"punt-links",          "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"punt-rechts",         "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"punt-pin-links",      "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"punt-pin-rechts",     "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"punt-dubbelk-links",  "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"punt-dubbelk-rechts", "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"draaideur-lb",        "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"draaideur-lo",        "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"draaideur-rb",        "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"draaideur-ro",        "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"hefdeur",             "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"hangrol",             "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"rol-o",               "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"rol-storm-onder",     "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"rol-storm",           "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"rol",                 "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"schut-storm-punt",    "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"stormdeur-links",     "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"stormdeur-rechts",    "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"waaier-links",        "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  },
+
+{ "name":"waaier-rechts",       "deltay": 0,   "top":0,       "bottom": 0,   "gate": 0  }
+
+]

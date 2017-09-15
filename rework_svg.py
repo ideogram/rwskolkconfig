@@ -3,7 +3,20 @@ import glob, os
 import uuid
 
 for file in glob.glob("./assets/*.svg"):
+    #     Change the id of the svg element
+    elementname = os.path.splitext(os.path.basename(file))[0]
+    print elementname
     dom = minidom.parse(file)
+    dom.documentElement.setAttribute("data-type",elementname)
+
+    #  Add mark-up to the text element
+    w = dom.documentElement.getAttribute("width")
+    text = dom.getElementsByTagName("text")[0]
+    text.setAttribute("font-size","36")
+    text.setAttribute("font-family","sans-serif")
+    text.setAttribute("text-anchor","middle")
+
+    text.setAttribute("x", str(int(w)/2) )
 
     # Change the id's linking the symbols and the use-elements:
     for symbol in dom.getElementsByTagName("symbol"):

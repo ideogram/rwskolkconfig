@@ -1,31 +1,66 @@
 [
-	{"name":"binnenfrontkolk-kop-links","shift":0},
-	{"name":"binnenfrontkolk-kop-rechts","shift":0},
-	{"name":"draaideur-lb","shift":0},
-	{"name":"draaideur-lo","shift":0},
-	{"name":"draaideur-rb","shift":0},
-	{"name":"draaideur-ro","shift":0},
-	{"name":"gladde-kolk","shift":0},
-	{"name":"hangrol","shift":0},
-	{"name":"hefdeur","shift":0},
-	{"name":"kamerkolk-kop-b","shift":2},
-	{"name":"kamerkolk-kop-d","shift":-2},
-	{"name":"kamerkolk-kop-p","shift":-2},
-	{"name":"kamerkolk-kop-q","shift":2},
-	{"name":"kolk-body","shift":0},
-	{"name":"komkolk-kop-links","shift":0},
-	{"name":"komkolk-kop-rechts","shift":0},
-	{"name":"punt-dubbelk-links","shift":0},
-	{"name":"punt-dubbelk-rechts","shift":0},
-	{"name":"punt-links","shift":0},
-	{"name":"punt-pin-links","shift":0},
-	{"name":"punt-pin-rechts","shift":0},
-	{"name":"punt-rechts","shift":0},
-	{"name":"rol-o","shift":0},
-	{"name":"rol-storm-onder","shift":0},
-	{"name":"rol-storm","shift":0},
-	{"name":"rol","shift":0},
-	{"name":"schut-storm-punt","shift":0},
-	{"name":"stormdeur","shift":0},
-	{"name":"waaier-links","shift":0}
+{ "name":"gladde-kolk",         "deltay": 0,   "top":7,       "bottom": 13,   "gate": 0  },
+
+{ "name":"kolk-body",           "deltay": 0,   "top":5,       "bottom": 17,   "gate": 0  },
+
+{ "name":"kamerkolk-kop-b",     "deltay": 2,   "top":5,       "bottom": 17,   "gate": 0  },
+
+{ "name":"kamerkolk-kop-d",     "deltay": -2,  "top":3,       "bottom": 15,   "gate": 0  },
+
+{ "name":"kamerkolk-kop-p",     "deltay": -2,  "top":5,       "bottom": 17,   "gate": 0  },
+
+{ "name":"kamerkolk-kop-q",     "deltay": 2,   "top":7,       "bottom": 13,   "gate": 0  },
+
+{ "name":"binnenfrontkolk-kop-links","deltay": 0, "top":5,   "bottom": 15,   "gate": 0  },
+
+{ "name":"binnenfrontkolk-kop-rechts","deltay": 0, "top":5,  "bottom": 15,   "gate": 0  },
+
+{ "name":"komkolk-kop-links",   "deltay": 0,   "top":5,       "bottom": 15,   "gate": 0  },
+
+{ "name":"komkolk-kop-rechts",  "deltay": 0,   "top":5,       "bottom": 15,   "gate": 0  },
+
+{ "name":"punt-links",          "deltay": 0,   "top":6,       "bottom": 14,   "gate": 1  },
+
+{ "name":"punt-rechts",         "deltay": 0,   "top":6,       "bottom": 14,   "gate": 1  },
+
+{ "name":"punt-pin-links",      "deltay": 0,   "top":6,       "bottom": 14,   "gate": 1  },
+
+{ "name":"punt-pin-rechts",     "deltay": 0,   "top":6,       "bottom": 14,   "gate": 1  },
+
+{ "name":"punt-dubbelk-links",  "deltay": 0,   "top":6,       "bottom": 14,   "gate": 1  },
+
+{ "name":"punt-dubbelk-rechts", "deltay": 0,   "top":6,       "bottom": 14,   "gate": 1  },
+
+{ "name":"stormdeur-links",     "deltay": 0,   "top":6,       "bottom": 14,   "gate": "S"},
+
+{ "name":"stormdeur-rechts",    "deltay": 0,   "top":6,       "bottom": 14,   "gate": "S"},
+
+{ "name":"schut-storm-punt-links", "deltay": 0,   "top":0,       "bottom": 0,   "gate": 1  },
+
+{ "name":"schut-storm-punt-rechts", "deltay": 0, "top":0,       "bottom": 0,   "gate": 1  },
+
+{ "name":"draaideur-lb",        "deltay": 0,   "top":6,       "bottom": 14,   "gate": 1  },
+
+{ "name":"draaideur-lo",        "deltay": 0,   "top":6,       "bottom": 14,   "gate": 1  },
+
+{ "name":"draaideur-rb",        "deltay": 0,   "top":6,       "bottom": 14,   "gate": 1  },
+
+{ "name":"draaideur-ro",        "deltay": 0,   "top":6,       "bottom": 14,   "gate": 1  },
+
+{ "name":"hefdeur",             "deltay": 0,   "top":5,       "bottom": 15,   "gate": 1  },
+
+{ "name":"hangrol",             "deltay": 0,   "top":0,       "bottom": 15,   "gate": 1  },
+
+{ "name":"rol",                 "deltay": 0,   "top":0,       "bottom": 14,   "gate": 0  },
+
+{ "name":"rol-storm",           "deltay": 0,   "top":0,       "bottom": 14,   "gate": "S"},
+
+{ "name":"rol-o",               "deltay": 0,   "top":6,       "bottom": 20,   "gate": 1  },
+
+{ "name":"rol-storm-onder",     "deltay": 0,   "top":6,       "bottom": 20,   "gate": "S"},
+
+{ "name":"waaier-links",        "deltay": 0,   "top":4,       "bottom": 16,   "gate": 1  },
+
+{ "name":"waaier-rechts",       "deltay": 0,   "top":4,       "bottom": 16,   "gate": 1  }
+
 ]

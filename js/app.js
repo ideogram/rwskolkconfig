@@ -32,10 +32,10 @@ const options = { connectToSortable: "#diagram", helper: "clone", revert: "inval
 
         $.each(elements, function (key, val) {
             id = val.name;
-            $li = $("<li class='element' id='" + id + "'>"+id+"</li>").appendTo($toolbar)
+            $li = $("<li class='element'></li>").appendTo($toolbar)
                 .attr("title",id)
                 .draggable(options)
-                .attr("data-shift",val.shift )
+                .attr( "data-ref", key )
                 .load(folderAssets + id + ".svg" );
 
             // After the SVG is rendered, rework the SVG
@@ -48,47 +48,107 @@ const options = { connectToSortable: "#diagram", helper: "clone", revert: "inval
     $diagram.find("li").disableSelection();
     $toolbar.find("li").disableSelection();
 
-    // Nadat elementen zijn toegevoegd of gewijzigd: verander de tekening
-
-    function diagramChanged(event, ui){
-        $diagramElements = $diagram.find(".element");
-        var shift = 0;
-
-        for (i=0; i<$diagramElements.length; i++){
-            var $me = $diagramElements.eq(i);
-            var $svg = $me.find("svg")
-            var viewbox = $svg.attr("viewBox");
-
-            if (viewbox !== undefined ) {
-                viewbox = viewbox.split(" ");
-                viewbox[1] = shift*-24;
-                $svg.attr("viewBox", viewbox.join(" "));
-                shift += ($me.attr("data-shift")*1.0);
-            }
-
-            $me.attr("data-order",i);
-        }
-
-    }
-
     // change size
     function elementRendered(mutationRecords){
         var $li = $(mutationRecords["0"].target);
         var $svg = $li.find("svg");
+        var id = $svg.attr("id");
 
         // Use half the width and remove the height
         var w = $svg.attr("width");
         $svg.attr('width',w/2)
         $svg.removeAttr("height");
 
-        // Add text element
-
-
         countElementsRendered++;
         if ( countElementsRendered == elements.length ) {
             observer.disconnect();
         }
+    }
+
+    // Nadat elementen zijn toegevoegd of gewijzigd: verander de tekening
+    function diagramChanged(event, ui){
+        shiftElements();
+        annotateGates();
+        alignAnnotations();
 
     }
+
+    function shiftElements(){
+        var $diagramElements = $diagram.find(".element");
+        var shift = 0;
+
+        for (i=0; i<$diagramElements.length; i++){
+            var $me = $diagramElements.eq(i);
+            var data = elements[ $me.attr("data-ref") ];
+            var deltay = data['deltay'];
+            var gate = data['gate'];
+            var $svg = $me.find("svg");
+            var type = $svg.attr("data-type");
+            var viewbox = $svg.attr("viewBox");
+
+
+            if (viewbox !== undefined ) {
+                viewbox = viewbox.split(" ");
+                viewbox[1] = shift*-24;
+                $svg
+                    .attr("viewBox", viewbox.join(" "))
+                    .data("shift",shift);
+                shift += ( deltay*1.0 );
+            }
+
+        }
+
+    }
+
+    function annotateGates(){
+        var $diagramElements = $diagram.find(".element");
+        var gateCount = 0;
+
+        for (i=0; i<$diagramElements.length; i++){
+            var $me = $diagramElements.eq(i);
+            var data = elements[ $me.attr("data-ref") ];
+            var gate = data['gate'];
+            var $svg = $me.find("svg");
+
+            if ( gate == "1"){
+                $svg.find("text").html( String.fromCharCode(gateCount+65) );
+                gateCount++;
+            } else if (gate == "S") {
+                $svg.find("text").html("S");
+            }
+        }
+
+    }
+
+    function alignAnnotations(){
+        var $diagramElements = $diagram.find(".element");
+        var gateCount = 0;
+        var shift = 0;
+        var lowest = -1000; // very few indeed
+
+
+        // Put al the annotations on the same height
+
+        // Loop over the annotations twice.
+
+        // First, find the lowest position
+        for (i=0; i<$diagramElements.length; i++){
+            var $me = $diagramElements.eq(i);
+            var data = elements[ $me.attr("data-ref") ];
+            var deltay = data['deltay'];
+            var gate = data['gate'];
+            var bottom = data['bottom'];
+            var name = data['name'];
+            lowest = Math.max(lowest, bottom);
+            console.log(name, bottom, lowest);
+
+            shift += ( deltay*1.0 );
+
+        }
+
+    }
+
+
+
 })(jQuery);
 

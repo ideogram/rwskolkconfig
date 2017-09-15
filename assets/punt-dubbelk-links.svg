@@ -1,1 +1,33 @@
-<svg height="480" viewBox="0 0 168 480" width="168" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="ce1bd7ec" viewBox="0 0 15 15"><circle cx="7.5" cy="7.5" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/></symbol><symbol id="e7c1d5af" viewBox="0 0 99 86"><path d="M97.5 13.5h-96v-12h90l6 12z" fill="#d9ebf7"/><path d="M96.5 7.5l-24 78h-10l24-78h10z" fill="#ffb612" stroke="#000" stroke-miterlimit="10"/><path d="M91.5 1.5v6h6v6" fill="none" stroke="#9fceea" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/><path d="M1.5 13.5v-12h90" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/><use height="15" transform="translate(84)" width="15" xlink:href="#ce1bd7ec"/></symbol></defs><title>punt-dubbelk</title><path d="M0 168h168v144H0z" fill="#d9ebf7"/><path d="M24 312H0m0-144h24m144 144h-48m0-144h48" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/><path d="M24 312h96v12H24zm96-144H24v-12h90l6 12z" fill="#d9ebf7"/><path d="M114 156v6h6v6" fill="none" stroke="#9fceea" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/><use height="86" transform="matrix(1 0 0 -1 22.5 325.5)" width="99" xlink:href="#e7c1d5af"/><path d="M150 318l-45-30" fill="#fff"/><path d="M150 318l-45-30" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4"/><circle cx="105" cy="288" fill="#fff" r="3.3" transform="rotate(-56.3 105.018 288.056)"/><path d="M150 318l-45-30" fill="none" stroke="#154573" stroke-miterlimit="10" stroke-width="2"/><circle cx="150" cy="318" fill="#154573" r="2.3" transform="rotate(-56.3 150.038 318.035)"/><circle cx="105" cy="288" fill="#154573" r="2.3" transform="rotate(-56.3 105.018 288.056)"/><use height="86" transform="translate(22.5 154.5)" width="99" xlink:href="#e7c1d5af"/><path d="M150 162l-45 30" fill="#fff"/><path d="M150 162l-45 30" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4"/><circle cx="105" cy="192" fill="#fff" r="3.3" transform="rotate(-33.7 104.954 192.013)"/><path d="M150 162l-45 30" fill="none" stroke="#154573" stroke-miterlimit="10" stroke-width="2"/><circle cx="150" cy="162" fill="#154573" r="2.3" transform="rotate(-33.7 149.906 162.011)"/><circle cx="105" cy="192" fill="#154573" r="2.3" transform="rotate(-33.7 104.954 192.013)"/></svg>
+<svg data-type="punt-dubbelk-links" height="480" viewBox="0 0 168 480" width="168" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <symbol id="dfe0dc31" viewBox="0 0 15 15">
+            <circle cx="7.5" cy="7.5" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
+        </symbol>
+        <symbol id="87f165ee" viewBox="0 0 99 86">
+            <path d="M97.5 13.5h-96v-12h90l6 12z" fill="#d9ebf7"/>
+            <path d="M96.5 7.5l-24 78h-10l24-78h10z" fill="#ffb612" stroke="#000" stroke-miterlimit="10"/>
+            <path d="M91.5 1.5v6h6v6" fill="none" stroke="#9fceea" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
+            <path d="M1.5 13.5v-12h90" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
+            <use height="15" transform="translate(84)" width="15" xlink:href="#dfe0dc31"/>
+        </symbol>
+    </defs>
+    <title>punt-dubbelk</title>
+    <path d="M0 168h168v144H0z" fill="#d9ebf7"/>
+    <path d="M24 312H0m0-144h24m144 144h-48m0-144h48" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M24 312h96v12H24zm96-144H24v-12h90l6 12z" fill="#d9ebf7"/>
+    <path d="M114 156v6h6v6" fill="none" stroke="#9fceea" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
+    <use height="86" transform="matrix(1 0 0 -1 22.5 325.5)" width="99" xlink:href="#87f165ee"/>
+    <path d="M150 318l-45-30" fill="#fff"/>
+    <path d="M150 318l-45-30" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4"/>
+    <circle cx="105" cy="288" fill="#fff" r="3.3" transform="rotate(-56.3 105.018 288.056)"/>
+    <path d="M150 318l-45-30" fill="none" stroke="#154573" stroke-miterlimit="10" stroke-width="2"/>
+    <circle cx="150" cy="318" fill="#154573" r="2.3" transform="rotate(-56.3 150.038 318.035)"/>
+    <circle cx="105" cy="288" fill="#154573" r="2.3" transform="rotate(-56.3 105.018 288.056)"/>
+    <use height="86" transform="translate(22.5 154.5)" width="99" xlink:href="#87f165ee"/>
+    <path d="M150 162l-45 30" fill="#fff"/>
+    <path d="M150 162l-45 30" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4"/>
+    <circle cx="105" cy="192" fill="#fff" r="3.3" transform="rotate(-33.7 104.954 192.013)"/>
+    <path d="M150 162l-45 30" fill="none" stroke="#154573" stroke-miterlimit="10" stroke-width="2"/>
+    <circle cx="150" cy="162" fill="#154573" r="2.3" transform="rotate(-33.7 149.906 162.011)"/>
+    <circle cx="105" cy="192" fill="#154573" r="2.3" transform="rotate(-33.7 104.954 192.013)"/>
+<text font-family="sans-serif" font-size="36" text-anchor="middle" width="168" x="84" y="420"/></svg>

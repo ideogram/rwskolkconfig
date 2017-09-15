@@ -1,22 +1,28 @@
 #toolbar {
   height: auto;
-  margin-top: 10px; }
+  margin-top: 10px;
+  outline: 1px solid silver; }
+  #toolbar svg {
+    opacity: 0.8; }
   #toolbar li {
     margin: 2px; }
     #toolbar li:hover {
-      background-color: floralwhite;
+      background-color: #f8f8ff;
+      outline: 1px solid silver;
       cursor: move; }
+      #toolbar li:hover svg {
+        opacity: 1; }
 
 #diagram {
   text-align: center;
-  height: 240px; }
+  box-shadow: inset 0px 0px 45px 0px rgba(0, 0, 0, 0.13);
+  height: 320px; }
   #diagram li:hover {
     cursor: ew-resize;
     background-color: aliceblue; }
 
 #toolbar, #diagram {
   overflow: hidden;
-  outline: 1px solid silver;
   display: block;
   padding: 0; }
   #toolbar li, #diagram li {
