@@ -1,49 +1,38 @@
-$gridsize: 24px
-$every: 4
-
-#toolbar
-  height: auto
-  margin-top: 10px
-  outline: 1px solid silver
-  svg
-    opacity: 0.8
-  li
-    margin: 2px
-    &:hover
-      background-color: #f8f8ff
-      outline: 1px solid silver
-      cursor: move
-      svg
-        opacity: 1
-
-#diagram
-  text-align: center
-  box-shadow: inset 0px 0px 45px 0px rgba(0,0,0,0.13)
-  height: 320px
-  li
-    &:hover
-      cursor: ew-resize
-      background-color: aliceblue
-
 #toolbar, #diagram
+  text-align: center
   overflow: hidden
   display: block
-  padding: 0
+  padding: 24px 0 0 0
+  background-color: white
 
   li
     height: auto
     display: inline-block
 
-  svg
+    &:hover
+      background-color: white
+      outline: 1px solid black
+      cursor: move
+
+#toolbar
+  height: auto
+  margin-top: 10px
+
+  li
+    margin: 2px
+    outline: 1px solid silver
+    background-color: #f8f8f8
+
+
+#diagram
+  box-shadow: inset 0px 0px 45px 0px rgba(0,0,0,0.13)
+  height: 320px
+  li
+    &:hover
+      cursor: ew-resize
+      background-color: #f8f8f8
+
 
 .ui-sortable-placeholder
   background-color: azure
   outline: 1px solid red
-
-
-//#toolbar
-//  li
-//    background-color: #269
-//    background-image: linear-gradient(white 2px, transparent 2px), linear-gradient(90deg, white 2px, transparent 2px), linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 1px)
-//    background-size: $every*$gridsize $every*$gridsize, $every*$gridsize $every*$gridsize, $gridsize $gridsize, $gridsize $gridsize
-//    background-position: (-2px) -2px, -2px -2px, -1px -1px, -1px -1px

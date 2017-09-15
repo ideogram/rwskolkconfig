@@ -1,33 +1,31 @@
+#toolbar, #diagram {
+  text-align: center;
+  overflow: hidden;
+  display: block;
+  padding: 24px 0 0 0;
+  background-color: white; }
+  #toolbar li, #diagram li {
+    height: auto;
+    display: inline-block; }
+    #toolbar li:hover, #diagram li:hover {
+      background-color: white;
+      outline: 1px solid black;
+      cursor: move; }
+
 #toolbar {
   height: auto;
-  margin-top: 10px;
-  outline: 1px solid silver; }
-  #toolbar svg {
-    opacity: 0.8; }
+  margin-top: 10px; }
   #toolbar li {
-    margin: 2px; }
-    #toolbar li:hover {
-      background-color: #f8f8ff;
-      outline: 1px solid silver;
-      cursor: move; }
-      #toolbar li:hover svg {
-        opacity: 1; }
+    margin: 2px;
+    outline: 1px solid silver;
+    background-color: #f8f8f8; }
 
 #diagram {
-  text-align: center;
   box-shadow: inset 0px 0px 45px 0px rgba(0, 0, 0, 0.13);
   height: 320px; }
   #diagram li:hover {
     cursor: ew-resize;
-    background-color: aliceblue; }
-
-#toolbar, #diagram {
-  overflow: hidden;
-  display: block;
-  padding: 0; }
-  #toolbar li, #diagram li {
-    height: auto;
-    display: inline-block; }
+    background-color: #f8f8f8; }
 
 .ui-sortable-placeholder {
   background-color: azure;

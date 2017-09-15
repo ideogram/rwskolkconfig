@@ -48,7 +48,7 @@ const options = { connectToSortable: "#diagram", helper: "clone", revert: "inval
     $diagram.find("li").disableSelection();
     $toolbar.find("li").disableSelection();
 
-    // change size
+    // change size of the svg-elements
     function elementRendered(mutationRecords){
         var $li = $(mutationRecords["0"].target);
         var $svg = $li.find("svg");
@@ -86,13 +86,11 @@ const options = { connectToSortable: "#diagram", helper: "clone", revert: "inval
             var type = $svg.attr("data-type");
             var viewbox = $svg.attr("viewBox");
 
-
             if (viewbox !== undefined ) {
                 viewbox = viewbox.split(" ");
                 viewbox[1] = shift*-24;
-                $svg
-                    .attr("viewBox", viewbox.join(" "))
-                    .data("shift",shift);
+                $svg.attr("viewBox", viewbox.join(" "));
+                $me.data("shift",shift);
                 shift += ( deltay*1.0 );
             }
 
@@ -123,7 +121,6 @@ const options = { connectToSortable: "#diagram", helper: "clone", revert: "inval
     function alignAnnotations(){
         var $diagramElements = $diagram.find(".element");
         var gateCount = 0;
-        var shift = 0;
         var lowest = -1000; // very few indeed
 
 
@@ -135,16 +132,28 @@ const options = { connectToSortable: "#diagram", helper: "clone", revert: "inval
         for (i=0; i<$diagramElements.length; i++){
             var $me = $diagramElements.eq(i);
             var data = elements[ $me.attr("data-ref") ];
-            var deltay = data['deltay'];
-            var gate = data['gate'];
-            var bottom = data['bottom'];
-            var name = data['name'];
-            lowest = Math.max(lowest, bottom);
-            console.log(name, bottom, lowest);
+            var deltay  = data['deltay'];
+            var bottom  = data['bottom'];
+            var name    = data['name'];
+            var shift   = $me.data('shift');
+            lowest = Math.max(lowest, bottom+shift);
+        }
 
-            shift += ( deltay*1.0 );
+        // Next, put annotations on this lowest point
+        for (i=0; i<$diagramElements.length; i++) {
+            $me = $diagramElements.eq(i);
+            var gate    = data['gate'];
+            var $svg = $me.find("svg");
+
+            shift   = $me.data('shift');
+
+            $svg.find("text").attr("y",(lowest-shift+2)*24);
+
+
+
 
         }
+
 
     }
 
