@@ -22,7 +22,7 @@
 
 #diagram {
   box-shadow: inset 0px 0px 45px 0px rgba(0, 0, 0, 0.13);
-  height: 320px; }
+  height: 360px; }
   #diagram li:hover {
     cursor: ew-resize;
     background-color: #f8f8f8; }

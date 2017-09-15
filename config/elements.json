@@ -51,7 +51,7 @@
 
 { "name":"hangrol",             "deltay": 0,   "top":0,       "bottom": 15,   "gate": 1  },
 
-{ "name":"rol",                 "deltay": 0,   "top":0,       "bottom": 14,   "gate": 0  },
+{ "name":"rol",                 "deltay": 0,   "top":0,       "bottom": 14,   "gate": 1  },
 
 { "name":"rol-storm",           "deltay": 0,   "top":0,       "bottom": 14,   "gate": "S"},
 

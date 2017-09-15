@@ -1,0 +1,26 @@
+<svg data-type="punt-pin-rechts" height="480" version="1.1" viewBox="0 0 144 480" width="144" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg">
+    <metadata id="metadata36">
+        <rdf:RDF>
+            <cc:Work rdf:about="">
+                <dc:format>image/svg+xml</dc:format>
+                <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+                <dc:title>punt-pin</dc:title>
+            </cc:Work>
+        </rdf:RDF>
+    </metadata>
+    <defs id="defs34"/>
+    <title id="title4">punt-pin</title>
+    <path d="m 144,168 l -144,0 l 0,144 l 144,0 z" id="path6" style="fill:#d9ebf7"/>
+    <path d="m 120,312 l 24,0 m 0,-144 l -24,0 m -120,144 l 24,0 m 0,-144 l -24,0" id="path8" stroke-miterlimit="10" style="fill:none;stroke:#9fceea;stroke-width:3;stroke-miterlimit:10"/>
+    <path d="m 120,312 l -96,0 l 0,12 l 96,0 z" id="path10" style="fill:#d9ebf7"/>
+    <path d="m 24,312 l 96,0 l 0,12 l -89.4,-0.1 l -6.6,-11.9 z" id="path12" style="fill:#d9ebf7"/>
+    <path d="m 35,318 l 21.8,-70.7 a 9,9 0 1 0 -3.8,-7.3 l -4,0 l -24,78 z m 27,-81 a 3,3 0 1 1 -3,3" id="path14" stroke-miterlimit="10" style="fill:#ffb612;stroke:#000000;stroke-miterlimit:10"/>
+    <path d="m 30,324 l 0,-6 l -6,0 l 0,-6" id="path16" style="fill:none;stroke:#9fceea;stroke-width:3;stroke-linecap:square;stroke-linejoin:round"/>
+    <path d="m 120,312 l 0,12 l -90,0" id="path18" style="fill:none;stroke:#7d7d7d;stroke-width:3;stroke-linecap:square;stroke-linejoin:round"/>
+    <circle cx="-30" cy="318" id="circle20" r="6" stroke-miterlimit="10" style="stroke:#474747;stroke-width:3;stroke-miterlimit:10" transform="scale(-1,1)"/>
+    <path d="m 24,168 l 96,0 l 0,-12 l -89.4,0.1 l -6.6,11.9 z" id="path22" style="fill:#d9ebf7"/>
+    <path d="m 35,162 l 21.8,70.7 a 9,9 0 1 1 -3.8,7.3 l -4,0 l -24,-78 z m 27,81 a 3,3 0 1 0 -3,-3" id="path24" stroke-miterlimit="10" style="fill:#ffb612;stroke:#000000;stroke-miterlimit:10"/>
+    <path d="m 30,156 l 0,6 l -6,0 l 0,6" id="path26" style="fill:none;stroke:#9fceea;stroke-width:3;stroke-linecap:square;stroke-linejoin:round"/>
+    <path d="m 120,168 l 0,-12 l -90,0" id="path28" style="fill:none;stroke:#7d7d7d;stroke-width:3;stroke-linecap:square;stroke-linejoin:round"/>
+    <circle cx="-30" cy="162" id="circle30" r="6" stroke-miterlimit="10" style="stroke:#474747;stroke-width:3;stroke-miterlimit:10" transform="scale(-1,1)"/>
+<text font-family="sans-serif" font-size="36" text-anchor="middle" width="144" x="72" y="420"/></svg>

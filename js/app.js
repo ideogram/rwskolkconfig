@@ -68,6 +68,7 @@ const options = { connectToSortable: "#diagram", helper: "clone", revert: "inval
     // Nadat elementen zijn toegevoegd of gewijzigd: verander de tekening
     function diagramChanged(event, ui){
         shiftElements();
+        moveDiagramUp();
         annotateGates();
         alignAnnotations();
 
@@ -88,7 +89,8 @@ const options = { connectToSortable: "#diagram", helper: "clone", revert: "inval
 
             if (viewbox !== undefined ) {
                 viewbox = viewbox.split(" ");
-                viewbox[1] = shift*-24;
+                viewbox[1] = shift*-24-4*24;
+                viewbox[3] = 27*24;
                 $svg.attr("viewBox", viewbox.join(" "));
                 $me.data("shift",shift);
                 shift += ( deltay*1.0 );
@@ -96,6 +98,43 @@ const options = { connectToSortable: "#diagram", helper: "clone", revert: "inval
 
         }
 
+    }
+
+    function moveDiagramUp(){
+        var $diagramElements = $diagram.find(".element");
+        var gateCount = 0;
+        var highest = 1000; // very few indeed
+
+
+        // Put al the annotations on the same height
+
+        // Loop over the annotations twice.
+
+        // First, find the lowest position
+        for (i=0; i<$diagramElements.length; i++){
+            var $me = $diagramElements.eq(i);
+            var data = elements[ $me.attr("data-ref") ];
+            var deltay  = data['deltay'];
+            var top  = data['top'];
+            var name    = data['name'];
+            var shift   = $me.data('shift');
+
+            highest = Math.min(highest, top+shift);
+        }
+
+        // Next, move all elemets up to the top
+        for (i=0; i<$diagramElements.length; i++) {
+            $me = $diagramElements.eq(i);
+            var gate    = data['gate'];
+            var $svg = $me.find("svg");
+            var viewbox = $svg.attr("viewBox");
+
+            if (viewbox !== undefined ) {
+                viewbox = viewbox.split(" ");
+                viewbox[1] = viewbox[1]*1.0 + highest*24;
+                $svg.attr("viewBox", viewbox.join(" "));
+            }
+        }
     }
 
     function annotateGates(){
