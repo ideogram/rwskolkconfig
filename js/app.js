@@ -7,7 +7,7 @@ const folderAssets = "./assets/";
 const folderConfigs = "./config/";
 const $toolbar = $("#toolbar");
 const $diagram = $("#diagram");
-const $result = $("#result");
+const $result = $("#result").find("svg");
 const $download = $("#download");
 
 // Variables
@@ -53,7 +53,7 @@ const options = { connectToSortable: "#diagram", helper: "clone", revert: "inval
     // Create and download SVG
     $download.on('click',function(){
 
-        // Fill the 'result' SVG tag with the elements
+        // Fill the 'result' SVG  with the lock-elements
         $result.html("");
         x = 0;
         var $diagramElements = $diagram.find(".element");
@@ -62,16 +62,19 @@ const options = { connectToSortable: "#diagram", helper: "clone", revert: "inval
             var $me = $diagramElements.eq(i);
             var $svg = $me.find("svg");
             var html = $svg.html();
-            var w = 2*parseFloat( $svg.attr("width"));
+            var w = 2*parseFloat( $svg.attr("width") );
             var viewbox = $svg.attr("viewBox");
-            $svg
-                .clone()
-                .appendTo($result)
-                    .attr("x",x-i)
-                    .attr("y","0")
-                    .attr("width",w)
-                    .attr("viewBox",viewbox);
-            // ( We substract i from x to make the elements overlap by one pixel )
+
+            if (viewbox !== undefined ) {
+                viewbox = viewbox.split(" ");
+                h = viewbox[1];
+
+                $g=$("<g>" + html + "</g>").appendTo($result);
+
+                $g.attr("transform","translate("+(x-i)+","+(-h)+")");
+                // ( We substract i from x to make the elements overlap by one pixel )
+            }
+
             x += w;
         }
 
@@ -141,9 +144,7 @@ const options = { connectToSortable: "#diagram", helper: "clone", revert: "inval
                 $me.data("shift",shift);
                 shift += ( deltay*1.0 );
             }
-
         }
-
     }
 
     function moveDiagramUp(){
