@@ -7,6 +7,8 @@ const folderAssets = "./assets/";
 const folderConfigs = "./config/";
 const $toolbar = $("#toolbar");
 const $diagram = $("#diagram");
+const $result = $("#result");
+const $download = $("#download");
 
 // Variables
 var elements = [];
@@ -47,6 +49,50 @@ const options = { connectToSortable: "#diagram", helper: "clone", revert: "inval
     $diagram.sortable({ revert: true,  stop: diagramChanged });
     $diagram.find("li").disableSelection();
     $toolbar.find("li").disableSelection();
+
+    // Create and download SVG
+    $download.on('click',function(){
+
+        // Fill the 'result' SVG tag with the elements
+        $result.html("");
+        x = 0;
+        var $diagramElements = $diagram.find(".element");
+
+        for (i=0; i<$diagramElements.length; i++) {
+            var $me = $diagramElements.eq(i);
+            var $svg = $me.find("svg");
+            var html = $svg.html();
+            var w = 2*parseFloat( $svg.attr("width"));
+            var viewbox = $svg.attr("viewBox");
+            $svg
+                .clone()
+                .appendTo($result)
+                    .attr("x",x-i)
+                    .attr("y","0")
+                    .attr("width",w)
+                    .attr("viewBox",viewbox);
+            // ( We substract i from x to make the elements overlap by one pixel )
+            x += w;
+        }
+
+        $result.attr("width", x + "px");
+        $result.attr("height", 2*324);
+
+        // Offer the download
+        var svgData = $result[0].outerHTML;
+        var svgBlob = new Blob([svgData], {type:"image/svg+xml;charset=utf-8"});
+        var svgUrl = URL.createObjectURL(svgBlob);
+        var downloadLink = document.createElement("a");
+        var d = new Date();
+        var n = d.getTime();
+        var randomFilename = n.toString(36);
+        downloadLink.href = svgUrl;
+        downloadLink.download = randomFilename + ".svg";
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+
+        });
 
     // change size of the svg-elements
     function elementRendered(mutationRecords){

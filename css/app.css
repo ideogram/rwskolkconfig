@@ -27,6 +27,18 @@
     cursor: ew-resize;
     background-color: #f8f8f8; }
 
+#download-wrapper {
+  text-align: center; }
+
+#download {
+  width: 200px;
+  height: 40px;
+  border: 1px solid silver;
+  background-color: white;
+  font-size: 18px; }
+  #download:hover {
+    background-color: #f8f8f8; }
+
 .ui-sortable-placeholder {
   background-color: azure;
   outline: 1px solid red; }
