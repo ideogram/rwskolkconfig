@@ -39,17 +39,11 @@ var countElementsRendered = 0;
         $.each(elements, function (key, val) {
             var id = val.name
             var description = val.description;
-            var subfolder = "kolk";
 
             // Bridges may be draggable, but should not be allowed to end up in the #diagram
             draggableOptionsElement = draggableOptions;
             if ( val.name == "brug-vast" || val.name == "brug-beweegbaar" ){
                 delete draggableOptionsElement.connectToSortable;
-                subfolder = "brug";
-            }
-
-            if (val.gate !== false ){
-                subfolder = "deur";
             }
 
             var $li = $("<li class='element'></li>").appendTo($toolbar)
@@ -57,7 +51,7 @@ var countElementsRendered = 0;
                 .addClass( val.name  )
                 .disableSelection()
                 .draggable(draggableOptions)
-                .load(folderAssets + subfolder + '/' + id + ".svg" );
+                .load(folderAssets + id + ".svg" );
 
             // After the SVG is rendered, rework the SVG
             observer.observe( $li[0], { childList: true } );
@@ -129,7 +123,6 @@ var countElementsRendered = 0;
         alignAnnotations();
     }
 
-    // Add
     function elementDropped(event, ui) {
         $me = $(ui.helper);
 
@@ -275,17 +268,9 @@ var countElementsRendered = 0;
         var $target = $(event.target);
         var $targetSVG = $target.find("svg");
         var $bridge = $(ui.helper);
-        var dataTarget = elements[ $target.attr("data-ref") ];
-        var dataBridge = elements[ $bridge.attr("data-ref") ];
-        var subfolder = "kolk-met-";
+        var $bridgeGroup = $bridge.find("g");
 
-        if (dataTarget.gate != false ) {
-            subfolder = "deur-met-";
-        }
-
-        subfolder += dataBridge.name;
-
-        $targetSVG.load(folderAssets + subfolder + '/' + dataTarget.name + ".svg" );
+        $targetSVG.append($bridgeGroup);
     }
 
 
