@@ -1,0 +1,267 @@
+#- name: filename
+#  deltay:
+#    integer, how many grid cells should the tiles to the
+#    right be shifted vertically
+#  top: integer, top-most cell that is used for the drawing in the tile
+#  bottom: integer, idem but bottom-most
+#  gate: boolean.
+#   True for normal door, false for no door or 'S' for storm-gate
+
+- name: gladde-kolk
+  deltay: 0
+  top: 7
+  bottom: 13
+  gate: false
+
+- name: stopstreep
+  description: stopstreep
+  deltay: 0
+  top: 6
+  bottom: 14
+  gate: false
+
+- name: kolk-body
+  deltay: 0
+  top: 5
+  bottom: 17
+  gate: false
+
+- name: kamerkolk-kop-b
+  deltay: 2
+  top: 5
+  bottom: 17
+  gate: false
+
+- name: kamerkolk-kop-d
+  deltay: -2
+  top: 3
+  bottom: 15
+  gate: false
+
+- name: kamerkolk-kop-p
+  deltay: -2
+  top: 5
+  bottom: 17
+  gate: false
+
+- name: kamerkolk-kop-q
+  deltay: 2
+  top: 7
+  bottom: 13
+  gate: false
+
+- name: kamerkolk-kop-b-rond
+  deltay: 2
+  top: 5
+  bottom: 17
+  gate: false
+
+- name: kamerkolk-kop-d-rond
+  deltay: -2
+  top: 3
+  bottom: 15
+  gate: false
+
+- name: kamerkolk-kop-p-rond
+  deltay: -2
+  top: 5
+  bottom: 17
+  gate: false
+
+- name: kamerkolk-kop-q-rond
+  deltay: 2
+  top: 7
+  bottom: 13
+  gate: false
+
+- name: binnenfrontkolk-kop-links
+  deltay: 0
+  top: 5
+  bottom: 15
+  gate: false
+
+- name: binnenfrontkolk-kop-rechts
+  deltay: 0
+  top: 5
+  bottom: 15
+  gate: false
+
+- name: komkolk-kop-links
+  deltay: 0
+  top: 5
+  bottom: 15
+  gate: false
+
+- name: komkolk-kop-rechts
+  deltay: 0
+  top: 5
+  bottom: 15
+  gate: false
+
+- name: puntdeur-links
+  description: puntdeur links
+  deltay: 0
+  top: 6
+  bottom: 14
+  gate: 1
+
+- name: puntdeur-rechts
+  description: puntdeur rechts
+  deltay: 0
+  top: 6
+  bottom: 14
+  gate: 1
+
+- name: puntdeur-pin-links
+  description: dubbelkerende enkelvoudige puntdeur met pin, links
+  deltay: 0
+  top: 6
+  bottom: 14
+  gate: 1
+
+- name: puntdeur-pin-rechts
+  description: dubbelkerende enkelvoudige puntdeur met pin, rechts
+  deltay: 0
+  top: 6
+  bottom: 14
+  gate: 1
+
+- name: puntdeur-dubbelk-links
+  description: dubbelkerende enkelvoudige puntdeur, links
+  deltay: 0
+  top: 6
+  bottom: 14
+  gate: 1
+
+- name: puntdeur-dubbelk-rechts
+  description: dubbelkerende enkelvoudige puntdeur, rechts
+  deltay: 0
+  top: 6
+  bottom: 14
+  gate: 1
+
+- name: stormdeur-links
+  description: puntdeur, stormdeur, links
+  deltay: 0
+  top: 6
+  bottom: 14
+  gate: S
+
+- name: stormdeur-rechts
+  description: puntdeur, stormdeur, rechts
+  deltay: 0
+  top: 6
+  bottom: 14
+  gate: S
+
+- name: puntstormdeur-links
+  description: puntdeur, ook stormdeur, links
+  deltay: 0
+  top: 0
+  bottom: 0
+  gate: 1
+
+- name: puntstormdeur-rechts
+  description: puntdeur, ook stormdeur, rechts
+  deltay: 0
+  top: 0
+  bottom: 0
+  gate: 1
+
+- name: draaideur-lb
+  description: enkele draaideur, links, scharnier boven
+  deltay: 0
+  top: 6
+  bottom: 14
+  gate: 1
+
+- name: draaideur-lo
+  description: enkele draaideur, links, scharnier onder
+  deltay: 0
+  top: 6
+  bottom: 14
+  gate: 1
+
+- name: draaideur-rb
+  description: enkele draaideur, rechts, scharnier boven
+  deltay: 0
+  top: 6
+  bottom: 14
+  gate: 1
+
+- name: draaideur-ro
+  description: enkele draaideur, rechts, scharnier boven
+  deltay: 0
+  top: 6
+  bottom: 14
+  gate: 1
+
+- name: hefdeur
+  description: hefdeur
+  deltay: 0
+  top: 5
+  bottom: 15
+  gate: 1
+
+- name: hangroldeur
+  description: hangroldeur
+  deltay: 0
+  top: 0
+  bottom: 15
+  gate: 1
+
+- name: roldeur-boven
+  description: roldeur boven
+  deltay: 0
+  top: 0
+  bottom: 14
+  gate: 1
+
+- name: roldeur-boven-storm
+  description: roldeur, storm, boven
+  deltay: 0
+  top: 0
+  bottom: 14
+  gate: S
+
+- name: roldeur-onder
+  description: roldeur, onder
+  deltay: 0
+  top: 6
+  bottom: 20
+  gate: 1
+
+- name: roldeur-onder-storm
+  description: roldeur, storm, onder
+  deltay: 0
+  top: 6
+  bottom: 20
+  gate: S
+
+- name: waaierdeur-links
+  description: waaierdeur, links
+  deltay: 0
+  top: 4
+  bottom: 16
+  gate: 1
+
+- name: waaierdeur-rechts
+  description: waaierdeur, rechts
+  deltay: 0
+  top: 4
+  bottom: 16
+  gate: 1
+
+- name: brug-vast
+  description: Vaste brug over deur of kolk
+  deltay: 0
+  top: 4
+  bottom: 16
+  gate: false
+
+- name: brug-beweegbaar
+  description: Beweegbare brug over deur of kolk
+  deltay: 0
+  top: 4
+  bottom: 6
+  gate: false

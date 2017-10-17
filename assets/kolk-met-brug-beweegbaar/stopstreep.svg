@@ -1,0 +1,33 @@
+<svg height="480" viewBox="0 0 48 480" width="48" xmlns="http://www.w3.org/2000/svg">
+    <title>Stopstreep</title>
+    <path d="M32.49 139.5H15.51l1.32 14.2h14.34l1.32-14.2" fill="#d52b1e" style="isolation:isolate"/>
+    <path d="M31.17 153.7H16.83l1.04 11.3h12.25l1.05-11.3" fill="#fff4dc" style="isolation:isolate"/>
+    <path d="M30.12 165H17.87l.72 7.7h10.82l.71-7.7" fill="#d52b1e" style="isolation:isolate"/>
+    <path d="M29.41 172.7H18.59l.62 6.7h9.58l.62-6.7" fill="#fff4dc" style="isolation:isolate"/>
+    <path d="M19.21 179.37l-3.7-39.84h16.98l-3.7 39.84h-9.58z" fill="none"/>
+    <path d="M32.49 139.53H15.51l1.32 14.2h14.34l1.32-14.2" fill="#d52b1e"/>
+    <path d="M31.17 153.73H16.83L17.87 165h12.25l1.05-11.27" fill="#fff4dc"/>
+    <path d="M30.12 165H17.87l.72 7.72h10.82l.71-7.72" fill="#d52b1e"/>
+    <path d="M29.41 172.72H18.59l.62 6.65h9.58l.62-6.65" fill="#fff4dc"/>
+    <path d="M28.79 300.53l3.7 39.84H15.51l3.7-39.84h9.58z" fill="none"/>
+    <path d="M15.51 340.37h16.98l-1.32-14.2H16.83l-1.32 14.2" fill="#d52b1e"/>
+    <path d="M16.83 326.17h14.34l-1.05-11.27H17.87l-1.04 11.27" fill="#fff4dc"/>
+    <path d="M17.87 314.9h12.25l-.71-7.72H18.59l-.72 7.72" fill="#d52b1e"/>
+    <path d="M18.59 307.18h10.82l-.62-6.65h-9.58l-.62 6.65" fill="#fff4dc"/>
+    <path d="M0 168h48v144H0z" fill="#d9ebf7"/>
+    <path d="M32.49 340.37H15.51l3.7-39.84h9.58l3.7 39.84zM15.51 139.53h16.98l-3.7 39.84h-9.58l-3.7-39.84z" fill="none" stroke="#999" stroke-miterlimit="10"/>
+    <path d="M24 168v144" fill="#999" stroke="#9fceea" stroke-dasharray="8,4" stroke-miterlimit="6" stroke-width="2"/>
+    <path d="M0 168h48M0 312h48" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+<g>
+        <path d="M36 72h72v336H36z" fill="#e6e6e6" opacity=".9" style="isolation:isolate"/>
+        <path d="M36 324v84m72-84v84" fill="none" stroke="#999" stroke-miterlimit="10" stroke-width="2"/>
+        <path d="M33 324v36l-18 18" fill="none" stroke="#535353" stroke-miterlimit="10" stroke-width="4"/>
+        <path d="M33 174v138" fill="none" stroke="#535353" stroke-dasharray="12,12" stroke-miterlimit="10" stroke-width="4"/>
+        <path d="M15 102l18 18v36" fill="none" stroke="#535353" stroke-miterlimit="10" stroke-width="4"/>
+        <path d="M36 174v138" fill="none" stroke="#999" stroke-dasharray="12 12" stroke-miterlimit="10" stroke-width="2"/>
+        <path d="M36 72v84M108 72v84" fill="none" stroke="#999" stroke-miterlimit="10" stroke-width="2"/>
+        <path d="M111 324v36l18 18" fill="none" stroke="#535353" stroke-miterlimit="10" stroke-width="4"/>
+        <path d="M111 174v138" fill="none" stroke="#535353" stroke-dasharray="12 12" stroke-miterlimit="10" stroke-width="4"/>
+        <path d="M129 102l-18 18v36" fill="none" stroke="#535353" stroke-miterlimit="10" stroke-width="4"/>
+        <path d="M108 174v138" fill="none" stroke="#999" stroke-dasharray="12 12" stroke-miterlimit="10" stroke-width="2"/>
+    </g></svg>

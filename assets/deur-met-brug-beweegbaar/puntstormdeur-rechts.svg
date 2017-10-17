@@ -1,0 +1,40 @@
+<svg data-type="schut-storm-punt-rechts" height="480" viewBox="0 0 144 480" width="144" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <symbol id="a" viewBox="0 0 15 15">
+            <circle cx="7.5" cy="7.5" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
+        </symbol>
+    </defs>
+    <title>
+        punt
+    </title>
+    <path d="M144 168H0v144h144z" fill="#d9ebf7"/>
+    <path d="M120 312h24m0-144h-24M0 312h24m0-144H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M120 312H24v12h96z" fill="#d9ebf7"/>
+    <path d="M24 312h96v12H30l-6-12z" fill="#d9ebf7"/>
+    <path color="#000" d="M63.17 242.6l-23.97 78" fill="none" overflow="visible" stroke="#fff" stroke-linecap="round" stroke-width="9" style="isolation:auto;mix-blend-mode:normal"/>
+    <path d="M120 169.2V156H30l-6 13.2z" fill="#d9ebf7"/>
+    <path color="#000" d="M63.17 238.6l-23.97-78" fill="none" overflow="visible" stroke="#fff" stroke-linecap="round" stroke-width="9" style="isolation:auto;mix-blend-mode:normal"/>
+    <path color="#000" d="M61.37 242.6l-23.97 78" fill="none" overflow="visible" stroke="#ca005d" stroke-linecap="round" stroke-width="5" style="isolation:auto;mix-blend-mode:normal"/>
+    <path d="M25 318l24-78h10l-24 78H25z" fill="#ffb612" stroke="#000" stroke-miterlimit="10"/>
+    <path d="M30 324v-6h-6v-6" fill="none" stroke="#9fceea" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
+    <path d="M120 312v12H30" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
+    <use height="15" transform="rotate(180 18.75 162.75)" width="15" xlink:href="#a"/>
+    <path color="#000" d="M61.37 237.5l-23.97-78" fill="none" overflow="visible" stroke="#ca005d" stroke-linecap="round" stroke-width="5" style="isolation:auto;mix-blend-mode:normal"/>
+    <path d="M25 162l24 78h10l-24-78H25z" fill="#ffb612" stroke="#000" stroke-miterlimit="10"/>
+    <path d="M30 156v6h-6v6" fill="none" stroke="#9fceea" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
+    <path d="M120 168v-12H30" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
+    <use height="15" transform="matrix(-1 0 0 1 37.5 154.5)" width="15" xlink:href="#a"/>
+    <g>
+        <path d="M36 72h72v336H36z" fill="#e6e6e6" opacity=".9" style="isolation:isolate"/>
+        <path d="M36 324v84m72-84v84" fill="none" stroke="#999" stroke-miterlimit="10" stroke-width="2"/>
+        <path d="M33 324v36l-18 18" fill="none" stroke="#535353" stroke-miterlimit="10" stroke-width="4"/>
+        <path d="M33 174v138" fill="none" stroke="#535353" stroke-dasharray="12,12" stroke-miterlimit="10" stroke-width="4"/>
+        <path d="M15 102l18 18v36" fill="none" stroke="#535353" stroke-miterlimit="10" stroke-width="4"/>
+        <path d="M36 174v138" fill="none" stroke="#999" stroke-dasharray="12 12" stroke-miterlimit="10" stroke-width="2"/>
+        <path d="M36 72v84m72-84v84" fill="none" stroke="#999" stroke-miterlimit="10" stroke-width="2"/>
+        <path d="M111 324v36l18 18" fill="none" stroke="#535353" stroke-miterlimit="10" stroke-width="4"/>
+        <path d="M111 174v138" fill="none" stroke="#535353" stroke-dasharray="12 12" stroke-miterlimit="10" stroke-width="4"/>
+        <path d="M129 102l-18 18v36" fill="none" stroke="#535353" stroke-miterlimit="10" stroke-width="4"/>
+        <path d="M108 174v138" fill="none" stroke="#999" stroke-dasharray="12 12" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+</svg>

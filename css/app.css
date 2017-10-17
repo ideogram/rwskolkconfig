@@ -1,3 +1,6 @@
+body {
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif; }
+
 #toolbar, #diagram {
   text-align: center;
   overflow: hidden;
@@ -6,7 +9,8 @@
   background-color: white; }
   #toolbar li, #diagram li {
     height: auto;
-    display: inline-block; }
+    display: inline-block;
+    position: relative; }
     #toolbar li:hover, #diagram li:hover {
       background-color: white;
       outline: 1px solid black;
@@ -19,13 +23,60 @@
     margin: 2px;
     outline: 1px solid silver;
     background-color: #f8f8f8; }
+    #toolbar li[title]:hover::after {
+      content: attr(title);
+      padding: 4px 8px;
+      position: absolute;
+      left: 5px;
+      top: 5px;
+      z-index: 20;
+      white-space: nowrap;
+      border-radius: 5px;
+      box-shadow: 0px 0px 4px #222;
+      background-color: white; }
+
+#wind-cross-left, #wind-cross-right {
+  width: 100px;
+  float: left;
+  height: 360px;
+  background-image: url(../images/roos-links.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto; }
+
+#wind-cross-right {
+  background-image: url(../images/roos-rechts.svg);
+  background-position: center; }
 
 #diagram {
   box-shadow: inset 0px 0px 45px 0px rgba(0, 0, 0, 0.13);
-  height: 360px; }
-  #diagram li:hover {
-    cursor: ew-resize;
-    background-color: #f8f8f8; }
+  height: 360px;
+  float: left;
+  width: calc(100% - 200px); }
+  #diagram li {
+    position: relative; }
+    #diagram li:hover {
+      cursor: ew-resize;
+      background-color: #f8f8f8;
+      z-index: 1000; }
+      #diagram li:hover .btn-remove {
+        cursor: pointer;
+        opacity: 0.5; }
+
+.btn-remove {
+  display: block;
+  height: 24px;
+  width: 24px;
+  background-image: url(../images/delete-forever.svg);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-family: sans-serif;
+  font-size: 32px;
+  opacity: 0; }
+  .btn-remove:hover {
+    background-image: url(../images/delete-forever-hover.svg);
+    opacity: 1 !important; }
 
 #download-wrapper {
   text-align: center; }
@@ -42,5 +93,8 @@
 .ui-sortable-placeholder {
   background-color: azure;
   outline: 1px solid red; }
+
+svg {
+  pointer-events: none; }
 
 /*# sourceMappingURL=app.css.map */
