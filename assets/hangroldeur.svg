@@ -1,1 +1,23 @@
-<svg data-type="hangrol" height="480" viewBox="0 0 72 480" width="72" xmlns="http://www.w3.org/2000/svg"><title>hangrol</title><path d="M0 168v144h24v24h24v-24h24V168H48V6H24v162z" fill="#d9ebf7"/><path d="M12 168H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/><path d="M60 168H48V6H24v162H12" fill="none" stroke="#7d7d7d" stroke-miterlimit="10" stroke-width="3"/><path d="M72 168H60m0 144h12" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/><path d="M12 312h12v24h24v-24h12" fill="none" stroke="#7d7d7d" stroke-miterlimit="10" stroke-width="3"/><path d="M0 312h12" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/><path d="M29 161h14v158H29z" fill="#ffb612" stroke="#154573" stroke-miterlimit="10"/><path d="M36 14.2V336" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/><circle cx="36" cy="240" fill="#154573" r="3" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/><circle cx="36" cy="264" fill="#154573" r="3" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/><circle cx="36" cy="288" fill="#154573" r="3" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/><circle cx="36" cy="312" fill="#154573" r="3" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/><circle cx="36" cy="216" fill="#154573" r="3" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/><circle cx="36" cy="192" fill="#154573" r="3" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/><circle cx="36" cy="168" fill="#154573" r="3" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/><path d="M36 12v324" fill="#154573" stroke="#154573" stroke-miterlimit="10" stroke-width="2"/><path d="M27 323.5h18v18H27zM27 1h18v18H27z"/><text font-family="sans-serif" font-size="36" text-anchor="middle" x="36" y="420"/></svg>
+<svg data-type="hangrol" height="480" viewBox="0 0 72 480" width="72" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        hangrol
+    </title>
+    <path d="M0 168v144h24v24h24v-24h24V168H48V6H24v162z" fill="#d9ebf7"/>
+    <path d="M12 168H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M60 168H48V6H24v162H12" fill="none" stroke="#7d7d7d" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M72 168H60m0 144h12" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M12 312h12v24h24v-24h12" fill="none" stroke="#7d7d7d" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M0 312h12" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M29 161h14v158H29z" fill="#ffb612" stroke="#154573" stroke-miterlimit="10"/>
+    <path d="M36 14.2V336" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
+    <circle cx="36" cy="240" fill="#154573" r="3" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+    <circle cx="36" cy="264" fill="#154573" r="3" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+    <circle cx="36" cy="288" fill="#154573" r="3" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+    <circle cx="36" cy="312" fill="#154573" r="3" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+    <circle cx="36" cy="216" fill="#154573" r="3" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+    <circle cx="36" cy="192" fill="#154573" r="3" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+    <circle cx="36" cy="168" fill="#154573" r="3" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+    <path d="M36 12v324" fill="#154573" stroke="#154573" stroke-miterlimit="10" stroke-width="2"/>
+    <path d="M27 323.5h18v18H27zM27 1h18v18H27z"/>
+    <text font-family="sans-serif" font-size="36" text-anchor="middle" x="60" y="420"/>
+</svg>

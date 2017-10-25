@@ -1,16 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 480" height="480" width="144">
-    <title>brug-beweegbaar</title>
-    <g>
-        <path d="M36 72h72v336H36z" style="isolation:isolate" opacity=".9" fill="#e6e6e6"/>
-        <path d="M36 324v84m72-84v84" stroke-width="2" stroke-miterlimit="10" stroke="#999" fill="none"/>
-        <path d="M33 324v36l-18 18" stroke-miterlimit="10" fill="none" stroke="#535353" stroke-width="4"/>
-        <path d="M33 174v138" stroke-miterlimit="10" fill="none" stroke="#535353" stroke-width="4" stroke-dasharray="12,12"/>
-        <path d="M15 102l18 18v36" stroke-miterlimit="10" fill="none" stroke="#535353" stroke-width="4"/>
-        <path d="M36 174v138" stroke-dasharray="12 12" stroke-width="2" stroke-miterlimit="10" stroke="#999" fill="none"/>
-        <path d="M36 72v84M108 72v84" fill="none" stroke="#999" stroke-width="2" stroke-miterlimit="10"/>
-        <path d="M111 324v36l18 18" stroke-miterlimit="10" fill="none" stroke="#535353" stroke-width="4"/>
-        <path d="M111 174v138" stroke-dasharray="12 12" stroke-width="4" stroke-miterlimit="10" stroke="#535353" fill="none"/>
-        <path d="M129 102l-18 18v36" stroke-miterlimit="10" fill="none" stroke="#535353" stroke-width="4"/>
-        <path d="M108 174v138" stroke-dasharray="12 12" stroke-width="2" stroke-miterlimit="10" stroke="#999" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="480" viewBox="0 0 120 480">
+    <title>
+        brug-beweegbaar
+    </title>
+    <g class="bridge">
+    <path style="isolation:isolate" d="M24 72h72v336H24z" opacity=".5" fill="#e6e6e6"/>
+        <path stroke-miterlimit="10" d="M24 324v84m72-84v84" fill="none" stroke="#999" stroke-width="2"/>
+        <path stroke-miterlimit="10" d="M21 324v36L3 378" fill="none" stroke="#535353" stroke-width="4"/>
+        <path stroke-miterlimit="10" d="M21 174v138" fill="none" stroke="#535353" stroke-width="4" stroke-dasharray="12,12"/>
+        <path stroke-miterlimit="10" d="M3 102l18 18v36" fill="none" stroke="#535353" stroke-width="4"/>
+        <path stroke-miterlimit="10" d="M24 174v138" fill="none" stroke="#999" stroke-width="2" stroke-dasharray="12,12"/>
+        <path stroke-miterlimit="10" d="M24 72v84m72-84v84" fill="none" stroke="#999" stroke-width="2"/>
+        <path stroke-miterlimit="10" d="M99 324v36l18 18" fill="none" stroke="#535353" stroke-width="4"/>
+        <path stroke-miterlimit="10" d="M99 174v138" fill="none" stroke="#535353" stroke-width="4" stroke-dasharray="12,12"/>
+        <path stroke-miterlimit="10" d="M117 102l-18 18v36" fill="none" stroke="#535353" stroke-width="4"/>
+        <path stroke-miterlimit="10" d="M96 174v138" fill="none" stroke="#999" stroke-width="2" stroke-dasharray="12,12"/>
     </g>
 </svg>

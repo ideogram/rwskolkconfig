@@ -135,7 +135,7 @@ var countElementsRendered = 0;
         // Allow a bridge to be dropped on the element.
         $me.droppable(
             {
-                drop: replaceWithBridge,
+                drop: drawBridge,
                 accept: ".brug-vast, .brug-beweegbaar"
             }
         );
@@ -218,11 +218,9 @@ var countElementsRendered = 0;
             var gate = data['gate'];
             var $svg = $me.find("svg");
 
-            if ( gate == "1"){
-                $svg.find("text").html( String.fromCharCode(gateCount+65) );
+            if ( gate !== false ){
+                $svg.find("text").not(".hw").html( String.fromCharCode(gateCount+65) );
                 gateCount++;
-            } else if (gate == "S") {
-                $svg.find("text").html("S");
             }
         }
 
@@ -243,36 +241,49 @@ var countElementsRendered = 0;
         for (i=0; i<$diagramElements.length; i++){
             var $me = $diagramElements.eq(i);
             var data = elements[ $me.attr("data-ref") ];
-            var deltay  = data['deltay'];
+
+            var bridge = $me.data('bridge') == "true" ? 17 : 0;
+
             var bottom  = data['bottom'];
-            var name    = data['name'];
+
             var shift   = $me.data('shift');
-            lowest = Math.max(lowest, bottom+shift);
+
+            lowest = Math.max( lowest, bottom + shift, bridge + shift );
         }
 
         // Next, put annotations on this lowest point
         for (i=0; i<$diagramElements.length; i++) {
-            $me = $diagramElements.eq(i);
+            var $me = $diagramElements.eq(i);
             var gate    = data['gate'];
             var $svg = $me.find("svg");
             shift   = $me.data('shift');
             $svg.find("text").attr("y",(lowest-shift+2)*24);
-
+            $svg.find("text.hw").attr("y",(lowest-shift+3.5)*24);
         }
-
-
     }
 
-    // Replace an element with a similar version with a bridge drawn over it
-    function replaceWithBridge(event, ui){
+    // Draw a bridge over the target element
+    function drawBridge(event, ui) {
         var $target = $(event.target);
         var $targetSVG = $target.find("svg");
+        var pxTargetWidth = 2 * parseFloat($targetSVG.attr("width"));
+        var pxBridgeWidth = 5 * 24; // 120;
+        var pxCentre = (pxTargetWidth - pxBridgeWidth) / 2;
+
         var $bridge = $(ui.helper);
         var $bridgeGroup = $bridge.find("g");
 
         $targetSVG.append($bridgeGroup);
-    }
 
+        if (pxCentre != 0) {
+            $targetSVG.find(".bridge").attr("transform", "translate(" + pxCentre + ",0)");
+        }
+
+        $target.data("bridge","true");
+
+        alignAnnotations();
+
+    }
 
 
     // offer a string containing SVG as download
@@ -297,4 +308,6 @@ var countElementsRendered = 0;
     }
 
 })(jQuery);
+
+var f = console.log.bind(console);
 

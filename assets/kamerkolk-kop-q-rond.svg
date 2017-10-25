@@ -1,6 +1,7 @@
-<svg height="480" width="72" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 72 480" style="enable-background:new 0 0 72 480;" xml:space="preserve">
-<title>bajonetkolk-kop</title>
-<path fill="#d9ebf7" d="M0,312V168h72v240H48c-13.3,0-24-10.7-24-24v-72H0z"/>
-<path fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3" d="M72,408H48c-13.3,0-24-10.7-24-24v-72H0 M0,168h72"/>
+<svg height="480" width="72" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 480">
+    <title>
+        bajonetkolk-kop
+    </title>
+    <path fill="#d9ebf7" d="M0 312V168h72v240H48c-13.3 0-24-10.7-24-24v-72H0z"/>
+    <path fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3" d="M72 408H48c-13.3 0-24-10.7-24-24v-72H0m0-144h72"/>
 </svg>
