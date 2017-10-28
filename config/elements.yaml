@@ -1,24 +1,43 @@
-#- name:
+# name:
 #   filename
+#
+# description:
+#   string, used as tooltip in ui
 #
 #  deltay:
 #    integer, how many grid cells should the tiles to the
-#    right be shifted vertically
+#    right be shifted vertically.
 #
 #  top:
-#    integer, top-most cell that is used for the drawing in the tile
+#    integer, top-most grid cell that is used for the drawing in the tile
 #
 #  bottom:
 #     integer, idem but bottom-most
 #
 #  gate:
 #     boolean. True for normal gate, false for not-a-gate or 'S' for storm-gate
+#
+# symbol:
+#     string(s): Symbol(s) used in the configuration strings
+#
+# mnemo:
+#   string, not used in the app, for documentation only
+#
+# Notes:
+#  - Puntdueren worden weergeven met een < of >
+#  - Speciale puntdeuren krijgen een hoofdletter aan de 'binnenkant': <W, W>, <P, P> en <D D>
+#  - Deuren die worden gebruikt als stormdeuren krijgen een 's' als suffix: bv. <s, >s, Hs en in het diagram krijgen ze aanduiding "HW"
+#  - Deuren die worden gebruikt als hwk krijgen een 'h' als suffix: <h, >h, Hh en in het diagram krijgen ze aanduiding "HWK"
+#
+# Grid cells are 24*24 px
+
 
 - name: gladde-kolk
   deltay: 0
   top: 7
   bottom: 13
   gate: false
+  symbol: " " # SPACE
 
 - name: stopstreep
   description: stopstreep
@@ -26,91 +45,115 @@
   top: 6
   bottom: 14
   gate: false
+  symbol: "." # PERIOD
 
-- name: stopstreep-breed
-  description: stopstreep
-  deltay: 0
-  top: 6
-  bottom: 14
-  gate: false
-
-- name: kolk-body
+- name: kolk-verbreed
   deltay: 0
   top: 5
   bottom: 17
   gate: false
+  symbol: "|" # VERTICAL STRIPE, PIPE
 
 - name: kamerkolk-kop-b
   deltay: 2
   top: 5
   bottom: 17
   gate: false
+  symbol: b
+  mnemo: Overgang van verbrede kolk (links) naar smalle kolk (rechts-onder). De vorm van dit element lijkt op de onderkastletter 'b'
+
 
 - name: kamerkolk-kop-d
   deltay: -2
   top: 3
   bottom: 15
   gate: false
+  symbol: d
+  mnemo: Overgang van smalle kolk (links-onder) naar verbrede kolk aan de rechterzijde. De vorm van dit element lijkt op de kleine letter 'd'
 
 - name: kamerkolk-kop-p
   deltay: -2
   top: 5
   bottom: 17
   gate: false
+  symbol: p
+  mnemo: Overgang van verbrede kolk (links) naar smalle kolk (rechts-boven). De vorm van dit element lijkt op de onderkastletter 'p'
 
 - name: kamerkolk-kop-q
   deltay: 2
   top: 7
   bottom: 13
   gate: false
+  symbol: q
+  mnemo: Overgang van smalle kolk (links-boven) naar verbrede kolk aan de rechterzijde. De vorm van dit element lijkt op de onderkastletter 'q'
 
-- name: kamerkolk-kop-b-rond
+- name: kamerkolk-kop-6-rond
   deltay: 2
   top: 5
   bottom: 17
   gate: false
+  symbol: "6"
+  mnemo: Overgang van verbrede kolk (links) naar smalle kolk (rechts-onder). De vorm van dit element lijkt op het cijfer '6'
 
-- name: kamerkolk-kop-d-rond
+- name: kamerkolk-kop-j-rond
   deltay: -2
   top: 3
   bottom: 15
   gate: false
+  symbol: "j"
+  mnemo: Overgang van smalle kolk (links-onder) naar verbrede kolk aan de rechterzijde. De vorm van dit element lijkt op  de letter 'j'
 
-- name: kamerkolk-kop-p-rond
+
+- name: kamerkolk-kop-r-rond
   deltay: -2
   top: 5
   bottom: 17
   gate: false
+  symbol: "r"
+  mnemo: Overgang van verbrede kolk (links) naar smalle kolk (rechts-boven). De vorm van dit element lijkt op de  de letter 'r'
 
-- name: kamerkolk-kop-q-rond
+
+- name: kamerkolk-kop-9-rond
   deltay: 2
   top: 7
   bottom: 13
   gate: false
+  symbol: 9
+  mnemo: Overgang van smalle kolk (links-boven) naar verbrede kolk aan de rechterzijde. De vorm van dit element lijkt op het cijfer '9'
+
 
 - name: binnenfrontkolk-kop-links
   deltay: 0
   top: 5
   bottom: 15
   gate: false
+  symbol: "["
+  mnemo: Overgang van smalle kolk (links) naar verbrede kolk (rechts) met rechthoeking front
+
 
 - name: binnenfrontkolk-kop-rechts
   deltay: 0
   top: 5
   bottom: 15
   gate: false
+  symbol: "]"
+  mnemo: Overgang van verbrede kolk (links) naar smalle kolk (rechts) met rechthoeking front
 
 - name: komkolk-kop-links
   deltay: 0
   top: 5
   bottom: 15
   gate: false
+  symbol: "{"
+  mnemo: Overgang van smalle kolk (links) naar verbrede kolk (rechts) met rond front
 
 - name: komkolk-kop-rechts
   deltay: 0
   top: 5
   bottom: 15
   gate: false
+  symbol: "}"
+  mnemo: Overgang van verbrede kolk (links) naar smalle kolk (rechts) met rond front
 
 - name: puntdeur-links
   description: puntdeur links
@@ -118,6 +161,7 @@
   top: 6
   bottom: 14
   gate: 1
+  symbol: ">"
 
 - name: puntdeur-rechts
   description: puntdeur rechts
@@ -125,6 +169,7 @@
   top: 6
   bottom: 14
   gate: 1
+  symbol: ">"
 
 - name: puntdeur-pin-links
   description: dubbelkerende enkelvoudige puntdeur met pin, links
@@ -132,6 +177,7 @@
   top: 6
   bottom: 14
   gate: 1
+  symbol: "<P"
 
 - name: puntdeur-pin-rechts
   description: dubbelkerende enkelvoudige puntdeur met pin, rechts
@@ -139,6 +185,7 @@
   top: 6
   bottom: 14
   gate: 1
+  symbol: "P>"
 
 - name: puntdeur-dubbelk-links
   description: dubbelkerende enkelvoudige puntdeur, links
@@ -146,6 +193,7 @@
   top: 6
   bottom: 14
   gate: 1
+  symbol: "<D"
 
 - name: puntdeur-dubbelk-rechts
   description: dubbelkerende enkelvoudige puntdeur, rechts
@@ -153,62 +201,81 @@
   top: 6
   bottom: 14
   gate: 1
+  symbol: "D>"
 
-- name: stormdeur-links
+- name: puntdeur-storm-links
   description: puntdeur, stormdeur, links
   deltay: 0
   top: 6
   bottom: 14
   gate: S
+  symbol: "<s"
+  mnemo: "Deur is voorzien van het label 'HW'"
 
-- name: stormdeur-rechts
+- name: puntdeur-storm-rechts
   description: puntdeur, stormdeur, rechts
   deltay: 0
   top: 6
   bottom: 14
   gate: S
+  symbol: ">s"
+  mnemo: Deur is voorzien van het label 'HW'
 
-- name: puntstormdeur-links
+- name: puntdeur-hwk-links
   description: puntdeur, ook stormdeur, links
   deltay: 0
   top: 0
   bottom: 0
   gate: 1
+  symbol: "<h"
+  mnemo: Deur is voorzien van het label 'HWK'
 
-- name: puntstormdeur-rechts
+
+- name: puntdeur-hwk-rechts
   description: puntdeur, ook stormdeur, rechts
   deltay: 0
   top: 0
   bottom: 0
   gate: 1
+  symbol: ">h"
+  mnemo: Deur is voorzien van het label 'HWK'
+
 
 - name: draaideur-lb
-  description: enkele draaideur, links, scharnier boven
+  description: enkele draaideur, links, scharnier boven, aanslag onder
   deltay: 0
   top: 6
   bottom: 14
   gate: 1
+  symbol: ',\'
+  mnemo: De komma toont de aanslag, de backslash toont een half-open deur
 
 - name: draaideur-lo
-  description: enkele draaideur, links, scharnier onder
+  description: enkele draaideur, links, scharnier onder, aanslag boven
   deltay: 0
   top: 6
   bottom: 14
   gate: 1
+  symbol: "'/"
+  mnemo: De apostrophe toont de aanslag, de slash een half-open deur
 
 - name: draaideur-rb
-  description: enkele draaideur, rechts, scharnier boven
+  description: enkele draaideur, rechts, scharnier boven, aanslag onder
   deltay: 0
   top: 6
   bottom: 14
   gate: 1
+  symbol: "/,"
+  mnemo: De komma toont de aanslag, de slash een half-open deur
 
 - name: draaideur-ro
-  description: enkele draaideur, rechts, scharnier boven
+  description: enkele draaideur, rechts, scharnier onder, aanslag boven
   deltay: 0
   top: 6
   bottom: 14
   gate: 1
+  symbol: \'
+  mnemo: De apostrophe toont de aanslag, de backslash een half-open deur
 
 - name: hefdeur
   description: hefdeur
@@ -216,6 +283,7 @@
   top: 5
   bottom: 15
   gate: 1
+  symbol: "H"
 
 - name: hefdeur-hwk
   description: hefdeur
@@ -223,6 +291,15 @@
   top: 5
   bottom: 15
   gate: 1
+  symbol: "Hh"
+
+- name: hefdeur-hwk
+  description: hefdeur
+  deltay: 0
+  top: 5
+  bottom: 15
+  gate: 1
+  symbol: "Hs"
 
 - name: hangroldeur
   description: hangroldeur
@@ -230,6 +307,7 @@
   top: 0
   bottom: 15
   gate: 1
+  symbol: "?"
 
 - name: roldeur-boven
   description: roldeur boven
@@ -237,6 +315,8 @@
   top: 0
   bottom: 14
   gate: 1
+  symbol: "A"
+  mnemo: De letter A is een pijltje dat wijst de richting aan waarin de deur rolt
 
 - name: roldeur-boven-storm
   description: roldeur, storm, boven
@@ -244,6 +324,8 @@
   top: 0
   bottom: 14
   gate: S
+  symbol: "As"
+  mnemo: De letter A is een pijltje dat wijst de richting aan waarin de deur rolt
 
 - name: roldeur-boven-hwk
   description: roldeur, storm, boven
@@ -251,6 +333,8 @@
   top: 0
   bottom: 14
   gate: S
+  symbol: "Ah"
+  mnemo: De letter A is een pijltje dat wijst de richting aan waarin de deur rolt
 
 - name: roldeur-onder
   description: roldeur, onder
@@ -258,6 +342,8 @@
   top: 6
   bottom: 20
   gate: 1
+  symbol: "V"
+  mnemo: De letter V is een pijltje dat wijst de richting aan waarin de deur rolt
 
 - name: roldeur-onder-storm
   description: roldeur, storm, onder
@@ -265,6 +351,9 @@
   top: 6
   bottom: 20
   gate: S
+  symbol: "Vs"
+  mnemo: De letter V is een pijltje dat wijst de richting aan waarin de deur rolt
+
 
 - name: roldeur-onder-hwk
   description: roldeur, storm, onder
@@ -272,6 +361,9 @@
   top: 6
   bottom: 20
   gate: S
+  symbol: "Vh"
+  mnemo: De letter V is een pijltje datwijst de richting aan waarin de deur rolt
+
 
 - name: waaierdeur-links
   description: waaierdeur, links
@@ -279,6 +371,7 @@
   top: 4
   bottom: 16
   gate: 1
+  symbol: "<W"
 
 - name: waaierdeur-rechts
   description: waaierdeur, rechts
@@ -286,6 +379,7 @@
   top: 4
   bottom: 16
   gate: 1
+  symbol: "W>"
 
 - name: brug-vast
   description: Vaste brug over deur of kolk
@@ -293,6 +387,7 @@
   top: 4
   bottom: 16
   gate: false
+  symbol: "#"
 
 - name: brug-beweegbaar
   description: Beweegbare brug over deur of kolk
@@ -300,3 +395,5 @@
   top: 4
   bottom: 6
   gate: false
+  symbol: ":"
+...
