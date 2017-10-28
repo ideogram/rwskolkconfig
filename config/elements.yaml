@@ -293,14 +293,6 @@
   gate: 1
   symbol: "Hh"
 
-- name: hefdeur-hwk
-  description: hefdeur
-  deltay: 0
-  top: 5
-  bottom: 15
-  gate: 1
-  symbol: "Hs"
-
 - name: hangroldeur
   description: hangroldeur
   deltay: 0

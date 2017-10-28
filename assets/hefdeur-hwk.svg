@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" viewBox="0 0 120 480" height="480" data-type="hefdeur">
+    <title>hefdeur-hwk</title>
+    <path d="M0 168v144h120V168z" fill="#d9ebf7"/>
+    <path stroke-miterlimit="10" d="M120 168H0m0 144h120" fill="none" stroke="#9fceea" stroke-width="3"/>
+    <path stroke-width="3" stroke="#7d7d7d" fill="none" d="M78 312H42" stroke-miterlimit="10"/>
+    <path d="M78 336H42v-18h36z"/>
+    <path fill="#535353" d="M48 312h24l6 6H42l6-6z"/>
+    <path stroke-width="3" stroke="#7d7d7d" fill="none" d="M42 168h36" stroke-miterlimit="10"/>
+    <path d="M42 144h36v18H42z"/>
+    <path fill="#535353" d="M72 168H48l-6-6h36l-6 6z"/>
+    <path stroke-miterlimit="10" d="M53 169.5h14v141H53z" fill="#ffb612" stroke="#000"/>
+    <text y="420" x="60" font-size="36" font-family="sans-serif" text-anchor="middle"/>
+    <text font-weight="700" class="hw" font-size="26" x="59.996" y="420.004" font-family="sans-serif" text-anchor="middle" fill="#ca005d">
+        HWK
+    </text>
+    <path d="M60 170v140" fill="none" stroke="#ca005d" stroke-width="4"/>
+</svg>
