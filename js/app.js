@@ -10,16 +10,24 @@ const $diagram = $("#diagram");
 const $result = $("#result").find("svg");
 const $download = $("#download");
 const draggableOptions = { connectToSortable: "#diagram", helper: "clone", revert: "invalid" };
+const $options = $("#options");
 
 // Variables
 var elements = [];
 var countElementsRendered = 0;
+var networkDirection = "-->";
+var gateNumbering = "ABC";
+var chamberOrientation = "WO";
 
 (function ($) {
 
     // Initialisation
     var observer = new MutationObserver( elementRendered );
     $.fx.off = true;
+
+    // ... attach an event to our radio buttons and force an initial state
+    $options.find("input").on("click",optionChanged );
+    $("#dir-lr, #chamber-orient-wo, #gates-abc").prop("checked",true);
 
     // jQuery-UI interactions: allow for drag-and-drop and duplication of lock elements
     $diagram.sortable({ revert: true, receive: elementDropped, stop: diagramChanged });
@@ -211,15 +219,36 @@ var countElementsRendered = 0;
     function annotateGates(){
         var $diagramElements = $diagram.find(".element");
         var gateCount = 0;
+        var totalGates = 0;
+        var start, stop, inc;
 
-        for (i=0; i<$diagramElements.length; i++){
+        // First, find the total amount of gates
+        if (gateNumbering == "CBA") {
+            for (i = 0; i < $diagramElements.length; i++) {
+                f(i);
+                var $me = $diagramElements.eq(i);
+                var data = elements[$me.attr("data-ref")];
+                var gate = data['gate'];
+
+                if (gate !== false) {
+                    totalGates++;
+                }
+            }
+        }
+
+        for (i = 0; i < $diagramElements.length; i++) {
             var $me = $diagramElements.eq(i);
-            var data = elements[ $me.attr("data-ref") ];
+            var data = elements[$me.attr("data-ref")];
             var gate = data['gate'];
             var $svg = $me.find("svg");
 
-            if ( gate !== false ){
-                $svg.find("text").not(".hw").html( String.fromCharCode(gateCount+65) );
+            if (gate !== false) {
+
+                if (gateNumbering == "ABC") {
+                    $svg.find("text").not(".hw").html(String.fromCharCode(gateCount + 65));
+                } else {
+                    $svg.find("text").not(".hw").html(String.fromCharCode(totalGates - gateCount + 65 - 1));
+                }
                 gateCount++;
             }
         }
@@ -285,7 +314,6 @@ var countElementsRendered = 0;
 
     }
 
-
     // offer a string containing SVG as download
     function offerDownload(strDownload, fileName){
         var str_preface = '<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n';
@@ -306,6 +334,45 @@ var countElementsRendered = 0;
         var n = d.getTime();
         return n.toString(36); // Number to 36-base string.
     }
+
+    // Set the configuration strings options
+    function optionChanged(event, ui) {
+
+        var $me = $(this);
+        var varName = $me.attr("name");
+        var value = $me.val();
+
+        switch (varName) {
+            case "gates-direction":
+                gateNumbering = value;
+                diagramChanged();
+                break;
+
+            case "network-direction":
+                networkDirection = value;
+
+                break;
+
+            case "chamber-orient-direction":
+                chamberOrientation = value;
+                redrawCompassRose(value);
+                break;
+        }
+    }
+
+    // Swap representation of the compass rose alongside the #diagram
+    function redrawCompassRose(value){
+        if (value == "NZ"){
+            $("#compass-rose-left").css("background-image","url(images/compass-left-north.svg)");
+            $("#compass-rose-right").css("background-image","url(images/compass-right-south.svg)");
+        }
+
+        if (value == "WO"){
+            $("#compass-rose-left").css("background-image","url(images/compass-left-west.svg)");
+            $("#compass-rose-right").css("background-image","url(images/compass-right-east.svg)");
+        }
+    }
+
 
 })(jQuery);
 

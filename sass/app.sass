@@ -37,20 +37,20 @@ body
       box-shadow: 0px 0px 4px #222
       background-color: white
 
-#wind-cross-left
-  width: 100px
+#compass-rose-left
+  width: 150px
   float: left
-  height: 360px
+  height: 400px
   background:
-    image: url(../images/roos-links.svg)
+    image: url(../images/compass-left-west.svg)
     position: center
     repeat: no-repeat
     size: 100% auto
 
-#wind-cross-right
-  @extend #wind-cross-left
+#compass-rose-right
+  @extend #compass-rose-left
   background:
-    image: url(../images/roos-rechts.svg)
+    image: url(../images/compass-right-east.svg)
     position: center
 
 
@@ -58,7 +58,7 @@ body
   box-shadow: inset 0px 0px 45px 0px rgba(0,0,0,0.13)
   height: 360px
   float: left
-  width: calc(100% - 200px)
+  width: calc(100% - 300px)
 
   li
     position: relative
@@ -108,4 +108,74 @@ body
 svg
   pointer-events: none
 
+#options
+  list-style: none inside none
+  text-align: center
+
+  li
+    display: inline-block
+    margin-right: 50px
+
+  legend
+    margin-bottom: 0.5em
+
+#network-direction, #gates-direction, #chamber-orient-direction
+  input
+    display: none
+    &:checked + label
+      background-color: #DEECF8
+      border-color: #8CC3E7
+      opacity: 1
+
+
+  label
+    display: block
+    float: left
+    width: 64px
+    height: 32px
+    text-align: center
+    vertical-align: bottom
+    border: 1px solid silver
+    opacity: 0.6
+    background:
+      position: center
+      size: contain
+
+%label-left
+  border-radius: 8px
+  border-top-right-radius: 0px
+  border-bottom-right-radius: 0px
+
+%label-right
+  border-radius: 8px
+  border-top-left-radius: 0px
+  border-bottom-left-radius: 0px
+
+#label-dir-lr
+  background-image: url(../images/netwerk-L-2-R.svg)
+  @extend %label-left
+
+#label-dir-rl
+  background-image: url(../images/netwerk-R-2-L.svg)
+  @extend %label-right
+
+
+
+#label-gates-abc
+  background-image: url(../images/ABC.svg)
+  @extend %label-left
+
+#label-gates-cba
+  background-image: url(../images/CBA.svg)
+  @extend %label-right
+
+
+#label-chamber-orient-abc
+  background-image: url(../images/chamber-orientation-WO.svg)
+  @extend %label-left
+
+
+#label-chamber-orient-cba
+  background-image: url(../images/chamber-orientation-NZ.svg)
+  @extend %label-right
 

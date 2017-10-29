@@ -35,24 +35,24 @@ body {
       box-shadow: 0px 0px 4px #222;
       background-color: white; }
 
-#wind-cross-left, #wind-cross-right {
-  width: 100px;
+#compass-rose-left, #compass-rose-right {
+  width: 150px;
   float: left;
-  height: 360px;
-  background-image: url(../images/roos-links.svg);
+  height: 400px;
+  background-image: url(../images/compass-left-west.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% auto; }
 
-#wind-cross-right {
-  background-image: url(../images/roos-rechts.svg);
+#compass-rose-right {
+  background-image: url(../images/compass-right-east.svg);
   background-position: center; }
 
 #diagram {
   box-shadow: inset 0px 0px 45px 0px rgba(0, 0, 0, 0.13);
   height: 360px;
   float: left;
-  width: calc(100% - 200px); }
+  width: calc(100% - 300px); }
   #diagram li {
     position: relative; }
     #diagram li:hover {
@@ -96,5 +96,60 @@ body {
 
 svg {
   pointer-events: none; }
+
+#options {
+  list-style: none inside none;
+  text-align: center; }
+  #options li {
+    display: inline-block;
+    margin-right: 50px; }
+  #options legend {
+    margin-bottom: 0.5em; }
+
+#network-direction input, #gates-direction input, #chamber-orient-direction input {
+  display: none; }
+  #network-direction input:checked + label, #gates-direction input:checked + label, #chamber-orient-direction input:checked + label {
+    background-color: #DEECF8;
+    border-color: #8CC3E7;
+    opacity: 1; }
+#network-direction label, #gates-direction label, #chamber-orient-direction label {
+  display: block;
+  float: left;
+  width: 64px;
+  height: 32px;
+  text-align: center;
+  vertical-align: bottom;
+  border: 1px solid silver;
+  opacity: 0.6;
+  background-position: center;
+  background-size: contain; }
+
+#label-dir-lr, #label-gates-abc, #label-chamber-orient-abc {
+  border-radius: 8px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px; }
+
+#label-dir-rl, #label-gates-cba, #label-chamber-orient-cba {
+  border-radius: 8px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px; }
+
+#label-dir-lr {
+  background-image: url(../images/netwerk-L-2-R.svg); }
+
+#label-dir-rl {
+  background-image: url(../images/netwerk-R-2-L.svg); }
+
+#label-gates-abc {
+  background-image: url(../images/ABC.svg); }
+
+#label-gates-cba {
+  background-image: url(../images/CBA.svg); }
+
+#label-chamber-orient-abc {
+  background-image: url(../images/chamber-orientation-WO.svg); }
+
+#label-chamber-orient-cba {
+  background-image: url(../images/chamber-orientation-NZ.svg); }
 
 /*# sourceMappingURL=app.css.map */
