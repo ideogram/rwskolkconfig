@@ -21,6 +21,7 @@ var chamberOrientation = "WO";
 var $diagramElements;
 var element = [];
 var arr$SVG = [];
+var shifts = [];
 var L = 0;
 
 (function ($) {
@@ -133,13 +134,15 @@ var L = 0;
         // into a an array connected to every element in the #diagram
         element = [];
         arr$SVG = [];
+        shifts = [];
         $diagramElements = $diagram.find(".element");
         L = $diagramElements.length;
-        for (var i=0; i<L; i++){
-            var $me = $diagramElements.eq(i);
+
+        $diagramElements.each(function(i){
+            $me = $(this);
             element[i] = elementPalette[ $me.attr("data-ref") ];
             arr$SVG[i] = $me.find("svg");
-        }
+        });
 
         // With this information, we can do a series of manipulations:
         shiftElements();
@@ -153,6 +156,7 @@ var L = 0;
 
         // Add a button to erase the element from the #diagram again
         $btnRemove = $("<a></a>").appendTo($me).addClass("btn-remove");
+
         $btnRemove.on("click", function () {
             $(this).closest("li").remove();
             diagramChanged();
@@ -183,7 +187,7 @@ var L = 0;
                 viewbox[1] = -24*shift - 6;
                 viewbox[3] = 27*24;
                 $svg.attr("viewBox", viewbox.join(" "));
-                element[i]['shift'] = shift ;
+                shifts[i] = shift ;
 
                 shift +=  parseInt(deltay) ;
             }
@@ -206,7 +210,7 @@ var L = 0;
             var deltay  = element[i]['deltay'];
             var top     = element[i]['top'];
             var name    = element[i]['name'];
-            var shift   = element[i]['shift'];
+            var shift   = shifts[i];
 
             highest = Math.min(highest, top+shift);
         }
@@ -254,11 +258,7 @@ var L = 0;
                 }
                 gateCount++;
             }
-
-
-
         }
-
     }
 
     // Put all the labels of the gates on the same height
@@ -274,8 +274,7 @@ var L = 0;
         for (i=0; i<L; i++){
             var bridge  = element[i]['bridge'] == "true" ? 17 : 0;
             var bottom  = element[i]['bottom'];
-
-            shift   = element[i]['shift'];
+            shift   = shifts[i];
             lowest = Math.max( lowest, bottom + shift, bridge + shift );
         }
 
@@ -285,8 +284,7 @@ var L = 0;
 
             if ( gate !== undefined ) {
                 var $svg = arr$SVG[i];
-
-                shift = element[i]['shift'];
+                shift = shifts[i];
                 $svg.find("text").attr("y", (lowest - shift + 2) * 24);
                 $svg.find("text.hw").attr("y", (lowest - shift + 3.5) * 24);
             }
