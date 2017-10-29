@@ -49,17 +49,17 @@ var L = 0;
     // Iterate over the elements array and add the drawings to the #toolbar
     function addElementsToDOM(){
         $.each(elementPalette, function (key, val) {
-            var id = val.name
+            var id = val.name;
             var description = val.description;
 
             // Bridges may be draggable, but should not be allowed to end up in the #diagram
-            draggableOptionsElement = draggableOptions;
+            var draggableOptionsElement = draggableOptions;
             if ( val.name == "brug-vast" || val.name == "brug-beweegbaar" ){
                 delete draggableOptionsElement.connectToSortable;
             }
 
             var $li = $("<li class='element'></li>").appendTo($toolbar)
-                .attr( { "title": description, "data-ref": key,} )
+                .attr( { "title": description, "data-ref": key } )
                 .addClass( val.name  )
                 .disableSelection()
                 .draggable(draggableOptions)
@@ -85,6 +85,7 @@ var L = 0;
             var html = $svg.html();
             var w = 2 * parseFloat($svg.attr("width"));
             var viewbox = $svg.attr("viewBox");
+            var h = 0;
 
             // Remove the viewbox and wrap the element in a <g>-tag instead
             if (viewbox !== undefined) {
@@ -106,7 +107,7 @@ var L = 0;
         offerDownload($result[0].outerHTML, uniqueStringFromTime());
 
 
-    };
+    }
 
     // Scale the SVG-elements, so they take up less space
     function elementRendered(mutationRecords){
@@ -126,7 +127,7 @@ var L = 0;
     }
 
     // Update the #diagram after adding, removing or re-arranging elements
-    function diagramChanged(event, ui){
+    function diagramChanged(){
 
         // Store the element-information from the palette
         // into a an array connected to every element in the #diagram
@@ -134,7 +135,7 @@ var L = 0;
         arr$SVG = [];
         $diagramElements = $diagram.find(".element");
         L = $diagramElements.length;
-        for (i=0; i<L; i++){
+        for (var i=0; i<L; i++){
             var $me = $diagramElements.eq(i);
             element[i] = elementPalette[ $me.attr("data-ref") ];
             arr$SVG[i] = $me.find("svg");
@@ -148,7 +149,7 @@ var L = 0;
     }
 
     function elementDropped(event, ui) {
-        $me = $(ui.helper);
+        var $me = $(ui.helper);
 
         // Add a button to erase the element from the #diagram again
         $btnRemove = $("<a></a>").appendTo($me).addClass("btn-remove");
@@ -194,7 +195,6 @@ var L = 0;
 
     // Draw the elements in the diagram as close to the top of the #diagram as possible
     function moveDiagramUp(){
-        var gateCount = 0;
         var highest = 1000; // very few indeed
 
         // Put al the annotations on the same height
@@ -202,7 +202,7 @@ var L = 0;
         // ... Loop over the annotations twice.
 
         // ... ... First, find the lowest position
-        for (i=0; i<L; i++){
+        for (var i=0; i<L; i++){
             var deltay  = element[i]['deltay'];
             var top     = element[i]['top'];
             var name    = element[i]['name'];
@@ -229,19 +229,20 @@ var L = 0;
     function annotateGates(){
         var gateCount = 0;
         var totalGates = 0;
+        var gate = false;
 
         // First, find the total amount of gates
         for (i = 0; i < L; i++) {
-            var gate = element[i]['gate'];
+            gate = element[i]['gate'];
 
-            if (gate !== false) {
+            if (gate != false) {
                 totalGates++;
             }
         }
 
         // Fill the text element with the gate number (A, B, C, etc)
         for (i = 0; i < L; i++) {
-            var gate = element[i]['gate'];
+            gate = element[i]['gate'];
             var $svg = arr$SVG[i];
 
             if (gate !== false) {
@@ -262,8 +263,8 @@ var L = 0;
 
     // Put all the labels of the gates on the same height
     function alignAnnotations(){
-        var gateCount = 0;
         var lowest = -1000; //  minus infinity
+        var shift = 0;
 
         // Put al the annotations on the same height
 
@@ -273,7 +274,8 @@ var L = 0;
         for (i=0; i<L; i++){
             var bridge  = element[i]['bridge'] == "true" ? 17 : 0;
             var bottom  = element[i]['bottom'];
-            var shift   = element[i]['shift'];
+
+            shift   = element[i]['shift'];
             lowest = Math.max( lowest, bottom + shift, bridge + shift );
         }
 
@@ -283,7 +285,8 @@ var L = 0;
 
             if ( gate !== undefined ) {
                 var $svg = arr$SVG[i];
-                var shift = element[i]['shift'];
+
+                shift = element[i]['shift'];
                 $svg.find("text").attr("y", (lowest - shift + 2) * 24);
                 $svg.find("text.hw").attr("y", (lowest - shift + 3.5) * 24);
             }
@@ -335,7 +338,7 @@ var L = 0;
     }
 
     // Set the configuration strings options
-    function optionChanged(event, ui) {
+    function optionChanged() {
 
         var $me = $(this);
         var varName = $me.attr("name");
