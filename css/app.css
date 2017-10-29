@@ -52,7 +52,9 @@ body {
   box-shadow: inset 0px 0px 45px 0px rgba(0, 0, 0, 0.13);
   height: 360px;
   float: left;
-  width: calc(100% - 300px); }
+  width: calc(100% - 300px);
+  margin-top: 0;
+  padding-top: 0; }
   #diagram li {
     position: relative; }
     #diagram li:hover {

@@ -13,11 +13,15 @@ const draggableOptions = { connectToSortable: "#diagram", helper: "clone", rever
 const $options = $("#options");
 
 // Variables
-var elements = [];
+var elementPalette = [];
 var countElementsRendered = 0;
 var networkDirection = "-->";
 var gateNumbering = "ABC";
 var chamberOrientation = "WO";
+var $diagramElements;
+var element = [];
+var arr$SVG = [];
+var L = 0;
 
 (function ($) {
 
@@ -36,15 +40,15 @@ var chamberOrientation = "WO";
     // Load the YAML-configuration file containig names and properties of the lock-elements
     $.get(folderConfigs + "elements.yaml", null, loadElements);
 
-    // Loads all the separate elements into an array an
+    // Loads all the separate elements into an array and add them to the toolbar
     function loadElements(data){
-        elements = jsyaml.load(data);
+        elementPalette = jsyaml.load(data);
         addElementsToDOM();
     }
 
-    // Iterate over the elemets array and add the drawings to the #toolbar
+    // Iterate over the elements array and add the drawings to the #toolbar
     function addElementsToDOM(){
-        $.each(elements, function (key, val) {
+        $.each(elementPalette, function (key, val) {
             var id = val.name
             var description = val.description;
 
@@ -74,11 +78,9 @@ var chamberOrientation = "WO";
         // Fill the '#result'-SVG  with the lock-elements
         $result.html("");
         var x = 0;
-        var $diagramElements = $diagram.find(".element");
 
         for (var i = 0; i < $diagramElements.length; i++) {
             var $me = $diagramElements.eq(i);
-            var data = elements[$me.attr("data-ref")];
             var $svg = $me.find("svg");
             var html = $svg.html();
             var w = 2 * parseFloat($svg.attr("width"));
@@ -118,13 +120,27 @@ var chamberOrientation = "WO";
         $svg.removeAttr("height");
 
         countElementsRendered++;
-        if ( countElementsRendered == elements.length ) {
+        if ( countElementsRendered == elementPalette.length ) {
             observer.disconnect();
         }
     }
 
     // Update the #diagram after adding, removing or re-arranging elements
     function diagramChanged(event, ui){
+
+        // Store the element-information from the palette
+        // into a an array connected to every element in the #diagram
+        element = [];
+        arr$SVG = [];
+        $diagramElements = $diagram.find(".element");
+        L = $diagramElements.length;
+        for (i=0; i<L; i++){
+            var $me = $diagramElements.eq(i);
+            element[i] = elementPalette[ $me.attr("data-ref") ];
+            arr$SVG[i] = $me.find("svg");
+        }
+
+        // With this information, we can do a series of manipulations:
         shiftElements();
         moveDiagramUp();
         annotateGates();
@@ -138,6 +154,7 @@ var chamberOrientation = "WO";
         $btnRemove = $("<a></a>").appendTo($me).addClass("btn-remove");
         $btnRemove.on("click", function () {
             $(this).closest("li").remove();
+            diagramChanged();
         });
 
         // Allow a bridge to be dropped on the element.
@@ -150,66 +167,59 @@ var chamberOrientation = "WO";
 
     }
 
-    // Shift elements upward or downward if needed because of some special chamer-shapes
+    // Shift elements upward or downward if needed because of some special chamber-shapes
     // (Bajonet-kolk, komkolk, binnenfront-kolk)
     function shiftElements(){
-        var $diagramElements = $diagram.find(".element");
         var shift = 0;
 
-        for (i=0; i<$diagramElements.length; i++){
-            var $me = $diagramElements.eq(i);
-            var data = elements[ $me.attr("data-ref") ];
-            var deltay = data['deltay'];
-            var gate = data['gate'];
-            var $svg = $me.find("svg");
-            var type = $svg.attr("data-type");
-            var viewbox = $svg.attr("viewBox");
-            $me.css("height","auto");
+        for (var i=0; i<L; i++){
+            var deltay = element[i]['deltay'];
+            var $svg = arr$SVG[i];
+            var viewbox = arr$SVG[i].attr("viewBox");
 
             if (viewbox !== undefined ) {
                 viewbox = viewbox.split(" ");
-                viewbox[1] = shift*-24-4*24;
+                viewbox[1] = -24*shift - 6;
                 viewbox[3] = 27*24;
                 $svg.attr("viewBox", viewbox.join(" "));
-                $me.data("shift",shift);
-                shift += ( deltay*1.0 );
+                element[i]['shift'] = shift ;
+
+                shift +=  parseInt(deltay) ;
             }
         }
+
+
+
     }
 
     // Draw the elements in the diagram as close to the top of the #diagram as possible
     function moveDiagramUp(){
-        var $diagramElements = $diagram.find(".element");
         var gateCount = 0;
         var highest = 1000; // very few indeed
 
-
         // Put al the annotations on the same height
 
-        // Loop over the annotations twice.
+        // ... Loop over the annotations twice.
 
-        // First, find the lowest position
-        for (i=0; i<$diagramElements.length; i++){
-            var $me = $diagramElements.eq(i);
-            var data = elements[ $me.attr("data-ref") ];
-            var deltay  = data['deltay'];
-            var top  = data['top'];
-            var name    = data['name'];
-            var shift   = $me.data('shift');
+        // ... ... First, find the lowest position
+        for (i=0; i<L; i++){
+            var deltay  = element[i]['deltay'];
+            var top     = element[i]['top'];
+            var name    = element[i]['name'];
+            var shift   = element[i]['shift'];
 
             highest = Math.min(highest, top+shift);
         }
 
-        // Next, move all elemets up to the top
-        for (i=0; i<$diagramElements.length; i++) {
-            $me = $diagramElements.eq(i);
-            var gate    = data['gate'];
-            var $svg = $me.find("svg");
+        // ... ... Next, move all elements up to the top
+        for (i=0; i<L; i++) {
+            var gate    = element[i]['gate'];
+            var $svg    = arr$SVG[i];
             var viewbox = $svg.attr("viewBox");
 
             if (viewbox !== undefined ) {
                 viewbox = viewbox.split(" ");
-                viewbox[1] = viewbox[1]*1.0 + highest*24;
+                viewbox[1] = parseFloat( viewbox[1] ) + highest*24;
                 $svg.attr("viewBox", viewbox.join(" "));
             }
         }
@@ -217,30 +227,22 @@ var chamberOrientation = "WO";
 
     // Put a label under each gate (sluisdeur)
     function annotateGates(){
-        var $diagramElements = $diagram.find(".element");
         var gateCount = 0;
         var totalGates = 0;
-        var start, stop, inc;
 
         // First, find the total amount of gates
-        if (gateNumbering == "CBA") {
-            for (i = 0; i < $diagramElements.length; i++) {
-                f(i);
-                var $me = $diagramElements.eq(i);
-                var data = elements[$me.attr("data-ref")];
-                var gate = data['gate'];
+        for (i = 0; i < L; i++) {
+            var gate = element[i]['gate'];
 
-                if (gate !== false) {
-                    totalGates++;
-                }
+            if (gate !== false) {
+                totalGates++;
             }
         }
 
-        for (i = 0; i < $diagramElements.length; i++) {
-            var $me = $diagramElements.eq(i);
-            var data = elements[$me.attr("data-ref")];
-            var gate = data['gate'];
-            var $svg = $me.find("svg");
+        // Fill the text element with the gate number (A, B, C, etc)
+        for (i = 0; i < L; i++) {
+            var gate = element[i]['gate'];
+            var $svg = arr$SVG[i];
 
             if (gate !== false) {
 
@@ -251,44 +253,42 @@ var chamberOrientation = "WO";
                 }
                 gateCount++;
             }
+
+
+
         }
 
     }
 
     // Put all the labels of the gates on the same height
     function alignAnnotations(){
-        var $diagramElements = $diagram.find(".element");
         var gateCount = 0;
-        var lowest = -1000; // very few indeed
-
+        var lowest = -1000; //  minus infinity
 
         // Put al the annotations on the same height
 
-        // Loop over the annotations twice.
+        // ... Loop over the annotations twice.
 
-        // First, find the lowest position
-        for (i=0; i<$diagramElements.length; i++){
-            var $me = $diagramElements.eq(i);
-            var data = elements[ $me.attr("data-ref") ];
-
-            var bridge = $me.data('bridge') == "true" ? 17 : 0;
-
-            var bottom  = data['bottom'];
-
-            var shift   = $me.data('shift');
-
+        // ... ... First, find the lowest position
+        for (i=0; i<L; i++){
+            var bridge  = element[i]['bridge'] == "true" ? 17 : 0;
+            var bottom  = element[i]['bottom'];
+            var shift   = element[i]['shift'];
             lowest = Math.max( lowest, bottom + shift, bridge + shift );
         }
 
-        // Next, put annotations on this lowest point
-        for (i=0; i<$diagramElements.length; i++) {
-            var $me = $diagramElements.eq(i);
-            var gate    = data['gate'];
-            var $svg = $me.find("svg");
-            shift   = $me.data('shift');
-            $svg.find("text").attr("y",(lowest-shift+2)*24);
-            $svg.find("text.hw").attr("y",(lowest-shift+3.5)*24);
+        // ... ... Next, put annotations on this lowest point
+        for (i=0; i<L; i++) {
+            var gate    = element[i]['gate'];
+
+            if ( gate !== undefined ) {
+                var $svg = arr$SVG[i];
+                var shift = element[i]['shift'];
+                $svg.find("text").attr("y", (lowest - shift + 2) * 24);
+                $svg.find("text.hw").attr("y", (lowest - shift + 3.5) * 24);
+            }
         }
+
     }
 
     // Draw a bridge over the target element
@@ -311,7 +311,6 @@ var chamberOrientation = "WO";
         $target.data("bridge","true");
 
         alignAnnotations();
-
     }
 
     // offer a string containing SVG as download

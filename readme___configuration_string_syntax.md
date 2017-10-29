@@ -52,9 +52,8 @@ dat de deur aan de rechterzijde (de *zuid*zijde dus) geteld wordt als deur "A".
 De serie symbolen tekenen samen de sluisconfiguratie op een een wijze die zowel voor computers als mensen
 begrijpelijk is. De symbolen dienen gekozen te worden uit de tabel aan het einde van dit document.
 
-
 | symbol | name            | mnemo 
-| :---:    | ---             | --- 
+| ---    | ---             | --- 
 | `[SPACE]`  | gladde-kolk                    |                                                                                                                                         |
 | `.`        | stopstreep                     |                                                                                                                                         |
 | `[PIPE]`   | kolk-verbreed                  |                                                                                                                                         |
@@ -80,11 +79,12 @@ begrijpelijk is. De symbolen dienen gekozen te worden uit de tabel aan het einde
 | `>s`       | puntdeur-storm-rechts          | Deur is voorzien van het label 'HW'                                                                                                     |
 | `<h`       | puntdeur-hwk-links             | Deur is voorzien van het label 'HWK'                                                                                                    |
 | `>h`       | puntdeur-hwk-rechts            | Deur is voorzien van het label 'HWK'                                                                                                    |
-| `,/\`      | draaideur-lb                   | De komma toont de aanslag, de backslash toont een half-open deur                                                                        |
+| `,\`       | draaideur-lb                   | De komma toont de aanslag, de backslash toont een half-open deur                                                                        |
 | `'/`       | draaideur-lo                   | De apostrophe toont de aanslag, de slash een half-open deur                                                                             |
 | `/,`       | draaideur-rb                   | De komma toont de aanslag, de slash een half-open deur                                                                                  |
 | `\'`       | draaideur-ro                   | De apostrophe toont de aanslag, de backslash een half-open deur                                                                         |
 | `H`        | hefdeur                        |                                                                                                                                         |
+| `Hs`       | hefdeur-storm                  |                                                                                                                                         |
 | `Hh`       | hefdeur-hwk                    |                                                                                                                                         |
 | `?`        | hangroldeur                    |                                                                                                                                         |
 | `A`        | roldeur-boven                  | De letter A is een pijltje dat wijst de richting aan waarin de deur rolt                                                                |

@@ -24,7 +24,7 @@
 #   string, not used in the app, for documentation only
 #
 # Notes:
-#  - Puntdueren worden weergeven met een < of >
+#  - Puntdeuren worden weergeven met een < of >
 #  - Speciale puntdeuren krijgen een hoofdletter aan de 'binnenkant': <W, W>, <P, P> en <D D>
 #  - Deuren die worden gebruikt als stormdeuren krijgen een 's' als suffix: bv. <s, >s, Hs en in het diagram krijgen ze aanduiding "HW"
 #  - Deuren die worden gebruikt als hwk krijgen een 'h' als suffix: <h, >h, Hh en in het diagram krijgen ze aanduiding "HWK"
@@ -161,7 +161,7 @@
   top: 6
   bottom: 14
   gate: 1
-  symbol: ">"
+  symbol: "<"
 
 - name: puntdeur-rechts
   description: puntdeur rechts
