@@ -151,6 +151,7 @@ var L = 0;
         alignAnnotations();
     }
 
+    // Preparing an element for it's life inside the #diagram
     function elementDropped(event, ui) {
         var $me = $(ui.helper);
 
@@ -299,24 +300,37 @@ var L = 0;
     function drawBridge(event, ui) {
         // Determine the right DOM-elements
         var $target = $(event.target);
-        var $targetSVG = $target.find("svg");
+        var $svg = $target.find("svg");
         var $bridge = $(ui.helper);
         var $bridgeGroup = $bridge.find("g");
+        var i = $target.index();
 
         // Calculate the position
-        var pxTargetWidth = 2 * parseFloat($targetSVG.attr("width"));
+        var pxTargetWidth = 2 * parseFloat($svg.attr("width"));
         var pxBridgeWidth = 5 * 24; // 120;
         var pxCentre = (pxTargetWidth - pxBridgeWidth) / 2;
 
         // Change the DOM of the receiving element
-        $targetSVG.append($bridgeGroup);
+        $svg.append($bridgeGroup);
 
-        if (pxCentre != 0) {
-            $targetSVG.find(".bridge").attr("transform", "translate(" + pxCentre + ",0)");
+        // ... positioning the bridge nicely in the centre
+        if (pxCentre != 0 && element[i].name != 'stopstreep') {
+            $svg.find(".bridge").attr("transform", "translate(" + pxCentre + ",0)");
+        }
+
+        // ... make the 'stopstreep' wider if a bridge is dropped on it
+        f(element[i]);
+        if ( element[i].name == 'stopstreep'){
+            viewbox = $svg.attr('viewBox');
+            viewbox = viewbox.split(" ");
+            viewbox[0] = 0;
+            viewbox[2] = 120;
+            $svg.attr("viewBox", viewbox.join(" ")).attr("width",60);
+            $target.css("width",60);
         }
 
         // Change the element-data
-        element[ $target.index() ]['bridge'] = true;
+        element[ i ]['bridge'] = true;
 
         // Uodate drawing
         diagramChanged();
@@ -385,4 +399,6 @@ var L = 0;
 })(jQuery);
 
 var f = console.log.bind(console);
+
+
 
