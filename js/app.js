@@ -184,7 +184,7 @@ var L = 0;
 
             if (viewbox !== undefined ) {
                 viewbox = viewbox.split(" ");
-                viewbox[1] = -24*shift - 6;
+                viewbox[1] = -24*shift - 2;
                 viewbox[3] = 27*24;
                 $svg.attr("viewBox", viewbox.join(" "));
                 shifts[i] = shift ;
@@ -192,9 +192,6 @@ var L = 0;
                 shift +=  parseInt(deltay) ;
             }
         }
-
-
-
     }
 
     // Draw the elements in the diagram as close to the top of the #diagram as possible
@@ -208,9 +205,15 @@ var L = 0;
         // ... ... First, find the lowest position
         for (var i=0; i<L; i++){
             var deltay  = element[i]['deltay'];
-            var top     = element[i]['top'];
+            var top     = 0
             var name    = element[i]['name'];
             var shift   = shifts[i];
+
+            if ( element[i]['bridge']) {
+                top = Math.min(3,element[i]['top'])
+            } else {
+                top = element[i]['top'];
+            }
 
             highest = Math.min(highest, top+shift);
         }
@@ -272,7 +275,7 @@ var L = 0;
 
         // ... ... First, find the lowest position
         for (i=0; i<L; i++){
-            var bridge  = element[i]['bridge'] == "true" ? 17 : 0;
+            var bridge  = element[i]['bridge']  ? 17 : 0;
             var bottom  = element[i]['bottom'];
             shift   = shifts[i];
             lowest = Math.max( lowest, bottom + shift, bridge + shift );
@@ -294,24 +297,29 @@ var L = 0;
 
     // Draw a bridge over the target element
     function drawBridge(event, ui) {
+        // Determine the right DOM-elements
         var $target = $(event.target);
         var $targetSVG = $target.find("svg");
+        var $bridge = $(ui.helper);
+        var $bridgeGroup = $bridge.find("g");
+
+        // Calculate the position
         var pxTargetWidth = 2 * parseFloat($targetSVG.attr("width"));
         var pxBridgeWidth = 5 * 24; // 120;
         var pxCentre = (pxTargetWidth - pxBridgeWidth) / 2;
 
-        var $bridge = $(ui.helper);
-        var $bridgeGroup = $bridge.find("g");
-
+        // Change the DOM of the receiving element
         $targetSVG.append($bridgeGroup);
 
         if (pxCentre != 0) {
             $targetSVG.find(".bridge").attr("transform", "translate(" + pxCentre + ",0)");
         }
 
-        $target.data("bridge","true");
+        // Change the element-data
+        element[ $target.index() ]['bridge'] = true;
 
-        alignAnnotations();
+        // Uodate drawing
+        diagramChanged();
     }
 
     // offer a string containing SVG as download

@@ -54,7 +54,7 @@ body {
   float: left;
   width: calc(100% - 300px);
   margin-top: 0;
-  padding-top: 0; }
+  padding-top: 24px; }
   #diagram li {
     position: relative; }
     #diagram li:hover {
