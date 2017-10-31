@@ -85,6 +85,9 @@ body {
     background-image: url(../images/delete-forever-hover.svg);
     opacity: 1 !important; }
 
+#result {
+  display: none; }
+
 #download-wrapper {
   text-align: center; }
 
