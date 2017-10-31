@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>SluisDiagramTool</title>
   <link href="css/app.css" type="text/css" rel="stylesheet" >
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
 </head>
 <body>
@@ -11,7 +13,7 @@
   <ul id="toolbar"></ul>
 
   <ul id="options">
-    
+
     <li id="network-direction">
       <legend>Netwerk richting</legend>
       <input id="dir-lr" type="radio" value="-->" name="network-direction" checked>
@@ -21,7 +23,7 @@
       <label id="label-dir-rl" for="dir-rl"></label>
 
     </li>
-    
+
     <li id="gates-direction">
       <legend>Label de sluishoofden:</legend>
       <input id="gates-abc" type="radio" value="ABC" name="gates-direction" checked>
@@ -29,8 +31,8 @@
 
       <input id="gates-cba" type="radio" value="CBA" name="gates-direction">
       <label id="label-gates-cba" for="gates-cba"></label>
-    </li>    
-    
+    </li>
+
     <li id="chamber-orient-direction">
       <legend>Kolkoriëntatie</legend>
       <input id="chamber-orient-wo" type="radio" value="WO" name="chamber-orient-direction" checked>
@@ -49,11 +51,7 @@
     <button id="download">Download</button>
   </div>
 
-  <div id="result">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
-    </svg>
-  </div>
 
 <!--Javascript YAML-library for reading in the element-configuration: https://github.com/nodeca/js-yaml-->
 <script src="vendor/js-yaml.min.js"></script>
