@@ -113,13 +113,13 @@ svg {
   #options legend {
     margin-bottom: 0.5em; }
 
-#network-direction input, #gates-direction input, #chamber-orient-direction input {
+#network-direction input, #gates-direction input, #chamber-orientation input {
   display: none; }
-  #network-direction input:checked + label, #gates-direction input:checked + label, #chamber-orient-direction input:checked + label {
+  #network-direction input:checked + label, #gates-direction input:checked + label, #chamber-orientation input:checked + label {
     background-color: #DEECF8;
     border-color: #8CC3E7;
     opacity: 1; }
-#network-direction label, #gates-direction label, #chamber-orient-direction label {
+#network-direction label, #gates-direction label, #chamber-orientation label {
   display: block;
   float: left;
   width: 64px;
@@ -131,12 +131,12 @@ svg {
   background-position: center;
   background-size: contain; }
 
-#label-dir-lr, #label-gates-abc, #label-chamber-orient-abc {
+#label-dir-lr, #label-gates-abc, #label-chamber-orientation-wo {
   border-radius: 8px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px; }
 
-#label-dir-rl, #label-gates-cba, #label-chamber-orient-cba {
+#label-dir-rl, #label-gates-cba, #label-chamber-orientation-nz {
   border-radius: 8px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px; }
@@ -153,10 +153,10 @@ svg {
 #label-gates-cba {
   background-image: url(../images/CBA.svg); }
 
-#label-chamber-orient-abc {
+#label-chamber-orientation-wo {
   background-image: url(../images/chamber-orientation-WO.svg); }
 
-#label-chamber-orient-cba {
+#label-chamber-orientation-nz {
   background-image: url(../images/chamber-orientation-NZ.svg); }
 
 /*# sourceMappingURL=app.css.map */

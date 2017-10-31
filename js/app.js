@@ -11,19 +11,6 @@
  - Een methode om de volledige kolk als svg op te vragen (dit is nuttig voor het downloaden / exporteren bij ons).
  */
 
-(function ($) {
-
-    $.fn.showLinkLocation = function () {
-
-        this.filter("a").append(function () {
-            return " (" + this.href + ")";
-        });
-
-        return this;
-
-    };
-
-}(jQuery));
 
 
 const draggableOptions = {connectToSortable: "#diagram", helper: "clone", revert: "invalid"};
@@ -56,28 +43,13 @@ var diagramTool = {
     $toolbar: null,
     $diagram: null,
     folderAssets: null,
-    observer: null
+    observer: null,
+    $compassRoseLeft: null,
+    $compassRoseRight: null
 };
 
 setToolbar('#toolbar', "./assets/", "./catalogue/elements.yaml");
 setDiagram('#diagram');
-init();
-
-function init() {
-
-    // Pre-flight
-    if (diagramTool.$toolbar == null) {
-        console.error("No DOM-element assigned as toolbar yet. Call setToolbar(«selector») before calling init()");
-    }
-    if (diagramTool.$diagram == null) {
-        console.error("No DOM-element assigned as diagram yet. Call setDiagram(«selector») before calling init()");
-    }
-
-    // ... attach an event to our radio buttons and force an initial state
-    $options.find("input").on("click", optionChanged);
-    $("#dir-lr, #chamber-orient-wo, #gates-abc").prop("checked", true);
-
-}
 
 // Assign a DOM-element as container for our catalogue of DOM-elements
 function setToolbar(strSelector, folderAssets, fileCatalogue) {
@@ -96,10 +68,11 @@ function setToolbar(strSelector, folderAssets, fileCatalogue) {
 }
 
 function setDiagram(strSelector) {
-    diagramTool.$diagram = $(strSelector);
+    var d = diagramTool;
+    d.$diagram = $(strSelector);
 
     // jQuery-UI interactions: allow for drag-and-drop and duplication of lock elements
-    diagramTool.$diagram.sortable({
+    d.$diagram.sortable({
         revert: true,
         receive: elementDropped,
         stop: diagramChanged,
@@ -107,17 +80,46 @@ function setDiagram(strSelector) {
     });
 
     // Create some extra HTML
+    // ... #result: invisible div containing the SVG before it gets downloaded
+
     var $resultWrapper =
         $('<div id="result"></div>')
-            .insertAfter(diagramTool.$diagram);
+            .insertAfter(d.$diagram);
 
-    diagramTool.$result = $('<svg></svg>')
+    d.$result = $('<svg></svg>')
         .appendTo($resultWrapper)
         .attr({
             "xmlns": "http://www.w3.org/2000/svg",
             "xmlns:xlink": "http://www.w3.org/1999/xlink"
         });
+
+    // ... #diagram-wrapper: contains the diagram, compass rose and options
+    d.$diagram.wrap("<div id='diagram-wrapper' />");
+    d.$diagramWrapper = d.$diagram.find("#diagram-wrapper");
+
+    // ... #options: contains a series of options that can be set on the diagram
+    d.$options =
+        $("<ul id='options' />")
+            .prependTo("#diagram-wrapper");
+
+    var strOptions = [
+        'chamber-orientation','gates-direction', 'network-direction'
+    ];
+
+    for(var i=0; i<strOptions.length; i++){
+
+        $.get( "partials/option-"+strOptions[i]+".partial.html", function( data ) {
+            $(data).appendTo( d.$options )
+                .find("input").on("click", optionChanged);
+        });
+    }
+
+    // ... compas-rose
+    d.$compassRoseLeft = $('<div id="compass-rose-left"></div>').insertBefore(d.$diagram);
+    d.$compassRoseRight = $('<div id="compass-rose-right"></div>').insertAfter(d.$diagram);
 }
+
+
 
 
 // Make the SVG from the #diagram available as a download.
@@ -151,14 +153,8 @@ function downloadSVG() {
     $result.attr("height", 2 * 324);
 
     // Offer the download
-
-    f(diagramTool.$result[0].outerHTML );
-
     offerDownload( diagramTool.$result[0].outerHTML, uniqueStringFromTime() );
-
-
 }
-
 
 // Loads all the separate elements into an array and add them to the toolbar
 function loadElements(data) {
@@ -459,7 +455,7 @@ function optionChanged() {
 
             break;
 
-        case "chamber-orient-direction":
+        case "chamber-orientation":
             chamberOrientation = value;
             redrawCompassRose(value);
             break;
@@ -469,13 +465,13 @@ function optionChanged() {
 // Swap representation of the compass rose alongside the #diagram
 function redrawCompassRose(value) {
     if (value == "NZ") {
-        $("#compass-rose-left").css("background-image", "url(images/compass-left-north.svg)");
-        $("#compass-rose-right").css("background-image", "url(images/compass-right-south.svg)");
+        diagramTool.$compassRoseLeft.css("background-image", "url(images/compass-left-north.svg)");
+        diagramTool.$compassRoseRight.css("#compass-rose-right").css("background-image", "url(images/compass-right-south.svg)");
     }
 
     if (value == "WO") {
-        $("#compass-rose-left").css("background-image", "url(images/compass-left-west.svg)");
-        $("#compass-rose-right").css("background-image", "url(images/compass-right-east.svg)");
+        diagramTool.$compassRoseLeft.css("background-image", "url(images/compass-left-west.svg)");
+        diagramTool.$compassRoseRight.css("background-image", "url(images/compass-right-east.svg)");
     }
 }
 

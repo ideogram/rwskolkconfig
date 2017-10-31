@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="pandoc.css" type="text/css" />
+</head>
+<body>
+<h1 id="kolk-configuratiestring-syntax">Kolk configuratiestring syntax</h1>
+<h2 id="syntax">Syntax</h2>
+<p>Een kolkconfiguratiestring voldoet aan de volgende syntax</p>
+<pre><code> &quot;(&quot;,[&#39;0&#39;-&#39;9&#39;]{4,5},&quot;N&quot;|&quot;O&quot;|&quot;Z&quot;|&quot;W&quot;,&quot;--&gt;&quot;|&quot;&lt;--&quot;,&quot;)&quot;,symbol+</code></pre>
+<p>waarbij voor <code>symbol</code> een tekencombinatie gebruikt wordt uit de tabel, zie <strong>Symbolen</strong></p>
+<p>Bijvoorbeeld:</p>
+<pre><code>( 31415 W --&gt; )&lt;.&gt;.    .&lt;.&gt;.    .&lt;.&gt;</code></pre>
+<p>De configuratiestring bestaat uit twee delen: een deel tussen haakjes aan het begin en een reeks symbolen aan het einde. De symbolen staan voor kolk-elementen, in de JavaScript-code aangeduid als <em><strong>elements</strong></em></p>
+<p>In het gedeelte tussen haakjes staat achtereenvolgens:</p>
+<ul>
+<li><p>de kolk-id, bestaande uit 4 of 5 cijfers</p></li>
+<li><p>één letter die de windstreek aangeeft waar begonnen wordt met het tellen van de deuren. Zie '<strong>Windstreek</strong>'</p></li>
+<li><p>een 'pijl' die aangeeft of de netwerkrichting binnen de configuratiestring van links naar rechts of van recht naar links loopt. De netwerkrichting heeft geen invloed op de weergave van het diagram.</p></li>
+</ul>
+<p>Spaties in de het gedeelte tussen de haakjes worden genegeerd en kunnen naar believen worden toegevoegd om de leesbaarheid te verhogen.</p>
+<h2 id="windstreek">Windstreek</h2>
+<p>De kolk wordt altijd horizontaal getekend en altijd van west naar oost <em>of</em> van noord naar zuid. Dit geldt voor zowel de configuratiestring als het uiteindelijke diagram. De linkerkant van het diagram komt dus <em>altijd</em> overeen met ofwel de westzijde van de kolk ofwel de noordzijde van de kolk. De linkerkant wordt in het uiteindelijk diagram altijd voorzien van de letter &quot;N&quot; <em>of</em> &quot;W&quot;. Evenzo wordt de rechterzijde altijd voorzien van de letter &quot;Z&quot; <em>of</em> &quot;O&quot;.</p>
+<p>De windstreek-letter geeft dus aan of de kolk noord→zuid of west→oost getekend word. Zowel de letter &quot;W&quot; als de letter &quot;O&quot; zorgen er dus voor dat de kolk west→oost getekend word! En, zowel de letter &quot;N&quot; als de letter &quot;Z&quot; zorgen ervoor dat de kolk noord→zuid getekend word.</p>
+<p>De windsteek-letter geeft ook aan aan welke zijde van de kolk begonnen dient te worden met het tellen van de deuren. Als hier dus een letter &quot;Z&quot; staat, weten we dat de kolk noord→zuid getekend wordt, maar dat de deur aan de rechterzijde (de <em>zuid</em>zijde dus) geteld wordt als deur &quot;A&quot;.</p>
+<h2 id="symbolen">Symbolen</h2>
+<p>De serie symbolen tekenen samen de sluisconfiguratie op een een wijze die zowel voor computers als mensen begrijpelijk is. De symbolen dienen gekozen te worden uit de eerste kolom van de volgende tabel</p>
+<table style="width:19%;">
+<colgroup>
+<col width="8%" />
+<col width="5%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">symbol</th>
+<th>name</th>
+<th>mnemo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><code>[SPACE]</code></td>
+<td>gladde-kolk</td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="center"><code>.</code></td>
+<td>stopstreep</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td align="center"><code>[PIPE]</code></td>
+<td>kolk-verbreed</td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="center"><code>b</code></td>
+<td>kamerkolk-kop-b</td>
+<td>Overgang van verbrede kolk (links) naar smalle kolk (rechts-onder). De vorm van dit element lijkt op de onderkastletter 'b'</td>
+</tr>
+<tr class="odd">
+<td align="center"><code>d</code></td>
+<td>kamerkolk-kop-d</td>
+<td>Overgang van smalle kolk (links-onder) naar verbrede kolk aan de rechterzijde. De vorm van dit element lijkt op de kleine letter 'd'</td>
+</tr>
+<tr class="even">
+<td align="center"><code>p</code></td>
+<td>kamerkolk-kop-p</td>
+<td>Overgang van verbrede kolk (links) naar smalle kolk (rechts-boven). De vorm van dit element lijkt op de onderkastletter 'p'</td>
+</tr>
+<tr class="odd">
+<td align="center"><code>q</code></td>
+<td>kamerkolk-kop-q</td>
+<td>Overgang van smalle kolk (links-boven) naar verbrede kolk aan de rechterzijde. De vorm van dit element lijkt op de onderkastletter 'q'</td>
+</tr>
+<tr class="even">
+<td align="center"><code>6</code></td>
+<td>kamerkolk-kop-6-rond</td>
+<td>Overgang van verbrede kolk (links) naar smalle kolk (rechts-onder). De vorm van dit element lijkt op het cijfer '6'</td>
+</tr>
+<tr class="odd">
+<td align="center"><code>j</code></td>
+<td>kamerkolk-kop-j-rond</td>
+<td>Overgang van smalle kolk (links-onder) naar verbrede kolk aan de rechterzijde. De vorm van dit element lijkt op de letter 'j'</td>
+</tr>
+<tr class="even">
+<td align="center"><code>r</code></td>
+<td>kamerkolk-kop-r-rond</td>
+<td>Overgang van verbrede kolk (links) naar smalle kolk (rechts-boven). De vorm van dit element lijkt op de de letter 'r'</td>
+</tr>
+<tr class="odd">
+<td align="center"><code>9</code></td>
+<td>kamerkolk-kop-9-rond</td>
+<td>Overgang van smalle kolk (links-boven) naar verbrede kolk aan de rechterzijde. De vorm van dit element lijkt op het cijfer '9'</td>
+</tr>
+<tr class="even">
+<td align="center"><code>[</code></td>
+<td>binnenfrontkolk-kop-links</td>
+<td>Overgang van smalle kolk (links) naar verbrede kolk (rechts) met rechthoeking front</td>
+</tr>
+<tr class="odd">
+<td align="center"><code>]</code></td>
+<td>binnenfrontkolk-kop-rechts</td>
+<td>Overgang van verbrede kolk (links) naar smalle kolk (rechts) met rechthoeking front</td>
+</tr>
+<tr class="even">
+<td align="center"><code>{</code></td>
+<td>komkolk-kop-links</td>
+<td>Overgang van smalle kolk (links) naar verbrede kolk (rechts) met rond front</td>
+</tr>
+<tr class="odd">
+<td align="center"><code>}</code></td>
+<td>komkolk-kop-rechts</td>
+<td>Overgang van verbrede kolk (links) naar smalle kolk (rechts) met rond front</td>
+</tr>
+<tr class="even">
+<td align="center"><code>&lt;</code></td>
+<td>puntdeur-links</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td align="center"><code>&gt;</code></td>
+<td>puntdeur-rechts</td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="center"><code>&lt;P</code></td>
+<td>puntdeur-pin-links</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td align="center"><code>P&gt;</code></td>
+<td>puntdeur-pin-rechts</td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="center"><code>&lt;D</code></td>
+<td>puntdeur-dubbelk-links</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td align="center"><code>D&gt;</code></td>
+<td>puntdeur-dubbelk-rechts</td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="center"><code>&lt;s</code></td>
+<td>puntdeur-storm-links</td>
+<td>Deur is voorzien van het label 'HW'</td>
+</tr>
+<tr class="odd">
+<td align="center"><code>&gt;s</code></td>
+<td>puntdeur-storm-rechts</td>
+<td>Deur is voorzien van het label 'HW'</td>
+</tr>
+<tr class="even">
+<td align="center"><code>&lt;h</code></td>
+<td>puntdeur-hwk-links</td>
+<td>Deur is voorzien van het label 'HWK'</td>
+</tr>
+<tr class="odd">
+<td align="center"><code>&gt;h</code></td>
+<td>puntdeur-hwk-rechts</td>
+<td>Deur is voorzien van het label 'HWK'</td>
+</tr>
+<tr class="even">
+<td align="center"><code>,\</code></td>
+<td>draaideur-lb</td>
+<td>De komma toont de aanslag, de backslash toont een half-open deur</td>
+</tr>
+<tr class="odd">
+<td align="center"><code>'/</code></td>
+<td>draaideur-lo</td>
+<td>De apostrophe toont de aanslag, de slash een half-open deur</td>
+</tr>
+<tr class="even">
+<td align="center"><code>/,</code></td>
+<td>draaideur-rb</td>
+<td>De komma toont de aanslag, de slash een half-open deur</td>
+</tr>
+<tr class="odd">
+<td align="center"><code>\'</code></td>
+<td>draaideur-ro</td>
+<td>De apostrophe toont de aanslag, de backslash een half-open deur</td>
+</tr>
+<tr class="even">
+<td align="center"><code>H</code></td>
+<td>hefdeur</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td align="center"><code>Hs</code></td>
+<td>hefdeur-storm</td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="center"><code>Hh</code></td>
+<td>hefdeur-hwk</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td align="center"><code>?</code></td>
+<td>hangroldeur</td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="center"><code>A</code></td>
+<td>roldeur-boven</td>
+<td>De letter A is een pijltje dat wijst de richting aan waarin de deur rolt</td>
+</tr>
+<tr class="odd">
+<td align="center"><code>As</code></td>
+<td>roldeur-boven-storm</td>
+<td>De letter A is een pijltje dat wijst de richting aan waarin de deur rolt</td>
+</tr>
+<tr class="even">
+<td align="center"><code>Ah</code></td>
+<td>roldeur-boven-hwk</td>
+<td>De letter A is een pijltje dat wijst de richting aan waarin de deur rolt</td>
+</tr>
+<tr class="odd">
+<td align="center"><code>V</code></td>
+<td>roldeur-onder</td>
+<td>De letter V is een pijltje dat wijst de richting aan waarin de deur rolt</td>
+</tr>
+<tr class="even">
+<td align="center"><code>Vs</code></td>
+<td>roldeur-onder-storm</td>
+<td>De letter V is een pijltje dat wijst de richting aan waarin de deur rolt</td>
+</tr>
+<tr class="odd">
+<td align="center"><code>Vh</code></td>
+<td>roldeur-onder-hwk</td>
+<td>De letter V is een pijltje datwijst de richting aan waarin de deur rolt</td>
+</tr>
+<tr class="even">
+<td align="center"><code>&lt;W</code></td>
+<td>waaierdeur-links</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td align="center"><code>W&gt;</code></td>
+<td>waaierdeur-rechts</td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="center"><code>#</code></td>
+<td>brug-vast</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td align="center"><code>:</code></td>
+<td>brug-beweegbaar</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
