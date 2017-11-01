@@ -35,8 +35,9 @@
         arr$SVG : [],
         shifts : [],
         L : 0,
+        strConfig: "",
 
-        // Assign a DOM-element as container for our catalogue of DOM-elements
+        // Assign a DOM-element as container for the catalogue of DOM-elements
         setToolbar: function (strSelector, folderAssets, fileCatalogue) {
 
             libConfig.$toolbar = $(strSelector);
@@ -53,6 +54,7 @@
             libConfig.$toolbar.find("li").disableSelection();
         },
 
+        // Assign a DOM-element as container for the diagram.
         setDiagram: function(strSelector) {
             var l = libConfig;
             l.$diagram = $(strSelector);
@@ -107,6 +109,29 @@
             l.$compassRoseRight = $('<div id="compass-rose-right"></div>').insertAfter(l.$diagram);
         },
 
+        // Re-build and return the configuration string
+        getConfigString: function () {
+            var l = libConfig;
+
+            l.strConfig = "";
+
+            l.strConfig = [
+                "(",
+                "12345",
+                l.chamberOrientation,
+                l.gateNumbering,
+                l.networkDirection,
+                ")"
+            ].join(" ");
+
+
+            for (var i = 0; i < l.L; i++) {
+                l.strConfig += l.element[i]['symbol'];
+            }
+            return l.strConfig;
+
+        },
+
         // Make the SVG from the #diagram available as a download.
         downloadSVG: function(strFileName) {
             var l = libConfig;
@@ -142,7 +167,7 @@
             libConfig.offerDownload(l.$result[0].outerHTML, strFileName );
         },
 
-        // Iterate over the elements array and add the drawings to the #toolbar
+        // Iterate over the elements array and add the drawings to the toolbar
         addElementsToDOM: function() {
             var l = libConfig;
             $.each(l.elementCatalogue, function (key, val) {
@@ -451,7 +476,7 @@
             }
         },
 
-        // Swap representation of the compass rose alongside the #diagram
+        // Swap representation of the compass rose alongside the diagram
         redrawCompassRose: function(value) {
             var l = libConfig;
 
@@ -475,6 +500,15 @@ libConfig.setDiagram('#diagram');
 
 $("#download").on("click",function(){
   libConfig.downloadSVG(uniqueStringFromTime());
+});
+
+$("#get-config-string").on("click",function(){
+    str = libConfig.getConfigString();
+
+    $("#config-string")
+        .val(str)
+        .attr('style', "width: " + (str.length)*0.6 + "em" );
+
 });
 
 

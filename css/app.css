@@ -162,4 +162,17 @@ svg {
 #label-chamber-orientation-nz {
   background-image: url(../images/chamber-orientation-NZ.svg); }
 
+#debug {
+  list-style-type: none; }
+  #debug li {
+    display: inline-block; }
+  #debug label {
+    display: block;
+    font-size: 10px; }
+  #debug input {
+    font-family: Lucida Console, Lucida Sans Typewriter, monaco, Bitstream Vera Sans Mono, monospace;
+    font-size: 14px;
+    color: black;
+    font-weight: bold; }
+
 /*# sourceMappingURL=app.css.map */
