@@ -1,5 +1,7 @@
 <svg height="480" viewBox="24 0 72 480" width="72" xmlns="http://www.w3.org/2000/svg">
-    <title>/stopstreep</title>
+    <title>
+        stopstreep
+    </title>
     <path d="M68.49 139.5H51.51l1.32 14.2h14.34l1.32-14.2" fill="#d52b1e" style="isolation:isolate"/>
     <path d="M67.17 153.7H52.83l1.04 11.3h12.25l1.05-11.3" fill="#fff4dc" style="isolation:isolate"/>
     <path d="M66.13 165H53.87l.72 7.7h10.83l.71-7.7" fill="#d52b1e" style="isolation:isolate"/>

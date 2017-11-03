@@ -1,5 +1,7 @@
 <svg height="480" viewBox="0 0 120 480" width="120" xmlns="http://www.w3.org/2000/svg">
-    <title>/waaierdeur-rechts-hwk</title>
+    <title>
+        waaierdeur-rechts-hwk
+    </title>
     <path d="M95.64 312.4c0 39.8-32.77 72-73.2 72v-72zM22.4 314h-6.1v72h6.1zm0-218h-6.1v72h6.1zm73.24 71.9c0-39.8-32.75-72.05-73.2-72.05v72.05zm24.36.1H0v144h120z" fill="#d9ebf7"/>
     <path color="#000" d="M31.95 169.1l14.33 71-14.27 71.1" fill="none" overflow="visible" stroke="#ca005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" style="isolation:auto;mix-blend-mode:normal"/>
     <path d="M92.22 310.3c0-32.7-23.49-59.9-54.51-65.7" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="7"/>

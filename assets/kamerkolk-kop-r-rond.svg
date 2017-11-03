@@ -1,5 +1,7 @@
 <svg height="480" viewBox="0 0 72 480" width="72" xmlns="http://www.w3.org/2000/svg">
-    <title>/kamerkolk-kop-r-rond</title>
+    <title>
+        kamerkolk-kop-r-rond
+    </title>
     <path d="M72 264V120H0v240h24c13.3 0 24-10.7 24-24v-72h24z" fill="#d9ebf7"/>
     <path d="M0 360h24c13.3 0 24-10.7 24-24v-72h24m0-144H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
 </svg>

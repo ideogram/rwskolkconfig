@@ -1,5 +1,7 @@
 <svg height="480" viewBox="0 0 120 480" width="120" xmlns="http://www.w3.org/2000/svg">
-    <title>/roldeur-boven-hwk</title>
+    <title>
+        roldeur-boven-hwk
+    </title>
     <path d="M48 6v162H0v144h48v12h24v-12h48V168H72V6z" fill="#d9ebf7"/>
     <path d="M36 168H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
     <path d="M84 168H72V6H48v162H36" fill="none" stroke="#7d7d7d" stroke-miterlimit="10" stroke-width="3"/>

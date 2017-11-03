@@ -1,5 +1,7 @@
 <svg height="480" viewBox="0 0 144 480" width="144" xmlns="http://www.w3.org/2000/svg">
-    <title>/puntdeur-pin-links</title>
+    <title>
+        puntdeur-pin-links
+    </title>
     <path d="M0 168h144v144H0z" fill="#d9ebf7"/>
     <path d="M24 312H0m0-144h24m120 144h-24m0-144h24" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
     <path d="M24 312h96v12H24z" fill="#d9ebf7"/>

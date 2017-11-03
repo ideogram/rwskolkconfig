@@ -4,7 +4,9 @@
             <circle cx="7.5" cy="7.5" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
         </symbol>
     </defs>
-    <title>/waaierdeur-links</title>
+    <title>
+        waaierdeur-links
+    </title>
     <path d="M24.36 312.4c0 39.8 32.77 72 73.2 72v-72zM97.6 314h6.1v72h-6.1zm0-218h6.1v72h-6.1zm-73.24 71.9c0-39.8 32.75-72.05 73.2-72.05v72.05zM0 168h120v144H0z" fill="#d9ebf7"/>
     <path d="M27.78 310.3c0-32.7 23.49-59.9 54.51-65.7" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="7"/>
     <path d="M96.766 386.096c-40.847 0-73.96-33.112-73.96-73.959" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-width="3.082"/>
