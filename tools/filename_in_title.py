@@ -15,10 +15,10 @@ for file in glob.glob("../assets/*.svg"):
     title = dom.getElementsByTagName("title")[0]
 
     filename = os.path.splitext(file)[0]
-    filename = filename.replace("../assets","")
+    filename = filename.replace("../assets/","")
 
     title.firstChild.replaceWholeText(filename)
 
-    file_handle = open("../assets2/"+file ,"w+")
+    file_handle = open("../assets/"+file ,"w+")
     dom.documentElement.writexml(file_handle)
     file_handle.close()

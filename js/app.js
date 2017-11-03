@@ -8,9 +8,8 @@
 
 // ... other
     libConfig = {
-        networkDirection : "-->",
+        networkDirection : "N",
         gateNumbering : "ABC",
-        chamberOrientation : "WO",
         draggableOptions : {connectToSortable: null, helper: "clone", revert: "invalid"},
         diagramTool: {},
         $toolbar: null,
@@ -84,7 +83,7 @@
                     .prependTo("#diagram-wrapper");
 
             var strOptions = [
-                'chamber-orientation', 'gates-direction', 'network-direction'
+                 'network-direction', 'gates-names-direction',
             ];
 
             for (var i = 0; i < strOptions.length; i++) {
@@ -109,9 +108,8 @@
             l.strConfig = [
                 "(",
                 "12345",
-                l.chamberOrientation,
-                l.gateNumbering,
                 l.networkDirection,
+                l.gateNumbering,
                 ")"
             ].join(" ");
 
@@ -459,29 +457,54 @@
 
                 case "network-direction":
                     l.networkDirection = value;
-                    break;
-
-                case "chamber-orientation":
-                    l.chamberOrientation = value;
-                    libConfig.redrawCompassRose(value);
+                    libConfig.drawCompassRose(value);
+                    libConfig.drawNetworkArrow(value);
                     break;
             }
         },
 
-        // Swap representation of the compass rose alongside the diagram
-        redrawCompassRose: function(value) {
+        // Draw representation of the compass rose alongside the diagram
+        drawCompassRose: function(value) {
             var l = libConfig;
 
-            if (value == "NZ") {
-                l.$compassRoseLeft.css("background-image", "url(images/compass-left-north.svg)");
-                l.$compassRoseRight.css("background-image", "url(images/compass-right-south.svg)");
-            }
+            switch (value){
+                case "N":
+                case "Z":
 
-            if (value == "WO") {
-                l.$compassRoseLeft.css("background-image", "url(images/compass-left-west.svg)");
-                l.$compassRoseRight.css("background-image", "url(images/compass-right-east.svg)");
+                    l.$compassRoseLeft.css("background-image", "url(images/compass-left-north.svg)");
+                    l.$compassRoseRight.css("background-image", "url(images/compass-right-south.svg)");
+
+                    break;
+                case "O":
+                case "W":
+                    l.$compassRoseLeft.css("background-image", "url(images/compass-left-west.svg)");
+                    l.$compassRoseRight.css("background-image", "url(images/compass-right-east.svg)");
+
+                break;
             }
-        }
+        },
+
+        // Draw network-arrow on top of the diagram
+        drawNetworkArrow: function(value) {
+            var l = libConfig;
+
+            switch (value){
+                case "N":
+                case "W":
+
+                    l.$diagram.css("background-image", "url(images/network-arrow-right.svg)");
+                    l.$diagram.css("background-image", "url(images/network-arrow-right.svg)");
+
+                    break;
+                case "O":
+                case "Z":
+                    l.$diagram.css("background-image", "url(images/network-arrow-left.svg)");
+                    l.$diagram.css("background-image", "url(images/network-arrow-left.svg)");
+
+                    break;
+            }
+        },
+
 
     }
 })(window);

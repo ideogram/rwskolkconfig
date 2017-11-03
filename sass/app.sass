@@ -37,17 +37,12 @@ body
       box-shadow: 0px 0px 4px #222
       background-color: white
 
-.ui-sortable-placeholder
-  outline: 3px solid deeppink !important
-  border: 3px solid deepskyblue !important
-  background-color: yellow !important
-
 #compass-rose-left
   width: 150px
   float: left
   height: 400px
   background:
-    image: url(../images/compass-left-west.svg)
+    image: url(../images/compass-left-north.svg)
     position: center
     repeat: no-repeat
     size: 100% auto
@@ -55,7 +50,7 @@ body
 #compass-rose-right
   @extend #compass-rose-left
   background:
-    image: url(../images/compass-right-east.svg)
+    image: url(../images/compass-right-south.svg)
     position: center
 
 
@@ -65,6 +60,9 @@ body
   float: left
   width: calc(100% - 300px)
   //background-image: url(../images/12x12px_grid.png)
+  background-image: url(../images/network-arrow-right.svg)
+  background-repeat: no-repeat
+  background-position: center 10px
   margin-top: 0
   padding-top: 24px
 
@@ -127,7 +125,7 @@ svg
   legend
     margin-bottom: 0.5em
 
-#network-direction, #gates-direction, #chamber-orientation
+#network-direction, #gates-direction
   input
     display: none
     &:checked + label
@@ -149,24 +147,40 @@ svg
       position: center
       size: contain
 
+#network-direction
+  label
+    width: 72px
+    height: 72px
+
 %label-left
   border-radius: 8px
   border-top-right-radius: 0px
   border-bottom-right-radius: 0px
+
+%label-mid
+  border-radius: 0px
+
 
 %label-right
   border-radius: 8px
   border-top-left-radius: 0px
   border-bottom-left-radius: 0px
 
-#label-dir-lr
-  background-image: url(../images/netwerk-L-2-R.svg)
+#label-dir-n
+  background-image: url(../images/network-dir-n.svg)
   @extend %label-left
 
-#label-dir-rl
-  background-image: url(../images/netwerk-R-2-L.svg)
-  @extend %label-right
+#label-dir-o
+  background-image:  url(../images/network-dir-o.svg)
+  @extend %label-mid
 
+#label-dir-z
+  background-image:  url(../images/network-dir-z.svg)
+  @extend %label-mid
+
+#label-dir-w
+  background-image:  url(../images/network-dir-w.svg)
+  @extend %label-right
 
 
 #label-gates-abc
@@ -178,14 +192,7 @@ svg
   @extend %label-right
 
 
-#label-chamber-orientation-wo
-  background-image: url(../images/chamber-orientation-WO.svg)
-  @extend %label-left
 
-
-#label-chamber-orientation-nz
-  background-image: url(../images/chamber-orientation-NZ.svg)
-  @extend %label-right
 
 // DEBUGGING ONLY
 #debug
@@ -202,5 +209,8 @@ svg
     font-family: Lucida Console, Lucida Sans Typewriter, monaco, Bitstream Vera Sans Mono, monospace
     font-size: 14px
     color: black
-    font-weight: bold
+
+#config-string
+  border: none
+  background-color: #f0f0f0
 

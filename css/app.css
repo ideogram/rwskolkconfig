@@ -39,13 +39,13 @@ body {
   width: 150px;
   float: left;
   height: 400px;
-  background-image: url(../images/compass-left-west.svg);
+  background-image: url(../images/compass-left-north.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% auto; }
 
 #compass-rose-right {
-  background-image: url(../images/compass-right-east.svg);
+  background-image: url(../images/compass-right-south.svg);
   background-position: center; }
 
 #diagram {
@@ -53,6 +53,9 @@ body {
   height: 360px;
   float: left;
   width: calc(100% - 300px);
+  background-image: url(../images/network-arrow-right.svg);
+  background-repeat: no-repeat;
+  background-position: center 10px;
   margin-top: 0;
   padding-top: 24px; }
   #diagram li {
@@ -111,13 +114,13 @@ svg {
   #options legend {
     margin-bottom: 0.5em; }
 
-#network-direction input, #gates-direction input, #chamber-orientation input {
+#network-direction input, #gates-direction input {
   display: none; }
-  #network-direction input:checked + label, #gates-direction input:checked + label, #chamber-orientation input:checked + label {
+  #network-direction input:checked + label, #gates-direction input:checked + label {
     background-color: #DEECF8;
     border-color: #8CC3E7;
     opacity: 1; }
-#network-direction label, #gates-direction label, #chamber-orientation label {
+#network-direction label, #gates-direction label {
   display: block;
   float: left;
   width: 64px;
@@ -129,33 +132,40 @@ svg {
   background-position: center;
   background-size: contain; }
 
-#label-dir-lr, #label-gates-abc, #label-chamber-orientation-wo {
+#network-direction label {
+  width: 72px;
+  height: 72px; }
+
+#label-dir-n, #label-gates-abc {
   border-radius: 8px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px; }
 
-#label-dir-rl, #label-gates-cba, #label-chamber-orientation-nz {
+#label-dir-o, #label-dir-z {
+  border-radius: 0px; }
+
+#label-dir-w, #label-gates-cba {
   border-radius: 8px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px; }
 
-#label-dir-lr {
-  background-image: url(../images/netwerk-L-2-R.svg); }
+#label-dir-n {
+  background-image: url(../images/network-dir-n.svg); }
 
-#label-dir-rl {
-  background-image: url(../images/netwerk-R-2-L.svg); }
+#label-dir-o {
+  background-image: url(../images/network-dir-o.svg); }
+
+#label-dir-z {
+  background-image: url(../images/network-dir-z.svg); }
+
+#label-dir-w {
+  background-image: url(../images/network-dir-w.svg); }
 
 #label-gates-abc {
   background-image: url(../images/ABC.svg); }
 
 #label-gates-cba {
   background-image: url(../images/CBA.svg); }
-
-#label-chamber-orientation-wo {
-  background-image: url(../images/chamber-orientation-WO.svg); }
-
-#label-chamber-orientation-nz {
-  background-image: url(../images/chamber-orientation-NZ.svg); }
 
 #debug {
   list-style-type: none; }
@@ -167,7 +177,10 @@ svg {
   #debug input {
     font-family: Lucida Console, Lucida Sans Typewriter, monaco, Bitstream Vera Sans Mono, monospace;
     font-size: 14px;
-    color: black;
-    font-weight: bold; }
+    color: black; }
+
+#config-string {
+  border: none;
+  background-color: #f0f0f0; }
 
 /*# sourceMappingURL=app.css.map */
