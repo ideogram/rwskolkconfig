@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" data-type="rol-o" height="480" viewBox="0 0 120 480" width="120">
-    <title>roldeur-onder-hwk</title>
-    <path fill="#d9ebf7" d="M48 474V312H0V168h48v-12h24v12h48v144H72v162z"/>
-    <path stroke-width="3" stroke="#9fceea" fill="none" d="M36 312H0" stroke-miterlimit="10"/>
-    <path stroke-width="3" stroke="#7d7d7d" fill="none" d="M84 312H72v162H48V312H36" stroke-miterlimit="10"/>
-    <path stroke-width="3" stroke="#9fceea" fill="none" d="M120 312H84m0-144h36" stroke-miterlimit="10"/>
-    <path stroke-width="3" stroke="#7d7d7d" fill="none" d="M36 168h12v-12h24v12h12" stroke-miterlimit="10"/>
-    <path stroke-width="3" stroke="#9fceea" fill="none" d="M0 168h36" stroke-miterlimit="10"/>
-    <path stroke="#000" fill="#ffb612" d="M53 319h14V161H53z" stroke-miterlimit="10"/>
-    <text text-anchor="middle" font-family="sans-serif" font-size="36" x="60" y="420"/>
-    <text font-weight="700" class="hw" font-size="26" x="59.996" y="420.004" font-family="sans-serif" text-anchor="middle" fill="#ca005d">
+<svg height="480" viewBox="0 0 120 480" width="120" xmlns="http://www.w3.org/2000/svg">
+    <title>/roldeur-onder-hwk</title>
+    <path d="M48 474V312H0V168h48v-12h24v12h48v144H72v162z" fill="#d9ebf7"/>
+    <path d="M36 312H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M84 312H72v162H48V312H36" fill="none" stroke="#7d7d7d" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M120 312H84m0-144h36" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M36 168h12v-12h24v12h12" fill="none" stroke="#7d7d7d" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M0 168h36" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M53 319h14V161H53z" fill="#ffb612" stroke="#000" stroke-miterlimit="10"/>
+    <text font-family="sans-serif" font-size="36" text-anchor="middle" x="60" y="420"/>
+    <text class="hw" fill="#ca005d" font-family="sans-serif" font-size="26" font-weight="700" text-anchor="middle" x="59.996" y="420.004">
         HWK
     </text>
     <path d="M60 161v157" fill="none" stroke="#ca005d" stroke-width="4"/>

@@ -1,12 +1,10 @@
-<svg data-type="draaideur-lb" height="480" viewBox="0 0 216 480" width="216" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg height="480" viewBox="0 0 216 480" width="216" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
         <symbol id="a" viewBox="0 0 15 15">
             <circle cx="7.5" cy="7.5" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
         </symbol>
     </defs>
-    <title>
-        draaideur
-    </title>
+    <title>/draaideur-lb</title>
     <path d="M216 168v144h-12v-12h-12v12H0V168" fill="#d9ebf7"/>
     <path d="M216 168h-31M0 168h24" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
     <path d="M24 156h159l.1 8.1 6.9-1.1v6.5H24z" fill="#d9ebf7"/>

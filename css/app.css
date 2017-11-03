@@ -35,11 +35,6 @@ body {
       box-shadow: 0px 0px 4px #222;
       background-color: white; }
 
-.ui-sortable-placeholder {
-  outline: 3px solid deeppink !important;
-  border: 3px solid deepskyblue !important;
-  background-color: yellow !important; }
-
 #compass-rose-left, #compass-rose-right {
   width: 150px;
   float: left;

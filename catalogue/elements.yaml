@@ -62,7 +62,6 @@
   symbol: b
   mnemo: Overgang van verbrede kolk (links) naar smalle kolk (rechts-onder). De vorm van dit element lijkt op de onderkastletter 'b'
 
-
 - name: kamerkolk-kop-d
   deltay: -2
   top: 3
@@ -155,12 +154,14 @@
   symbol: "}"
   mnemo: Overgang van verbrede kolk (links) naar smalle kolk (rechts) met rond front
 
+#  PUNTDEUREN
+
 - name: puntdeur-links
   description: puntdeur links
   deltay: 0
   top: 6
   bottom: 14
-  gate: 1
+  gate: true
   symbol: "<"
 
 - name: puntdeur-rechts
@@ -168,7 +169,7 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: 1
+  gate: true
   symbol: ">"
 
 - name: puntdeur-pin-links
@@ -176,7 +177,7 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: 1
+  gate: true
   symbol: "<P"
 
 - name: puntdeur-pin-rechts
@@ -184,7 +185,7 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: 1
+  gate: true
   symbol: "P>"
 
 - name: puntdeur-dubbelk-links
@@ -192,7 +193,7 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: 1
+  gate: true
   symbol: "<D"
 
 - name: puntdeur-dubbelk-rechts
@@ -200,54 +201,19 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: 1
+  gate: true
   symbol: "D>"
 
-- name: puntdeur-storm-links
-  description: puntdeur, stormdeur, links
-  deltay: 0
-  top: 6
-  bottom: 14
-  gate: S
-  symbol: "<s"
-  mnemo: "Deur is voorzien van het label 'HW'"
 
-- name: puntdeur-storm-rechts
-  description: puntdeur, stormdeur, rechts
-  deltay: 0
-  top: 6
-  bottom: 14
-  gate: S
-  symbol: ">s"
-  mnemo: Deur is voorzien van het label 'HW'
-
-- name: puntdeur-hwk-links
-  description: puntdeur, ook stormdeur, links
-  deltay: 0
-  top: 0
-  bottom: 0
-  gate: 1
-  symbol: "<h"
-  mnemo: Deur is voorzien van het label 'HWK'
-
-
-- name: puntdeur-hwk-rechts
-  description: puntdeur, ook stormdeur, rechts
-  deltay: 0
-  top: 0
-  bottom: 0
-  gate: 1
-  symbol: ">h"
-  mnemo: Deur is voorzien van het label 'HWK'
-
+#  DRAAIDEUREN
 
 - name: draaideur-lb
   description: enkele draaideur, links, scharnier boven, aanslag onder
   deltay: 0
   top: 6
   bottom: 14
-  gate: 1
-  symbol: ',\'
+  gate: true
+  symbol: '/,'
   mnemo: De komma toont de aanslag, de backslash toont een half-open deur
 
 - name: draaideur-lo
@@ -255,8 +221,8 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: 1
-  symbol: "'/"
+  gate: true
+  symbol: \'
   mnemo: De apostrophe toont de aanslag, de slash een half-open deur
 
 - name: draaideur-rb
@@ -264,8 +230,8 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: 1
-  symbol: "/,"
+  gate: true
+  symbol: ",\\"
   mnemo: De komma toont de aanslag, de slash een half-open deur
 
 - name: draaideur-ro
@@ -273,67 +239,39 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: 1
-  symbol: \'
+  gate: true
+  symbol: "'/"
   mnemo: De apostrophe toont de aanslag, de backslash een half-open deur
+
+# HEFDEUR
 
 - name: hefdeur
   description: hefdeur
   deltay: 0
   top: 5
   bottom: 15
-  gate: 1
+  gate: true
   symbol: "H"
 
-- name: hefdeur-storm
-  description: hefdeur storm
-  deltay: 0
-  top: 5
-  bottom: 15
-  gate: 1
-  symbol: "Hs"
-
-- name: hefdeur-hwk
-  description: hefdeur
-  deltay: 0
-  top: 5
-  bottom: 15
-  gate: 1
-  symbol: "Hh"
+#  HANGROLDEUR
 
 - name: hangroldeur
   description: hangroldeur
   deltay: 0
   top: 0
   bottom: 15
-  gate: 1
+  gate: true
   symbol: "?"
+
+#  Roldeuren
 
 - name: roldeur-boven
   description: roldeur boven
   deltay: 0
   top: 0
   bottom: 14
-  gate: 1
+  gate: true
   symbol: "A"
-  mnemo: De letter A is een pijltje dat wijst de richting aan waarin de deur rolt
-
-- name: roldeur-boven-storm
-  description: roldeur, storm, boven
-  deltay: 0
-  top: 0
-  bottom: 14
-  gate: S
-  symbol: "As"
-  mnemo: De letter A is een pijltje dat wijst de richting aan waarin de deur rolt
-
-- name: roldeur-boven-hwk
-  description: roldeur, storm, boven
-  deltay: 0
-  top: 0
-  bottom: 14
-  gate: S
-  symbol: "Ah"
   mnemo: De letter A is een pijltje dat wijst de richting aan waarin de deur rolt
 
 - name: roldeur-onder
@@ -341,36 +279,18 @@
   deltay: 0
   top: 6
   bottom: 20
-  gate: 1
+  gate: true
   symbol: "V"
   mnemo: De letter V is een pijltje dat wijst de richting aan waarin de deur rolt
 
-- name: roldeur-onder-storm
-  description: roldeur, storm, onder
-  deltay: 0
-  top: 6
-  bottom: 20
-  gate: S
-  symbol: "Vs"
-  mnemo: De letter V is een pijltje dat wijst de richting aan waarin de deur rolt
-
-
-- name: roldeur-onder-hwk
-  description: roldeur, storm, onder
-  deltay: 0
-  top: 6
-  bottom: 20
-  gate: S
-  symbol: "Vh"
-  mnemo: De letter V is een pijltje datwijst de richting aan waarin de deur rolt
-
+# WAAIEREDEUREN
 
 - name: waaierdeur-links
   description: waaierdeur, links
   deltay: 0
   top: 4
   bottom: 16
-  gate: 1
+  gate: true
   symbol: "<W"
 
 - name: waaierdeur-rechts
@@ -378,11 +298,173 @@
   deltay: 0
   top: 4
   bottom: 16
-  gate: 1
+  gate: true
   symbol: "W>"
 
+
+# HOOGWATERKERINGEN
+
+# ... puntdeuren
+
+- name: schot
+  description: Deur of schot, alleen bij hoogwater
+  deltay: 0
+  top: 6
+  bottom: 15
+  gate: false
+  symbol: "!"
+  mnemo: Deur krijgt geen eigen letter
+
+- name: puntdeur-links-hwk
+  description: puntdeur, links, hoogwaterkerig
+  deltay: 0
+  top: 0
+  bottom: 0
+  gate: true
+  symbol: "<h"
+  mnemo: Deur is voorzien van het label 'HWK'
+
+- name: puntdeur-rechts-hwk
+  description: puntdeur, rechts, hoogwaterkering
+  deltay: 0
+  top: 0
+  bottom: 0
+  gate: true
+  symbol: ">h"
+  mnemo: Deur is voorzien van het label 'HWK'
+
+- name: puntdeur-pin-links-hwk
+  description: dubbelkerende enkelvoudige puntdeur met pin, links, hoogwaterkering
+  deltay: 0
+  top: 6
+  bottom: 14
+  gate: true
+  symbol: "<Ph"
+
+- name: puntdeur-pin-rechts-hwk
+  description: dubbelkerende enkelvoudige puntdeur met pin, rechts, hoogwaterkering
+  deltay: 0
+  top: 6
+  bottom: 14
+  gate: true
+  symbol: "P>h"
+
+- name: puntdeur-dubbelk-links-hwk
+  description: dubbelkerende enkelvoudige puntdeur, links, hoogwaterkering
+  deltay: 0
+  top: 6
+  bottom: 14
+  gate: true
+  symbol: "<Dh"
+
+- name: puntdeur-dubbelk-rechts-hwk
+  description: dubbelkerende enkelvoudige puntdeur, rechts, hoogwaterkering
+  deltay: 0
+  top: 6
+  bottom: 14
+  gate: true
+  symbol: "D>h"
+
+# ... hefdeur
+
+- name: hefdeur-hwk
+  description: hefdeur
+  deltay: 0
+  top: 5
+  bottom: 15
+  gate: true
+  symbol: "Hh"
+
+# ... roldeuren
+
+- name: roldeur-boven-hwk
+  description: roldeur, hoogwaterkering, boven
+  deltay: 0
+  top: 0
+  bottom: 14
+  gate: true
+  symbol: "Ah"
+  mnemo: De letter A is een pijltje dat wijst de richting aan waarin de deur rolt
+
+- name: roldeur-onder-hwk
+  description: roldeur, hoogwaterkering, onder
+  deltay: 0
+  top: 6
+  bottom: 20
+  gate: true
+  symbol: "Vh"
+  mnemo: De letter V is een pijltje dat wijst de richting aan waarin de deur rolt
+
+- name: hangroldeur-hwk
+  description: hangroldeur, hoogwaterkering
+  deltay: 0
+  top: 0
+  bottom: 15
+  gate: true
+  symbol: "?h"
+  mnemo: Geen
+
+# ... waaierdeuren
+
+- name: waaierdeur-links-hwk
+  description: waaierdeur, hoogwaterkering, links
+  deltay: 0
+  top: 4
+  bottom: 16
+  gate: true
+  symbol: "<Wh"
+
+- name: waaierdeur-rechts-hwk
+  description: waaierdeur, hoogwaterkering, rechts
+  deltay: 0
+  top: 4
+  bottom: 16
+  gate: true
+  symbol: "W>h"
+
+
+# ... draaideuren
+
+- name: draaideur-lb-hwk
+  description: enkele draaideur, links, scharnier boven, aanslag onder, hoogwaterkering
+  deltay: 0
+  top: 6
+  bottom: 14
+  gate: true
+  symbol: ',\h'
+  mnemo: De komma toont de aanslag, de backslash toont een half-open deur
+
+- name: draaideur-lo-hwk
+  description: enkele draaideur, links, scharnier onder, aanslag boven, hoogwaterkering
+  deltay: 0
+  top: 6
+  bottom: 14
+  gate: true
+  symbol: "'/h"
+  mnemo: De apostrophe toont de aanslag, de slash een half-open deur
+
+- name: draaideur-rb-hwk
+  description: enkele draaideur, rechts, scharnier boven, aanslag onder, hoogwaterkering
+  deltay: 0
+  top: 6
+  bottom: 14
+  gate: true
+  symbol: "/,h"
+  mnemo: De komma toont de aanslag, de slash een half-open deur
+
+- name: draaideur-ro-hwk
+  description: enkele draaideur, rechts, scharnier onder, aanslag boven, hoogwaterkering
+  deltay: 0
+  top: 6
+  bottom: 14
+  gate: true
+  symbol: \'h
+  mnemo: De apostrophe toont de aanslag, de backslash een half-open deur
+
+#  DOORVAAROPENINGEN
+
 - name: brug-vast
-  description: Vaste brug over deur of kolk
+  description: Doorvaartopening, vast
   deltay: 0
   top: 4
   bottom: 16
@@ -390,10 +472,13 @@
   symbol: "#"
 
 - name: brug-beweegbaar
-  description: Beweegbare brug over deur of kolk
+  description: Doorvaartopening, beweegbaar
   deltay: 0
   top: 4
   bottom: 6
   gate: false
   symbol: ":"
+
+
+
 ...

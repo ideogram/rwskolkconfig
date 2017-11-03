@@ -3,15 +3,6 @@
  */
 
 
-
-/*
- - Een methode om een opgegeven container div te vullen met de kolkonderdelen
- - Een methode om een opgegeven container div te vullen met het kolkplaatje. Deze moet als parameter de configuratie string accepteren, inclusief een boolean of toevoeging aan de configuratie string die de volgorde van de deurletters omdraaid.
- - Een methode om de configuratie string zoals het kolkplaatje op het moment is geconfigureerd op te vragen.
- - Een methode om de volledige kolk als svg op te vragen (dit is nuttig voor het downloaden / exporteren bij ons).
- */
-
-
 (function (window) {
 
 
@@ -49,7 +40,7 @@
 
             // Load the YAML-configuration file containig names and properties of the lock-elements
             // and add them to our UI
-            $.get(fileCatalogue, null, this.loadElements);
+            $.get(fileCatalogue, null, libConfig.loadElements);
 
             libConfig.$toolbar.find("li").disableSelection();
         },
@@ -64,7 +55,7 @@
             // jQuery-UI interactions: allow for drag-and-drop and duplication of lock elements
             l.$diagram.sortable({
                 revert: true,
-                receive: this.elementDropped,
+                receive: libConfig.elementDropped,
                 stop: this.diagramChanged,
                 forcePlaceholderSize: true
             });
@@ -250,6 +241,7 @@
         elementDropped: function(event, ui) {
             var l = libConfig;
             var $me = $(ui.helper);
+            console.log(Math.random());
 
             // Add a button to erase the element from the #diagram again
             var $btnRemove = $("<a></a>").appendTo($me).addClass("btn-remove");
