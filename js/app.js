@@ -1,13 +1,11 @@
 /**
- * Created by maartenvandervelde on 08/09/2017.
+ * Created by M. H. van der Velde on 08/09/2017.
  */
 
 
 (function (window) {
-
-
-// ... other
     libConfig = {
+        chamberID: "0000",
         networkDirection : "N",
         gateNumbering : "ABC",
         draggableOptions : {connectToSortable: null, helper: "clone", revert: "invalid"},
@@ -107,7 +105,7 @@
 
             l.strConfig = [
                 "(",
-                "12345",
+                l.chamberID,
                 l.networkDirection,
                 l.gateNumbering,
                 ")"
@@ -505,25 +503,42 @@
             }
         },
 
+        setChamberID: function(value){
+            libConfig.chamberID = value;
+        }
+
 
     }
 })(window);
 
-
+libConfig.setChamberID("31415");
 libConfig.setToolbar('#toolbar', "./assets/", "./catalogue/elements.yaml");
 libConfig.setDiagram('#diagram');
 
-$("#download").on("click",function(){
-  libConfig.downloadSVG(uniqueStringFromTime());
+$("#download").on("click", function () {
+    var strFileName = $("#filename").val();
+
+    if (strFileName == "" ) {
+        strFileName = $("#chamber-id").val();
+    }
+
+    if (strFileName == "") {
+        strFileName = uniqueStringFromTime();
+    }
+
+    libConfig.downloadSVG(strFileName);
 });
 
-$("#get-config-string").on("click",function(){
+$("#get-config-string").on("click", function () {
     str = libConfig.getConfigString();
 
     $("#config-string")
         .val(str)
-        .attr('style', "width: " + (str.length)*0.6 + "em" );
+        .attr('style', "width: " + (str.length) * 0.6 + "em");
+});
 
+$("#chamber-id").on("change", function () {
+    libConfig.setChamberID($(this).val());
 });
 
 

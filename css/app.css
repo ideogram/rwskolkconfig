@@ -170,7 +170,8 @@ svg {
 #debug {
   list-style-type: none; }
   #debug li {
-    display: inline-block; }
+    display: inline-block;
+    margin-right: 1em; }
   #debug label {
     display: block;
     font-size: 10px; }
