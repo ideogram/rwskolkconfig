@@ -18,6 +18,7 @@
         $compassRoseRight: null,
         elementCatalogue : [],
         countElementsRendered : 0,
+        countElementsLoaded: null,
         $diagramElement: null,
         element : [],
         arr$SVG : [],
@@ -26,20 +27,24 @@
         strConfig: "",
 
         // Assign a DOM-element as container for the catalogue of DOM-elements
-        setToolbar: function (strSelector, folderAssets, fileCatalogue) {
+        setToolbar: function (strSelector ) {
 
             libConfig.$toolbar = $(strSelector);
-            libConfig.folderAssets = folderAssets;
 
             // Prepare a special welcome for our SVG-elements by calling the elementRendered function.
             libConfig.observer = new MutationObserver(this.elementRendered);
             $.fx.off = true;
 
+            libConfig.$toolbar.find("li").disableSelection();
+        },
+
+        // load catalogue and assets
+        loadAssetsAndCatalogue: function(folderAssets, fileCatalogue){
+
             // Load the YAML-configuration file containig names and properties of the lock-elements
             // and add them to our UI
+            libConfig.folderAssets = folderAssets;
             $.get(fileCatalogue, null, libConfig.loadElements);
-
-            libConfig.$toolbar.find("li").disableSelection();
         },
 
         // Assign a DOM-element as container for the diagram.
@@ -154,12 +159,105 @@
             libConfig.offerDownload(l.$result[0].outerHTML, strFileName );
         },
 
-        // Iterate over the elements array and add the drawings to the toolbar
-        addElementsToDOM: function() {
+        // Set the config string
+        setConfigString: function(strConfig){
             var l = libConfig;
+            libConfig.strConfig = strConfig;
+            // drawDiagram is invoked from libconfig.elementLoaded is the configString is set
+        },
+
+        // fill the diagram with elemets from the chamberConfigString
+        drawDiagram: function ( strConfig ) {
+            var l = libConfig;
+            var s = l.strConfig;
+            var elements = [];
+            var fill = "";
+            var pos = "";
+            var symbol = "";
+            var name = "";
+            var htmlDiagram = "";
+
+            // Pre-flight check
+            if ( !(l.$diagram instanceof jQuery) ) console.error("No DOM-object assigned to contain the diagram.");
+            if ( l.elementCatalogue.length == 0 ) console.error("No element catalogue found.");
+
+            // Clear the diagram
+            l.$diagram.html("");
+
+            // Make a local copy of the catalogue
+            var c = l.elementCatalogue.slice();
+
+            // Sort the local catalogue by string length of the symbol, from long to small
+            c.sort(compare);
+
+            function compare(a,b) {
+                if (a.symbol.length > b.symbol.length)
+                    return -1;
+                if (a.symbol.length < b.symbol.length)
+                    return 1;
+                return 0;
+            }
+
+            // Find occurrences of every symbol in the config-string and store them in an array
+
+            for ( var i=0; i<c.length; i++ ){
+
+                symbol = c[i].symbol;
+                name = c[i].name;
+
+                pos = s.indexOf( symbol );
+                while (pos !== -1) {
+                    elements[pos] = c[i];
+                    elements[pos]['ref'] = i;
+                    fill = "".padStart(symbol.length,"@");
+                    s = s.replace( symbol, fill );
+                    pos = s.indexOf(symbol, pos + 1 );
+                }
+            }
+
+            // Copy the array to the global elements array, removing empty slots on the fly
+            $.each(elements,function(index,value){
+                if (value !== undefined) {
+                    l.element.push(value);
+                }
+            });
+
+            // Fill the diagram with copies of the elements in the toolbar
+            for(var i=0; i<l.element.length; i++){
+                name = l.element[i].name;
+                $e = l.$toolbar.find("."+name);
+                htmlDiagram +=  $e[0].outerHTML;
+            }
+            l.$diagram.html(htmlDiagram);
+
+            l.shifts = [];
+
+            l.$diagramElements = l.$diagram.find(".element");
+
+            l.$diagramElements.each(function (i) {
+                var $me = $(this);
+                l.arr$SVG[i] = $me.find("svg");
+                libConfig.prepareForDiagramLife($me);
+            });
+
+            l.L = l.$diagramElements.length;
+
+            // With this information, we can do a series of manipulations:
+            l.shiftElements();
+            l.moveDiagramUp();
+            l.annotateGates();
+            l.alignAnnotations();
+        },
+
+        // Iterate over the elements array and add the drawings to the toolbar
+        addElementsToToolbar: function() {
+            var l = libConfig;
+            l.countElementsLoaded = 0;
+
             $.each(l.elementCatalogue, function (key, val) {
                 var id = val.name;
                 var description = val.description;
+
 
                 // Bridges may be draggable, but should not be allowed to end up in the #diagram
                 var draggableOptionsElement = l.draggableOptions;
@@ -168,22 +266,35 @@
                 }
 
                 var $li = $('<li class="element"></li>' ).
-                appendTo(libConfig.$toolbar)
-                    .attr({"title": description, "data-ref": key})
-                    .addClass(val.name)
-                    .disableSelection()
-                    .draggable(l.draggableOptions)
-                    .load(libConfig.folderAssets + id + ".svg");
+                    appendTo(libConfig.$toolbar)
+                        .attr({"title": description, "data-ref": key})
+                        .addClass(val.name)
+                        .disableSelection()
+                        .draggable(l.draggableOptions)
+                        .load(libConfig.folderAssets + id + ".svg", libConfig.elementLoaded);
 
                 // After the SVG is rendered, rework the SVG
                 libConfig.observer.observe($li[0], {childList: true});
             });
         },
 
+        // Keeps track of the number of elements loaded
+        elementLoaded: function(){
+            var l = libConfig;
+            l.countElementsLoaded++;
+
+            if (l.countElementsLoaded == l.elementCatalogue.length){
+
+                if ( l.strConfig != null ){
+                    libConfig.drawDiagram();
+                }
+            }
+        },
+
         // Loads all the separate elements into an array and add them to the toolbar
         loadElements: function(data) {
             libConfig.elementCatalogue = jsyaml.load(data);
-            libConfig.addElementsToDOM();
+            libConfig.addElementsToToolbar();
         },
 
         // Scale the SVG-elements, so they take up less space
@@ -235,12 +346,14 @@
 
         // Preparing an element for it's life inside the #diagram
         elementDropped: function(event, ui) {
+            libConfig.prepareForDiagramLife( $(ui.helper) );
+        },
+
+        prepareForDiagramLife: function( $target ){
             var l = libConfig;
-            var $me = $(ui.helper);
-            console.log(Math.random());
 
             // Add a button to erase the element from the #diagram again
-            var $btnRemove = $("<a></a>").appendTo($me).addClass("btn-remove");
+            var $btnRemove = $("<a></a>").appendTo($target).addClass("btn-remove");
 
             $btnRemove.on("click", function () {
                 $(this).closest("li").remove();
@@ -248,13 +361,12 @@
             });
 
             // Allow a bridge to be dropped on the element.
-            $me.droppable(
+            $target.droppable(
                 {
                     drop: libConfig.drawBridge,
                     accept: ".brug-vast, .brug-beweegbaar"
                 }
             );
-
         },
 
         // Shift elements upward or downward if needed because of some special chamber-shapes
@@ -506,14 +618,15 @@
         setChamberID: function(value){
             libConfig.chamberID = value;
         }
-
-
     }
 })(window);
 
 libConfig.setChamberID("31415");
-libConfig.setToolbar('#toolbar', "./assets/", "./catalogue/elements.yaml");
+libConfig.loadAssetsAndCatalogue("./assets/", "./catalogue/elements.yaml");
+libConfig.setToolbar('#toolbar');
 libConfig.setDiagram('#diagram');
+libConfig.setConfigString("/,'   !   .\\'"); // implicit drawDiagram
+// libConfig.drawDiagram();
 
 $("#download").on("click", function () {
     var strFileName = $("#filename").val();
