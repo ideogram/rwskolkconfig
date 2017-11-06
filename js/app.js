@@ -5,14 +5,21 @@
 
 (function (window) {
     libConfig = {
+        // Settings
+        folderAssets: "assets/",
+        fileCatalogue: "catalogue/elements.yaml",
+        folderPartials: "partials/",
+
+        // Defaults
         chamberID: "0000",
         networkDirection : "N",
         gateNumbering : "ABC",
         draggableOptions : {connectToSortable: null, helper: "clone", revert: "invalid"},
+
+        // Variables
         diagramTool: {},
         $toolbar: null,
         $diagram: null,
-        folderAssets: null,
         observer: null,
         $compassRoseLeft: null,
         $compassRoseRight: null,
@@ -26,6 +33,8 @@
         L : 0,
         strConfig: "",
         height: null,
+        svgArrowLeft: null,
+        svgArrowRight: null,
 
         // Assign a DOM-element as container for the catalogue of DOM-elements
         setToolbar: function (strSelector ) {
@@ -40,12 +49,14 @@
         },
 
         // load catalogue and assets
-        loadAssetsAndCatalogue: function(folderAssets, fileCatalogue){
+        loadAssetsAndCatalogue: function(){
+            l = libConfig;
 
             // Load the YAML-configuration file containig names and properties of the lock-elements
             // and add them to our UI
-            libConfig.folderAssets = folderAssets;
-            $.get(fileCatalogue, null, libConfig.loadElements);
+
+            $.get(l.fileCatalogue, null, libConfig.loadElements);
+
         },
 
         // Assign a DOM-element as container for the diagram.
@@ -325,10 +336,9 @@
             var l = libConfig;
             l.countElementsLoaded = 0;
 
-            $.each(l.elementCatalogue, function (key, val) {
+            $.each( l.elementCatalogue, function (key, val) {
                 var id = val.name;
                 var description = val.description;
-
 
                 // Bridges may be draggable, but should not be allowed to end up in the #diagram
                 var draggableOptionsElement = l.draggableOptions;
@@ -342,7 +352,7 @@
                         .addClass(val.name)
                         .disableSelection()
                         .draggable(l.draggableOptions)
-                        .load(libConfig.folderAssets + id + ".svg", libConfig.elementLoaded);
+                        .load(l.folderAssets + id + ".svg", libConfig.elementLoaded);
 
                 // After the SVG is rendered, rework the SVG
                 libConfig.observer.observe($li[0], {childList: true});
@@ -364,7 +374,8 @@
 
         // Loads all the separate elements into an array and add them to the toolbar
         loadElements: function(data) {
-            libConfig.elementCatalogue = jsyaml.load(data);
+            l = libConfig;
+            l.elementCatalogue = jsyaml.load(data);
             libConfig.addElementsToToolbar();
         },
 
