@@ -25,6 +25,7 @@
         shifts : [],
         L : 0,
         strConfig: "",
+        height: null,
 
         // Assign a DOM-element as container for the catalogue of DOM-elements
         setToolbar: function (strSelector ) {
@@ -62,21 +63,9 @@
                 forcePlaceholderSize: true
             });
 
-            // Create some extra HTML
-            // ... #result: invisible div containing the SVG before it gets downloaded
+            // Create some extra HTML elements:
 
-            var $resultWrapper =
-                $('<div id="result"></div>')
-                    .insertAfter(l.$diagram);
-
-            l.$result = $('<svg></svg>')
-                .appendTo($resultWrapper)
-                .attr({
-                    "xmlns": "http://www.w3.org/2000/svg",
-                    "xmlns:xlink": "http://www.w3.org/1999/xlink"
-                });
-
-            // ... #diagram-wrapper: contains the diagram, compass rose and options
+            // .. #diagram-wrapper: contains the diagram, compass rose and options
             l.$diagram.wrap('<div id="diagram-wrapper" />');
             l.$diagramWrapper = l.$diagram.find("#diagram-wrapper");
 
@@ -100,6 +89,30 @@
             // ... compass roses
             l.$compassRoseLeft = $('<div id="compass-rose-left"></div>').insertBefore(l.$diagram);
             l.$compassRoseRight = $('<div id="compass-rose-right"></div>').insertAfter(l.$diagram);
+
+            // ... #result: invisible div containing the SVG before it gets downloaded
+
+            var $resultWrapper =
+                $('<div id="result"></div>')
+                    .insertAfter("#diagram-wrapper");
+
+            l.$result = $('<svg></svg>')
+                .appendTo($resultWrapper)
+                .attr({
+                    "xmlns": "http://www.w3.org/2000/svg",
+                    "xmlns:xlink": "http://www.w3.org/1999/xlink"
+                });
+
+            // ... store two network-direction symbols into variables
+
+            $.get("partials/network-arrow-left.partial.svg", null, function( data ) {
+                l.svgArrowLeft = data;
+            }, 'html' );
+
+            $.get("partials/network-arrow-right.partial.svg", null, function( data ) {
+                l.svgArrowRight = data;
+            }, 'html');
+
         },
 
         // Re-build and return the configuration string
@@ -125,35 +138,92 @@
         },
 
         // Make the SVG from the #diagram available as a download.
-        downloadSVG: function(strFileName) {
+        composeSVG: function(strFileName) {
             var l = libConfig;
+            var margin = 32;
+            var h = l.height + 2*margin;
+            var strLeft, strRight;
+            var textStyle = {
+                "font-family": "sans-serif",
+                "font-size": 24,
+                "text-anchor": "middle",
+                "fill": "#9ACAE8"
+            };
 
             // Fill the '#result'-SVG  with the lock-elements
             l.$result.html("");
 
             var x = 0;
             for (var i = 0; i < l.L; i++) {
+                var name = l.element[i].name;
                 var $svg = l.arr$SVG[i];
                 var html = $svg.html();
                 var w = 2 * parseFloat($svg.attr("width"));
                 var viewBox = $svg.attr("viewBox");
-                var h = 0;
-
+                var y = 0;
                 // Remove the viewbox and wrap the element in a <g>-tag instead
                 if (viewBox !== undefined) {
                     viewBox = viewBox.split(" ");
-                    h = viewBox[1];
+                    y = viewBox[1];
 
-                    $g = $("<g>" + html + "</g>").appendTo(libConfig.$result);
+                    $g = $("<g>" + html + "</g>").appendTo(l.$result);
 
-                    $g.attr("transform", "translate(" + (x - i) + "," + (-h) + ")");
+                    $g.attr("transform", "translate(" + (x - i + margin ) + "," + (-y+margin) + ")");
                     // ( We substract i from x to make the elements overlap by one pixel )
+
+                    // The background of the stopstreep extends beyond the viewbox.
+
                 }
-                x += w;
+                x += (w-1);
             }
 
-            l.$result.attr("width", x + "px");
-            l.$result.attr("height", 2 * 324);
+            w = (x+2*margin);
+
+            // Show the N, W, O or Z alongside
+
+            switch (l.networkDirection){
+                case "N":
+                case "Z":
+                    strLeft = "N"; strRight = "Z";
+                    break;
+                case "O":
+                case "W":
+                    strLeft = "W"; strRight = "O";
+                    break;
+            }
+
+            $("<text />").appendTo(l.$result).attr({
+                x: margin/2,
+                y: h/2})
+                .attr(textStyle)
+                .html( strLeft );
+
+            $("<text />").appendTo(l.$result).attr({
+                x: x+margin+margin/2,
+                y: h/2})
+                .attr(textStyle)
+                .html( strRight );
+
+            // Show the network direction
+            switch (l.networkDirection){
+                case "N":
+                case "W":
+                    $arrow = $( l.svgArrowRight ).appendTo(l.$result);
+                    break;
+                case "O":
+                case "Z":
+                    $arrow = $( l.svgArrowLeft ).appendTo(l.$result);
+                    strLeft = "W"; strRight = "O";
+                    break;
+            }
+
+            $arrow.attr("transform","translate("+(w/2 - 32)+",16)");
+
+            // Ajust width and ehigth
+
+
+            l.$result.attr("width", w + "px");
+            l.$result.attr("height", h + "px");
 
             // Offer the download
             libConfig.offerDownload(l.$result[0].outerHTML, strFileName );
@@ -163,7 +233,7 @@
         setConfigString: function(strConfig){
             var l = libConfig;
             libConfig.strConfig = strConfig;
-            // drawDiagram is invoked from libconfig.elementLoaded is the configString is set
+            // drawDiagram is invoked from libconfig.elementLoaded if the configString is set
         },
 
         // fill the diagram with elemets from the chamberConfigString
@@ -183,6 +253,7 @@
 
             // Clear the diagram
             l.$diagram.html("");
+            l.element = [];
 
             // Make a local copy of the catalogue
             var c = l.elementCatalogue.slice();
@@ -394,11 +465,11 @@
             var highest = 1000; // infinity
             var l = libConfig;
 
-            // Put al the annotations on the same height
+            // Move all elements uo
 
-            // ... Loop over the annotations twice.
+            // ... Loop over the elements twice.
 
-            // ... ... First, find the lowest position
+            // ... ... First, find the highest position
             for (var i = 0; i < l.L; i++) {
                 var top = 0
                 var name = l.element[i]['name'];
@@ -425,6 +496,9 @@
                     $svg.attr("viewBox", viewBox.join(" "));
                 }
             }
+
+            l.highest = highest;
+
         },
 
         // Put a label under each gate (sluisdeur)
@@ -467,6 +541,7 @@
             var lowest = -1000; //  minus infinity
             var shift = 0;
             var l = libConfig;
+            var hasHWK = 0;
 
 
             // Put al the annotations on the same height
@@ -490,8 +565,13 @@
                     shift = l.shifts[i];
                     $svg.find("text").attr("y", (lowest - shift + 2) * 24);
                     $svg.find("text.hw").attr("y", (lowest - shift + 3.5) * 24);
+
+                    if ( l.element[i].symbol.indexOf("h") !== -1  ) hasHWK = 1;
                 }
             }
+
+            // Remember the lowest position for setting the height later on
+            l.height = (lowest + 2 + hasHWK*3.5 - l.highest) * 24;
 
         },
 

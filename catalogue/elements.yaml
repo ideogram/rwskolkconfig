@@ -318,8 +318,8 @@
 - name: puntdeur-links-hwk
   description: puntdeur, links, hoogwaterkerig
   deltay: 0
-  top: 0
-  bottom: 0
+  top: 6
+  bottom: 14
   gate: true
   symbol: "<h"
   mnemo: Deur is voorzien van het label 'HWK'
@@ -327,8 +327,8 @@
 - name: puntdeur-rechts-hwk
   description: puntdeur, rechts, hoogwaterkering
   deltay: 0
-  top: 0
-  bottom: 0
+  top: 6
+  bottom: 14
   gate: true
   symbol: ">h"
   mnemo: Deur is voorzien van het label 'HWK'

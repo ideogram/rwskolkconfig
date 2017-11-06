@@ -180,8 +180,7 @@ svg {
     font-size: 14px;
     color: black; }
 
-#config-string {
-  border: none;
-  background-color: #f0f0f0; }
+#diagram-wrapper {
+  overflow: hidden; }
 
 /*# sourceMappingURL=app.css.map */

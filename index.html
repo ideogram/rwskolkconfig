@@ -24,6 +24,7 @@
     <li>
       <label id="label-config-string">Configuration string:</label>
       <input name="configString" id="config-string">
+      <button id="set-config-string">Teken</button>
       <button id="get-config-string">Opvragen</button>
     </li>
 
@@ -57,7 +58,7 @@
   libConfig.loadAssetsAndCatalogue("./assets/", "./catalogue/elements.yaml");
   libConfig.setToolbar('#toolbar');
   libConfig.setDiagram('#diagram');
-  libConfig.setConfigString(".    ."); // implicit drawDiagram
+  libConfig.setConfigString("<    <"); // implicit drawDiagram
 
   $("#download").on("click", function () {
     var strFileName = $("#filename").val();
@@ -70,7 +71,7 @@
       strFileName = uniqueStringFromTime();
     }
 
-    libConfig.downloadSVG(strFileName);
+    libConfig.composeSVG(strFileName);
   });
 
   $("#get-config-string").on("click", function () {
@@ -79,6 +80,11 @@
     $("#config-string")
             .val(str)
             .attr('style', "width: " + (str.length) * 0.6 + "em");
+  });
+
+  $("#set-config-string").on("click", function () {
+    libConfig.setConfigString($("#config-string").val());
+    libConfig.drawDiagram();
   });
 
   $("#chamber-id").on("change", function () {
