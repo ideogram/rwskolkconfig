@@ -86,14 +86,14 @@
                     .prependTo("#diagram-wrapper");
 
             var strOptions = [
-                 'network-direction', 'gates-names-direction',
+                 'network-direction', 'gates-names-direction', 'comment'
             ];
 
             for (var i = 0; i < strOptions.length; i++) {
 
                 $.get("partials/option-" + strOptions[i] + ".partial.html", function (data) {
                     $(data).appendTo(l.$options)
-                        .find("input").on("click", libConfig.optionChanged);
+                        .find("input").on("change", libConfig.optionChanged);
                 });
             }
 
@@ -144,6 +144,9 @@
             for (var i = 0; i < l.L; i++) {
                 l.strConfig += l.element[i]['symbol'];
             }
+
+            l.strConfig += "(" + l.strComment + ")";
+
             return l.strConfig;
 
         },
@@ -243,8 +246,20 @@
         // Set the config string
         setConfigString: function(strConfig){
             var l = libConfig;
-            libConfig.strConfig = strConfig;
-            // drawDiagram is invoked from libconfig.elementLoaded if the configString is set
+
+            var matches = strConfig.match(/\((.*?)\)/g);
+
+            if (matches.length > 0) {
+                strPre = matches[0];
+                strComment = matches[1];
+
+                strConfig = strConfig.replace(strPre, "");
+                strConfig = strConfig.replace(strComment, "");
+
+                l.strComment = strComment
+            }
+
+            l.strConfig = strConfig;
         },
 
         // fill the diagram with elemets from the chamberConfigString
@@ -661,6 +676,9 @@
                     libConfig.drawCompassRose(value);
                     libConfig.drawNetworkArrow(value);
                     break;
+
+                case "comment":
+                    l.strComment = value;
             }
         },
 

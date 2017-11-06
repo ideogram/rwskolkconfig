@@ -110,7 +110,8 @@ svg {
   text-align: center; }
   #options li {
     display: inline-block;
-    margin-right: 50px; }
+    margin-right: 50px;
+    vertical-align: top; }
   #options legend {
     margin-bottom: 0.5em; }
 
@@ -131,6 +132,17 @@ svg {
   opacity: 0.6;
   background-position: center;
   background-size: contain; }
+
+#comment {
+  width: 200px;
+  border-radius: 8px;
+  line-height: 24px;
+  border-color: #8CC3E7;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 18px;
+  padding: 0 0.5em;
+  color: #525252; }
 
 #network-direction label {
   width: 72px;
