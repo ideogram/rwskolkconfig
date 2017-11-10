@@ -58,7 +58,7 @@
   libConfig.loadAssetsAndCatalogue();
   libConfig.setToolbar('#toolbar');
   libConfig.setDiagram('#diagram');
-  libConfig.setConfigString("(12345 N ABC)<    <(Saaie sluis, hoor!)"); // implicit drawDiagram
+  libConfig.setConfigString("(12345 Z ABC)<S.<.     .>(DVO ten noorden van kolk)"); // implicit drawDiagram
 
   $("#download").on("click", function () {
     var strFileName = $("#filename").val();
@@ -91,8 +91,10 @@
     libConfig.setChamberID($(this).val());
   });
 
-
-  // Helper function to provide a unique string based on the time stamp
+  /**
+   *
+   * @returns {string}
+   */
   function uniqueStringFromTime() {
     var d = new Date();
     var n = d.getTime();

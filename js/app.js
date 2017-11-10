@@ -4,6 +4,12 @@
 
 
 (function (window) {
+    /**
+     * Module libConfig
+     * @exports libConfig
+     * @namespace libConfig
+     */
+
     libConfig = {
         // Settings
         folderAssets: "assets/",
@@ -36,7 +42,12 @@
         svgArrowLeft: null,
         svgArrowRight: null,
 
-        // Assign a DOM-element as container for the catalogue of DOM-elements
+
+        /**
+         * Assign a DOM-element as container for the catalogue of DOM-elements
+         * @param {string} strSelector jQuery/CSS style selector
+         * @memberof libConfig
+         */
         setToolbar: function (strSelector ) {
 
             libConfig.$toolbar = $(strSelector);
@@ -48,7 +59,10 @@
             libConfig.$toolbar.find("li").disableSelection();
         },
 
-        // load catalogue and assets
+        /**
+         * Initiate the drawing GUI by loading the catalogue and all the assets.
+         * @memberof libConfig
+         */
         loadAssetsAndCatalogue: function(){
             l = libConfig;
 
@@ -59,7 +73,11 @@
 
         },
 
-        // Assign a DOM-element as container for the diagram.
+        /**
+         * Assign a DOM-element as container for the diagram.
+         * @param {string} strSelector jQuery/CSS style selector
+         * @memberof libConfig
+         */
         setDiagram: function(strSelector) {
             var l = libConfig;
             l.$diagram = $(strSelector);
@@ -126,7 +144,11 @@
 
         },
 
-        // Re-build and return the configuration string
+        /**
+         * Re-build and return the configuration string
+         * @returns {string} String containig kolk-id, network direction, gate numbering, chamber configuration and comment
+         * @memberof libConfig
+         */
         getConfigString: function () {
             var l = libConfig;
 
@@ -151,7 +173,11 @@
 
         },
 
-        // Make the SVG from the #diagram available as a download.
+        /**
+         * Make the SVG from the diagram available as a download.
+         * @param {string} strFileName Filename for the SVG to be offered as download
+         * @memberof libConfig
+         */
         composeSVG: function(strFileName) {
             var l = libConfig;
             var margin = 32;
@@ -243,12 +269,17 @@
             libConfig.offerDownload(l.$result[0].outerHTML, strFileName );
         },
 
-        // Set the config string
+        /**
+         * Set the configuration string. The chamber-id, network direction, gate numbering and comments are also set
+         * @param {string} strConfig A complete configuration string
+         * @memberof libConfig
+         */
         setConfigString: function(strConfig){
             var l = libConfig;
-
             var matches = strConfig.match(/\((.*?)\)/g);
+            var strPre, strComment;
 
+            // Split the string into three parts and keep the middle part
             if (matches.length > 0) {
                 strPre = matches[0];
                 strComment = matches[1];
@@ -256,14 +287,82 @@
                 strConfig = strConfig.replace(strPre, "");
                 strConfig = strConfig.replace(strComment, "");
 
-                l.strComment = strComment
+                // Set the comment from the third part
+                l.strComment = strComment;
+
+                // From the first part,
+                // ... remove all the spaces and brackets
+                strPre = strPre.replace(/\s/gi,"");
+                strPre = strPre.replace("(","");
+                strPre = strPre.replace(")","");
+
+                // ... extract and set chamber-id (kolk-id)
+                l.setChamberID( strPre.match(/^\d*/)[0]  );
+
+                // ... extract network direction
+                l.setNetworkDirection( strPre.match(/[NOZW]/)[0] );
+
+                // ... extract gate-numbering direction
+                d = strPre.match(/ABC|CBA/g);
+                console.log(d);
+                if (d === null || d[0] === "ABC"){
+                    l.setGateNumbering("ABC");
+                } else {
+                    l.setGateNumbering("CBA");
+                }
+
             }
 
+            // What remains is the 'actual' config string, the part
+            // that contains all the symbols, like e.g. <S.<.   .>
             l.strConfig = strConfig;
         },
 
-        // fill the diagram with elemets from the chamberConfigString
-        drawDiagram: function ( strConfig ) {
+        /**
+         * set the Network direction. This represents the direction of the entrance of the chamber according to RWS network direction
+         * @param {string} value Either "N","Z","O" or "W"
+         * @memberof libConfig
+         */
+        setNetworkDirection : function( value ){
+            var l = libConfig;
+            l.networkDirection = value;
+        },
+
+        /**
+         * Returns the networkwork direction.
+         * @returns {string} Either "N","Z","O" or "W"
+         * @memberof libConfig
+         */
+        getNetworkDirection : function(  ){
+            var l = libConfig;
+            return l.networkDirection;
+        },
+
+        /**
+         * Set gate numbering direction. "CBA" should practically never be needed.
+         * @param {string} value Either "ABC" or "CBA"
+         * @memberof libConfig
+         */
+        setGateNumbering: function( value ){
+            var l = libConfig;
+            l.gateNumbering = value;
+        },
+
+        /**
+         * Returns  gate numbering
+         * @returns {string} Either "ABC" or "CBA"
+         * @memberof libConfig
+         */
+        getGateNumbering: function(){
+            var l = libConfig;
+            return l.gateNumbering;
+        },
+
+        /**
+         * Draws the diagram. Call if the diagram is not updated automatically
+         * @memberof libConfig
+         */
+        drawDiagram: function () {
             var l = libConfig;
             var s = l.strConfig;
             var elements = [];
