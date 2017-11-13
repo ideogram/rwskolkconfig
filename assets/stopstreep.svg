@@ -1,17 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" height="480" viewBox="0 0 72 480" width="72">
+<svg xmlns="http://www.w3.org/2000/svg" height="480" viewBox="24 0 72 480" width="72">
     <title>
         stopstreep
     </title>
-    <path d="M44.49 139.5H27.51l1.32 14.2h14.34l1.32-14.2" fill="#d52b1e"/>
-    <path d="M43.17 153.7H28.83l1.04 11.3h12.25l1.05-11.3" fill="#fff4dc"/>
-    <path d="M42.13 165H29.87l.72 7.7h10.83l.71-7.7" fill="#d52b1e"/>
-    <path d="M41.41 172.7H30.59l.62 6.7h9.58l.62-6.7" fill="#fff4dc"/>
-    <path d="M27.51 340.4h16.98l-1.32-14.2H28.83l-1.32 14.2" fill="#d52b1e"/>
-    <path d="M28.83 326.2h14.34l-1.05-11.3H29.87l-1.04 11.3" fill="#fff4dc"/>
-    <path d="M29.87 314.9h12.26l-.71-7.7H30.59l-.72 7.7" fill="#d52b1e"/>
-    <path d="M30.59 307.2h10.82l-.62-6.7h-9.58l-.62 6.7" fill="#fff4dc"/>
-    <path d="M-24 168H96v144H-24z" class="kolk" fill="#d9ebf7"/>
-    <path d="M44.49 340.4H27.51l3.7-39.9h9.58zM27.51 139.5h16.98l-3.7 39.9h-9.58z" stroke-miterlimit="10" fill="none" stroke="#999"/>
-    <path d="M36 168v144" stroke-miterlimit="6" stroke="#9fceea" stroke-width="2" stroke-dasharray="8,4"/>
-    <path d="M-24 168H96M-24 312H96" stroke-miterlimit="10" class="kolk-border" fill="none" stroke="#9fceea" stroke-width="3"/>
+    <g transform="translate(24,0)">
+        <path d="M44.49 139.5H27.51l1.32 14.2h14.34l1.32-14.2" fill="#d52b1e"/>
+        <path d="M43.17 153.7H28.83l1.04 11.3h12.25l1.05-11.3" fill="#fff4dc"/>
+        <path d="M42.13 165H29.87l.72 7.7h10.83l.71-7.7" fill="#d52b1e"/>
+        <path d="M41.41 172.7H30.59l.62 6.7h9.58l.62-6.7" fill="#fff4dc"/>
+        <path d="M27.51 340.4h16.98l-1.32-14.2H28.83l-1.32 14.2" fill="#d52b1e"/>
+        <path d="M28.83 326.2h14.34l-1.05-11.3H29.87l-1.04 11.3" fill="#fff4dc"/>
+        <path d="M29.87 314.9h12.26l-.71-7.7H30.59l-.72 7.7" fill="#d52b1e"/>
+        <path d="M30.59 307.2h10.82l-.62-6.7h-9.58l-.62 6.7" fill="#fff4dc"/>
+        <path d="M-24 168H96v144H-24z" class="kolk" fill="#d9ebf7"/>
+        <path d="M44.49 340.4H27.51l3.7-39.9h9.58zM27.51 139.5h16.98l-3.7 39.9h-9.58z" stroke-miterlimit="10" fill="none" stroke="#999"/>
+        <path d="M36 168v144" stroke-miterlimit="6" stroke="#9fceea" stroke-width="2" stroke-dasharray="8,4"/>
+        <path d="M-24 168H96M-24 312H96" stroke-miterlimit="10" class="kolk-border" fill="none" stroke="#9fceea" stroke-width="3"/>
+    </g>
 </svg>

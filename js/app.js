@@ -189,13 +189,13 @@
                 "text-anchor": "middle",
                 "fill": "#9ACAE8"
             };
+            var $arrow;
 
             // Fill the '#result'-SVG  with the lock-elements
             l.$result.html("");
 
             var x = 0;
             for (var i = 0; i < l.L; i++) {
-                var name = l.element[i].name;
                 var $svg = l.arr$SVG[i];
                 var html = $svg.html();
                 var w = 2 * parseFloat($svg.attr("width"));
@@ -371,6 +371,7 @@
             var symbol = "";
             var name = "";
             var htmlDiagram = "";
+            var i;
 
             // Pre-flight check
             if ( !(l.$diagram instanceof jQuery) ) console.error("No DOM-object assigned to contain the diagram.");
@@ -396,7 +397,7 @@
 
             // Find occurrences of every symbol in the config-string and store them in an array
 
-            for ( var i=0; i<c.length; i++ ){
+            for (i=0; i<c.length; i++ ){
 
                 symbol = c[i].symbol;
                 name = c[i].name;
@@ -419,7 +420,7 @@
             });
 
             // Fill the diagram with copies of the elements in the toolbar
-            for(var i=0; i<l.element.length; i++){
+            for(i=0; i<l.element.length; i++){
                 name = l.element[i].name;
                 $e = l.$toolbar.find("."+name);
                 htmlDiagram +=  $e[0].outerHTML;
@@ -596,7 +597,7 @@
 
             // ... ... First, find the highest position
             for (var i = 0; i < l.L; i++) {
-                var top = 0
+                var top = 0;
                 var name = l.element[i]['name'];
                 var shift = l.shifts[i];
 
@@ -711,6 +712,7 @@
             var $bridge = $(ui.helper);
             var $bridgeGroup = $bridge.find("g");
             var i = $target.index();
+            var isStopStreep = ( l.element[i].name == 'stopstreep');
 
             // Calculate the position
             var pxTargetWidth = 2 * parseFloat($svg.attr("width"));
@@ -726,11 +728,10 @@
             }
 
             // ... make the 'stopstreep' wider if a bridge is dropped on it
-
-            if (l.element[i].name == 'stopstreep') {
+            if ( isStopStreep ) {
                 viewBox = $svg.attr('viewBox');
                 viewBox = viewBox.split(" ");
-                viewBox[0] = 0;
+                viewBox[0] = -0;
                 viewBox[2] = 120;
                 $svg.attr("viewBox", viewBox.join(" ")).attr("width", 60);
                 $target.css("width", 60);
