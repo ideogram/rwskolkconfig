@@ -62,6 +62,34 @@
             var l = libConfig;
             // use the jQuery extend option to override the default path settings:
             jQuery.extend(l.path, objPathOptions);
+            libConfig.loadImagesUI();
+        },
+
+        loadImagesUI: function(){
+            var l = libConfig;
+            var sheet = libConfig.addStyleSheet();
+
+            var strSelector, strRule = "";
+
+            var images = [
+                ["#compass-rose-left", "compass-left-north.svg"],
+                ["#compass-rose-right","compass-right-south.svg"],
+                ["#diagram","network-arrow-right.svg"],
+                [".btn-remove","delete-forever.svg"],
+                [".btn-remove:hover","delete-forever-hover.svg"],
+                ["#label-dir-n","network-dir-n.svg"],
+                ["#label-dir-o","network-dir-o.svg"],
+                ["#label-dir-z","network-dir-z.svg"],
+                ["#label-dir-w","network-dir-w.svg"],
+                ["#label-gates-abc","ABC.svg"],
+                ["#label-gates-cba","CBA.svg"],
+            ];
+
+            for(var i=0; i<images.length; i++){
+                strSelector = images[i][0];
+                strRule = "background-image: url(" + l.path.folderImages + images[i][1] + ")";
+                libConfig.addCSSRule(sheet, strSelector, strRule );
+            }
         },
 
         /**
@@ -186,6 +214,11 @@
 
             for (var i = 0; i < l.L; i++) {
                 l.strConfig += l.element[i]['symbol'];
+
+                if ( l.element[i].bridge ){
+                    l.strConfig += "#";
+                }
+
             }
 
             l.strConfig += "(" + l.strComment + ")";
@@ -325,7 +358,6 @@
 
                 // ... extract gate-numbering direction
                 d = strPre.match(/ABC|CBA/g);
-                console.log(d);
                 if (d === null || d[0] === "ABC"){
                     l.setGateNumbering("ABC");
                 } else {
@@ -436,7 +468,7 @@
             // Copy the array to the global elements array, removing empty slots on the fly
             $.each(elements,function(index,value){
                 if (value !== undefined) {
-                    l.element.push(value);
+                    l.element.push( value );
                 }
             });
 
@@ -761,9 +793,11 @@
                 $target.css("width", 60);
             }
 
+            strBridgeName = l.element[$bridge.attr('data-ref')];
+            console.log($bridge.attr('data-ref'));
+
             // Change the element-data
             l.element[i]['bridge'] = true;
-            l.element[i]['symbol'] = "POEP!";
 
             // Update drawing
             libConfig.diagramChanged();
@@ -860,6 +894,30 @@
 
             return "url("+l.path.folderImages + filename + ")";
 
+        },
+
+        // CSS Helper functions
+
+        // Create the <style> tag
+        addStyleSheet: function () {
+            var style = document.createElement("style");
+
+            // WebKit hack :(
+            style.appendChild(document.createTextNode(""));
+
+            // Add the <style> element to the page
+            document.head.appendChild(style);
+
+            return style.sheet;
+        },
+
+        addCSSRule: function (sheet, selector, rules, index) {
+            if ("insertRule" in sheet) {
+                sheet.insertRule(selector + "{" + rules + "}", index);
+            }
+            else if ("addRule" in sheet) {
+                sheet.addRule(selector, rules, index);
+            }
         }
     }
 })(window);

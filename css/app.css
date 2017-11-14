@@ -39,13 +39,11 @@ body {
   width: 150px;
   float: left;
   height: 400px;
-  background-image: url(../images/compass-left-north.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% auto; }
 
 #compass-rose-right {
-  background-image: url(../images/compass-right-south.svg);
   background-position: center; }
 
 #diagram {
@@ -53,7 +51,6 @@ body {
   height: 360px;
   float: left;
   width: calc(100% - 300px);
-  background-image: url(../images/network-arrow-right.svg);
   background-repeat: no-repeat;
   background-position: center 10px;
   margin-top: 0;
@@ -72,7 +69,6 @@ body {
   display: block;
   height: 24px;
   width: 24px;
-  background-image: url(../images/delete-forever.svg);
   position: absolute;
   top: 0px;
   right: 0px;
@@ -80,7 +76,6 @@ body {
   font-size: 32px;
   opacity: 0; }
   .btn-remove:hover {
-    background-image: url(../images/delete-forever-hover.svg);
     opacity: 1 !important; }
 
 #result {
@@ -161,24 +156,6 @@ svg {
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px; }
 
-#label-dir-n {
-  background-image: url(../images/network-dir-n.svg); }
-
-#label-dir-o {
-  background-image: url(../images/network-dir-o.svg); }
-
-#label-dir-z {
-  background-image: url(../images/network-dir-z.svg); }
-
-#label-dir-w {
-  background-image: url(../images/network-dir-w.svg); }
-
-#label-gates-abc {
-  background-image: url(../images/ABC.svg); }
-
-#label-gates-cba {
-  background-image: url(../images/CBA.svg); }
-
 #debug {
   list-style-type: none; }
   #debug li {
@@ -194,5 +171,3 @@ svg {
 
 #diagram-wrapper {
   overflow: hidden; }
-
-/*# sourceMappingURL=app.css.map */
