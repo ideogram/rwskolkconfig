@@ -39,6 +39,7 @@
         element : [],
         arr$SVG : [],
         shifts : [],
+        bridges: [],
         L : 0,
         strConfig: "",
         height: null,
@@ -65,6 +66,9 @@
             libConfig.loadImagesUI();
         },
 
+        /**
+         * Force loading of the images of the GUI. This is only needed if 'setPaths' is never called
+         */
         loadImagesUI: function(){
             var l = libConfig;
             var sheet = libConfig.addStyleSheet();
@@ -87,7 +91,7 @@
 
             for(var i=0; i<images.length; i++){
                 strSelector = images[i][0];
-                strRule = "background-image: url(" + l.path.folderImages + images[i][1] + ")";
+                strRule = "background-image: " + libConfig.getCssUrl( images[i][1] );
                 libConfig.addCSSRule(sheet, strSelector, strRule );
             }
         },
@@ -215,8 +219,8 @@
             for (var i = 0; i < l.L; i++) {
                 l.strConfig += l.element[i]['symbol'];
 
-                if ( l.element[i].bridge ){
-                    l.strConfig += "#";
+                if ( typeof l.bridges[i] !== "undefined" ){
+                    l.strConfig += l.bridges[i];
                 }
 
             }
@@ -466,9 +470,10 @@
             }
 
             // Copy the array to the global elements array, removing empty slots on the fly
-            $.each(elements,function(index,value){
+            $.each(elements, function (index, value) {
                 if (value !== undefined) {
-                    l.element.push( value );
+                    l.element.push(value);
+
                 }
             });
 
@@ -654,7 +659,7 @@
                 var name = l.element[i]['name'];
                 var shift = l.shifts[i];
 
-                if (l.element[i]['bridge']) {
+                if ( typeof l.bridges[i] !== 'undefined' ) {
                     top = Math.min(3, l.element[i]['top'])
                 } else {
                     top = l.element[i]['top'];
@@ -793,11 +798,9 @@
                 $target.css("width", 60);
             }
 
-            strBridgeName = l.element[$bridge.attr('data-ref')];
-            console.log($bridge.attr('data-ref'));
+            // Change the 'bridge' value of the element
+            l.bridges[i] =  l.elementCatalogue[$bridge.attr('data-ref')]['symbol'];
 
-            // Change the element-data
-            l.element[i]['bridge'] = true;
 
             // Update drawing
             libConfig.diagramChanged();
