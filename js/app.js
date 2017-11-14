@@ -1,5 +1,5 @@
 /**
- * Created by M. H. van der Velde on 08/09/2017.
+ * Created by M. H. van der Velde (ideogram.nl) on 08/09/2017.
  */
 
 
@@ -12,9 +12,14 @@
 
     libConfig = {
         // Settings
-        folderAssets: "assets/",
-        fileCatalogue: "catalogue/elements.yaml",
-        folderPartials: "partials/",
+        path: {
+            folderAssets: "assets/",
+            fileCatalogue: "catalogue/elements.yaml",
+            folderPartials: "partials/",
+            folderImages: 'images/',
+        },
+
+        meta: '<metadata> <rdf:RDF> <cc:Work rdf:about=""> <dc:format>image/svg+xml</dc:format> <dc:creator> <cc:Agent> <dc:title>M. H. van der Velde (ideogram.nl) in opdracht van Rijkswaterstaat ism Qualogy</dc:title> </cc:Agent> </dc:creator> </cc:Work> </rdf:RDF> </metadata>',
 
         // Defaults
         chamberID: "0000",
@@ -42,6 +47,24 @@
         svgArrowLeft: null,
         svgArrowRight: null,
 
+        /**
+         * Set the paths used within the app.
+         *
+         * Argument is an object that can contain zero or more of the following
+         * properties (with their default value)
+         * - folderAssets: "assets/"
+         * - fileCatalogue: "catalogue/elements.yaml"
+         * - folderPartials: "partials/"
+         * - folderImages: 'images/'
+         *
+         * @param {object} objPathOptions Object containing the various paths
+         * @memberof libConfig
+         */
+        setPaths: function (objPathOptions) {
+            var l = libConfig;
+            // use the jQuery extend option to override the default path settings:
+            jQuery.extend(l.path, objPathOptions);
+        },
 
         /**
          * Assign a DOM-element as container for the catalogue of DOM-elements
@@ -69,7 +92,7 @@
             // Load the YAML-configuration file containig names and properties of the lock-elements
             // and add them to our UI
 
-            $.get(l.fileCatalogue, null, libConfig.loadElements);
+            $.get(l.path.fileCatalogue, null, libConfig.loadElements);
 
         },
 
@@ -109,7 +132,7 @@
 
             for (var i = 0; i < strOptions.length; i++) {
 
-                $.get("partials/option-" + strOptions[i] + ".partial.html", function (data) {
+                $.get(l.path.folderPartials + "option-" + strOptions[i] + ".partial.html", function (data) {
                     $(data).appendTo(l.$options)
                         .find("input").on("change", libConfig.optionChanged);
                 });
@@ -134,11 +157,11 @@
 
             // ... store two network-direction symbols into variables
 
-            $.get("partials/network-arrow-left.partial.svg", null, function( data ) {
+            $.get(l.path.folderPartials + "network-arrow-left.partial.svg", null, function( data ) {
                 l.svgArrowLeft = data;
             }, 'html' );
 
-            $.get("partials/network-arrow-right.partial.svg", null, function( data ) {
+            $.get(l.path.folderPartials + "network-arrow-right.partial.svg", null, function( data ) {
                 l.svgArrowRight = data;
             }, 'html');
 
@@ -192,7 +215,7 @@
             var $arrow;
 
             // Fill the '#result'-SVG  with the lock-elements
-            l.$result.html("");
+            l.$result.html(l.meta);
 
             var x = 0;
             for (var i = 0; i < l.L; i++) {
@@ -467,7 +490,7 @@
                         .addClass(val.name)
                         .disableSelection()
                         .draggable(l.draggableOptions)
-                        .load(l.folderAssets + id + ".svg", libConfig.elementLoaded);
+                        .load(l.path.folderAssets + id + ".svg", libConfig.elementLoaded);
 
                 // After the SVG is rendered, rework the SVG
                 libConfig.observer.observe($li[0], {childList: true});
@@ -786,19 +809,19 @@
         drawCompassRose: function(value) {
             var l = libConfig;
 
+
             switch (value){
                 case "N":
                 case "Z":
 
-                    l.$compassRoseLeft.css("background-image", "url(images/compass-left-north.svg)");
-                    l.$compassRoseRight.css("background-image", "url(images/compass-right-south.svg)");
+                    l.$compassRoseLeft.css("background-image", libConfig.getCssUrl("compass-right-south.svg"));
+                    l.$compassRoseRight.css("background-image", libConfig.getCssUrl("compass-right-south.svg"));
 
                     break;
                 case "O":
                 case "W":
-                    l.$compassRoseLeft.css("background-image", "url(images/compass-left-west.svg)");
-                    l.$compassRoseRight.css("background-image", "url(images/compass-right-east.svg)");
-
+                    l.$compassRoseLeft.css("background-image", libConfig.getCssUrl("compass-left-west.svg"));
+                    l.$compassRoseRight.css("background-image", libConfig.getCssUrl("compass-right-east.svg"));
                 break;
             }
         },
@@ -811,14 +834,14 @@
                 case "N":
                 case "W":
 
-                    l.$diagram.css("background-image", "url(images/network-arrow-right.svg)");
-                    l.$diagram.css("background-image", "url(images/network-arrow-right.svg)");
+                    l.$diagram.css("background-image", libConfig.getCssUrl("network-arrow-right.svg)"));
+                    l.$diagram.css("background-image", libConfig.getCssUrl("network-arrow-right.svg)"));
 
                     break;
                 case "O":
                 case "Z":
-                    l.$diagram.css("background-image", "url(images/network-arrow-left.svg)");
-                    l.$diagram.css("background-image", "url(images/network-arrow-left.svg)");
+                    l.$diagram.css("background-image", libConfig.getCssUrl("network-arrow-left.svg"));
+                    l.$diagram.css("background-image", libConfig.getCssUrl("network-arrow-left.svg"));
 
                     break;
             }
@@ -826,6 +849,13 @@
 
         setChamberID: function(value){
             libConfig.chamberID = value;
+        },
+
+        getCssUrl: function (filename){
+            var l = libConfig;
+
+            return "url("+l.path.folderImages + filename + ")";
+
         }
     }
 })(window);

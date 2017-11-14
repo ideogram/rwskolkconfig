@@ -54,11 +54,14 @@
 
 <!-- Implementation of application-script -->
 <script>
+  libConfig.setPaths({"folderAssets":"assets/"});
   libConfig.setChamberID("31415");
   libConfig.loadAssetsAndCatalogue();
   libConfig.setToolbar('#toolbar');
   libConfig.setDiagram('#diagram');
   libConfig.setConfigString("(12345 Z ABC)<S.<.     .>(DVO ten noorden van kolk)"); // implicit drawDiagram
+
+
 
   $("#download").on("click", function () {
     var strFileName = $("#filename").val();
