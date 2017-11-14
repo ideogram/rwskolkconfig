@@ -19,8 +19,6 @@
             folderImages: 'images/',
         },
 
-        meta: '<metadata> <rdf:RDF> <cc:Work rdf:about=""> <dc:format>image/svg+xml</dc:format> <dc:creator> <cc:Agent> <dc:title>M. H. van der Velde (ideogram.nl) in opdracht van Rijkswaterstaat ism Qualogy</dc:title> </cc:Agent> </dc:creator> </cc:Work> </rdf:RDF> </metadata>',
-
         // Defaults
         chamberID: "0000",
         networkDirection : "N",
@@ -215,7 +213,7 @@
             var $arrow;
 
             // Fill the '#result'-SVG  with the lock-elements
-            l.$result.html(l.meta);
+            l.$result.html("");
 
             var x = 0;
             for (var i = 0; i < l.L; i++) {
@@ -583,7 +581,7 @@
             // Allow a bridge to be dropped on the element.
             $target.droppable(
                 {
-                    drop: libConfig.drawBridge,
+                    drop: libConfig.receiveDropOnElement,
                     accept: ".brug-vast, .brug-beweegbaar"
                 }
             );
@@ -724,15 +722,18 @@
 
         },
 
+        // event-handler for receiving a bridge dropped on a ui-element
+        receiveDropOnElement: function(event, ui){
+            libConfig.drawBridge($(event.target),$(ui.helper));
+        },
+
         // Draw a bridge over the target element
-        drawBridge: function(event, ui) {
+        drawBridge: function($target, $bridge) {
             var l = libConfig;
             var viewBox;
 
             // Determine the right DOM-elements
-            var $target = $(event.target);
             var $svg = $target.find("svg");
-            var $bridge = $(ui.helper);
             var $bridgeGroup = $bridge.find("g");
             var i = $target.index();
             var isStopStreep = ( l.element[i].name == 'stopstreep');
@@ -762,6 +763,7 @@
 
             // Change the element-data
             l.element[i]['bridge'] = true;
+            l.element[i]['symbol'] = "POEP!";
 
             // Update drawing
             libConfig.diagramChanged();
@@ -851,6 +853,8 @@
             libConfig.chamberID = value;
         },
 
+        // Helper function to construct a css-style url for an image.
+        // Return for example: url("to/images/folder/filename.jpg")
         getCssUrl: function (filename){
             var l = libConfig;
 
