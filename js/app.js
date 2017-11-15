@@ -345,6 +345,9 @@
                 strConfig = strConfig.replace(strComment, "");
 
                 // Set the comment from the third part
+                strComment = strComment.replace(/\s/gi,"");
+                strComment = strComment.replace("(","");
+                strComment = strComment.replace(")","");
                 l.strComment = strComment;
 
                 // From the first part,
@@ -372,6 +375,8 @@
             // What remains is the 'actual' config string, the part
             // that contains all the symbols, like e.g. <S.<.   .>
             l.strConfig = strConfig;
+
+
         },
 
         /**
@@ -597,6 +602,7 @@
             l.element = [];
             l.arr$SVG = [];
             l.shifts = [];
+            // ( We must keep the l.bridges[], because these can't be discovered automatically )
 
             l.$diagramElements = l.$diagram.find(".element");
 
@@ -627,13 +633,7 @@
             // Add a button to erase the element from the #diagram again
             var $btnRemove = $("<a></a>").appendTo($target).addClass("btn-remove");
 
-            $btnRemove.on("click", function () {
-                $(this).closest("li").remove();
-                l.diagramChanged();
-
-                // todo: Remove bridge as well
-
-            });
+            $btnRemove.on("click", libConfig.removeElement );
 
             // Allow a bridge to be dropped on the element.
             $target.droppable(
@@ -642,6 +642,18 @@
                     accept: ".brug-vast, .brug-beweegbaar"
                 }
             );
+        },
+
+        // Remove an element from the diagram
+        removeElement: function(){
+            var $me = $(this);
+            var $li = $me.closest("li");
+            var i = $li.index();
+
+            l.bridges.splice(i,1);
+            $li.remove();
+            l.diagramChanged();
+
         },
 
         // Shift elements upward or downward if needed because of some special chamber-shapes
