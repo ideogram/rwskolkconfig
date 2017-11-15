@@ -345,7 +345,6 @@
                 strConfig = strConfig.replace(strComment, "");
 
                 // Set the comment from the third part
-                strComment = strComment.replace(/\s/gi,"");
                 strComment = strComment.replace("(","");
                 strComment = strComment.replace(")","");
                 l.strComment = strComment;
