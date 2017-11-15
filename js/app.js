@@ -215,7 +215,6 @@
                 ")"
             ].join(" ");
 
-
             for (var i = 0; i < l.L; i++) {
                 l.strConfig += l.element[i]['symbol'];
 
@@ -437,6 +436,8 @@
             // Clear the diagram
             l.$diagram.html("");
             l.element = [];
+            l.shifts = [];
+            l.bridges = [];
 
             // Make a local copy of the catalogue
             var c = l.elementCatalogue.slice();
@@ -453,13 +454,13 @@
             }
 
             // Find occurrences of every symbol in the config-string and store them in an array
-
             for (i=0; i<c.length; i++ ){
 
                 symbol = c[i].symbol;
                 name = c[i].name;
 
                 pos = s.indexOf( symbol );
+
                 while (pos !== -1) {
                     elements[pos] = c[i];
                     elements[pos]['ref'] = i;
@@ -469,11 +470,17 @@
                 }
             }
 
-            // Copy the array to the global elements array, removing empty slots on the fly
-            $.each(elements, function (index, value) {
-                if (value !== undefined) {
-                    l.element.push(value);
+            var index = 0;
 
+            // Copy the array to the global elements array, removing empty slots on the fly
+            $.each(elements, function (i, value) {
+                if (value !== undefined) {
+                    if ( value.symbol == "#" || value.symbol == ":") {
+                        l.bridges[index-1] = value.symbol;
+                    } else {
+                        l.element.push(value);
+                        index++;
+                    }
                 }
             });
 
@@ -483,9 +490,8 @@
                 $e = l.$toolbar.find("."+name);
                 htmlDiagram +=  $e[0].outerHTML;
             }
-            l.$diagram.html(htmlDiagram);
 
-            l.shifts = [];
+            l.$diagram.html(htmlDiagram);
 
             l.$diagramElements = l.$diagram.find(".element");
 
@@ -493,6 +499,16 @@
                 var $me = $(this);
                 l.arr$SVG[i] = $me.find("svg");
                 libConfig.prepareForDiagramLife($me);
+
+                if (l.bridges[i] == "#"){
+                    $bridge = l.$toolbar.find(".brug-vast").clone();
+                    libConfig.drawBridge($me, $bridge);
+                }
+
+                if (l.bridges[i] == ":"){
+                    $bridge = l.$toolbar.find(".brug-beweegbaar").clone();
+                    libConfig.drawBridge($me, $bridge);
+                }
             });
 
             l.L = l.$diagramElements.length;
@@ -599,11 +615,12 @@
             l.alignAnnotations();
         },
 
-        // Preparing an element for it's life inside the #diagram
+        // Event-handler for when an element from the toolbar is dropped on the diagram
         elementDropped: function(event, ui) {
             libConfig.prepareForDiagramLife( $(ui.helper) );
         },
 
+        // Preparing an element for it's life inside the #diagram
         prepareForDiagramLife: function( $target ){
             var l = libConfig;
 
@@ -613,6 +630,9 @@
             $btnRemove.on("click", function () {
                 $(this).closest("li").remove();
                 l.diagramChanged();
+
+                // todo: Remove bridge as well
+
             });
 
             // Allow a bridge to be dropped on the element.
@@ -801,7 +821,6 @@
             // Change the 'bridge' value of the element
             l.bridges[i] =  l.elementCatalogue[$bridge.attr('data-ref')]['symbol'];
 
-
             // Update drawing
             libConfig.diagramChanged();
         },
@@ -890,18 +909,16 @@
             libConfig.chamberID = value;
         },
 
+        // --- CSS Helper functions ---
         // Helper function to construct a css-style url for an image.
-        // Return for example: url("to/images/folder/filename.jpg")
         getCssUrl: function (filename){
             var l = libConfig;
 
+            // Returns for example: url("to/images/folder/filename.jpg")
             return "url("+l.path.folderImages + filename + ")";
-
         },
 
-        // CSS Helper functions
-
-        // Create the <style> tag
+        // Create a stylesheet. Returns a reference to the stylesheet
         addStyleSheet: function () {
             var style = document.createElement("style");
 
@@ -914,6 +931,7 @@
             return style.sheet;
         },
 
+        // Add a CSS rule
         addCSSRule: function (sheet, selector, rules, index) {
             if ("insertRule" in sheet) {
                 sheet.insertRule(selector + "{" + rules + "}", index);

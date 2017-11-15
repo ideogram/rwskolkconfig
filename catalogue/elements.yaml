@@ -26,8 +26,7 @@
 # Notes:
 #  - Puntdeuren worden weergeven met een < of >
 #  - Speciale puntdeuren krijgen een hoofdletter aan de 'binnenkant': <W, W>, <P, P> en <D D>
-#  - Deuren die worden gebruikt als stormdeuren krijgen een 's' als suffix: bv. <s, >s, Hs en in het diagram krijgen ze aanduiding "HW"
-#  - Deuren die worden gebruikt als hwk krijgen een 'h' als suffix: <h, >h, Hh en in het diagram krijgen ze aanduiding "HWK"
+#  - Deuren die worden gebruikt als hoogwaterkering krijgen een 'h' als suffix, bv:: <h, >h, Hh. In het diagram krijgen ze de annotatie "HWK"
 #
 # Grid cells are 24*24 px
 
