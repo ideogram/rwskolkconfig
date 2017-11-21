@@ -883,7 +883,7 @@
                 case "N":
                 case "Z":
 
-                    l.$compassRoseLeft.css("background-image", libConfig.getCssUrl("compass-right-south.svg"));
+                    l.$compassRoseLeft.css("background-image", libConfig.getCssUrl("compass-left-north.svg"));
                     l.$compassRoseRight.css("background-image", libConfig.getCssUrl("compass-right-south.svg"));
 
                     break;
