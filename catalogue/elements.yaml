@@ -91,7 +91,7 @@
   bottom: 17
   gate: false
   symbol: "6"
-  mnemo: Overgang van verbrede kolk (links) naar smalle kolk (rechts-onder). De vorm van dit element lijkt op het cijfer '6'
+  mnemo: Afgeronde overgang van verbrede kolk (links) naar smalle kolk (rechts-onder). De vorm van dit element lijkt op het cijfer '6'
 
 - name: kamerkolk-kop-j-rond
   deltay: -2
@@ -99,7 +99,7 @@
   bottom: 15
   gate: false
   symbol: "j"
-  mnemo: Overgang van smalle kolk (links-onder) naar verbrede kolk aan de rechterzijde. De vorm van dit element lijkt op  de letter 'j'
+  mnemo: Afgeronde overgang van smalle kolk (links-onder) naar verbrede kolk aan de rechterzijde. De vorm van dit element lijkt op  de letter 'j'
 
 
 - name: kamerkolk-kop-r-rond
@@ -108,7 +108,7 @@
   bottom: 17
   gate: false
   symbol: "r"
-  mnemo: Overgang van verbrede kolk (links) naar smalle kolk (rechts-boven). De vorm van dit element lijkt op de  de letter 'r'
+  mnemo: Afgeronde overgang van verbrede kolk (links) naar smalle kolk (rechts-boven). De vorm van dit element lijkt op de  de letter 'r'
 
 
 - name: kamerkolk-kop-9-rond
@@ -117,7 +117,7 @@
   bottom: 13
   gate: false
   symbol: 9
-  mnemo: Overgang van smalle kolk (links-boven) naar verbrede kolk aan de rechterzijde. De vorm van dit element lijkt op het cijfer '9'
+  mnemo: Afgeronde overgang van smalle kolk (links-boven) naar verbrede kolk aan de rechterzijde. De vorm van dit element lijkt op het cijfer '9'
 
 
 - name: binnenfrontkolk-kop-links
@@ -430,7 +430,7 @@
   top: 6
   bottom: 14
   gate: true
-  symbol: ',\h'
+  symbol: '/,h'
   mnemo: De komma toont de aanslag, de backslash toont een half-open deur
 
 - name: draaideur-lo-hwk
@@ -439,7 +439,7 @@
   top: 6
   bottom: 14
   gate: true
-  symbol: "'/h"
+  symbol: "\\'h"
   mnemo: De apostrophe toont de aanslag, de slash een half-open deur
 
 - name: draaideur-rb-hwk
@@ -448,7 +448,7 @@
   top: 6
   bottom: 14
   gate: true
-  symbol: "/,h"
+  symbol: ",\\h"
   mnemo: De komma toont de aanslag, de slash een half-open deur
 
 - name: draaideur-ro-hwk
@@ -457,8 +457,9 @@
   top: 6
   bottom: 14
   gate: true
-  symbol: \'h
+  symbol: "'/h"
   mnemo: De apostrophe toont de aanslag, de backslash een half-open deur
+
 
 #  DOORVAAROPENINGEN
 
@@ -478,6 +479,15 @@
   gate: false
   symbol: ":"
 
+# WEGDEK OVER SLUISHOOFD
 
+
+- name: weg-over-hoofd
+  description: Wegdek over sluishoofd
+  deltay: 0
+  top: 4
+  bottom: 6
+  gate: false
+  symbol: "X"
 
 ...

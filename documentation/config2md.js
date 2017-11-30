@@ -10,7 +10,7 @@ polyfill();
 
 // Get document, or throw exception on error
 try {
-    var doc = yaml.safeLoad(fs.readFileSync('../config/elements.yaml', 'utf8'));
+    var doc = yaml.safeLoad(fs.readFileSync('catalogue/elements.yaml', 'utf8'));
     makeDoc(doc);
 } catch (e) {
     console.log(e);

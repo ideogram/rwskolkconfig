@@ -4,7 +4,7 @@
 
 Een kolkconfiguratiestring voldoet aan de volgende syntax
 ```
- "(",['0'-'9']{4,5},"N"|"O"|"Z"|"W",("ABC"|"CBA")?,")",symbol+,("(",.+,")")?
+ "(","N"|"O"|"Z"|"W",("ABC"|"CBA")?,")",symbol+
 ```
 
 waarbij voor `symbol` een tekencombinatie
@@ -13,13 +13,13 @@ gebruikt wordt uit de tabel, zie **Symbolen**
 Beschrijvend:
 
 ```
- ( [Kolk-id] [Ingang-volgens-netwerk-richting] [Naamvolgorde] ) Configuratiestring (Vrije tekst)
+ ( [Ingang-volgens-netwerk-richting] [Naamvolgorde] ) Configuratiestring
 ```
 
 Bijvoorbeeld:
 
 ```
-( 31415 W --> )<.:>.    .<.>.    .<.>:(Doorvaartopening tussen noordelijke en zuidelijke hoofden) 
+( W ABC )<.:>.    .<.>.    .<.>: 
 ```
 
 De configuratiestring bestaat uit drie delen: een deel tussen
@@ -28,8 +28,6 @@ afsluitend vrije tekst tussen haakjes. De symbolen staan voor
 kolk-elementen, in de JavaScript-code aangeduid als _**elements**_
 
 In het eerste gedeelte, tussen haakjes, staat achtereenvolgens:
-
-* de kolk-id, bestaande uit 4 of 5 cijfers
 
 * één letter die de windstreek aanduid waar de ingang van de kolk
   ligt volgens de netwerkrichting. Zie '**Windstreek**'
@@ -47,10 +45,6 @@ kunnen naar believen worden toegevoegd om de leesbaarheid te verhogen.
 De configuratiestring is een tekstuele, maar engiszins grafische, 
 representatie van de sluis.
  
-De vrije tekst kan gebruikt worden om eventuele aanvullingen tekstueel
-weer te geven in de configuratiestring. Hierin kan bijvoorbeeld
-informatie over de ligging van doorvaartopeningen worden opgenomen.
-
 ## Windstreek
 
 De kolk wordt altijd horizontaal getekend en _altijd_ van west
@@ -62,7 +56,7 @@ uiteindelijk diagram altijd voorzien van de letter "N" _of_ "W". Evenzo
 wordt de rechterzijde altijd voorzien van de letter "Z" _of_ "O".
 
 De windstreek geeft aan, aan welke zijde van de kolk zich de ingang
-bevind volgens de netwerkrichting zoals RWS die hanteert. De enige
+bevindt volgens de netwerkrichting zoals RWS die hanteert. De enige
 invloed die dit heeft op het uiteindelijke diagram is een pijltje
 in de tekening. Het is echter van belang voor het toekennen van
 id's aan de sluishoofden, aangezien deze altijd oplopend in de
@@ -80,7 +74,7 @@ De serie symbolen tekenen samen de sluisconfiguratie op een een wijze die zowel 
 begrijpelijk is. De symbolen dienen gekozen te worden uit de eerste kolom van de volgende tabel
 
 | symbol | name            | mnemo 
-| :---:    | ---             | --- 
+| ---    | ---             | --- 
 | `[SPACE]`  | gladde-kolk                    |                                                                                                                                         |
 | `.`        | stopstreep                     |                                                                                                                                         |
 | `[PIPE]`   | kolk-verbreed                  |                                                                                                                                         |
@@ -88,10 +82,10 @@ begrijpelijk is. De symbolen dienen gekozen te worden uit de eerste kolom van de
 | `d`        | kamerkolk-kop-d                | Overgang van smalle kolk (links-onder) naar verbrede kolk aan de rechterzijde. De vorm van dit element lijkt op de kleine letter 'd'    |
 | `p`        | kamerkolk-kop-p                | Overgang van verbrede kolk (links) naar smalle kolk (rechts-boven). De vorm van dit element lijkt op de onderkastletter 'p'             |
 | `q`        | kamerkolk-kop-q                | Overgang van smalle kolk (links-boven) naar verbrede kolk aan de rechterzijde. De vorm van dit element lijkt op de onderkastletter 'q'  |
-| `6`        | kamerkolk-kop-6-rond           | Overgang van verbrede kolk (links) naar smalle kolk (rechts-onder). De vorm van dit element lijkt op het cijfer '6'                     |
-| `j`        | kamerkolk-kop-j-rond           | Overgang van smalle kolk (links-onder) naar verbrede kolk aan de rechterzijde. De vorm van dit element lijkt op  de letter 'j'          |
-| `r`        | kamerkolk-kop-r-rond           | Overgang van verbrede kolk (links) naar smalle kolk (rechts-boven). De vorm van dit element lijkt op de  de letter 'r'                  |
-| `9`        | kamerkolk-kop-9-rond           | Overgang van smalle kolk (links-boven) naar verbrede kolk aan de rechterzijde. De vorm van dit element lijkt op het cijfer '9'          |
+| `6`        | kamerkolk-kop-6-rond           | Afgeronde overgang van verbrede kolk (links) naar smalle kolk (rechts-onder). De vorm van dit element lijkt op het cijfer '6'           |
+| `j`        | kamerkolk-kop-j-rond           | Afgeronde overgang van smalle kolk (links-onder) naar verbrede kolk aan de rechterzijde. De vorm van dit element lijkt op  de letter 'j' |
+| `r`        | kamerkolk-kop-r-rond           | Afgeronde overgang van verbrede kolk (links) naar smalle kolk (rechts-boven). De vorm van dit element lijkt op de  de letter 'r'        |
+| `9`        | kamerkolk-kop-9-rond           | Afgeronde overgang van smalle kolk (links-boven) naar verbrede kolk aan de rechterzijde. De vorm van dit element lijkt op het cijfer '9' |
 | `[`        | binnenfrontkolk-kop-links      | Overgang van smalle kolk (links) naar verbrede kolk (rechts) met rechthoeking front                                                     |
 | `]`        | binnenfrontkolk-kop-rechts     | Overgang van verbrede kolk (links) naar smalle kolk (rechts) met rechthoeking front                                                     |
 | `{`        | komkolk-kop-links              | Overgang van smalle kolk (links) naar verbrede kolk (rechts) met rond front                                                             |
@@ -102,25 +96,32 @@ begrijpelijk is. De symbolen dienen gekozen te worden uit de eerste kolom van de
 | `P>`       | puntdeur-pin-rechts            |                                                                                                                                         |
 | `<D`       | puntdeur-dubbelk-links         |                                                                                                                                         |
 | `D>`       | puntdeur-dubbelk-rechts        |                                                                                                                                         |
-| `<s`       | puntdeur-storm-links           | Deur is voorzien van het label 'HW'                                                                                                     |
-| `>s`       | puntdeur-storm-rechts          | Deur is voorzien van het label 'HW'                                                                                                     |
-| `<h`       | puntdeur-hwk-links             | Deur is voorzien van het label 'HWK'                                                                                                    |
-| `>h`       | puntdeur-hwk-rechts            | Deur is voorzien van het label 'HWK'                                                                                                    |
-| `,\`       | draaideur-lb                   | De komma toont de aanslag, de backslash toont een half-open deur                                                                        |
-| `'/`       | draaideur-lo                   | De apostrophe toont de aanslag, de slash een half-open deur                                                                             |
-| `/,`       | draaideur-rb                   | De komma toont de aanslag, de slash een half-open deur                                                                                  |
-| `\'`       | draaideur-ro                   | De apostrophe toont de aanslag, de backslash een half-open deur                                                                         |
+| `/,`       | draaideur-lb                   | De komma toont de aanslag, de backslash toont een half-open deur                                                                        |
+| `\'`       | draaideur-lo                   | De apostrophe toont de aanslag, de slash een half-open deur                                                                             |
+| `,\ `       | draaideur-rb                   | De komma toont de aanslag, de slash een half-open deur                                                                                  |
+| `'/`       | draaideur-ro                   | De apostrophe toont de aanslag, de backslash een half-open deur                                                                         |
 | `H`        | hefdeur                        |                                                                                                                                         |
-| `Hs`       | hefdeur-storm                  |                                                                                                                                         |
-| `Hh`       | hefdeur-hwk                    |                                                                                                                                         |
 | `?`        | hangroldeur                    |                                                                                                                                         |
 | `A`        | roldeur-boven                  | De letter A is een pijltje dat wijst de richting aan waarin de deur rolt                                                                |
-| `As`       | roldeur-boven-storm            | De letter A is een pijltje dat wijst de richting aan waarin de deur rolt                                                                |
-| `Ah`       | roldeur-boven-hwk              | De letter A is een pijltje dat wijst de richting aan waarin de deur rolt                                                                |
 | `V`        | roldeur-onder                  | De letter V is een pijltje dat wijst de richting aan waarin de deur rolt                                                                |
-| `Vs`       | roldeur-onder-storm            | De letter V is een pijltje dat wijst de richting aan waarin de deur rolt                                                                |
-| `Vh`       | roldeur-onder-hwk              | De letter V is een pijltje datwijst de richting aan waarin de deur rolt                                                                 |
 | `<W`       | waaierdeur-links               |                                                                                                                                         |
 | `W>`       | waaierdeur-rechts              |                                                                                                                                         |
+| `!`        | schot                          | Deur krijgt geen eigen letter                                                                                                           |
+| `<h`       | puntdeur-links-hwk             | Deur is voorzien van het label 'HWK'                                                                                                    |
+| `>h`       | puntdeur-rechts-hwk            | Deur is voorzien van het label 'HWK'                                                                                                    |
+| `<Ph`      | puntdeur-pin-links-hwk         |                                                                                                                                         |
+| `P>h`      | puntdeur-pin-rechts-hwk        |                                                                                                                                         |
+| `<Dh`      | puntdeur-dubbelk-links-hwk     |                                                                                                                                         |
+| `D>h`      | puntdeur-dubbelk-rechts-hwk    |                                                                                                                                         |
+| `Hh`       | hefdeur-hwk                    |                                                                                                                                         |
+| `Ah`       | roldeur-boven-hwk              | De letter A is een pijltje dat wijst de richting aan waarin de deur rolt                                                                |
+| `Vh`       | roldeur-onder-hwk              | De letter V is een pijltje dat wijst de richting aan waarin de deur rolt                                                                |
+| `?h`       | hangroldeur-hwk                | Geen                                                                                                                                    |
+| `<Wh`      | waaierdeur-links-hwk           |                                                                                                                                         |
+| `W>h`      | waaierdeur-rechts-hwk          |                                                                                                                                         |
+| `/,h`      | draaideur-lb-hwk               | De komma toont de aanslag, de backslash toont een half-open deur                                                                        |
+| `\'h`      | draaideur-lo-hwk               | De apostrophe toont de aanslag, de slash een half-open deur                                                                             |
+| `,\h`      | draaideur-rb-hwk               | De komma toont de aanslag, de slash een half-open deur                                                                                  |
+| `'/h`      | draaideur-ro-hwk               | De apostrophe toont de aanslag, de backslash een half-open deur                                                                         |
 | `#`        | brug-vast                      |                                                                                                                                         |
 | `:`        | brug-beweegbaar                |                                                                                                                                         |

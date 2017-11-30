@@ -513,6 +513,11 @@
                     $bridge = l.$toolbar.find(".brug-beweegbaar").clone();
                     libConfig.drawBridge($me, $bridge);
                 }
+
+                if (l.bridges[i] == "X"){
+                    $bridge = l.$toolbar.find(".weg-over-hoofd").clone();
+                    libConfig.drawBridge($me, $bridge);
+                }
             });
 
             l.L = l.$diagramElements.length;
@@ -533,9 +538,9 @@
                 var id = val.name;
                 var description = val.description;
 
-                // Bridges may be draggable, but should not be allowed to end up in the #diagram
+                // Bridges may be draggable, but should not be allowed to end up in the diagram as separate entities
                 var draggableOptionsElement = l.draggableOptions;
-                if (val.name == "brug-vast" || val.name == "brug-beweegbaar") {
+                if (val.name == "brug-vast" || val.name == "brug-beweegbaar" || val.name == "weg-over-hoofd" ) {
                     delete draggableOptionsElement.connectToSortable;
                 }
 
@@ -638,7 +643,7 @@
             $target.droppable(
                 {
                     drop: libConfig.receiveDropOnElement,
-                    accept: ".brug-vast, .brug-beweegbaar"
+                    accept: ".brug-vast, .brug-beweegbaar, .weg-over-hoofd"
                 }
             );
         },
