@@ -654,10 +654,17 @@
             var $li = $me.closest("li");
             var i = $li.index();
 
-            l.bridges.splice(i,1);
-            $li.remove();
-            l.diagramChanged();
 
+            if (i in l.bridges ){
+                // remove bridge, but not the underlaying element
+                $li.find("g.bridge").remove();
+                delete l.bridges[i];
+            } else {
+                // remove the element
+                l.bridges.splice(i,1);
+                $li.remove();
+                l.diagramChanged();
+            }
         },
 
         // Shift elements upward or downward if needed because of some special chamber-shapes
