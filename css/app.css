@@ -1,5 +1,17 @@
+body, html {
+  height: 100%;
+  padding: 0;
+  margin: 0; }
+
 body {
   font-family: Arial, Helvetica Neue, Helvetica, sans-serif; }
+
+#toolbar-wrapper {
+  outline: 1px solid #f0f0f0;
+  max-height: calc(100% - 420px);
+  width: 100%;
+  overflow: scroll;
+  margin: 5px; }
 
 #toolbar, #diagram {
   text-align: center;
