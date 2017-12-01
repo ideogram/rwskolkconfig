@@ -23,10 +23,6 @@
 #
 #   string, not used in the app, for documentation only
 #
-# Notes:
-#  - Puntdeuren worden weergeven met een < of >
-#  - Speciale puntdeuren krijgen een hoofdletter aan de 'binnenkant': <W, W>, <P, P> en <D D>
-#  - Deuren die worden gebruikt als hoogwaterkering krijgen een 'h' als suffix, bv:: <h, >h, Hh. In het diagram krijgen ze de annotatie "HWK"
 #
 # Grid cells are 24*24 px
 
@@ -324,8 +320,8 @@
 - name: breed-schot
   tooltip: Deur of schot over brede kolk, alleen bij hoogwater
   deltay: 0
-  top: 6
-  bottom: 15
+  top: 5
+  bottom: 18
   gate: false
   symbol: "I03"
  
