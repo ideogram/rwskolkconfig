@@ -480,7 +480,7 @@
             // Copy the array to the global elements array, removing empty slots on the fly
             $.each(elements, function (i, value) {
                 if (value !== undefined) {
-                    if ( value.symbol == "#" || value.symbol == ":") {
+                    if ( value.symbol == "I05" || value.symbol == "I06" || value.symbol == "I07" ) {
                         l.bridges[index-1] = value.symbol;
                     } else {
                         l.element.push(value);
@@ -505,17 +505,17 @@
                 l.arr$SVG[i] = $me.find("svg");
                 libConfig.prepareForDiagramLife($me);
 
-                if (l.bridges[i] == "#"){
+                if (l.bridges[i] == "I05"){
                     $bridge = l.$toolbar.find(".brug-vast").clone();
                     libConfig.drawBridge($me, $bridge);
                 }
 
-                if (l.bridges[i] == ":"){
+                if (l.bridges[i] == "I06"){
                     $bridge = l.$toolbar.find(".brug-beweegbaar").clone();
                     libConfig.drawBridge($me, $bridge);
                 }
 
-                if (l.bridges[i] == "X"){
+                if (l.bridges[i] == "I07"){
                     $bridge = l.$toolbar.find(".weg-over-hoofd").clone();
                     libConfig.drawBridge($me, $bridge);
                 }
@@ -595,12 +595,12 @@
             }
         },
 
-        // Update the #diagram after adding, removing or re-arranging elements
+        // Update the diagram after adding, removing or re-arranging elements
         diagramChanged: function() {
             var l = libConfig;
 
             // Store the element-information from the palette
-            // into a an array connected to every element in the #diagram
+            // into a an array connected to every element in the diagram
 
             // Erase anything previously stored:
             l.element = [];
@@ -630,11 +630,11 @@
             libConfig.prepareForDiagramLife( $(ui.helper) );
         },
 
-        // Preparing an element for it's life inside the #diagram
+        // Preparing an element for it's life inside the diagram
         prepareForDiagramLife: function( $target ){
             var l = libConfig;
 
-            // Add a button to erase the element from the #diagram again
+            // Add a button to erase the element from the diagram again
             var $btnRemove = $("<a></a>").appendTo($target).addClass("btn-remove");
 
             $btnRemove.on("click", libConfig.removeElement );
@@ -687,7 +687,7 @@
             }
         },
 
-        // Draw the elements in the diagram as close to the top of the #diagram as possible
+        // Draw the elements in the diagram as close to the top of the diagram as possible
         moveDiagramUp: function() {
             var highest = 1000; // infinity
             var l = libConfig;

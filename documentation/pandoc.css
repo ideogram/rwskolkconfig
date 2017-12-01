@@ -20,6 +20,10 @@ body {
     background: #fefefe;
 }
 
+img{
+    max-height: 2cm !important;
+}
+
 a {
     color: #0645ad;
     text-decoration: none;

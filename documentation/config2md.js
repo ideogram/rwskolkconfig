@@ -47,7 +47,7 @@ function makeDoc(doc){
                 element.name.padEnd(30),
                 element.tooltip.padEnd(60),
                 element.description.padEnd(135),
-                '!['+element.name+'](../assets/'+element.name+".png)"
+                '!['+element.name+'](../documentation/png/'+element.name+".png)"
             ].join(" | ")
             + " |"
         );

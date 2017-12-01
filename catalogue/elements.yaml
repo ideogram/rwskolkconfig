@@ -467,7 +467,6 @@
   bottom: 14
   gate: true
   symbol: "D31"
- 
 
 - name: vaarweg
   tooltip: Vaarweg, geen kolk, alleen voor brug buiten kolk
@@ -475,7 +474,7 @@
   top: 4
   bottom: 6
   gate: false
-  symbol: "D32"
+  symbol: "I04"
 
 #  DOORVAAROPENINGEN
 
@@ -485,7 +484,7 @@
   top: 4
   bottom: 16
   gate: false
-  symbol: "I04"
+  symbol: "I05"
 
 - name: brug-beweegbaar
   tooltip: Doorvaartopening, beweegbaar
@@ -493,7 +492,7 @@
   top: 4
   bottom: 6
   gate: false
-  symbol: "I05"
+  symbol: "I06"
 
 # WEGDEK OVER SLUISHOOFD
 
@@ -503,6 +502,6 @@
   top: 4
   bottom: 6
   gate: false
-  symbol: "I06"
+  symbol: "I07"
 
 ...
