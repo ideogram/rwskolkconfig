@@ -777,7 +777,8 @@
 
             // ... ... First, find the lowest position
             for (i = 0; i < l.L; i++) {
-                var bridge = l.element[i]['bridge'] ? 17 : 0;
+                // var bridge = l.element[i]['bridge'] ? 17 : 0;
+                var bridge = i in l.bridges ? 17: 0;
                 var bottom = l.element[i]['bottom'];
                 shift = l.shifts[i];
                 lowest = Math.max(lowest, bottom + shift, bridge + shift);
@@ -843,6 +844,7 @@
 
             // Change the 'bridge' value of the element
             l.bridges[i] =  l.elementCatalogue[$bridge.attr('data-ref')]['symbol'];
+            console.log(l.bridges);
 
             // Update drawing
             libConfig.diagramChanged();
