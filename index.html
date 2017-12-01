@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <ul id="debug">
+  <!--<ul id="debug">
     <li>
       <label id="label-chamber-id">Kolk-id:</label>
       <input name="chamberID" id="chamber-id">
@@ -33,7 +33,7 @@
     </li>
 
 
-  </ul>
+  </ul>-->
 
   <ul id="toolbar"></ul>
 
@@ -60,19 +60,13 @@
   libConfig.loadAssetsAndCatalogue();
   libConfig.setToolbar('#toolbar');
   libConfig.setDiagram('#diagram');
-  libConfig.setConfigString("(12345 Z ABC)<#.<#.  .:   .>(DVO ten noorden van kolk)"); // implicit drawDiagram
+  libConfig.setConfigString("(12345 Z ABC)<#.<#.  . #   .>()"); // implicit drawDiagram
 
-  $("#download").on("click", function () {
-    var strFileName = $("#filename").val();
+  // Add download button to options bar. This button should be implemented into the app-menu-bar
+  $download = $('<li><button id="download">Download</button></li>').appendTo('#options');
 
-    if (strFileName == "") {
-      strFileName = $("#chamber-id").val();
-    }
-
-    if (strFileName == "") {
-      strFileName = uniqueStringFromTime();
-    }
-
+  $download.on("click", function () {
+    strFileName = uniqueStringFromTime();
     libConfig.composeSVG(strFileName);
   });
 

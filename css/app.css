@@ -36,9 +36,9 @@ body {
       background-color: white; }
 
 #compass-rose-left, #compass-rose-right {
-  width: 150px;
+  width: 100px;
   float: left;
-  height: 400px;
+  height: 240px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% auto; }
@@ -48,9 +48,9 @@ body {
 
 #diagram {
   box-shadow: inset 0px 0px 45px 0px rgba(0, 0, 0, 0.13);
-  height: 360px;
+  height: 240px;
   float: left;
-  width: calc(100% - 300px);
+  width: calc(100% - 200px);
   background-repeat: no-repeat;
   background-position: center 10px;
   margin-top: 0;
@@ -171,3 +171,5 @@ svg {
 
 #diagram-wrapper {
   overflow: hidden; }
+
+/*# sourceMappingURL=app.css.map */

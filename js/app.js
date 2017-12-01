@@ -24,6 +24,7 @@
         networkDirection : "N",
         gateNumbering : "ABC",
         draggableOptions : {connectToSortable: null, helper: "clone", revert: "invalid"},
+        scale: 3,
 
         // Variables
         diagramTool: {},
@@ -255,7 +256,7 @@
             for (var i = 0; i < l.L; i++) {
                 var $svg = l.arr$SVG[i];
                 var html = $svg.html();
-                var w = 2 * parseFloat($svg.attr("width"));
+                var w = l.scale * parseFloat($svg.attr("width"));
                 var viewBox = $svg.attr("viewBox");
                 var y = 0;
                 // Remove the viewbox and wrap the element in a <g>-tag instead
@@ -581,12 +582,11 @@
         elementRendered: function(mutationRecords) {
             var $li = $(mutationRecords["0"].target);
             var $svg = $li.find("svg");
-            var id = $svg.attr("id");
             var l = libConfig;
 
-            // Use half the width and remove the height
+            // Scale the element down and remove height-attribute
             var w = $svg.attr("width");
-            $svg.attr('width', w / 2);
+            $svg.attr('width', w / l.scale );
             $svg.removeAttr("height");
 
             l.countElementsRendered++;
@@ -819,7 +819,7 @@
             var isStopStreep = ( l.element[i].name == 'stopstreep');
 
             // Calculate the position
-            var pxTargetWidth = 2 * parseFloat($svg.attr("width"));
+            var pxTargetWidth = l.scale * parseFloat($svg.attr("width"));
             var pxBridgeWidth = 5 * 24; // 120;
             var pxCentre = (pxTargetWidth - pxBridgeWidth) / 2;
 
@@ -837,8 +837,8 @@
                 viewBox = viewBox.split(" ");
                 viewBox[0] = -0;
                 viewBox[2] = 120;
-                $svg.attr("viewBox", viewBox.join(" ")).attr("width", 60);
-                $target.css("width", 60);
+                $svg.attr("viewBox", viewBox.join(" ")).attr("width", 120 / l.scale );
+                $target.css("width", 120 / l.scale);
             }
 
             // Change the 'bridge' value of the element
