@@ -311,7 +311,16 @@
   top: 6
   bottom: 15
   gate: false
-  symbol: "!"
+  symbol: "i"
+  mnemo: Deur krijgt geen eigen letter
+
+- name: breed-schot
+  description: Deur of schot over brede kolk, alleen bij hoogwater
+  deltay: 0
+  top: 6
+  bottom: 15
+  gate: false
+  symbol: "I"
   mnemo: Deur krijgt geen eigen letter
 
 - name: puntdeur-links-hwk
@@ -460,6 +469,13 @@
   symbol: "'/h"
   mnemo: De apostrophe toont de aanslag, de backslash een half-open deur
 
+- name: vaarweg
+  description: Vaarweg, geen kolk, alleen voor brug buiten kolk
+  deltay: 0
+  top: 4
+  bottom: 6
+  gate: false
+  symbol: "-"
 
 #  DOORVAAROPENINGEN
 
@@ -481,7 +497,6 @@
 
 # WEGDEK OVER SLUISHOOFD
 
-
 - name: weg-over-hoofd
   description: Wegdek over sluishoofd
   deltay: 0
@@ -489,5 +504,7 @@
   bottom: 6
   gate: false
   symbol: "X"
+
+
 
 ...

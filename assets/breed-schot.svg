@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" viewBox="0 0 72 480" height="480">
+    <title>
+        kolk-verbreed
+    </title>
+    <path d="M24 110v10H0v240h24v10h24v-10h24V120H48v-10H24z" fill="#d9ebf7"/>
+    <path d="M12 121.5H0M72 121.5H60M60 358.5h12" fill="none" stroke="#9fceea" stroke-width="3" stroke-miterlimit="10"/>
+    <path stroke-miterlimit="10" d="M12 358.5h12v12h24v-12h12" fill="none" stroke="#7d7d7d" stroke-width="3"/>
+    <path stroke-miterlimit="10" d="M0 358.5h12" fill="none" stroke="#9fceea" stroke-width="3"/>
+    <path stroke-miterlimit="10" d="M12 121.5h12v-12h24v12h12" fill="none" stroke="#7d7d7d" stroke-width="3"/>
+    <path overflow="visible" style="isolation:auto;mix-blend-mode:normal" d="M35.9 383.7c-5.4 0-9.7 4.4-9.7 9.8v3.3H25v16h22v-16h-1.3v-3.3c0-5.4-4.3-9.8-9.6-9.8zm0 2.4h.2c4 0 7.2 3.3 7.2 7.4v3.3H28.6v-3.3c0-4.1 3.2-7.4 7.3-7.4z" color="#000" fill="#01689b"/>
+    <path d="M28 307.6h16v-16H28zm0 29.8h16v-16H28zm0 29.8h16v-16H28zm0-238.5h15.9l.1-16H28.1zm0 29.8h16v-16H28zm0 29.8h16v-16H28zm0 29.8h16v-16H28zm0 29.8h16v-16H28zm0 29.9h16v-16H28z" style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal" color="#000" font-weight="400" font-family="sans-serif" white-space="normal" overflow="visible" fill="#01689b"/>
+</svg>

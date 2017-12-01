@@ -157,7 +157,7 @@
                     .prependTo("#diagram-wrapper");
 
             var strOptions = [
-                 'network-direction', 'gates-names-direction', 'comment'
+                 'network-direction', 'gates-names-direction'
             ];
 
             for (var i = 0; i < strOptions.length; i++) {
