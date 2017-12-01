@@ -1,10 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="120" viewBox="0 0 120 480" height="480">
+<svg xmlns="http://www.w3.org/2000/svg" height="480" viewBox="0 0 120 480" width="120">
     <title>
         wegdek-over-sluishoofd
     </title>
     <g class="bridge">
-        <path d="M24 72h72v336H24z" style="isolation:isolate" opacity=".5"/>
-        <path d="M28 72v336M92 72v336" fill="none" stroke="#fff" stroke-width="2" stroke-miterlimit="10"/>
-        <path d="M58.22 108h4V84h-4zm-.1 48h4v-24h-4zm-.1 48h4v-24h-4zm-.1 48h4v-24h-4zm-.1 48h4v-24h-4zm-.1 48h4v-24h-4zm-.1 48h4v-24h-4z" style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal" color="#000" font-weight="400" font-family="sans-serif" white-space="normal" overflow="visible" fill="#fff" fill-rule="evenodd"/>
+        <path d="M35 242v166h50V242zm23 23h4v24h-4zm0 48h4v24h-4zm0 48h4v24h-4zM36 72v165h48V72zm22 22.52h4v23.98h-4zm0 47.98h4v24h-4zm0 48h4v24h-4z" style="isolation:isolate" opacity=".5"/>
+        <path d="M58 214.5h4v-24h-4zm0-48h4v-24h-4zm0-48h4v-24h-4zM58 385h4v-24h-4zm0-48h4v-24h-4zm0-48h4v-24h-4z" style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal" color="#000" font-weight="400" font-family="sans-serif" white-space="normal" overflow="visible" opacity=".5" fill="#fff" fill-rule="evenodd"/>
     </g>
 </svg>
