@@ -537,7 +537,7 @@
 
             $.each( l.elementCatalogue, function (key, val) {
                 var id = val.name;
-                var description = val.description;
+                var tooltip = val.tooltip;
 
                 // Bridges may be draggable, but should not be allowed to end up in the diagram as separate entities
                 var draggableOptionsElement = l.draggableOptions;
@@ -547,7 +547,7 @@
 
                 var $li = $('<li class="element"></li>' ).
                     appendTo(libConfig.$toolbar)
-                        .attr({"title": description, "data-ref": key})
+                        .attr({"title": tooltip, "data-ref": key})
                         .addClass(val.name)
                         .disableSelection()
                         .draggable(l.draggableOptions)

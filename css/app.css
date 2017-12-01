@@ -10,7 +10,7 @@ body {
   outline: 1px solid #f0f0f0;
   max-height: calc(100% - 420px);
   width: 100%;
-  overflow: scroll;
+  overflow: auto;
   margin: 5px; }
 
 #toolbar, #diagram {

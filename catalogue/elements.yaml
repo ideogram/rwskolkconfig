@@ -1,7 +1,7 @@
 # name:
 #   filename
 #
-# description:
+# tooltip:
 #   string, used as tooltip in ui
 #
 #  deltay:
@@ -20,7 +20,7 @@
 # symbol:
 #     string(s): Symbol(s) used in the configuration strings
 #
-# mnemo:
+#
 #   string, not used in the app, for documentation only
 #
 # Notes:
@@ -30,275 +30,282 @@
 #
 # Grid cells are 24*24 px
 
-
-- name: gladde-kolk
-  deltay: 0
-  top: 7
-  bottom: 13
-  gate: false
-  symbol: " " # SPACE
-
 - name: stopstreep
-  description: stopstreep
+  tooltip: stopstreep
   deltay: 0
   top: 6
   bottom: 14
   gate: false
-  symbol: "." # PERIOD
+  symbol: "I01" # PERIOD
+  description: Stopstrepen horen altijd bij 1 bepaalde deur
+
+- name: gladde-kolk
+  tooltip: kolkdeel
+  deltay: 0
+  top: 7
+  bottom: 13
+  gate: false
+  symbol: "C01" # SPACE
+  description: Getekend op 'sluisdeur-/sluishoofdbreedte'. Voor een langere Sluiskolk of langer Sluiskolkdeel wordt dit symbool naar smaak herhaald. Deze wordt in principe alleen toegepast in zgn. "gladde kolken" (even breed als de Sluishoofden).
 
 - name: kolk-verbreed
+  tooltip: Verbreed Kolkdeel
   deltay: 0
   top: 5
   bottom: 17
   gate: false
-  symbol: "|" # VERTICAL STRIPE, PIPE
+  symbol: "C02" # VERTICAL STRIPE, PIPE
+  description: Een kolkdeel dat breder is dan de 'deur-/hoofdbreedte' van de Sluiskolk. Voor een langere Sluiskolk of Sluiskolkdeel wordt dit symbool naar behoefte herhaald. Een Verbreed Kolkdeel (C02) wordt altijd vooraf gegaan door een Kolkovergang (C04, C06, C08, C10 of C11) of  door een ander Verbreed Kolkdeel.
 
 - name: kamerkolk-kop-b
+  tooltip: Kolkovergang, breed-naar-smal
   deltay: 2
   top: 5
   bottom: 17
   gate: false
-  symbol: b
-  mnemo: Overgang van verbrede kolk (links) naar smalle kolk (rechts-onder). De vorm van dit element lijkt op de onderkastletter 'b'
+  symbol: "C03"
+  description: Adaptor voor een kolkversmalling. Dit kolkdeel kan alleen volgen op een Verbreed Kolkdeel (C02).
 
 - name: kamerkolk-kop-d
+  tooltip: Kolkovergang, smal-naar-breed
   deltay: -2
   top: 3
   bottom: 15
   gate: false
-  symbol: d
-  mnemo: Overgang van smalle kolk (links-onder) naar verbrede kolk aan de rechterzijde. De vorm van dit element lijkt op de kleine letter 'd'
+  symbol: "C04"
+  description: Adaptor voor een kolkverbreding. Na dit kolkdeel moet een Verbreed Kolkdeel (G02) volgen.
 
 - name: kamerkolk-kop-p
+  tooltip: Kolkovergang, breed-naar-smal
   deltay: -2
   top: 5
   bottom: 17
   gate: false
-  symbol: p
-  mnemo: Overgang van verbrede kolk (links) naar smalle kolk (rechts-boven). De vorm van dit element lijkt op de onderkastletter 'p'
+  symbol: "C05"
+  description: Adaptor voor een kolkversmalling. Dit kolkdeel kan alleen volgen op een Verbreed Kolkdeel (C02).
 
 - name: kamerkolk-kop-q
+  tooltip: Kolkovergang, smal-naar-breed
   deltay: 2
   top: 7
   bottom: 13
   gate: false
-  symbol: q
-  mnemo: Overgang van smalle kolk (links-boven) naar verbrede kolk aan de rechterzijde. De vorm van dit element lijkt op de onderkastletter 'q'
+  symbol: "C06"
+  description: Adaptor voor een kolkverbreding. Na dit kolkdeel moet een Verbreed Kolkdeel (G02) volgen.
 
 - name: kamerkolk-kop-6-rond
+  tooltip: Kolkovergang, breed-naar-smal
   deltay: 2
   top: 5
   bottom: 17
   gate: false
-  symbol: "6"
-  mnemo: Afgeronde overgang van verbrede kolk (links) naar smalle kolk (rechts-onder). De vorm van dit element lijkt op het cijfer '6'
+  symbol: "C07"
+  description: Adaptor voor een kolkversmalling. Dit kolkdeel kan alleen volgen op een Verbreed Kolkdeel (C02).
+
 
 - name: kamerkolk-kop-j-rond
+  tooltip: Kolkovergang, smal-naar-breed
   deltay: -2
   top: 3
   bottom: 15
   gate: false
-  symbol: "j"
-  mnemo: Afgeronde overgang van smalle kolk (links-onder) naar verbrede kolk aan de rechterzijde. De vorm van dit element lijkt op  de letter 'j'
-
+  symbol: "C08"
+  description: Adaptor voor een kolkverbreding. Na dit kolkdeel moet een Verbreed Kolkdeel (G02) volgen.
 
 - name: kamerkolk-kop-r-rond
+  tooltip: Kolkovergang, breed-naar-smal
   deltay: -2
   top: 5
   bottom: 17
   gate: false
-  symbol: "r"
-  mnemo: Afgeronde overgang van verbrede kolk (links) naar smalle kolk (rechts-boven). De vorm van dit element lijkt op de  de letter 'r'
-
+  symbol: "C09"
+  description: Adaptor voor een kolkversmalling. Dit kolkdeel kan alleen volgen op een Verbreed Kolkdeel (C02).
 
 - name: kamerkolk-kop-9-rond
+  tooltip: Kolkovergang, smal-naar-breed
   deltay: 2
   top: 7
   bottom: 13
   gate: false
-  symbol: 9
-  mnemo: Afgeronde overgang van smalle kolk (links-boven) naar verbrede kolk aan de rechterzijde. De vorm van dit element lijkt op het cijfer '9'
+  symbol: "C10"
+  description: Adaptor voor een kolkverbreding. Na dit kolkdeel moet een Verbreed Kolkdeel volgen.
 
 
 - name: binnenfrontkolk-kop-links
+  tooltip: Kolkovergang, smal-naar-breed
   deltay: 0
   top: 5
   bottom: 15
   gate: false
-  symbol: "["
-  mnemo: Overgang van smalle kolk (links) naar verbrede kolk (rechts) met rechthoeking front
+  symbol: "C11"
+  description: Adaptor voor een kolkverbreding. Na dit kolkdeel moet een Verbreed Kolkdeel volgen.
 
 
 - name: binnenfrontkolk-kop-rechts
+  tooltip: Kolkovergang, breed-naar-smal
   deltay: 0
   top: 5
   bottom: 15
   gate: false
-  symbol: "]"
-  mnemo: Overgang van verbrede kolk (links) naar smalle kolk (rechts) met rechthoeking front
+  symbol: "C12"
+  description: Adaptor voor een kolkversmalling. Dit kolkdeel kan alleen volgen op een Verbreed Kolkdeel (C02).
 
 - name: komkolk-kop-links
+  tooltip: Kolkovergang, smal-naar-breed
   deltay: 0
   top: 5
   bottom: 15
   gate: false
-  symbol: "{"
-  mnemo: Overgang van smalle kolk (links) naar verbrede kolk (rechts) met rond front
+  symbol: "C13"
+  description: Adaptor voor een kolkverbreding. Na dit kolkdeel moet een Verbreed Kolkdeel volgen.
 
 - name: komkolk-kop-rechts
+  tooltip: Kolkovergang, breed-naar-smal
   deltay: 0
   top: 5
   bottom: 15
   gate: false
-  symbol: "}"
-  mnemo: Overgang van verbrede kolk (links) naar smalle kolk (rechts) met rond front
+  symbol: "C14"
+  description: Adaptor voor een kolkversmalling. Dit kolkdeel kan alleen volgen op een Verbreed Kolkdeel (C02).
+
 
 #  PUNTDEUREN
 
 - name: puntdeur-links
-  description: puntdeur links
+  tooltip: puntdeur links
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "<"
+  symbol: "D01"
 
 - name: puntdeur-rechts
-  description: puntdeur rechts
+  tooltip: puntdeur rechts
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: ">"
+  symbol: "D02"
 
 - name: puntdeur-pin-links
-  description: dubbelkerende enkelvoudige puntdeur met pin, links
+  tooltip: dubbelkerende enkelvoudige puntdeur met pin, links
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "<P"
+  symbol: "D03"
 
 - name: puntdeur-pin-rechts
-  description: dubbelkerende enkelvoudige puntdeur met pin, rechts
+  tooltip: dubbelkerende enkelvoudige puntdeur met pin, rechts
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "P>"
+  symbol: "D04"
 
 - name: puntdeur-dubbelk-links
-  description: dubbelkerende enkelvoudige puntdeur, links
+  tooltip: dubbelkerende enkelvoudige puntdeur, links
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "<D"
+  symbol: "D05"
 
 - name: puntdeur-dubbelk-rechts
-  description: dubbelkerende enkelvoudige puntdeur, rechts
+  tooltip: dubbelkerende enkelvoudige puntdeur, rechts
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "D>"
-
+  symbol: "D06"
 
 #  DRAAIDEUREN
 
 - name: draaideur-lb
-  description: enkele draaideur, links, scharnier boven, aanslag onder
+  tooltip: enkele draaideur, links, scharnier boven, aanslag onder
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: '/,'
-  mnemo: De komma toont de aanslag, de backslash toont een half-open deur
-
+  symbol: "D07"
 - name: draaideur-lo
-  description: enkele draaideur, links, scharnier onder, aanslag boven
+  tooltip: enkele draaideur, links, scharnier onder, aanslag boven
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: \'
-  mnemo: De apostrophe toont de aanslag, de slash een half-open deur
+  symbol: "D08"
 
 - name: draaideur-rb
-  description: enkele draaideur, rechts, scharnier boven, aanslag onder
+  tooltip: enkele draaideur, rechts, scharnier boven, aanslag onder
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: ",\\"
-  mnemo: De komma toont de aanslag, de slash een half-open deur
+  symbol: "D09"
 
 - name: draaideur-ro
-  description: enkele draaideur, rechts, scharnier onder, aanslag boven
+  tooltip: enkele draaideur, rechts, scharnier onder, aanslag boven
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "'/"
-  mnemo: De apostrophe toont de aanslag, de backslash een half-open deur
+  symbol: "D10"
 
 # HEFDEUR
-
 - name: hefdeur
-  description: hefdeur
+  tooltip: hefdeur
   deltay: 0
   top: 5
   bottom: 15
   gate: true
-  symbol: "H"
+  symbol: "D11"
 
 #  HANGROLDEUR
-
 - name: hangroldeur
-  description: hangroldeur
+  tooltip: hangroldeur
   deltay: 0
   top: 0
   bottom: 15
   gate: true
-  symbol: "?"
+  symbol: "D12"
 
 #  Roldeuren
 
 - name: roldeur-boven
-  description: roldeur boven
+  tooltip: roldeur boven
   deltay: 0
   top: 0
   bottom: 14
   gate: true
-  symbol: "A"
-  mnemo: De letter A is een pijltje dat wijst de richting aan waarin de deur rolt
+  symbol: "D13"
 
 - name: roldeur-onder
-  description: roldeur, onder
+  tooltip: roldeur, onder
   deltay: 0
   top: 6
   bottom: 20
   gate: true
-  symbol: "V"
-  mnemo: De letter V is een pijltje dat wijst de richting aan waarin de deur rolt
+  symbol: "D14"
+ 
 
 # WAAIEREDEUREN
 
 - name: waaierdeur-links
-  description: waaierdeur, links
+  tooltip: waaierdeur, links
   deltay: 0
   top: 4
   bottom: 16
   gate: true
-  symbol: "<W"
+  symbol: "D15"
 
 - name: waaierdeur-rechts
-  description: waaierdeur, rechts
+  tooltip: waaierdeur, rechts
   deltay: 0
   top: 4
   bottom: 16
   gate: true
-  symbol: "W>"
+  symbol: "D16"
 
 
 # HOOGWATERKERINGEN
@@ -306,205 +313,200 @@
 # ... puntdeuren
 
 - name: schot
-  description: Deur of schot, alleen bij hoogwater
+  tooltip: Deur of schot, alleen bij hoogwater
   deltay: 0
   top: 6
   bottom: 15
   gate: false
-  symbol: "i"
-  mnemo: Deur krijgt geen eigen letter
+  symbol: "I02"
+ 
 
 - name: breed-schot
-  description: Deur of schot over brede kolk, alleen bij hoogwater
+  tooltip: Deur of schot over brede kolk, alleen bij hoogwater
   deltay: 0
   top: 6
   bottom: 15
   gate: false
-  symbol: "I"
-  mnemo: Deur krijgt geen eigen letter
+  symbol: "I03"
+ 
 
 - name: puntdeur-links-hwk
-  description: puntdeur, links, hoogwaterkerig
+  tooltip: puntdeur, links, hoogwaterkerig
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "<h"
-  mnemo: Deur is voorzien van het label 'HWK'
+  symbol: "D17"
 
 - name: puntdeur-rechts-hwk
-  description: puntdeur, rechts, hoogwaterkering
+  tooltip: puntdeur, rechts, hoogwaterkering
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: ">h"
-  mnemo: Deur is voorzien van het label 'HWK'
+  symbol: "D18"
 
 - name: puntdeur-pin-links-hwk
-  description: dubbelkerende enkelvoudige puntdeur met pin, links, hoogwaterkering
+  tooltip: dubbelkerende enkelvoudige puntdeur met pin, links, hoogwaterkering
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "<Ph"
+  symbol: "D19"
 
 - name: puntdeur-pin-rechts-hwk
-  description: dubbelkerende enkelvoudige puntdeur met pin, rechts, hoogwaterkering
+  tooltip: dubbelkerende enkelvoudige puntdeur met pin, rechts, hoogwaterkering
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "P>h"
+  symbol: "D19"
 
 - name: puntdeur-dubbelk-links-hwk
-  description: dubbelkerende enkelvoudige puntdeur, links, hoogwaterkering
+  tooltip: dubbelkerende enkelvoudige puntdeur, links, hoogwaterkering
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "<Dh"
+  symbol: "D20"
 
 - name: puntdeur-dubbelk-rechts-hwk
-  description: dubbelkerende enkelvoudige puntdeur, rechts, hoogwaterkering
+  tooltip: dubbelkerende enkelvoudige puntdeur, rechts, hoogwaterkering
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "D>h"
+  symbol: "D21"
 
 # ... hefdeur
 
 - name: hefdeur-hwk
-  description: hefdeur
+  tooltip: hefdeur
   deltay: 0
   top: 5
   bottom: 15
   gate: true
-  symbol: "Hh"
+  symbol: "D22"
 
 # ... roldeuren
 
 - name: roldeur-boven-hwk
-  description: roldeur, hoogwaterkering, boven
+  tooltip: roldeur, hoogwaterkering, boven
   deltay: 0
   top: 0
   bottom: 14
   gate: true
-  symbol: "Ah"
-  mnemo: De letter A is een pijltje dat wijst de richting aan waarin de deur rolt
+  symbol: "D23"
+ 
 
 - name: roldeur-onder-hwk
-  description: roldeur, hoogwaterkering, onder
+  tooltip: roldeur, hoogwaterkering, onder
   deltay: 0
   top: 6
   bottom: 20
   gate: true
-  symbol: "Vh"
-  mnemo: De letter V is een pijltje dat wijst de richting aan waarin de deur rolt
+  symbol: "D24"
 
 - name: hangroldeur-hwk
-  description: hangroldeur, hoogwaterkering
+  tooltip: hangroldeur, hoogwaterkering
   deltay: 0
   top: 0
   bottom: 15
   gate: true
-  symbol: "?h"
-  mnemo: Geen
+  symbol: "D25"
+ 
 
 # ... waaierdeuren
 
 - name: waaierdeur-links-hwk
-  description: waaierdeur, hoogwaterkering, links
+  tooltip: waaierdeur, hoogwaterkering, links
   deltay: 0
   top: 4
   bottom: 16
   gate: true
-  symbol: "<Wh"
+  symbol: "D26"
 
 - name: waaierdeur-rechts-hwk
-  description: waaierdeur, hoogwaterkering, rechts
+  tooltip: waaierdeur, hoogwaterkering, rechts
   deltay: 0
   top: 4
   bottom: 16
   gate: true
-  symbol: "W>h"
+  symbol: "D27"
 
 
 # ... draaideuren
 
 - name: draaideur-lb-hwk
-  description: enkele draaideur, links, scharnier boven, aanslag onder, hoogwaterkering
+  tooltip: enkele draaideur, links, scharnier boven, aanslag onder, hoogwaterkering
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: '/,h'
-  mnemo: De komma toont de aanslag, de backslash toont een half-open deur
+  symbol: "D28"
+ 
 
 - name: draaideur-lo-hwk
-  description: enkele draaideur, links, scharnier onder, aanslag boven, hoogwaterkering
+  tooltip: enkele draaideur, links, scharnier onder, aanslag boven, hoogwaterkering
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "\\'h"
-  mnemo: De apostrophe toont de aanslag, de slash een half-open deur
+  symbol: "D29"
+ 
 
 - name: draaideur-rb-hwk
-  description: enkele draaideur, rechts, scharnier boven, aanslag onder, hoogwaterkering
+  tooltip: enkele draaideur, rechts, scharnier boven, aanslag onder, hoogwaterkering
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: ",\\h"
-  mnemo: De komma toont de aanslag, de slash een half-open deur
+  symbol: "D30"
+ 
 
 - name: draaideur-ro-hwk
-  description: enkele draaideur, rechts, scharnier onder, aanslag boven, hoogwaterkering
+  tooltip: enkele draaideur, rechts, scharnier onder, aanslag boven, hoogwaterkering
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "'/h"
-  mnemo: De apostrophe toont de aanslag, de backslash een half-open deur
+  symbol: "D31"
+ 
 
 - name: vaarweg
-  description: Vaarweg, geen kolk, alleen voor brug buiten kolk
+  tooltip: Vaarweg, geen kolk, alleen voor brug buiten kolk
   deltay: 0
   top: 4
   bottom: 6
   gate: false
-  symbol: "-"
+  symbol: "D32"
 
 #  DOORVAAROPENINGEN
 
 - name: brug-vast
-  description: Doorvaartopening, vast
+  tooltip: Doorvaartopening, vast
   deltay: 0
   top: 4
   bottom: 16
   gate: false
-  symbol: "#"
+  symbol: "I04"
 
 - name: brug-beweegbaar
-  description: Doorvaartopening, beweegbaar
+  tooltip: Doorvaartopening, beweegbaar
   deltay: 0
   top: 4
   bottom: 6
   gate: false
-  symbol: ":"
+  symbol: "I05"
 
 # WEGDEK OVER SLUISHOOFD
 
 - name: weg-over-hoofd
-  description: Wegdek over sluishoofd
+  tooltip: Wegdek over sluishoofd
   deltay: 0
   top: 4
   bottom: 6
   gate: false
-  symbol: "X"
-
-
+  symbol: "I06"
 
 ...

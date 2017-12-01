@@ -17,8 +17,8 @@ try {
 }
 
 function makeDoc(doc){
-    console.log("| symbol | name            | mnemo ");
-    console.log("| ---    | ---             | --- ");
+    console.log("| Symbool | (Bestands)naam            | Tooltip | Beschrijving | Afbeelding ");
+    console.log("| ---     | ---                       | ---     | ---          | ---   ");
 
     doc.forEach( element => {
 
@@ -32,8 +32,11 @@ function makeDoc(doc){
             element.symbol = "[SPACE]"
         }
 
-        // Make sure the mneno is not undefined
-        if ( typeof element.mnemo == "undefined") {  element.mnemo = " " }
+        // Make sure the description is not undefined
+        if ( typeof element.description == "undefined") {  element.description = " " }
+
+        // Make sure the tooltip is not undefined
+        if ( typeof element.tooltip == "undefined") {  element.tooltip = " " }
 
         var symbol = "`"+element.symbol + "`"
 
@@ -42,7 +45,9 @@ function makeDoc(doc){
             [
                 symbol.padEnd(10),
                 element.name.padEnd(30),
-                element.mnemo.padEnd(135),
+                element.tooltip.padEnd(60),
+                element.description.padEnd(135),
+                '!['+element.name+'](../assets/'+element.name+".png)"
             ].join(" | ")
             + " |"
         );
