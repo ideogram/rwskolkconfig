@@ -4,9 +4,7 @@
             <circle cx="7.5" cy="7.5" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
         </symbol>
     </defs>
-    <title>
-        puntdeur-rechts-hwk
-    </title>
+    <title>puntdeur-rechts-hwk</title>
     <path d="M144 168H0v144h144z" fill="#d9ebf7"/>
     <path d="M120 312h24m0-144h-24M0 312h24m0-144H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
     <path d="M120 312H24v12h96z" fill="#d9ebf7"/>

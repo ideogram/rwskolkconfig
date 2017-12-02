@@ -1,13 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="72" viewBox="0 0 72 480" height="480">
-    <title>
-        breed-schot
-    </title>
+<svg height="480" viewBox="0 0 72 480" width="72" xmlns="http://www.w3.org/2000/svg">
+    <title>breed-schot</title>
     <path d="M24 108v12H0v240h24v11h24v-11h24V120H48v-12z" fill="#d9ebf7"/>
-    <path d="M12 120H0M72 120H60" fill="none" stroke="#9fceea" stroke-width="3" stroke-miterlimit="10"/>
-    <path d="M59.98 360h11.99" fill="none" stroke="#9fceea" stroke-width="2.998" stroke-miterlimit="10"/>
-    <path stroke-miterlimit="10" d="M11.99 360h12v12h23.99v-12h12" fill="none" stroke="#7d7d7d" stroke-width="2.998"/>
-    <path stroke-miterlimit="10" d="M0 360h11.99" fill="none" stroke="#9fceea" stroke-width="2.998"/>
-    <path stroke-miterlimit="10" d="M12 120h12v-12h24v12h12" fill="none" stroke="#7d7d7d" stroke-width="3"/>
-    <path overflow="visible" style="isolation:auto;mix-blend-mode:normal" d="M35.9 383.7c-5.4 0-9.7 4.4-9.7 9.8v3.3H25v16h22v-16h-1.3v-3.3c0-5.4-4.3-9.8-9.6-9.8zm0 2.4h.2c4 0 7.2 3.3 7.2 7.4v3.3H28.6v-3.3c0-4.1 3.2-7.4 7.3-7.4z" color="#000" fill="#01689b"/>
-    <path d="M28 307.6h16v-16H28zm0 29.8h16v-16H28zm0 29.8h16v-16H28zm0-238.5h15.9l.1-16H28.1zm0 29.8h16v-16H28zm0 29.8h16v-16H28zm0 29.8h16v-16H28zm0 29.8h16v-16H28zm0 29.9h16v-16H28z" style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal" color="#000" font-weight="400" font-family="sans-serif" white-space="normal" overflow="visible" fill="#01689b"/>
+    <path d="M12 120H0M72 120H60" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M59.98 360h11.99" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="2.998"/>
+    <path d="M11.99 360h12v12h23.99v-12h12" fill="none" stroke="#7d7d7d" stroke-miterlimit="10" stroke-width="2.998"/>
+    <path d="M0 360h11.99" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="2.998"/>
+    <path d="M12 120h12v-12h24v12h12" fill="none" stroke="#7d7d7d" stroke-miterlimit="10" stroke-width="3"/>
+    <path color="#000" d="M35.9 383.7c-5.4 0-9.7 4.4-9.7 9.8v3.3H25v16h22v-16h-1.3v-3.3c0-5.4-4.3-9.8-9.6-9.8zm0 2.4h.2c4 0 7.2 3.3 7.2 7.4v3.3H28.6v-3.3c0-4.1 3.2-7.4 7.3-7.4z" fill="#01689b" overflow="visible" style="isolation:auto;mix-blend-mode:normal"/>
+    <path color="#000" d="M28 307.6h16v-16H28zm0 29.8h16v-16H28zm0 29.8h16v-16H28zm0-238.5h15.9l.1-16H28.1zm0 29.8h16v-16H28zm0 29.8h16v-16H28zm0 29.8h16v-16H28zm0 29.8h16v-16H28zm0 29.9h16v-16H28z" fill="#01689b" font-family="sans-serif" font-weight="400" overflow="visible" style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal" white-space="normal"/>
 </svg>

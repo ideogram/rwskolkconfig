@@ -1,7 +1,5 @@
 <svg height="480" viewBox="0 0 72 480" width="72" xmlns="http://www.w3.org/2000/svg">
-    <title>
-        hangroldeur-hwk
-    </title>
+    <title>hangroldeur-hwk</title>
     <path d="M0 168v144h24v24h24v-24h24V168H48V6H24v162z" fill="#d9ebf7"/>
     <path d="M12 168H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
     <path d="M60 168H48V6H24v162H12" fill="none" stroke="#7d7d7d" stroke-miterlimit="10" stroke-width="3"/>

@@ -1,7 +1,5 @@
 <svg height="480" viewBox="0 0 168 480" width="168" xmlns="http://www.w3.org/2000/svg">
-    <title>
-        puntdeur-dubbelk-rechts
-    </title>
+    <title>puntdeur-dubbelk-rechts</title>
     <path d="M168 168H0v144h168z" fill="#d9ebf7"/>
     <path d="M144 312h24m0-144h-24M0 312h48m0-144H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
     <path d="M144 312H48v12h96zM48 168h96v-12H54l-6 12z" fill="#d9ebf7"/>

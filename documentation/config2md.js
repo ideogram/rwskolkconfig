@@ -46,8 +46,8 @@ function makeDoc(doc){
                 symbol.padEnd(10),
                 element.name.padEnd(30),
                 element.tooltip.padEnd(60),
-                element.description.padEnd(135),
-                '!['+element.name+'](../documentation/png/'+element.name+".png)"
+                '!['+element.name+'](../documentation/png/'+element.name+".svg.png)",
+                element.description.padEnd(135)
             ].join(" | ")
             + " |"
         );

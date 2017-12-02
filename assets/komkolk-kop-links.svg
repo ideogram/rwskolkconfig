@@ -1,7 +1,5 @@
 <svg height="480" viewBox="0 0 72 480" width="72" xmlns="http://www.w3.org/2000/svg">
-    <title>
-        komkolk-kop-links
-    </title>
+    <title>komkolk-kop-links</title>
     <path d="M60 120c-26.51 0-48 21.5-48 48H0v144h12c0 26.5 21.49 48 48 48h12V120z" fill="#d9ebf7"/>
     <path d="M0 312h12c0 26.5 21.49 48 48 48h12M0 168.3h12c0-26.5 21.49-48 48-48h12" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
     <text font-family="sans-serif" font-size="36" text-anchor="middle" x="36" y="420"/>
