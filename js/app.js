@@ -20,7 +20,6 @@
         },
 
         // Defaults
-        chamberID: "0000",
         networkDirection : "N",
         gateNumbering : "ABC",
         draggableOptions : {connectToSortable: null, helper: "clone", revert: "invalid"},
@@ -210,7 +209,6 @@
 
             l.strConfig = [
                 "(",
-                l.chamberID,
                 l.networkDirection,
                 l.gateNumbering,
                 ")"
@@ -222,10 +220,7 @@
                 if ( typeof l.bridges[i] !== "undefined" ){
                     l.strConfig += l.bridges[i];
                 }
-
             }
-
-            l.strConfig += "(" + l.strComment + ")";
 
             return l.strConfig;
 
@@ -328,7 +323,7 @@
         },
 
         /**
-         * Set the configuration string. The chamber-id, network direction, gate numbering and comments are also set
+         * Set the configuration string. The network direction and gate numbering are also set
          * @param {string} strConfig A complete configuration string
          * @memberof libConfig
          */
@@ -340,24 +335,15 @@
             // Split the string into three parts and keep the middle part
             if (matches.length > 0) {
                 strPre = matches[0];
-                strComment = matches[1];
 
                 strConfig = strConfig.replace(strPre, "");
                 strConfig = strConfig.replace(strComment, "");
-
-                // Set the comment from the third part
-                strComment = strComment.replace("(","");
-                strComment = strComment.replace(")","");
-                l.strComment = strComment;
 
                 // From the first part,
                 // ... remove all the spaces and brackets
                 strPre = strPre.replace(/\s/gi,"");
                 strPre = strPre.replace("(","");
                 strPre = strPre.replace(")","");
-
-                // ... extract and set chamber-id (kolk-id)
-                l.setChamberID( strPre.match(/^\d*/)[0]  );
 
                 // ... extract network direction
                 l.setNetworkDirection( strPre.match(/[NOZW]/)[0] );
@@ -369,11 +355,11 @@
                 } else {
                     l.setGateNumbering("CBA");
                 }
-
             }
 
             // What remains is the 'actual' config string, the part
-            // that contains all the symbols, like e.g. <S.<.   .>
+            // that contains all the symbols.
+
             l.strConfig = strConfig;
 
 
@@ -844,7 +830,6 @@
 
             // Change the 'bridge' value of the element
             l.bridges[i] =  l.elementCatalogue[$bridge.attr('data-ref')]['symbol'];
-            console.log(l.bridges);
 
             // Update drawing
             libConfig.diagramChanged();
@@ -928,10 +913,6 @@
 
                     break;
             }
-        },
-
-        setChamberID: function(value){
-            libConfig.chamberID = value;
         },
 
         // --- CSS Helper functions ---
