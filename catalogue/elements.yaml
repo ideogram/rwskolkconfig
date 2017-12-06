@@ -32,8 +32,17 @@
   top: 6
   bottom: 14
   gate: false
-  symbol: "I01" # PERIOD
+  symbol: "I01"
   description: Stopstrepen horen altijd bij 1 bepaalde deur
+
+- name: vangwerk
+  tooltip: vangwerk
+  deltay: 0
+  top: 6
+  bottom: 14
+  gate: false
+  symbol: "I08"
+  description: Vangwerken horen altijd bij 1 bepaalde deur
 
 - name: gladde-kolk
   tooltip: kolkdeel

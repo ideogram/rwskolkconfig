@@ -312,9 +312,7 @@
 
             $arrow.attr("transform","translate("+(w/2 - 32)+",16)");
 
-            // Ajust width and ehigth
-
-
+            // Adjust width and height
             l.$result.attr("width", w + "px");
             l.$result.attr("height", h + "px");
 
