@@ -19,10 +19,13 @@
             folderImages: 'images/',
         },
 
+        arrOptions: ['network-direction', 'gates-names-direction','upstream-downstream'],
+
         // Defaults
         networkDirection : "N",
         gateNumbering : "ABC",
         draggableOptions : {connectToSortable: null, helper: "clone", revert: "invalid"},
+        stream: "up-down",
         scale: 3,
 
         // Variables
@@ -87,6 +90,11 @@
                 ["#label-dir-w","network-dir-w.svg"],
                 ["#label-gates-abc","ABC.svg"],
                 ["#label-gates-cba","CBA.svg"],
+                ["#label-up-down","up-down.svg"],
+                ["#label-down-up","down-up.svg"],
+                ['#stream-left',"stroomopwaarts.svg"],
+                ['#stream-right',"stroomafwaarts.svg"]
+
             ];
 
             for(var i=0; i<images.length; i++){
@@ -156,13 +164,9 @@
                 $("<ul id='options' />")
                     .prependTo("#diagram-wrapper");
 
-            var strOptions = [
-                 'network-direction', 'gates-names-direction'
-            ];
+            for (var i = 0; i < l.arrOptions.length; i++) {
 
-            for (var i = 0; i < strOptions.length; i++) {
-
-                $.get(l.path.folderPartials + "option-" + strOptions[i] + ".partial.html", function (data) {
+                $.get(l.path.folderPartials + "option-" + l.arrOptions[i] + ".partial.html", function (data) {
                     $(data).appendTo(l.$options)
                         .find("input").on("change", libConfig.optionChanged);
                 });
@@ -170,7 +174,11 @@
 
             // ... compass roses
             l.$compassRoseLeft = $('<div id="compass-rose-left"></div>').insertBefore(l.$diagram);
-            l.$compassRoseRight = $('<div id="compass-rose-right"></div>').insertAfter(l.$diagram);
+            l.$compassRoseRight = $('<div id="compass-rose-right"></div>').insertAfter(l.$diagram);            // ... compass roses
+
+            // ... upstream / downstream
+            l.$streamLeft = $('<div id="stream-left"></div>').insertBefore(l.$diagram);
+            l.$streamRight = $('<div id="stream-right"></div>').insertAfter(l.$diagram);
 
             // ... #result: invisible div containing the SVG before it gets downloaded
 
@@ -184,6 +192,16 @@
                     "xmlns": "http://www.w3.org/2000/svg",
                     "xmlns:xlink": "http://www.w3.org/1999/xlink"
                 });
+
+            // ... store two network-direction symbols into variables
+
+            $.get(l.path.folderPartials + "stroomopwaarts.partial.svg", null, function( data ) {
+                l.svgUpstream = data;
+            }, 'html' );
+
+            $.get(l.path.folderPartials + "stroomafwaarts.partial.svg", null, function( data ) {
+                l.svgDownstream = data;
+            }, 'html');
         },
 
         /**
@@ -222,9 +240,9 @@
          */
         composeSVG: function(strFileName) {
             var l = libConfig;
-            var margin = 32;
+            var margin = 64;
             var h = l.height + 2*margin;
-            var strLeft, strRight;
+            var strLeft, strRight, $streamLeft, $streamRight;
 
             var textStyle = {
                 "font-family": "sans-serif",
@@ -233,7 +251,7 @@
                 "fill": "#9ACAE8"
             };
 
-            // Fill the '#result'-SVG  with the lock-elements
+            // Fill the result-SVG-DOM  with the lock-elements
             l.$result.html("");
 
             var x = 0;
@@ -266,11 +284,13 @@
             switch (l.networkDirection){
                 case "N":
                 case "Z":
-                    strLeft = "N"; strRight = "Z";
+                    strLeft = "N";
+                    strRight = "Z";
                     break;
                 case "O":
                 case "W":
-                    strLeft = "W"; strRight = "O";
+                    strLeft = "W";
+                    strRight = "O";
                     break;
             }
 
@@ -285,6 +305,24 @@
                 y: h/2})
                 .attr(textStyle)
                 .html( strRight );
+
+            // Show the stream direction
+            switch (l.stream){
+                case "up-down":
+                    $streamLeft = $( l.svgUpstream ).appendTo(l.$result);
+                    $streamRight = $( l.svgDownstream ).appendTo(l.$result);
+                    break;
+
+                case "down-up":
+                    console.log("up-down");
+                    $streamLeft = $( l.svgDownstream ).appendTo(l.$result);
+                    $streamRight = $( l.svgUpstream ).appendTo(l.$result);
+                    break;
+            }
+
+            $streamLeft.attr("transform","translate(0,120)");
+            $streamRight.attr("transform","translate("+(w-margin)+",120)");
+
 
             // Adjust width and height
             l.$result.attr("width", w + "px");
@@ -839,6 +877,11 @@
                     libConfig.drawCompassRose(value);
                     libConfig.drawNetworkArrow(value);
                     break;
+
+                case "stream":
+                    l.stream = value;
+                    libConfig.drawStream(value);
+                    break;
             }
         },
 
@@ -884,6 +927,23 @@
                     l.$diagram.css("background-image", libConfig.getCssUrl("network-arrow-left.svg"));
                     break;
             }
+        },
+
+        // Change the labels 'upstream'/'downstream'
+        drawStream: function(value){
+            var l = libConfig;
+
+            switch (value){
+                case "up-down":
+                    l.$streamLeft.css("background-image",libConfig.getCssUrl("stroomopwaarts.svg"));
+                    l.$streamRight.css("background-image",libConfig.getCssUrl("stroomafwaarts.svg"));
+                    break;
+                case "down-up":
+                    l.$streamLeft.css("background-image",libConfig.getCssUrl("stroomafwaarts.svg"));
+                    l.$streamRight.css("background-image",libConfig.getCssUrl("stroomopwaarts.svg"));
+                    break;
+            }
+
         },
 
         // --- CSS Helper functions ---
