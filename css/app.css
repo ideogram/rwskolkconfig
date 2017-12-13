@@ -161,7 +161,7 @@ svg {
   width: 72px;
   height: 72px; }
 
-#label-dir-n, #label-gates-abc, #label-up-down {
+#label-dir-n, #label-gates-abc {
   border-radius: 8px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px; }
@@ -169,10 +169,14 @@ svg {
 #label-dir-o, #label-dir-z {
   border-radius: 0px; }
 
-#label-dir-w, #label-gates-cba, #label-down-up {
+#label-dir-w, #label-gates-cba {
   border-radius: 8px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px; }
+
+#label-up-down, #label-down-up {
+  border-radius: 8px;
+  margin: 0 5px; }
 
 #debug {
   list-style-type: none; }
