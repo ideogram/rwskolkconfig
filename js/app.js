@@ -184,17 +184,6 @@
                     "xmlns": "http://www.w3.org/2000/svg",
                     "xmlns:xlink": "http://www.w3.org/1999/xlink"
                 });
-
-            // ... store two network-direction symbols into variables
-
-            $.get(l.path.folderPartials + "network-arrow-left.partial.svg", null, function( data ) {
-                l.svgArrowLeft = data;
-            }, 'html' );
-
-            $.get(l.path.folderPartials + "network-arrow-right.partial.svg", null, function( data ) {
-                l.svgArrowRight = data;
-            }, 'html');
-
         },
 
         /**
@@ -236,13 +225,13 @@
             var margin = 32;
             var h = l.height + 2*margin;
             var strLeft, strRight;
+
             var textStyle = {
                 "font-family": "sans-serif",
                 "font-size": 24,
                 "text-anchor": "middle",
                 "fill": "#9ACAE8"
             };
-            var $arrow;
 
             // Fill the '#result'-SVG  with the lock-elements
             l.$result.html("");
@@ -296,21 +285,6 @@
                 y: h/2})
                 .attr(textStyle)
                 .html( strRight );
-
-            // Show the network direction
-            switch (l.networkDirection){
-                case "N":
-                case "W":
-                    $arrow = $( l.svgArrowRight ).appendTo(l.$result);
-                    break;
-                case "O":
-                case "Z":
-                    $arrow = $( l.svgArrowLeft ).appendTo(l.$result);
-                    strLeft = "W"; strRight = "O";
-                    break;
-            }
-
-            $arrow.attr("transform","translate("+(w/2 - 32)+",16)");
 
             // Adjust width and height
             l.$result.attr("width", w + "px");
@@ -865,9 +839,6 @@
                     libConfig.drawCompassRose(value);
                     libConfig.drawNetworkArrow(value);
                     break;
-
-                case "comment":
-                    l.strComment = value;
             }
         },
 
@@ -898,17 +869,19 @@
 
             switch (value){
                 case "N":
-                case "W":
-
-                    l.$diagram.css("background-image", libConfig.getCssUrl("network-arrow-right.svg)"));
-                    l.$diagram.css("background-image", libConfig.getCssUrl("network-arrow-right.svg)"));
-
+                    l.$diagram.css("background-image", libConfig.getCssUrl("network-arrow-right.svg"));
                     break;
+
+                case "W":
+                    l.$diagram.css("background-image", libConfig.getCssUrl("network-arrow-right.svg"));
+                    break;
+
                 case "O":
+                    l.$diagram.css("background-image", libConfig.getCssUrl("network-arrow-left.svg"));
+                    break;
+
                 case "Z":
                     l.$diagram.css("background-image", libConfig.getCssUrl("network-arrow-left.svg"));
-                    l.$diagram.css("background-image", libConfig.getCssUrl("network-arrow-left.svg"));
-
                     break;
             }
         },
