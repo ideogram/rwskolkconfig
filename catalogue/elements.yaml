@@ -71,24 +71,6 @@
   symbol: "C02"
   description: Een kolkdeel dat breder is dan de 'deur-/hoofdbreedte' van de Sluiskolk. Voor een langere Sluiskolk of Sluiskolkdeel wordt dit symbool naar behoefte herhaald. Een Verbreed Kolkdeel (C02) wordt altijd vooraf gegaan door een Kolkovergang (C04, C06, C08, C10 of C11) of  door een ander Verbreed Kolkdeel.
 
-- name: stroomopwaarts
-  tooltip: Tekst «Stroomopwaarts»
-  deltay: 0
-  top: 7
-  bottom: 13
-  gate: false
-  symbol: "I11"
-  description:  Tekst «Stroomopwaarts», te plaatsen aan het begin op aan het einde van het diagram, buiten de kolk.
-
-- name: stroomafwaarts
-  tooltip: Tekst «Stroomafwaarts»
-  deltay: 0
-  top: 5
-  bottom: 17
-  gate: false
-  symbol: "I12"
-  description:  Tekst «Stroomafwaarts», te plaatsen aan het begin op aan het einde van het diagram, buiten de kolk.
-
 - name: kamerkolk-kop-b
   tooltip: Kolkovergang, breed-naar-smal
   deltay: 2

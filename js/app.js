@@ -132,6 +132,7 @@
 
             $.get(l.path.fileCatalogue, null, libConfig.loadElements);
 
+
         },
 
         /**
@@ -216,7 +217,8 @@
 
             l.strConfig = [
                 "(",
-                l.networkDirection,
+                l.getStream(),
+                l.getNetworkDirection(),
                 l.gateNumbering,
                 ")"
             ].join(" ");
@@ -355,6 +357,9 @@
                 strPre = strPre.replace("(","");
                 strPre = strPre.replace(")","");
 
+                // ... extract the stream function
+                l.setStream( strPre.match(/(up-down|down-up)/)[0]);
+
                 // ... extract network direction
                 l.setNetworkDirection( strPre.match(/[NOZW]/)[0] );
 
@@ -371,8 +376,6 @@
             // that contains all the symbols.
 
             l.strConfig = strConfig;
-
-
         },
 
         /**
@@ -393,6 +396,16 @@
         getNetworkDirection : function(  ){
             var l = libConfig;
             return l.networkDirection;
+        },
+
+        setStream: function(value){
+            var l = libConfig;
+            l.stream = value;
+        },
+
+        getStream: function(value){
+            var l = libConfig;
+            return l.stream;
         },
 
         /**
@@ -571,6 +584,7 @@
         loadElements: function(data) {
             l = libConfig;
             l.elementCatalogue = jsyaml.load(data);
+
             libConfig.addElementsToToolbar();
         },
 

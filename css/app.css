@@ -8,9 +8,7 @@ body {
 
 #toolbar-wrapper {
   outline: 1px solid #f0f0f0;
-  max-height: calc(100% - 420px);
   width: 100%;
-  overflow: auto;
   margin: 5px; }
 
 #toolbar, #diagram {
