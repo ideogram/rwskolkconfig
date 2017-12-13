@@ -50,8 +50,17 @@
   top: 7
   bottom: 13
   gate: false
-  symbol: "C01" # SPACE
+  symbol: "C01"
   description: Getekend op 'sluisdeur-/sluishoofdbreedte'. Voor een langere Sluiskolk of langer Sluiskolkdeel wordt dit symbool naar smaak herhaald. Deze wordt in principe alleen toegepast in zgn. "gladde kolken" (even breed als de Sluishoofden).
+
+- name: gladde-kolk-half
+  tooltip: kolkdeel, halve breedte
+  deltay: 0
+  top: 7
+  bottom: 13
+  gate: false
+  symbol: "C22"
+  description: Identiek aan -->gladde-kolk, maar slechts halve breedte. Voor de fijnproever.
 
 - name: kolk-verbreed
   tooltip: Verbreed Kolkdeel
@@ -59,8 +68,26 @@
   top: 5
   bottom: 17
   gate: false
-  symbol: "C02" # VERTICAL STRIPE, PIPE
+  symbol: "C02"
   description: Een kolkdeel dat breder is dan de 'deur-/hoofdbreedte' van de Sluiskolk. Voor een langere Sluiskolk of Sluiskolkdeel wordt dit symbool naar behoefte herhaald. Een Verbreed Kolkdeel (C02) wordt altijd vooraf gegaan door een Kolkovergang (C04, C06, C08, C10 of C11) of  door een ander Verbreed Kolkdeel.
+
+- name: stroomopwaarts
+  tooltip: Tekst «Stroomopwaarts»
+  deltay: 0
+  top: 7
+  bottom: 13
+  gate: false
+  symbol: "I11"
+  description:  Tekst «Stroomopwaarts», te plaatsen aan het begin op aan het einde van het diagram, buiten de kolk.
+
+- name: stroomafwaarts
+  tooltip: Tekst «Stroomafwaarts»
+  deltay: 0
+  top: 5
+  bottom: 17
+  gate: false
+  symbol: "I12"
+  description:  Tekst «Stroomafwaarts», te plaatsen aan het begin op aan het einde van het diagram, buiten de kolk.
 
 - name: kamerkolk-kop-b
   tooltip: Kolkovergang, breed-naar-smal
