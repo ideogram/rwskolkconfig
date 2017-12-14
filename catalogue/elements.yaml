@@ -72,8 +72,8 @@
   description: >-
     Een kolkdeel dat breder is dan de 'deur-/hoofdbreedte' van de Sluiskolk.
     Voor een langere Sluiskolk of Sluiskolkdeel wordt dit symbool naar behoefte
-    herhaald. Een Verbreed Kolkdeel (C02) wordt altijd vooraf gegaan door een
-    Kolkovergang (C04, C06, C08, C10 of C11) of  door een ander Verbreed
+    herhaald. Een Verbreed Kolkdeel wordt altijd vooraf gegaan door een
+    Kolkovergang of  door een ander Verbreed
     Kolkdeel.
 
 - name: overgang-b-recht
@@ -560,7 +560,7 @@
   bottom: 16
   gate: false
   symbol: 'X'
-  role: "b"
+  role: "B"
 
 - name: brug-beweegbaar
   tooltip: 'Doorvaartopening, beweegbaar'
@@ -569,7 +569,7 @@
   bottom: 6
   gate: false
   symbol: 'Y'
-  role: "b"
+  role: "B"
 
 - name: weg-over-hoofd
   tooltip: Wegdek over sluishoofd
@@ -578,4 +578,4 @@
   bottom: 6
   gate: false
   symbol: 'Z'
-  role: "b"
+  role: "W"

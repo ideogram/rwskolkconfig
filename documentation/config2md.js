@@ -17,8 +17,8 @@ try {
 }
 
 function makeDoc(doc){
-    console.log("| Symbool | (Bestands)naam            | Tooltip | Beschrijving | Afbeelding ");
-    console.log("| ---     | ---                       | ---     | ---          | ---   ");
+    console.log("| Symbool | (Bestands)naam            | Rol | Tooltip | Beschrijving | Afbeelding ");
+    console.log("| ---     | ---                       | --- | ---     | ---          | ---   ");
 
     doc.forEach( element => {
 
@@ -31,6 +31,9 @@ function makeDoc(doc){
         if (element.symbol == " ") {
             element.symbol = "[SPACE]"
         }
+
+        if (element.role == ">") element.role = "&gt;";
+        if (element.role == "<") element.role = "&lt;";
 
         // Make sure the description is not undefined
         if ( typeof element.description == "undefined") {  element.description = " " }
@@ -45,9 +48,10 @@ function makeDoc(doc){
             [
                 symbol.padEnd(10),
                 element.name.padEnd(30),
+                element.role,
                 element.tooltip.padEnd(60),
-                '!['+element.name+'](../documentation/png/'+element.name+".svg.png)",
-                element.description.padEnd(135)
+                element.description.padEnd(135),
+                '!['+element.name+'](../documentation/png/'+element.name+".svg.png)"
             ].join(" | ")
             + " |"
         );

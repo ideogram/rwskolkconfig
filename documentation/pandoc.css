@@ -13,10 +13,10 @@ html {
 body {
     color: black;
     font-family: "Fira Sans";
-    font-size: 10px;
+    font-size: 7.5px;
     line-height: 1.7;
     padding: 1em;
-    margin: auto;
+    margin: 2em 1em;
     background: #fefefe;
 }
 
@@ -29,11 +29,6 @@ a {
     text-decoration: none;
 }
 
-svg{
-    width: 10px !important;
-    max-height: 10px !important;
-    border: 2px solid crimson;
-}
 
 a:visited {
     color: #0b0080;
