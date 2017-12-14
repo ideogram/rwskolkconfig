@@ -1,48 +1,40 @@
-# name:
-#   filename
-#
-# tooltip:
-#   string, used as tooltip in ui
-#
-#  deltay:
-#    integer, how many grid cells should the tiles to the
-#    right be shifted vertically.
-#
-#  top:
-#    integer, top-most grid cell that is used for the drawing in the tile
-#
-#  bottom:
-#     integer, idem but bottom-most
-#
-#  gate:
-#     boolean. True for normal gate, false for not-a-gate or 'S' for storm-gate
-#
-# symbol:
-#     string(s): Symbol(s) used in the configuration strings
-#
-#
-#   string, not used in the app, for documentation only
-#
-#
-# Grid cells are 24*24 px
-
 - name: stopstreep
   tooltip: stopstreep
   deltay: 0
   top: 6
   bottom: 14
   gate: false
-  symbol: "I01"
+  symbol: '!'
   description: Stopstrepen horen altijd bij 1 bepaalde deur
+  role: "i"
 
-- name: vangwerk
-  tooltip: vangwerk
+- name: vanginrichting
+  tooltip: vangwinrichting
   deltay: 0
   top: 6
   bottom: 14
   gate: false
-  symbol: "I08"
-  description: Vangwerken horen altijd bij 1 bepaalde deur
+  symbol: '"'
+  description: Vanginrichtingen horen altijd bij 1 bepaalde deur
+  role: "i"
+
+- name: schot
+  tooltip: 'Deur of schot, alleen bij hoogwater'
+  deltay: 0
+  top: 6
+  bottom: 15
+  gate: false
+  symbol: '#'
+  role: "i"
+
+- name: schot-breed
+  tooltip: 'Deur of schot over brede kolk, alleen bij hoogwater'
+  deltay: 0
+  top: 5
+  bottom: 18
+  gate: false
+  symbol: '$'
+  role: "i"
 
 - name: gladde-kolk
   tooltip: kolkdeel
@@ -50,17 +42,24 @@
   top: 7
   bottom: 13
   gate: false
-  symbol: "C01"
-  description: Getekend op 'sluisdeur-/sluishoofdbreedte'. Voor een langere Sluiskolk of langer Sluiskolkdeel wordt dit symbool naar smaak herhaald. Deze wordt in principe alleen toegepast in zgn. "gladde kolken" (even breed als de Sluishoofden).
+  symbol: '%'
+  role: "C"
+  description: >-
+    Getekend op 'sluisdeur-/sluishoofdbreedte'. Voor een langere Sluiskolk of
+    langer Sluiskolkdeel wordt dit symbool naar smaak herhaald. Deze wordt in
+    principe alleen toegepast in zgn. "gladde kolken" (even breed als de
+    Sluishoofden).
+
 
 - name: gladde-kolk-half
-  tooltip: kolkdeel, halve breedte
+  tooltip: 'kolkdeel, halve breedte'
   deltay: 0
   top: 7
   bottom: 13
   gate: false
-  symbol: "C22"
-  description: Identiek aan -->gladde-kolk, maar slechts halve breedte. Voor de fijnproever.
+  symbol: '&'
+  role: "C"
+  description: 'Identiek aan gladde-kolk, maar slechts halve breedte. Voor de fijnproever.'
 
 - name: kolk-verbreed
   tooltip: Verbreed Kolkdeel
@@ -68,122 +67,194 @@
   top: 5
   bottom: 17
   gate: false
-  symbol: "C02"
-  description: Een kolkdeel dat breder is dan de 'deur-/hoofdbreedte' van de Sluiskolk. Voor een langere Sluiskolk of Sluiskolkdeel wordt dit symbool naar behoefte herhaald. Een Verbreed Kolkdeel (C02) wordt altijd vooraf gegaan door een Kolkovergang (C04, C06, C08, C10 of C11) of  door een ander Verbreed Kolkdeel.
+  symbol: "'"
+  role: "C"
+  description: >-
+    Een kolkdeel dat breder is dan de 'deur-/hoofdbreedte' van de Sluiskolk.
+    Voor een langere Sluiskolk of Sluiskolkdeel wordt dit symbool naar behoefte
+    herhaald. Een Verbreed Kolkdeel (C02) wordt altijd vooraf gegaan door een
+    Kolkovergang (C04, C06, C08, C10 of C11) of  door een ander Verbreed
+    Kolkdeel.
 
-- name: kamerkolk-kop-b
-  tooltip: Kolkovergang, breed-naar-smal
+- name: overgang-b-recht
+  tooltip: 'Kolkovergang, breed-naar-smal'
   deltay: 2
   top: 5
   bottom: 17
   gate: false
-  symbol: "C03"
-  description: Adaptor voor een kolkversmalling. Dit kolkdeel kan alleen volgen op een Verbreed Kolkdeel (C02).
+  symbol: '('
+  role: "C"
+  description: >-
+    Adaptor voor een kolkversmalling. Dit kolkdeel kan alleen volgen op een
+    Verbreed Kolkdeel.
 
-- name: kamerkolk-kop-d
-  tooltip: Kolkovergang, smal-naar-breed
+- name: overgang-d-recht
+  tooltip: 'Kolkovergang, smal-naar-breed'
   deltay: -2
   top: 3
   bottom: 15
   gate: false
-  symbol: "C04"
-  description: Adaptor voor een kolkverbreding. Na dit kolkdeel moet een Verbreed Kolkdeel (G02) volgen.
+  symbol: ')'
+  role: "C"
+  description: >-
+    Adaptor voor een kolkverbreding. Na dit kolkdeel moet een Verbreed Kolkdeel
+    volgen.
 
-- name: kamerkolk-kop-p
-  tooltip: Kolkovergang, breed-naar-smal
+- name: overgang-p-recht
+  tooltip: 'Kolkovergang, breed-naar-smal'
   deltay: -2
   top: 5
   bottom: 17
   gate: false
-  symbol: "C05"
-  description: Adaptor voor een kolkversmalling. Dit kolkdeel kan alleen volgen op een Verbreed Kolkdeel (C02).
+  symbol: '*'
+  role: "C"
+  description: >-
+    Adaptor voor een kolkversmalling. Dit kolkdeel kan alleen volgen op een
+    Verbreed Kolkdeel.
 
-- name: kamerkolk-kop-q
-  tooltip: Kolkovergang, smal-naar-breed
+- name: overgang-q-recht
+  tooltip: 'Kolkovergang, smal-naar-breed'
   deltay: 2
   top: 7
   bottom: 13
   gate: false
-  symbol: "C06"
-  description: Adaptor voor een kolkverbreding. Na dit kolkdeel moet een Verbreed Kolkdeel (G02) volgen.
+  symbol: '+'
+  role: "C"
+  description: >-
+    Adaptor voor een kolkverbreding. Na dit kolkdeel moet een Verbreed Kolkdeel
+    volgen.
 
-- name: kamerkolk-kop-6-rond
-  tooltip: Kolkovergang, breed-naar-smal
+- name: overgang-b-rond
+  tooltip: 'Kolkovergang, breed-naar-smal'
   deltay: 2
   top: 5
   bottom: 17
   gate: false
-  symbol: "C07"
-  description: Adaptor voor een kolkversmalling. Dit kolkdeel kan alleen volgen op een Verbreed Kolkdeel (C02).
+  symbol: ','
+  role: "C"
+  description: >-
+    Adaptor voor een kolkversmalling. Dit kolkdeel kan alleen volgen op een
+    Verbreed Kolkdeel.
 
-
-- name: kamerkolk-kop-j-rond
-  tooltip: Kolkovergang, smal-naar-breed
+- name: overgang-d-rond
+  tooltip: 'Kolkovergang, smal-naar-breed'
   deltay: -2
   top: 3
   bottom: 15
   gate: false
-  symbol: "C08"
-  description: Adaptor voor een kolkverbreding. Na dit kolkdeel moet een Verbreed Kolkdeel (G02) volgen.
+  symbol: '-'
+  role: "C"
+  description: >-
+    Adaptor voor een kolkverbreding. Na dit kolkdeel moet een Verbreed Kolkdeel
+    volgen.
 
-- name: kamerkolk-kop-r-rond
-  tooltip: Kolkovergang, breed-naar-smal
+- name: overgang-p-rond
+  tooltip: 'Kolkovergang, breed-naar-smal'
   deltay: -2
   top: 5
   bottom: 17
   gate: false
-  symbol: "C09"
-  description: Adaptor voor een kolkversmalling. Dit kolkdeel kan alleen volgen op een Verbreed Kolkdeel (C02).
+  symbol: '.'
+  role: "C"
+  description: >-
+    Adaptor voor een kolkversmalling. Dit kolkdeel kan alleen volgen op een
+    Verbreed Kolkdeel.
 
-- name: kamerkolk-kop-9-rond
-  tooltip: Kolkovergang, smal-naar-breed
+- name: overgang-q-schuin
+  tooltip: 'Kolkovergang, smal-naar-breed'
   deltay: 2
   top: 7
   bottom: 13
   gate: false
-  symbol: "C10"
-  description: Adaptor voor een kolkverbreding. Na dit kolkdeel moet een Verbreed Kolkdeel volgen.
+  symbol: '/'
+  role: "C"
+  description: >-
+    Adaptor voor een kolkverbreding. Na dit kolkdeel moet een Verbreed Kolkdeel
+    volgen.
 
+- name: overgang-d-schuin
+  tooltip: 'Kolkovergang, smal-naar-breed'
+  deltay: -2
+  top: 3
+  bottom: 15
+  gate: false
+  symbol: '0'
+  role: "C"
+  description: >-
+    Adaptor voor een kolkverbreding. Na dit kolkdeel moet een Verbreed Kolkdeel
+    volgen.
 
-- name: binnenfrontkolk-kop-links
-  tooltip: Kolkovergang, smal-naar-breed
+- name: overgang-p-schuin
+  tooltip: 'Kolkovergang, breed-naar-smal'
+  deltay: -2
+  top: 5
+  bottom: 17
+  gate: false
+  symbol: '1'
+  role: "C"
+  description: >-
+    Adaptor voor een kolkversmalling. Dit kolkdeel kan alleen volgen op een
+    Verbreed Kolkdeel.
+
+- name: overgang-q-schuin
+  tooltip: 'Kolkovergang, smal-naar-breed, schuin'
+  deltay: 2
+  top: 7
+  bottom: 13
+  gate: false
+  symbol: '2'
+  role: "C"
+  description: >-
+    Adaptor voor een kolkverbreding. Na dit kolkdeel moet een Verbreed Kolkdeel
+    volgen.
+
+- name: overgang-binnenfrontkolk-links
+  tooltip: 'Kolkovergang, smal-naar-breed, binnenfront'
   deltay: 0
   top: 5
   bottom: 15
   gate: false
-  symbol: "C11"
-  description: Adaptor voor een kolkverbreding. Na dit kolkdeel moet een Verbreed Kolkdeel volgen.
+  role: "C"
+  symbol: '3'
+  description: >-
+    Adaptor voor een kolkverbreding. Na dit kolkdeel moet een Verbreed Kolkdeel
+    volgen.
 
-
-- name: binnenfrontkolk-kop-rechts
-  tooltip: Kolkovergang, breed-naar-smal
+- name: overgang-binnenfrontkolk-rechts
+  tooltip: 'Kolkovergang, breed-naar-smal, binnenfront'
   deltay: 0
   top: 5
   bottom: 15
   gate: false
-  symbol: "C12"
-  description: Adaptor voor een kolkversmalling. Dit kolkdeel kan alleen volgen op een Verbreed Kolkdeel (C02).
+  symbol: '4'
+  role: "C"
+  description: >-
+    Adaptor voor een kolkversmalling. Dit kolkdeel kan alleen volgen op een
+    Verbreed Kolkdeel.
 
-- name: komkolk-kop-links
-  tooltip: Kolkovergang, smal-naar-breed
+- name: overgang-komkolk-links
+  tooltip: 'Kolkovergang, smal-naar-breed, komkolk'
   deltay: 0
   top: 5
   bottom: 15
   gate: false
-  symbol: "C13"
-  description: Adaptor voor een kolkverbreding. Na dit kolkdeel moet een Verbreed Kolkdeel volgen.
+  symbol: '5'
+  role: "C"
+  description: >-
+    Adaptor voor een kolkverbreding. Na dit kolkdeel moet een Verbreed Kolkdeel
+    volgen.
 
-- name: komkolk-kop-rechts
-  tooltip: Kolkovergang, breed-naar-smal
+- name: overgang-komkolk-rechts
+  tooltip: 'Kolkovergang, breed-naar-smal, komkolk'
   deltay: 0
   top: 5
   bottom: 15
   gate: false
-  symbol: "C14"
-  description: Adaptor voor een kolkversmalling. Dit kolkdeel kan alleen volgen op een Verbreed Kolkdeel (C02).
-
-
-#  PUNTDEUREN
+  symbol: '6'
+  role: "C"
+  description: >-
+    Adaptor voor een kolkversmalling. Dit kolkdeel kan alleen volgen op een
+    Verbreed Kolkdeel.
 
 - name: puntdeur-links
   tooltip: puntdeur links
@@ -191,7 +262,8 @@
   top: 6
   bottom: 14
   gate: true
-  symbol: "D01"
+  role: "<"
+  symbol: '7'
 
 - name: puntdeur-rechts
   tooltip: puntdeur rechts
@@ -199,92 +271,98 @@
   top: 6
   bottom: 14
   gate: true
-  symbol: "D02"
+  role: ">"
+  symbol: '8'
 
 - name: puntdeur-pin-links
-  tooltip: dubbelkerende enkelvoudige puntdeur met pin, links
+  tooltip: 'dubbelkerende enkelvoudige puntdeur met pin, links'
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "D03"
+  role: "N"
+  symbol: '9'
 
 - name: puntdeur-pin-rechts
-  tooltip: dubbelkerende enkelvoudige puntdeur met pin, rechts
+  tooltip: 'dubbelkerende enkelvoudige puntdeur met pin, rechts'
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "D04"
+  symbol: ':'
+  role: "N"
 
 - name: puntdeur-dubbelk-links
-  tooltip: dubbelkerende enkelvoudige puntdeur, links
+  tooltip: 'dubbelkerende enkelvoudige puntdeur, links'
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "D05"
+  symbol: ';'
+  role: "N"
 
 - name: puntdeur-dubbelk-rechts
-  tooltip: dubbelkerende enkelvoudige puntdeur, rechts
+  tooltip: 'dubbelkerende enkelvoudige puntdeur, rechts'
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "D06"
-
-#  DRAAIDEUREN
+  symbol: '<'
+  role: "N"
 
 - name: draaideur-lb
-  tooltip: enkele draaideur, links, scharnier boven, aanslag onder
+  tooltip: 'enkele draaideur, links, scharnier boven, aanslag onder'
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "D07"
+  symbol: '='
+  role: "<"
+
 - name: draaideur-lo
-  tooltip: enkele draaideur, links, scharnier onder, aanslag boven
+  tooltip: 'enkele draaideur, links, scharnier onder, aanslag boven'
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "D08"
+  symbol: '>'
+  role: "<"
 
 - name: draaideur-rb
-  tooltip: enkele draaideur, rechts, scharnier boven, aanslag onder
+  tooltip: 'enkele draaideur, rechts, scharnier boven, aanslag onder'
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "D09"
+  symbol: '?'
+  role: ">"
 
 - name: draaideur-ro
-  tooltip: enkele draaideur, rechts, scharnier onder, aanslag boven
+  tooltip: 'enkele draaideur, rechts, scharnier onder, aanslag boven'
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "D10"
+  symbol: '@'
+  role: ">"
 
-# HEFDEUR
 - name: hefdeur
   tooltip: hefdeur
   deltay: 0
   top: 5
   bottom: 15
   gate: true
-  symbol: "D11"
+  symbol: 'A'
+  role: "N"
 
-#  HANGROLDEUR
 - name: hangroldeur
   tooltip: hangroldeur
   deltay: 0
   top: 0
   bottom: 15
   gate: true
-  symbol: "D12"
-
-#  Roldeuren
+  symbol: 'B'
+  role: "N"
 
 - name: roldeur-boven
   tooltip: roldeur boven
@@ -292,107 +370,89 @@
   top: 0
   bottom: 14
   gate: true
-  symbol: "D13"
+  symbol: 'C'
+  role: "N"
 
 - name: roldeur-onder
-  tooltip: roldeur, onder
+  tooltip: 'roldeur, onder'
   deltay: 0
   top: 6
   bottom: 20
   gate: true
-  symbol: "D14"
- 
-
-# WAAIEREDEUREN
+  symbol: 'D'
+  role: "N"
 
 - name: waaierdeur-links
-  tooltip: waaierdeur, links
+  tooltip: 'waaierdeur, links'
   deltay: 0
   top: 4
   bottom: 16
   gate: true
-  symbol: "D15"
+  symbol: 'E'
+  role: "<"
 
 - name: waaierdeur-rechts
-  tooltip: waaierdeur, rechts
+  tooltip: 'waaierdeur, rechts'
   deltay: 0
   top: 4
   bottom: 16
   gate: true
-  symbol: "D16"
-
-
-# HOOGWATERKERINGEN
-
-# ... puntdeuren
-
-- name: schot
-  tooltip: Deur of schot, alleen bij hoogwater
-  deltay: 0
-  top: 6
-  bottom: 15
-  gate: false
-  symbol: "I02"
- 
-
-- name: breed-schot
-  tooltip: Deur of schot over brede kolk, alleen bij hoogwater
-  deltay: 0
-  top: 5
-  bottom: 18
-  gate: false
-  symbol: "I03"
- 
+  symbol: 'F'
+  role: ">"
 
 - name: puntdeur-links-hwk
-  tooltip: puntdeur, links, hoogwaterkerig
+  tooltip: 'puntdeur, links, hoogwaterkerig'
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "D17"
+  symbol: 'G'
+  role: "<"
 
 - name: puntdeur-rechts-hwk
-  tooltip: puntdeur, rechts, hoogwaterkering
+  tooltip: 'puntdeur, rechts, hoogwaterkering'
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "D18"
+  symbol: 'H'
+  role: ">"
 
 - name: puntdeur-pin-links-hwk
-  tooltip: dubbelkerende enkelvoudige puntdeur met pin, links, hoogwaterkering
+  tooltip: 'dubbelkerende enkelvoudige puntdeur met pin, links, hoogwaterkering'
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "D19"
+  symbol: 'I'
+  role: "N"
 
 - name: puntdeur-pin-rechts-hwk
-  tooltip: dubbelkerende enkelvoudige puntdeur met pin, rechts, hoogwaterkering
+  tooltip: 'dubbelkerende enkelvoudige puntdeur met pin, rechts, hoogwaterkering'
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "D19"
+  symbol: 'J'
+  role: "N"
 
 - name: puntdeur-dubbelk-links-hwk
-  tooltip: dubbelkerende enkelvoudige puntdeur, links, hoogwaterkering
+  tooltip: 'dubbelkerende enkelvoudige puntdeur, links, hoogwaterkering'
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "D20"
+  symbol: 'K'
+  role: "N"
 
 - name: puntdeur-dubbelk-rechts-hwk
-  tooltip: dubbelkerende enkelvoudige puntdeur, rechts, hoogwaterkering
+  tooltip: 'dubbelkerende enkelvoudige puntdeur, rechts, hoogwaterkering'
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "D21"
-
-# ... hefdeur
+  symbol: 'L'
+  role: "N"
 
 - name: hefdeur-hwk
   tooltip: hefdeur
@@ -400,119 +460,116 @@
   top: 5
   bottom: 15
   gate: true
-  symbol: "D22"
-
-# ... roldeuren
+  symbol: 'M'
+  role: "N"
 
 - name: roldeur-boven-hwk
-  tooltip: roldeur, hoogwaterkering, boven
+  tooltip: 'roldeur, hoogwaterkering, boven'
   deltay: 0
   top: 0
   bottom: 14
   gate: true
-  symbol: "D23"
- 
+  symbol: 'N'
+  role: "N"
 
 - name: roldeur-onder-hwk
-  tooltip: roldeur, hoogwaterkering, onder
+  tooltip: 'roldeur, hoogwaterkering, onder'
   deltay: 0
   top: 6
   bottom: 20
   gate: true
-  symbol: "D24"
+  symbol: 'O'
+  role: "N"
 
 - name: hangroldeur-hwk
-  tooltip: hangroldeur, hoogwaterkering
+  tooltip: 'hangroldeur, hoogwaterkering'
   deltay: 0
   top: 0
   bottom: 15
   gate: true
-  symbol: "D25"
- 
-
-# ... waaierdeuren
+  symbol: 'P'
+  role: "N"
 
 - name: waaierdeur-links-hwk
-  tooltip: waaierdeur, hoogwaterkering, links
+  tooltip: 'waaierdeur, hoogwaterkering, links'
   deltay: 0
   top: 4
   bottom: 16
   gate: true
-  symbol: "D26"
+  symbol: 'Q'
+  role: "<"
 
 - name: waaierdeur-rechts-hwk
-  tooltip: waaierdeur, hoogwaterkering, rechts
+  tooltip: 'waaierdeur, hoogwaterkering, rechts'
   deltay: 0
   top: 4
   bottom: 16
   gate: true
-  symbol: "D27"
-
-
-# ... draaideuren
+  symbol: 'R'
+  role: ">"
 
 - name: draaideur-lb-hwk
-  tooltip: enkele draaideur, links, scharnier boven, aanslag onder, hoogwaterkering
+  tooltip: 'enkele draaideur, links, scharnier boven, aanslag onder, hoogwaterkering'
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "D28"
- 
+  symbol: 'S'
+  role: "<"
 
 - name: draaideur-lo-hwk
-  tooltip: enkele draaideur, links, scharnier onder, aanslag boven, hoogwaterkering
+  tooltip: 'enkele draaideur, links, scharnier onder, aanslag boven, hoogwaterkering'
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "D29"
- 
+  symbol: 'T'
+  role: "<"
 
 - name: draaideur-rb-hwk
-  tooltip: enkele draaideur, rechts, scharnier boven, aanslag onder, hoogwaterkering
+  tooltip: 'enkele draaideur, rechts, scharnier boven, aanslag onder, hoogwaterkering'
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "D30"
- 
+  symbol: 'U'
+  role: ">"
 
 - name: draaideur-ro-hwk
-  tooltip: enkele draaideur, rechts, scharnier onder, aanslag boven, hoogwaterkering
+  tooltip: 'enkele draaideur, rechts, scharnier onder, aanslag boven, hoogwaterkering'
   deltay: 0
   top: 6
   bottom: 14
   gate: true
-  symbol: "D31"
+  symbol: 'V'
+  role: ">"
 
 - name: vaarweg
-  tooltip: Vaarweg, geen kolk, alleen voor brug buiten kolk
+  tooltip: 'Vaarweg, geen kolk, alleen voor brug buiten kolk'
   deltay: 0
   top: 4
   bottom: 6
   gate: false
-  symbol: "I04"
-
-#  DOORVAAROPENINGEN
+  symbol: 'W'
+  role: "i"
 
 - name: brug-vast
-  tooltip: Doorvaartopening, vast
+  tooltip: 'Doorvaartopening, vast'
   deltay: 0
   top: 4
   bottom: 16
   gate: false
-  symbol: "I05"
+  symbol: 'X'
+  role: "b"
 
 - name: brug-beweegbaar
-  tooltip: Doorvaartopening, beweegbaar
+  tooltip: 'Doorvaartopening, beweegbaar'
   deltay: 0
   top: 4
   bottom: 6
   gate: false
-  symbol: "I06"
-
-# WEGDEK OVER SLUISHOOFD
+  symbol: 'Y'
+  role: "b"
 
 - name: weg-over-hoofd
   tooltip: Wegdek over sluishoofd
@@ -520,6 +577,5 @@
   top: 4
   bottom: 6
   gate: false
-  symbol: "I07"
-
-...
+  symbol: 'Z'
+  role: "b"

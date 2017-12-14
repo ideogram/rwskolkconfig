@@ -398,12 +398,21 @@
             return l.networkDirection;
         },
 
+        /**
+         * sets the stream (upstream-downstream or vv.)
+         * @param value either \up-down' or 'down-up\
+         */
         setStream: function(value){
             var l = libConfig;
             l.stream = value;
         },
 
-        getStream: function(value){
+        /**
+         * Get the stream (upstream-downstream or vv.)
+         * @param value
+         * @returns {string}
+         */
+        getStream: function(){
             var l = libConfig;
             return l.stream;
         },
@@ -478,7 +487,7 @@
                 while (pos !== -1) {
                     elements[pos] = c[i];
                     elements[pos]['ref'] = i;
-                    fill = "".padStart(symbol.length,"@");
+                    fill = "".padStart(symbol.length," ");
                     s = s.replace( symbol, fill );
                     pos = s.indexOf(symbol, pos + 1 );
                 }
@@ -489,7 +498,7 @@
             // Copy the array to the global elements array, removing empty slots on the fly
             $.each(elements, function (i, value) {
                 if (value !== undefined) {
-                    if ( value.symbol == "I05" || value.symbol == "I06" || value.symbol == "I07" ) {
+                    if ( value.symbol == "X" || value.symbol == "Y" || value.symbol == "Z" ) {
                         l.bridges[index-1] = value.symbol;
                     } else {
                         l.element.push(value);
@@ -514,17 +523,17 @@
                 l.arr$SVG[i] = $me.find("svg");
                 libConfig.prepareForDiagramLife($me);
 
-                if (l.bridges[i] == "I05"){
+                if (l.bridges[i] == "X"){
                     $bridge = l.$toolbar.find(".brug-vast").clone();
                     libConfig.drawBridge($me, $bridge);
                 }
 
-                if (l.bridges[i] == "I06"){
+                if (l.bridges[i] == "Y"){
                     $bridge = l.$toolbar.find(".brug-beweegbaar").clone();
                     libConfig.drawBridge($me, $bridge);
                 }
 
-                if (l.bridges[i] == "I07"){
+                if (l.bridges[i] == "Z"){
                     $bridge = l.$toolbar.find(".weg-over-hoofd").clone();
                     libConfig.drawBridge($me, $bridge);
                 }
@@ -584,7 +593,6 @@
         loadElements: function(data) {
             l = libConfig;
             l.elementCatalogue = jsyaml.load(data);
-
             libConfig.addElementsToToolbar();
         },
 
