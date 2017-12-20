@@ -1,13 +1,13 @@
 <svg height="480" viewBox="24 0 72 480" width="72" xmlns="http://www.w3.org/2000/svg">
     <title>stopstreep</title>
     <g transform="translate(24,0)">
-        <path d="M44.49 139.5H27.51l1.32 14.2h14.34l1.32-14.2" fill="#d52b1e"/>
+        <path d="M44.49 139.5H27.51l1.32 14.2h14.34l1.32-14.2" fill="#e17000"/>
         <path d="M43.17 153.7H28.83l1.04 11.3h12.25l1.05-11.3" fill="#fff4dc"/>
-        <path d="M42.13 165H29.87l.72 7.7h10.83l.71-7.7" fill="#d52b1e"/>
+        <path d="M42.13 165H29.87l.72 7.7h10.83l.71-7.7" fill="#e17000"/>
         <path d="M41.41 172.7H30.59l.62 6.7h9.58l.62-6.7" fill="#fff4dc"/>
-        <path d="M27.51 340.4h16.98l-1.32-14.2H28.83l-1.32 14.2" fill="#d52b1e"/>
+        <path d="M27.51 340.4h16.98l-1.32-14.2H28.83l-1.32 14.2" fill="#e17000"/>
         <path d="M28.83 326.2h14.34l-1.05-11.3H29.87l-1.04 11.3" fill="#fff4dc"/>
-        <path d="M29.87 314.9h12.26l-.71-7.7H30.59l-.72 7.7" fill="#d52b1e"/>
+        <path d="M29.87 314.9h12.26l-.71-7.7H30.59l-.72 7.7" fill="#e17000"/>
         <path d="M30.59 307.2h10.82l-.62-6.7h-9.58l-.62 6.7" fill="#fff4dc"/>
         <path class="kolk" d="M-24 168H96v144H-24z" fill="#d9ebf7"/>
         <path d="M44.49 340.4H27.51l3.7-39.9h9.58zM27.51 139.5h16.98l-3.7 39.9h-9.58z" fill="none" stroke="#999" stroke-miterlimit="10"/>
