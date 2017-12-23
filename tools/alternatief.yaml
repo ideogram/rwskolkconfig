@@ -1,0 +1,413 @@
+-
+    OldSymb: "%"
+    OrigName: Gladde-kolk
+    Code: A02
+    Type: Kolkdeel
+    NewName: Glad kolkdeel volle tekenbreedte
+    Tooltip: Glad kolkdeel volle tekenbreedte
+-
+    OldSymb: "&"
+    OrigName: Gladde-kolk-half
+    Code: A03
+    Type: Kolkdeel
+    NewName: Glad kolkdeel halve tekenbreedte
+    Tooltip: Glad kolkdeel halve tekenbreedte
+-
+    OldSymb: "‘"
+    OrigName: Kolk-verbreed
+    Code: A04
+    Type: Kolkdeel
+    NewName: Verbreed glad kolkdeel
+    Tooltip: Verbreed glad kolkdeel
+-
+    OldSymb: "+"
+    OrigName: Overgang-q-recht
+    Code: B01
+    Type: Kolkbegindeel
+    NewName: Hoekige ingangsadaptor boven
+    Tooltip: Hoekige ingangsadaptor boven
+-
+    OldSymb: 3
+    OrigName: Overgang-binnenfrontkolk-links
+    Code: B02
+    Type: Kolkbegindeel
+    NewName: Hoekige ingangsadaptor midden
+    Tooltip: Hoekige ingangsadaptor midden
+-
+    OldSymb: )
+    OrigName: Overgang-d-recht
+    Code: B03
+    Type: Kolkbegindeel
+    NewName: Hoekige ingangsadaptor onder
+    Tooltip: Hoekige ingangsadaptor onder
+-
+    OldSymb: 2
+    OrigName: Overgang-q-schuin
+    Code: B11
+    Type: Kolkbegindeel
+    NewName: Afgeschuinde ingangsadaptor boven
+    Tooltip: Afgeschuinde ingangsadaptor boven
+-
+    OldSymb: b
+    OrigName: Overgang-d-schuin
+    Code: B13
+    Type: Kolkbegindeel
+    NewName: Afgeschuinde ingangsadaptor onder
+    Tooltip: Afgeschuinde ingangsadaptor onder
+-
+    OldSymb: /
+    OrigName: Overgang-q-rond
+    Code: B21
+    Type: Kolkbegindeel
+    NewName: Ronde ingangsadaptor boven
+    Tooltip: Ronde ingangsadaptor boven
+-
+    OldSymb: 5
+    OrigName: Overgang-komkolk-links
+    Code: B22
+    Type: Kolkbegindeel
+    NewName: Ronde ingangsadaptor midden
+    Tooltip: Ronde ingangsadaptor midden
+-
+    OldSymb: "-"
+    OrigName: Overgang-d-rond
+    Code: B23
+    Type: Kolkbegindeel
+    NewName: Ronde ingangsadaptor onder
+    Tooltip: Ronde ingangsadaptor onder
+-
+    OldSymb: "*"
+    OrigName: Overgang-p-recht
+    Code: C01
+    Type: Kolkeinddeel
+    NewName: Hoekige uitgangsadaptor boven
+    Tooltip: Hoekige uitgangsadaptor boven
+-
+    OldSymb: 4
+    OrigName: Overgang-binnenfrontkolk-rechts
+    Code: C02
+    Type: Kolkeinddeel
+    NewName: Hoekige uitgangsadaptor midden
+    Tooltip: Hoekige uitgangsadaptor midden
+-
+    OldSymb: (
+    OrigName: Overgang-b-recht
+    Code: C03
+    Type: Kolkeinddeel
+    NewName: Hoekige uitgangsadaptor onder
+    Tooltip: Hoekige uitgangsadaptor onder
+-
+    OldSymb: 1
+    OrigName: Overgang-p-schuin
+    Code: C11
+    Type: Kolkeinddeel
+    NewName: Afgeschuinde uitgangsadaptor boven
+    Tooltip: Afgeschuinde uitgangsadaptor boven
+-
+    OldSymb: 0
+    OrigName: Overgang-b-schuin
+    Code: C13
+    Type: Kolkeinddeel
+    NewName: Afgeschuinde uitgangsadaptor onder
+    Tooltip: Afgeschuinde uitgangsadaptor onder
+-
+    OldSymb: .
+    OrigName: Overgang-p-rond
+    Code: C21
+    Type: Kolkeinddeel
+    NewName: Ronde uitgangsadaptor boven
+    Tooltip: Ronde uitgangsadaptor boven
+-
+    OldSymb: 6
+    OrigName: Overgang-komkolk-rechts
+    Code: C22
+    Type: Kolkeinddeel
+    NewName: Ronde uitgangsadaptor midden
+    Tooltip: Ronde uitgangsadaptor midden
+-
+    OldSymb: ","
+    OrigName: Overgang-b-rond
+    Code: C23
+    Type: Kolkeinddeel
+    NewName: Ronde uitgangsadaptor onder
+    Tooltip: Ronde uitgangsadaptor onder
+-
+    OldSymb: 7
+    OrigName: Puntdeur-links
+    Code: D01
+    Type: Deur
+    NewName: Puntdeur links
+    Tooltip: Puntdeur naar links
+-
+    OldSymb: 8
+    OrigName: Puntdeur-rechts
+    Code: D02
+    Type: Deur
+    NewName: Puntdeur rechts
+    Tooltip: Puntdeur naar rechts
+-
+    OldSymb: 9
+    OrigName: Puntdeur-pin-links
+    Code: D03
+    Type: Deur
+    NewName: Puntdeur pin links
+    Tooltip: Puntdeur met pin naar links
+-
+    OldSymb: ":"
+    OrigName: Puntdeur-pin-rechts
+    Code: D04
+    Type: Deur
+    NewName: Puntdeur pin rechts
+    Tooltip: Puntdeur met pin naar rechts
+-
+    OldSymb: ;
+    OrigName: Puntdeur-dubbelk-links
+    Code: D05
+    Type: Deur
+    NewName: Dubbelkerende enkelvoudige puntdeur links
+    Tooltip: Dubbelkerende enkelvoudige puntdeur, naar links
+-
+    OldSymb: <
+    OrigName: Puntdeur-dubbelk-rechts
+    Code: D06
+    Type: Deur
+    NewName: Dubbelkerende enkelvoudige puntdeur rechts
+    Tooltip: Dubbelkerende enkelvoudige puntdeur, naar rechts
+-
+    OldSymb: =
+    OrigName: Draaideur-lb
+    Code: D07
+    Type: Deur
+    NewName: Draaideur rechtsonder
+    Tooltip: Draaideur sluitend naar rechtsonder
+-
+    OldSymb: >
+    OrigName: Draaideur-lo
+    Code: D08
+    Type: Deur
+    NewName: Draaideur rechtsboven
+    Tooltip: Draaideur sluitend naar rechtsboven
+-
+    OldSymb: ?
+    OrigName: Draaideur-rb
+    Code: D09
+    Type: Deur
+    NewName: Draaideur linksonder
+    Tooltip: Draaideur sluitend naar linksonder
+-
+    OldSymb: "@"
+    OrigName: Draaideur-ro
+    Code: D10
+    Type: Deur
+    NewName: Draaideur linksboven
+    Tooltip: Draaideur sluitend naar linksboven
+-
+    OldSymb: A
+    OrigName: Hefdeur
+    Code: D11
+    Type: Deur
+    NewName: Hefdeur
+    Tooltip: Hefdeur
+-
+    OldSymb: B
+    OrigName: Hangroldeur
+    Code: D12
+    Type: Deur
+    NewName: Hangroldeur onder
+    Tooltip: Hangroldeur, naar onder sluitend
+-
+    OldSymb: C
+    OrigName: Roldeur-boven
+    Code: D14
+    Type: Deur
+    NewName: Roldeur onder
+    Tooltip: Roldeur, naar onder sluitend
+-
+    OldSymb: D
+    OrigName: Roldeur-onder
+    Code: D15
+    Type: Deur
+    NewName: Roldeur boven
+    Tooltip: Roldeur, naar boven sluitend
+-
+    OldSymb: E
+    OrigName: Waaierdeur-links
+    Code: D16
+    Type: Deur
+    NewName: Waaierdeur rechts
+    Tooltip: Waaierdeur, naar rechts sluitend
+-
+    OldSymb: F
+    OrigName: Waaierdeur-rechts
+    Code: D17
+    Type: Deur
+    NewName: Waaierdeur links
+    Tooltip: Waaierdeur, naar links sluitend
+-
+    OldSymb: G
+    OrigName: Puntdeur-links-hwk
+    Code: D51
+    Type: Deur
+    NewName: Puntdeur links hwk
+    Tooltip: Puntdeur naar links, met hoogwaterkerende functie (“stormdeur”)
+-
+    OldSymb: H
+    OrigName: Puntdeur-rechts-hwk
+    Code: D52
+    Type: Deur
+    NewName: Puntdeur rechts hwk
+    Tooltip: Puntdeur naar rechts, met hoogwaterkerende functie (“stormdeur”)
+-
+    OldSymb: I
+    OrigName: Puntdeur-pin-links-hwk
+    Code: D53
+    Type: Deur
+    NewName: Puntdeur links hwk
+    Tooltip: Puntdeur met pin naar links hoogwaterkerende functie (“stormdeur”)
+-
+    OldSymb: J
+    OrigName: Puntdeur-pin-rechts-hwk
+    Code: D54
+    Type: Deur
+    NewName: Puntdeur rechts hwk
+    Tooltip: Puntdeur met pin naar rechts hoogwaterkerende functie (“stormdeur”)
+-
+    OldSymb: K
+    OrigName: Puntdeur-dubbelk-links-hwk
+    Code: D55
+    Type: Deur
+    NewName: Dubbelkerende enkelvoudige puntdeur links hwk
+    Tooltip: Dubbelkerende enkelvoudige puntdeur, naar links en met hoogwaterkerende functie (“stormdeur”)
+-
+    OldSymb: L
+    OrigName: Puntdeur-dubbelk-rechts-hwk
+    Code: D56
+    Type: Deur
+    NewName: Dubbelkerende enkelvoudige puntdeur rechts hwk
+    Tooltip: Dubbelkerende enkelvoudige puntdeur, naar rechts en met hoogwaterkerende functie (“stormdeur”)
+-
+    OldSymb: S
+    OrigName: Daaideur-lb-hwk
+    Code: D57
+    Type: Deur
+    NewName: Draaideur rechtsonder hwk
+    Tooltip: Draaideur sluitend naar rechtsonder met hoogwaterkerende functie (“stormdeur”)
+-
+    OldSymb: T
+    OrigName: Daaideur-lo-hwk
+    Code: D58
+    Type: Deur
+    NewName: Draaideur rechtsboven hwk
+    Tooltip: Draaideur sluitend naar rechtsboven met hoogwaterkerende functie (“stormdeur”)
+-
+    OldSymb: U
+    OrigName: Daaideur-rb-hwk
+    Code: D59
+    Type: Deur
+    NewName: Draaideur linksonder hwk
+    Tooltip: Draaideur sluitend naar linksonder met hoogwaterkerende functie (“stormdeur”)
+-
+    OldSymb: V
+    OrigName: Daaideur-ro-hwk
+    Code: D60
+    Type: Deur
+    NewName: Draaideur linksboven hwk
+    Tooltip: Draaideur sluitend naar linksboven met hoogwaterkerende functie (“stormdeur”)
+-
+    OldSymb: M
+    OrigName: Hefdeur-hwk
+    Code: D61
+    Type: Deur
+    NewName: Hefdeur hwk
+    Tooltip: Hefdeur met hoogwaterkerende functie (“stormdeur”)
+-
+    OldSymb: P
+    OrigName: Hangroldeur-hwk
+    Code: D62
+    Type: Deur
+    NewName: Hangroldeur onder hwk
+    Tooltip: Hangroldeur, naar onder sluitend met hoogwaterkerende functie (“stormdeur”)
+-
+    OldSymb: N
+    OrigName: Roldeur-boven-hwk
+    Code: D64
+    Type: Deur
+    NewName: Roldeur onder hwk
+    Tooltip: Roldeur, naar onder sluitend met hoogwaterkerende functie (“stormdeur”)
+-
+    OldSymb: O
+    OrigName: Roldeur-onder-hwk
+    Code: D65
+    Type: Deur
+    NewName: Roldeur boven hwk
+    Tooltip: Roldeur, naar boven sluitend met hoogwaterkerende functie (“stormdeur”)
+-
+    OldSymb: Q
+    OrigName: Waaierdeur-links-hwk
+    Code: D66
+    Type: Deur
+    NewName: Waaierdeur rechts hwk
+    Tooltip: Waaierdeur, naar rechts sluitend met hoogwaterkerende functie (“stormdeur”)
+-
+    OldSymb: R
+    OrigName: Waaierdeur-rechts-hwk
+    Code: D67
+    Type: Deur
+    NewName: Waaierdeur links hwk
+    Tooltip: Waaierdeur, naar links sluitend met hoogwaterkerende functie (“stormdeur”)
+-
+    OldSymb: "!"
+    OrigName: Stopstreep
+    Code: I01
+    Type: Informatief onderdeel
+    NewName: Stopstreep
+    Tooltip: Stopstreep
+-
+    OldSymb: "#"
+    OrigName: Schot
+    Code: I11
+    Type: Informatief onderdeel
+    NewName: Afsluitingsschot
+    Tooltip: Afsluitingsschot
+-
+    OldSymb: "$"
+    OrigName: Schot-breed
+    Code: I12
+    Type: Informatief onderdeel
+    NewName: Afsluitingsschot verbreed kolkdeel
+    Tooltip: Afsluitingsschot verbreed kolkdeel
+-
+    OldSymb: 'c'
+    OrigName: Vanginrichting
+    Code: I21
+    Type: Informatief onderdeel
+    NewName: Vanginrichting
+    Tooltip: Vanginrichting; Ter bescherming van de Sluisdeur tegen aanvaringen.
+-
+    OldSymb: W
+    OrigName: Vaarweg
+    Code: I91
+    Type: Informatief onderdeel
+    NewName: Vaarweg buiten kolk
+    Tooltip: Vaarweg buiten de kolk
+-
+    OldSymb: X
+    OrigName: Brug-vast
+    Code: O21
+    Type: Overliggend onderdeel
+    NewName: Vast Brugdeel
+    Tooltip: Vast Brugdeel
+-
+    OldSymb: Y
+    OrigName: Brug-beweegbaar
+    Code: O22
+    Type: Overliggend onderdeel
+    NewName: Bedienbaar Brugdeel
+    Tooltip: Bedienbaar Brugdeel
+-
+    OldSymb: Z
+    OrigName: weg-over-hoofd
+    Code: O29
+    Type: Overliggend onderdeel
+    NewName: Weg over Sluisdeur
+    Tooltip: Weg over een Sluisdeur; een weg die sluit en opent met de stand van de betreffende deur.

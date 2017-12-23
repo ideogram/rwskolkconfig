@@ -1,26 +1,27 @@
 <svg height="480" viewBox="0 0 120 480" width="120" xmlns="http://www.w3.org/2000/svg">
     <title>waaierdeur-links-hwk</title>
-    <path d="M24.36 312.4c0 39.8 32.77 72 73.2 72v-72zM97.6 314h6.1v72h-6.1zm0-218h6.1v72h-6.1zm-73.24 71.9c0-39.8 32.75-72.05 73.2-72.05v72.05zM0 168h120v144H0z" fill="#d9ebf7"/>
-    <path d="M96.766 386.096c-40.847 0-73.96-33.112-73.96-73.959" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-width="3.082"/>
-    <path d="M0 168h21.3M0 312h21.3m80.7 0h18m-18-144h18" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M102.004 167.804V94.24h-6.008" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2.993"/>
-    <path color="#000" d="M86.98 169l-14.33 71 14.27 71" fill="none" overflow="visible" stroke="#ca005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" style="isolation:auto;mix-blend-mode:normal"/>
-    <path d="M27.78 310.3c0-32.7 23.49-59.9 54.51-65.7" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="7"/>
-    <path d="M96 168H26m70 0l-60.6 35M96 168l-35 60.6" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
-    <path d="M27.78 169.5c0 32.7 23.59 60 54.71 65.7" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="7"/>
-    <path d="M96 168l-60.6 35M96 168l-35 60.6" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M27.78 169.5c0 32.5 23.3 59.7 54.14 65.6" fill="none" stroke="#000" stroke-linecap="square" stroke-width="3.5"/>
-    <path d="M96 168H26" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M90 167.5h12l-14 72H76z" fill="#ffb612" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="7.5" cy="7.5" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3" transform="translate(88.5 160.5)"/>
-    <path d="M22.806 168.096a73.96 73.96 0 0 1 73.96-73.96" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-width="3.082"/>
-    <path d="M102 312v74h-6" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M96 312H26m70 0l-60.6-35M96 312l-35-60.6" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
-    <path d="M96 312l-60.6-35M96 312l-35-60.6" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M27.78 310.3c0-32.7 23.55-60 54.64-65.7" fill="none" stroke="#000" stroke-linecap="square" stroke-width="3.5"/>
-    <path d="M96 312H26" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M76 240.5h12l14 72H90z" fill="#ffb612" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="7.5" cy="7.5" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3" transform="matrix(1 0 0 -1 88.5 319.5)"/>
+    <path d="M95.64 312.4c0 39.8-32.77 72-73.2 72v-72zM22.4 314h-6.1v72h6.1zm0-218h-6.1v72h6.1zm73.24 71.9c0-39.8-32.75-72.05-73.2-72.05v72.05zm24.36.1H0v144h120z" fill="#d9ebf7"/>
+    <path color="#000" d="M31.95 169.1l14.33 71-14.27 71.1" fill="none" overflow="visible" stroke="#ca005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" style="isolation:auto;mix-blend-mode:normal"/>
+    <path d="M92.22 310.3c0-32.7-23.49-59.9-54.51-65.7" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="7"/>
+    <path d="M23.23 386.1c40.85 0 73.96-33.1 73.96-74" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-width="3.082"/>
+    <path d="M120 168H98.7M120 312H98.7M18 312H0m18-144H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M18 167.8V94.24h6" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2.993"/>
+    <path d="M24 168h70m-70 0l60.6 35M24 168l35 60.6" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
+    <path d="M92.22 169.5c0 32.7-23.59 60-54.71 65.7" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="7"/>
+    <path d="M24 168l60.6 35M24 168l35 60.6" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M92.22 169.5c0 32.5-23.3 59.7-54.14 65.6" fill="none" stroke="#000" stroke-linecap="square" stroke-width="3.5"/>
+    <path d="M24 168h70" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M30 167.5H18l14 72h12z" fill="#ffb612" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="-24" cy="168" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3" transform="scale(-1 1)"/>
+    <path d="M97.19 168.1a73.96 73.96 0 0 0-73.96-73.96" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-width="3.082"/>
+    <path d="M18 312v74h6" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M24 312h70m-70 0l60.6-35M24 312l35-60.6" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
+    <path d="M24 312l60.6-35M24 312l35-60.6" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M92.22 310.3c0-32.7-23.55-60-54.64-65.7" fill="none" stroke="#000" stroke-linecap="square" stroke-width="3.5"/>
+    <path d="M24 312h70" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M44 240.5H32l-14 72h12z" fill="#ffb612" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M23.23 94.28c40.85 0 73.96 33.12 73.96 74.02" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-width="3.082"/>
+    <circle cx="-24" cy="-312" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3" transform="scale(-1)"/>
     <text font-family="sans-serif" font-size="36" text-anchor="middle" x="60" y="420"/>
     <text class="hw" fill="#ca005d" font-family="sans-serif" font-size="26" font-weight="700" text-anchor="middle" x="60" y="420">
         HWK

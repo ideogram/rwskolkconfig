@@ -194,7 +194,7 @@
                     "xmlns:xlink": "http://www.w3.org/1999/xlink"
                 });
 
-            // ... store two network-direction symbols into variables
+            // ... store two stream symbols into variables
 
             $.get(l.path.folderPartials + "stroomopwaarts.partial.svg", null, function( data ) {
                 l.svgUpstream = data;
@@ -466,6 +466,9 @@
             var c = l.elementCatalogue.slice();
 
             // Sort the local catalogue by string length of the symbol, from long to small
+            // (This is needed for the case in which the symbols don't have the same length,
+            //  and contain the same characters )
+
             c.sort(compare);
 
             function compare(a,b) {
@@ -498,7 +501,7 @@
             // Copy the array to the global elements array, removing empty slots on the fly
             $.each(elements, function (i, value) {
                 if (value !== undefined) {
-                    if ( value.symbol == "X" || value.symbol == "Y" || value.symbol == "Z" ) {
+                    if ( value.symbol == "O21" || value.symbol == "O21" || value.symbol == "O29" ) {
                         l.bridges[index-1] = value.symbol;
                     } else {
                         l.element.push(value);
@@ -523,18 +526,18 @@
                 l.arr$SVG[i] = $me.find("svg");
                 libConfig.prepareForDiagramLife($me);
 
-                if (l.bridges[i] == "X"){
-                    $bridge = l.$toolbar.find(".brug-vast").clone();
+                if (l.bridges[i] == "O21"){
+                    $bridge = l.$toolbar.find(".vast-brugdeel").clone();
                     libConfig.drawBridge($me, $bridge);
                 }
 
-                if (l.bridges[i] == "Y"){
-                    $bridge = l.$toolbar.find(".brug-beweegbaar").clone();
+                if (l.bridges[i] == "O22"){
+                    $bridge = l.$toolbar.find(".bedienbaar-brugdeel").clone();
                     libConfig.drawBridge($me, $bridge);
                 }
 
-                if (l.bridges[i] == "Z"){
-                    $bridge = l.$toolbar.find(".weg-over-hoofd").clone();
+                if (l.bridges[i] == "O29"){
+                    $bridge = l.$toolbar.find(".weg-over-sluisdeur").clone();
                     libConfig.drawBridge($me, $bridge);
                 }
             });
@@ -559,7 +562,7 @@
 
                 // Bridges may be draggable, but should not be allowed to end up in the diagram as separate entities
                 var draggableOptionsElement = l.draggableOptions;
-                if (val.name == "brug-vast" || val.name == "brug-beweegbaar" || val.name == "weg-over-hoofd" ) {
+                if (val.name == "vast-brugdeel" || val.name == "bedienbaar-brugdeel" || val.name == "weg-over-sluisdeur" ) {
                     delete draggableOptionsElement.connectToSortable;
                 }
 
@@ -661,7 +664,7 @@
             $target.droppable(
                 {
                     drop: libConfig.receiveDropOnElement,
-                    accept: ".brug-vast, .brug-beweegbaar, .weg-over-hoofd"
+                    accept: ".vast-brugdeel, .bedienbaar-brugdeel, .weg-over-sluisdeur"
                 }
             );
         },
