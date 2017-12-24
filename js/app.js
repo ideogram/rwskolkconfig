@@ -346,7 +346,7 @@
         setConfigString: function(strConfig){
             var l = libConfig;
 
-            // Check if the string has been set. If not re-install defaults.
+            // Check if the config string is empty. If so, re-install defaults.
             if (strConfig == "") {
                 for (var property in l.default) {
                     if (l.default.hasOwnProperty(property)) {
