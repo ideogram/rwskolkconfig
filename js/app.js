@@ -22,10 +22,14 @@
         arrOptions: ['network-direction', 'gates-names-direction','upstream-downstream'],
 
         // Defaults
-        networkDirection : "N",
-        gateNumbering : "ABC",
+        default: {
+            networkDirection : "N",
+            gateNumbering : "ABC",
+            stream: "up-down"
+        },
+
+        // Behaviour
         draggableOptions : {connectToSortable: null, helper: "clone", revert: "invalid"},
-        stream: "up-down",
         scale: 3,
 
         // Variables
@@ -341,6 +345,18 @@
          */
         setConfigString: function(strConfig){
             var l = libConfig;
+
+            // Check if the string has been set. If not re-install defaults.
+            if (strConfig == "") {
+                for (var property in l.default) {
+                    if (l.default.hasOwnProperty(property)) {
+                        l[property] = l.default[property];
+                    }
+                }
+
+                return;
+            }
+
             var matches = strConfig.match(/\((.*?)\)/g);
             var strPre, strComment;
 
