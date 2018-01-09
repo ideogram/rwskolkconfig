@@ -521,9 +521,18 @@
   gate: true
   direction: '>'
 
-- name: stopstreep
+- name: stopstreep-links
   symbol: I01
-  tooltip: Stopstreep
+  tooltip: Stopstreep, deur aan linkerzijde
+  type: Informatief onderdeel
+  deltay: 0
+  top: 6
+  bottom: 14
+  gate: false
+
+- name: stopstreep-rechts
+  symbol: I02
+  tooltip: Stopstreep, deur aan rechterzijde
   type: Informatief onderdeel
   deltay: 0
   top: 6

@@ -277,8 +277,6 @@
                     $g.attr("transform", "translate(" + (x - i + margin ) + "," + (-y+margin) + ")");
                     // ( We substract i from x to make the elements overlap by one pixel )
 
-                    // The background of the stopstreep extends beyond the viewbox.
-
                 }
                 x += (w-1);
             }
@@ -860,7 +858,6 @@
             var $svg = $target.find("svg");
             var $bridgeGroup = $bridge.find("g");
             var i = $target.index();
-            var isStopStreep = ( l.element[i].name == 'stopstreep');
 
             // Calculate the position
             var pxTargetWidth = l.scale * parseFloat($svg.attr("width"));
@@ -873,16 +870,6 @@
             // ... positioning the bridge nicely in the centre
             if (pxCentre != 0 && l.element[i].name != 'stopstreep') {
                 $svg.find(".bridge").attr("transform", "translate(" + pxCentre + ",0)");
-            }
-
-            // ... make the 'stopstreep' wider if a bridge is dropped on it
-            if ( isStopStreep ) {
-                viewBox = $svg.attr('viewBox');
-                viewBox = viewBox.split(" ");
-                viewBox[0] = -0;
-                viewBox[2] = 120;
-                $svg.attr("viewBox", viewBox.join(" ")).attr("width", 120 / l.scale );
-                $target.css("width", 120 / l.scale);
             }
 
             // Change the 'bridge' value of the element
