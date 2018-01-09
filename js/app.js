@@ -207,6 +207,10 @@
             $.get(l.path.folderPartials + "stroomafwaarts.partial.svg", null, function( data ) {
                 l.svgDownstream = data;
             }, 'html');
+
+            // set defaults
+            libConfig.setConfigString("");
+
         },
 
         /**
