@@ -1,5 +1,7 @@
 <svg height="480" viewBox="0 0 144 480" width="144" xmlns="http://www.w3.org/2000/svg">
-    <title>puntdeur-pin-rechts</title>
+    <title>
+        puntdeur-pin-rechts
+    </title>
     <path d="M144 168H0v144h144z" fill="#d9ebf7"/>
     <path d="M120 312h24m0-144h-24M0 312h24m0-144H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
     <path d="M120 312H24v12h96z" fill="#d9ebf7"/>
@@ -13,5 +15,5 @@
     <path d="M30 156v6h-6v6" fill="none" stroke="#9fceea" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
     <path d="M120 168v-12H30" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
     <circle cx="-30" cy="162" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3" transform="scale(-1 1)"/>
-    <text font-family="sans-serif" font-size="36" text-anchor="middle" x="72" y="420"/>
+    <text font-family="sans-serif" font-size="36" text-anchor="middle" x="72" y="420"></text>
 </svg>

@@ -1,5 +1,7 @@
 <svg height="480" viewBox="0 0 72 480" width="72" xmlns="http://www.w3.org/2000/svg">
-    <title>hoekige-ingangsadaptor-onder</title>
+    <title>
+        hoekige-ingangsadaptor-onder
+    </title>
     <path d="M0 168v144h72V72H24v96z" fill="#d9ebf7"/>
     <path d="M72 72H24v96H0m0 144h72" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
 </svg>

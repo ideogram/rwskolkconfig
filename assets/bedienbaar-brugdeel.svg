@@ -1,5 +1,7 @@
 <svg height="480" viewBox="0 0 120 480" width="120" xmlns="http://www.w3.org/2000/svg">
-    <title>bedienbaar-brugdeel</title>
+    <title>
+        bedienbaar-brugdeel
+    </title>
     <g class="bridge">
         <path d="M24 72h72v336H24z" fill="#e6e6e6" opacity=".5" style="isolation:isolate"/>
         <path d="M24 324v84m72-84v84" fill="none" stroke="#999" stroke-miterlimit="10" stroke-width="2"/>

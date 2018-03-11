@@ -1,5 +1,7 @@
 <svg height="480" viewBox="0 0 72 480" width="72" xmlns="http://www.w3.org/2000/svg">
-    <title>ronde-ingangsadaptor-boven</title>
+    <title>
+        ronde-ingangsadaptor-boven
+    </title>
     <path d="M0 312V168h72v240H48c-13.3 0-24-10.7-24-24v-72H0z" fill="#d9ebf7"/>
     <path d="M72 408H48c-13.3 0-24-10.7-24-24v-72H0m0-144h72" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
 </svg>

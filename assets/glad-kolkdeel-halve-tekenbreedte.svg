@@ -1,38 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-           xmlns:dc="http://purl.org/dc/elements/1.1/"
-           xmlns:cc="http://creativecommons.org/ns#"
-           xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-           xmlns:svg="http://www.w3.org/2000/svg"
-           xmlns="http://www.w3.org/2000/svg"
-           version="1.1"
-           id="svg2"
-           width="72"
-           viewBox="0 0 72 480"
-           height="480">
-          <metadata
-                     id="metadata14">
-                    <rdf:RDF>
-                              <cc:Work
-                                         rdf:about="">
-                                        <dc:format>image/svg+xml</dc:format>
-                                        <dc:type
-                                                   rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-                                        <dc:title>glad-kolkdeel-halve-tekenbreedte</dc:title>
-                              </cc:Work>
-                    </rdf:RDF>
-          </metadata>
-          <defs
-                     id="defs12" />
-          <title
-                     id="title4">glad-kolkdeel-halve-tekenbreedte</title>
-          <path
-                     id="path6"
-                     fill="#d9ebf7"
-                     d="M0 168h72v144H0z" />
-          <path
-                     style="fill:none;stroke:#9fceea;stroke-width:3;stroke-miterlimit:10"
-                     id="path8"
-                     stroke-miterlimit="10"
-                     d="m 0,168 l 36,0 m -36,144 l 72,0" />
+<svg xmlns="http://www.w3.org/2000/svg" width="72" viewBox="0 0 72 480" height="480">
+    <title>
+        glad-kolkdeel-halve-tekenbreedte
+    </title>
+    <path fill="#d9ebf7" d="M0 168h72v144H0z"/>
+    <path stroke-miterlimit="10" d="M0 168h36M0 312h72" fill="none" stroke="#9fceea" stroke-width="3"/>
 </svg>

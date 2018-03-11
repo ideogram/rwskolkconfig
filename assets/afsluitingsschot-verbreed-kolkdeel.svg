@@ -1,7 +1,9 @@
 <svg height="480" viewBox="0 0 72 480" width="72" xmlns="http://www.w3.org/2000/svg">
-    <title>afsluitingsschot-verbreed-kolkdeel</title>
+    <title>
+        afsluitingsschot-verbreed-kolkdeel
+    </title>
     <path d="M24 108v12H0v240h24v11h24v-11h24V120H48v-12z" fill="#d9ebf7"/>
-    <path d="M12 120H0M72 120H60" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M12 120H0m72 0H60" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
     <path d="M59.98 360h11.99" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="2.998"/>
     <path d="M11.99 360h12v12h23.99v-12h12" fill="none" stroke="#7d7d7d" stroke-miterlimit="10" stroke-width="2.998"/>
     <path d="M0 360h11.99" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="2.998"/>

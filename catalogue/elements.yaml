@@ -359,7 +359,7 @@
   gate: true
   direction: '>'
 
-- name: puntdeur-links-hwk
+- name: puntdeur-pin-links-hwk
   symbol: D53
   tooltip: Puntdeur met pin naar links hoogwaterkerende functie (“stormdeur”)
   type: Deur
@@ -369,7 +369,7 @@
   gate: true
   direction: 'N'
 
-- name: puntdeur-rechts-hwk
+- name: puntdeur-pin-rechts-hwk
   symbol: D54
   tooltip: Puntdeur met pin naar rechts hoogwaterkerende functie (“stormdeur”)
   type: Deur

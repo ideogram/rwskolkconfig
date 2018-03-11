@@ -1,8 +1,10 @@
 <svg height="480" viewBox="0 0 48 480" width="48" xmlns="http://www.w3.org/2000/svg">
-    <title>vanginrichting</title>
+    <title>
+        vanginrichting
+    </title>
     <path class="kolk" d="M0 168h48v144H0z" fill="#d9ebf7"/>
     <path class="kolk-border" d="M0 168h48M0 312h48" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
-    <path color="#000" d="M24 279c1.66 0 3 1.3 3 3v6c0 1.7-1.34 3-3 3s-3-1.3-3-3v-6c0-1.7 1.34-3 3-3zM24 171c1.66 0 3 1.3 3 3v6c0 1.7-1.34 3-3 3s-3-1.3-3-3v-6c0-1.7 1.34-3 3-3zM24 189c1.66 0 3 1.3 3 3v6c0 1.7-1.34 3-3 3s-3-1.3-3-3v-6c0-1.7 1.34-3 3-3zM24 297c1.66 0 3 1.3 3 3v6c0 1.7-1.34 3-3 3s-3-1.3-3-3v-6c0-1.7 1.34-3 3-3zM24 261c1.66 0 3 1.3 3 3v6c0 1.7-1.34 3-3 3s-3-1.3-3-3v-6c0-1.7 1.34-3 3-3zM24 225c1.66 0 3 1.3 3 3v6c0 1.7-1.34 3-3 3s-3-1.3-3-3v-6c0-1.7 1.34-3 3-3zM24 207c1.66 0 3 1.3 3 3v6c0 1.7-1.34 3-3 3s-3-1.3-3-3v-6c0-1.7 1.34-3 3-3z" fill="none" overflow="visible" stroke="#4d4d4d" stroke-linejoin="round" stroke-width="2" style="isolation:auto;mix-blend-mode:normal"/>
+    <path color="#000" d="M24 279c1.66 0 3 1.3 3 3v6c0 1.7-1.34 3-3 3s-3-1.3-3-3v-6c0-1.7 1.34-3 3-3zm0-108c1.66 0 3 1.3 3 3v6c0 1.7-1.34 3-3 3s-3-1.3-3-3v-6c0-1.7 1.34-3 3-3zm0 18c1.66 0 3 1.3 3 3v6c0 1.7-1.34 3-3 3s-3-1.3-3-3v-6c0-1.7 1.34-3 3-3zm0 108c1.66 0 3 1.3 3 3v6c0 1.7-1.34 3-3 3s-3-1.3-3-3v-6c0-1.7 1.34-3 3-3zm0-36c1.66 0 3 1.3 3 3v6c0 1.7-1.34 3-3 3s-3-1.3-3-3v-6c0-1.7 1.34-3 3-3zm0-36c1.66 0 3 1.3 3 3v6c0 1.7-1.34 3-3 3s-3-1.3-3-3v-6c0-1.7 1.34-3 3-3zm0-18c1.66 0 3 1.3 3 3v6c0 1.7-1.34 3-3 3s-3-1.3-3-3v-6c0-1.7 1.34-3 3-3z" fill="none" overflow="visible" stroke="#4d4d4d" stroke-linejoin="round" stroke-width="2" style="isolation:auto;mix-blend-mode:normal"/>
     <path color="#000" d="M24 180v12m0-30v12m0 24v12m0 24v12m0-30v12m0 24v12m0 6v12m0 6v12m0 6v12" fill="none" overflow="visible" stroke="#d9ebf7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" style="isolation:auto;mix-blend-mode:normal"/>
     <path color="#000" d="M24 270v12m0-102v12m0-30v12" fill="#4d4d4d" overflow="visible" stroke="#4d4d4d" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="isolation:auto;mix-blend-mode:normal"/>
     <path color="#000" d="M24 243c1.66 0 3 1.3 3 3v6c0 1.7-1.34 3-3 3s-3-1.3-3-3v-6c0-1.7 1.34-3 3-3z" fill="none" overflow="visible" stroke="#4d4d4d" stroke-linejoin="round" stroke-width="2" style="isolation:auto;mix-blend-mode:normal"/>

@@ -1,16 +1,7 @@
-<svg height="480" id="svg2" version="1.1" viewBox="0 0 72 480" width="72" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg">
-          <metadata id="metadata16">
-                    <rdf:RDF>
-                              <cc:Work rdf:about="">
-                                        <dc:format>image/svg+xml</dc:format>
-                                        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-                                        <dc:title>kamerkolk-kop-b</dc:title>
-                              </cc:Work>
-                    </rdf:RDF>
-          </metadata>
-          <defs id="defs14"/>
-          <title id="title4">afgeschuinde-uitgangsadaptor-onder</title>
-          <path d="m 72,216 l 0,144 l -72,0 l 0,-240 l 24,0 l 24,96 z" id="path6" style="fill:#d9ebf7"/>
-          <path d="m 0,120 l 24,0 l 24,96 l 24,0 m 0,144 l -72,0" id="path8" stroke-miterlimit="10" style="fill:none;stroke:#9fceea;stroke-width:3;stroke-miterlimit:10"/>
-          <text font-family="sans-serif" font-size="36" id="text10" text-anchor="middle" x="36" y="420"/>
+<svg height="480" viewBox="0 0 72 480" width="72" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        afgeschuinde-uitgangsadaptor-onder
+    </title>
+    <path d="M72 216v144H0V120h24l24 96z" fill="#d9ebf7"/>
+    <path d="M0 120h24l24 96h24m0 144H0" stroke-miterlimit="10" fill="none" stroke="#9fceea" stroke-width="3"/>
 </svg>
