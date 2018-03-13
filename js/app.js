@@ -250,7 +250,7 @@
          */
         composeSVG: function(strFileName) {
             var l = libConfig;
-            var margin = 64;
+            var margin = 120;
             var h = l.height + 2*margin;
             var strLeft, strRight, $streamLeft, $streamRight;
 
