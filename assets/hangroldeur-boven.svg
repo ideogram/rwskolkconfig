@@ -19,5 +19,5 @@
     <circle cx="36" cy="-312" fill="#154573" r="3" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5" transform="scale(1 -1)"/>
     <path d="M36 468V144" fill="#154573" stroke="#154573" stroke-miterlimit="10" stroke-width="2"/>
     <path d="M27 156.5h18v-18H27zM27 479h18v-18H27z"/>
-    <text font-family="sans-serif" font-size="36" text-anchor="middle" x="84" y="420"></text>
+    <text font-family="sans-serif" font-size="36" text-anchor="middle" x="36" y="420"></text>
 </svg>

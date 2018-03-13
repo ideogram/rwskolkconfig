@@ -19,7 +19,7 @@
     <circle cx="36" cy="-312" fill="#ca005d" r="3" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5" transform="scale(1 -1)"/>
     <path d="M36 468V144" fill="#154573" stroke="#ca005d" stroke-miterlimit="10" stroke-width="2"/>
     <path d="M27 156.5h18v-18H27zM27 479h18v-18H27z"/>
-    <text font-family="sans-serif" font-size="36" text-anchor="middle" x="84" y="420"></text>
+    <text font-family="sans-serif" font-size="36" text-anchor="middle" x="36" y="420"></text>
     <text class="hw" fill="#ca005d" font-family="sans-serif" font-size="26" font-weight="700" text-anchor="middle" x="35.857" y="436.843">
         HWK
     </text>
