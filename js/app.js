@@ -525,7 +525,7 @@
             // Copy the array to the global elements array, removing empty slots on the fly
             $.each(elements, function (i, value) {
                 if (value !== undefined) {
-                    if ( value.symbol == "O21" || value.symbol == "O21" || value.symbol == "O29" ) {
+                    if ( value.symbol == "O21" || value.symbol == "O22" || value.symbol == "O29" ) {
                         l.bridges[index-1] = value.symbol;
                     } else {
                         l.element.push(value);
