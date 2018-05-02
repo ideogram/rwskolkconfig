@@ -1,0 +1,5 @@
+for i in *.svg; do svgexport "${i}" "${i}.png" 64:200;done
+
+pandoc configuration_string_syntax.md -o configuration_string_syntax.html --css pandoc.css
+
+html-pdf configuration_string_syntax.html configuration_string_syntax.pdf; open -a Preview configuration_string_syntax.pdf

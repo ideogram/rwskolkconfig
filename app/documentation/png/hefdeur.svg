@@ -1,0 +1,13 @@
+<svg height="480" viewBox="0 0 120 480" width="120" xmlns="http://www.w3.org/2000/svg">
+    <title>hefdeur</title>
+    <path d="M0 168v144h120V168z" fill="#d9ebf7"/>
+    <path d="M120 168H0m0 144h120" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M78 312H42" fill="none" stroke="#7d7d7d" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M78 336H42v-18h36z"/>
+    <path d="M48 312h24l6 6H42l6-6z" fill="#535353"/>
+    <path d="M42 168h36" fill="none" stroke="#7d7d7d" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M42 144h36v18H42z"/>
+    <path d="M72 168H48l-6-6h36l-6 6z" fill="#535353"/>
+    <path d="M53 169.5h14v141H53z" fill="#ffb612" stroke="#000" stroke-miterlimit="10"/>
+    <text font-family="sans-serif" font-size="36" text-anchor="middle" x="60" y="420"/>
+</svg>

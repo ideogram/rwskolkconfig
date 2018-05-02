@@ -1,9 +1,0 @@
-<svg height="480" viewBox="0 0 120 480" width="120" xmlns="http://www.w3.org/2000/svg">
-    <title>
-        weg-over-sluisdeur
-    </title>
-    <g class="bridge">
-        <path d="M39 242v166h42V242zm19 23h4v24h-4zm0 48h4v24h-4zm0 48h4v24h-4zM39 72v165h42V72zm19 22.52h4v23.98h-4zm0 47.98h4v24h-4zm0 48h4v24h-4z" style="isolation:isolate" opacity=".5"/>
-        <path d="M58 214.5h4v-24h-4zm0-48h4v-24h-4zm0-48h4v-24h-4zM58 385h4v-24h-4zm0-48h4v-24h-4zm0-48h4v-24h-4z" style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal" color="#000" font-weight="400" font-family="sans-serif" white-space="normal" overflow="visible" opacity=".5" fill="#fff" fill-rule="evenodd"/>
-    </g>
-</svg>

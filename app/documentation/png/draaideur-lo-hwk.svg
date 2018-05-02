@@ -1,0 +1,17 @@
+<svg height="480" viewBox="0 0 216 480" width="216" xmlns="http://www.w3.org/2000/svg">
+    <title>draaideur-lo-hwk</title>
+    <path d="M216 312V168h-12v12h-12v-12H0v144" fill="#d9ebf7"/>
+    <path d="M216 312h-31M0 312h24" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M24 324h159l.1-8.1 6.9 1.1v-6.5H24z" fill="#d9ebf7"/>
+    <path d="M24 312v12h158.4" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M190 316h-12V170h12z" fill="#ffb612" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M216 168h-12" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M204 168v12h-12v-12m-24 0h24" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M0 168h168" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M184 170.5v143" fill="none" stroke="#ca005d" stroke-width="4"/>
+    <circle cx="7.5" cy="7.5" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3" transform="rotate(180 95.75 162.75)"/>
+    <text class="hw" fill="#ca005d" font-family="sans-serif" font-size="26" font-weight="700" text-anchor="middle" x="106" y="420">
+        HWK
+    </text>
+    <text font-family="sans-serif" font-size="36" text-anchor="middle" x="108" y="420"/>
+</svg>

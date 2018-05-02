@@ -1,0 +1,11 @@
+%li#flow-and-buoyage-direction.diagram-editor-options
+    %legend
+        Stroomrichting, betonningsrichting
+    %ul
+        - ["n","o","z","w"].each do |windpoint|
+            %li{:id => "button-group-#{windpoint}"}
+                %input{:name => "flow-direction", :type => "radio", :value => "#{windpoint}", :id => "flow-direction-#{windpoint}" }/
+                %label{:for => "flow-direction-#{windpoint}", :id => "label-flow-direction-#{windpoint}"}
+                -["rood-rechts", "rood-links", "geen"].each do |direction|
+                    %input{:name => "buoyage-direction", :type => "radio", :value => "#{direction}", :id => "buoyage-direction-#{windpoint}-#{direction}"}/
+                    %label{:for => "buoyage-direction-#{windpoint}-#{direction}", :id => "label-buoyage-direction-#{windpoint}-#{direction}"}

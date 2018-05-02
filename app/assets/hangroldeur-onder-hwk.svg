@@ -1,0 +1,25 @@
+<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="72" height="480" viewBox="0 0 72 480">
+    <title>
+        hangroldeur-onder-hwk
+    </title>
+    <path d="M0 312V168h24v-24h24v24h24v144H48v162H24V312z" fill="#d9ebf7"/>
+    <path d="M12 312H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M60 312H48v162H24V312H12" fill="none" stroke="#7d7d7d" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M72 312H60m0-144h12" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M12 168h12v-24h24v24h12" fill="none" stroke="#7d7d7d" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M0 168h12" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M29 319h14V161H29z" fill="#ffb612" stroke="#154573" stroke-miterlimit="10"/>
+    <path d="M36 465.8V144" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
+    <circle cx="36" cy="240" r="3" fill="#ca005d" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+    <circle cx="36" cy="216" r="3" fill="#ca005d" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+    <circle cx="36" cy="192" r="3" fill="#ca005d" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+    <circle cx="36" cy="168" r="3" fill="#ca005d" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+    <circle cx="36" cy="264" r="3" fill="#ca005d" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+    <circle cx="36" cy="288" r="3" fill="#ca005d" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+    <circle cx="36" cy="312" r="3" fill="#ca005d" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+    <path d="M36 468V144" fill="#154573" stroke="#ca005d" stroke-miterlimit="10" stroke-width="2"/>
+    <path d="M27 156.5h18v-18H27zM27 479h18v-18H27z"/>
+    <g style="isolation:isolate" fill="#ca005d">
+        <path d="M6.8 436.8v-18.7h3.9v7.2h7.2v-7.2h3.9v18.7h-3.9v-8.3h-7.2v8.3zM28.1 418.1l2.5 10.7.5 3 .6-2.9 2.1-10.8h4.1l2.2 10.7.6 3 .6-2.8 2.5-10.9h3.9l-5.2 18.7h-3.8l-2.2-10.9-.7-3.6-.6 3.6-2.3 10.9h-3.6L24 418.1zM50.2 418.1H54v7.7l7.2-7.7h5.1l-7.7 7.7 8.1 11h-5l-5.8-8.1-1.9 1.9v6.2h-3.8z"/>
+    </g>
+</svg>
