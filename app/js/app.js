@@ -661,7 +661,6 @@
                     elmntText.setAttribute("x", parseInt(w/2));
                     elmntText.setAttribute("class", "label");
                     elmntText.setAttribute("style","fill : #000;  font-size : 48px; font-weight: bold; text-anchor: middle; font-family: Arial, Helvetica Neue, Helvetica, sans-serif");
-
                     svg.appendChild(elmntText);
                 };
 
@@ -790,14 +789,13 @@
                 var deltaY = l.element[i]['deltay'];
                 var viewBox = l.arr$SVG[i].attr("viewBox");
 
-                if (viewBox !== undefined) {
-                    viewBox = viewBox.split(" ");
-                    viewBox[1] = -24 * shift - 2;
-                    viewBox[3] = 27 * 24;
-                    l.arr$SVG[i].attr("viewBox", viewBox.join(" "));
-                    l.shifts[i] = shift;
-                    shift += parseInt(deltaY);
-                }
+                viewBox = viewBox.split(" ");
+                viewBox[1] = -24 * shift - 2;
+                viewBox[3] = 27 * 24;
+                l.arr$SVG[i].attr("viewBox", viewBox.join(" "));
+                l.shifts[i] = shift;
+                shift += parseInt(deltaY);
+
             }
         },
 
@@ -816,7 +814,7 @@
                 var name = l.element[i]['name'];
                 var shift = l.shifts[i];
 
-                if ( typeof l.bridges[i] !== 'undefined' ) {
+                if ( typeof l.overlays[i] !== 'undefined' ) {
                     top = Math.min(3, l.element[i]['top'])
                 } else {
                     top = l.element[i]['top'];
@@ -876,7 +874,6 @@
             var l = libConfig;
             var hasHWK = 0;
 
-
             // Put al the annotations on the same height
 
             // ... Loop over the annotations twice:
@@ -917,8 +914,6 @@
         drawOverlay: function($target, $overlay) {
             var l = libConfig;
             var viewBox;
-
-            console.log("Draw overlay");
 
             // Determine the right DOM-elements
             var $svg = $target.find("svg");
