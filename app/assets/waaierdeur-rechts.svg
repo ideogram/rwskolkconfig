@@ -1,6 +1,6 @@
-<svg id="ce71eece-49cc-49f7-9f9c-d66246ecb347" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="480" viewBox="0 0 120 480">
+<svg id="184bf4c4-6dbc-453f-9f7f-69b7df084731" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="480" viewBox="0 0 120 480">
   <defs>
-    <symbol id="062883cd-01e4-4bdb-bdd8-9596eb5e8cac" data-name="a" viewBox="0 0 15 15">
+    <symbol id="88fb5d67-6ec1-4309-b93c-b32e891deebd" data-name="a" viewBox="0 0 15 15">
       <circle cx="7.5" cy="7.5" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
     </symbol>
   </defs>
@@ -16,7 +16,7 @@
   <path d="M92.2,169.5a66.9,66.9,0,0,1-54.1,65.6" fill="none" stroke="#000" stroke-linecap="square" stroke-width="3.5"/>
   <path d="M24,168H94" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
   <path d="M30,167.5H18l14,72H44Z" fill="#ffb612" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
-  <use width="15" height="15" transform="translate(31.5 175.5) rotate(180)" xlink:href="#062883cd-01e4-4bdb-bdd8-9596eb5e8cac"/>
+  <use width="15" height="15" transform="translate(31.5 175.5) rotate(180)" xlink:href="#88fb5d67-6ec1-4309-b93c-b32e891deebd"/>
   <path d="M97.2,168.1a74,74,0,0,0-74-74" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-width="3.08"/>
   <path d="M18,312v74h6" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-miterlimit="10" stroke-width="3"/>
   <path d="M24,312H94m-70,0,60.6-35M24,312l35-60.6" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
@@ -24,5 +24,5 @@
   <path d="M92.2,310.3a66.8,66.8,0,0,0-54.6-65.7" fill="none" stroke="#000" stroke-linecap="square" stroke-width="3.5"/>
   <path d="M24,312H94" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
   <path d="M44,240.5H32l-14,72H30Z" fill="#ffb612" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
-  <use width="15" height="15" transform="matrix(-1, 0, 0, 1, 31.5, 304.5)" xlink:href="#062883cd-01e4-4bdb-bdd8-9596eb5e8cac"/>
+  <use width="15" height="15" transform="matrix(-1, 0, 0, 1, 31.5, 304.5)" xlink:href="#88fb5d67-6ec1-4309-b93c-b32e891deebd"/>
 </svg>

@@ -1,6 +1,6 @@
-<svg id="5e454314-348a-4783-9308-99354d5b5b3c" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="120" height="480" viewBox="0 0 120 480">
+<svg id="6cce8b5a-59f7-4497-a423-3e2d58d58541" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="120" height="480" viewBox="0 0 120 480">
   <title>weg-over-sluisdeur</title>
-  <g id="fb00adab-9e43-4a6d-b13a-03c066c3008a" data-name="overlay">
+  <g id="d2a260f9-93e8-4e41-8964-4510356e80e2" data-name="overlay">
     <path d="M39,242V408H81V242Zm19,23h4v24H58Zm0,48h4v24H58Zm0,48h4v24H58ZM39,72V237H81V72ZM58,94.5h4v24H58Zm0,48h4v24H58Zm0,48h4v24H58Z" opacity="0.5" style="isolation: isolate"/>
     <path d="M58,214.5h4v-24H58Zm0-48h4v-24H58Zm0-48h4v-24H58ZM58,385h4V361H58Zm0-48h4V313H58Zm0-48h4V265H58Z" fill="#fff" opacity="0.5" style="isolation: isolate"/>
   </g>

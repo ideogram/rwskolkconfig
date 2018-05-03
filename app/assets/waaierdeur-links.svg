@@ -1,6 +1,6 @@
-<svg id="f3bb6b33-48b4-455c-9a75-2af21df17647" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="480" viewBox="0 0 120 480">
+<svg id="b5008bc6-87ab-4a3d-baf5-63dd2bf7a78a" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="480" viewBox="0 0 120 480">
   <defs>
-    <symbol id="cded9a5a-bc80-4e7b-9a9f-6bf8e40e68e5" data-name="a" viewBox="0 0 15 15">
+    <symbol id="f1e95a49-cc63-4fa9-87d0-da427df1b119" data-name="a" viewBox="0 0 15 15">
       <circle cx="7.5" cy="7.5" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
     </symbol>
   </defs>
@@ -16,7 +16,7 @@
   <path d="M27.8,169.5a66.9,66.9,0,0,0,54.1,65.6" fill="none" stroke="#000" stroke-linecap="square" stroke-width="3.5"/>
   <path d="M96,168H26" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
   <path d="M90,167.5h12l-14,72H76Z" fill="#ffb612" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
-  <use width="15" height="15" transform="matrix(1, 0, 0, -1, 88.5, 175.5)" xlink:href="#cded9a5a-bc80-4e7b-9a9f-6bf8e40e68e5"/>
+  <use width="15" height="15" transform="matrix(1, 0, 0, -1, 88.5, 175.5)" xlink:href="#f1e95a49-cc63-4fa9-87d0-da427df1b119"/>
   <path d="M22.8,168.1a74,74,0,0,1,74-74" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-width="3.08"/>
   <path d="M102,312v74H96" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-miterlimit="10" stroke-width="3"/>
   <path d="M96,312H26m70,0L35.4,277M96,312,61,251.4" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
@@ -24,5 +24,5 @@
   <path d="M27.8,310.3a66.8,66.8,0,0,1,54.6-65.7" fill="none" stroke="#000" stroke-linecap="square" stroke-width="3.5"/>
   <path d="M96,312H26" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
   <path d="M76,240.5H88l14,72H90Z" fill="#ffb612" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
-  <use width="15" height="15" transform="translate(88.5 304.5)" xlink:href="#cded9a5a-bc80-4e7b-9a9f-6bf8e40e68e5"/>
+  <use width="15" height="15" transform="translate(88.5 304.5)" xlink:href="#f1e95a49-cc63-4fa9-87d0-da427df1b119"/>
 </svg>

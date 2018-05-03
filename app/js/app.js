@@ -670,7 +670,7 @@
                     elmntText = document.createElementNS("http://www.w3.org/2000/svg", 'text');
                     elmntText.setAttribute("x", parseInt(w/2));
                     elmntText.setAttribute("class", "hwk");
-                    elmntText.setAttribute("style","fill : #ca005d;  font-size : 36px; font-weight: bold; text-anchor: middle; font-family: Arial, Helvetica Neue, Helvetica, sans-serif");
+                    elmntText.setAttribute("style","fill : #ca005d;  font-size : 32px; font-weight: bold; text-anchor: middle; font-family: Arial, Helvetica Neue, Helvetica, sans-serif");
                     elmntText.innerHTML = "HWK"
                     svg.appendChild(elmntText);
                 };

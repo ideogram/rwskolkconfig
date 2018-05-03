@@ -1,6 +1,6 @@
-<svg id="f724cae0-b24a-418d-b567-e02804e54618" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="120" height="480" viewBox="0 0 120 480">
+<svg id="62655449-e261-4813-86d8-8fdd9567e977" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="120" height="480" viewBox="0 0 120 480">
   <title>brugdeel-vast</title>
-  <g id="a78804fb-5ef2-495a-8df4-745633ca14c0" data-name="overlay">
+  <g id="2765c6f7-cd6f-4c43-a71f-c5f7c10b174e" data-name="overlay">
     <path d="M24,72H96V408H24Z" fill="#e6e6e6" opacity="0.5" style="isolation: isolate"/>
     <path d="M24,72V408M96,72V408" fill="none" stroke="#999" stroke-miterlimit="10" stroke-width="2"/>
     <path d="M3,102l18,18V360L3,378M117,102,99,120V360l18,18" fill="none" stroke="#535353" stroke-miterlimit="10" stroke-width="4"/>

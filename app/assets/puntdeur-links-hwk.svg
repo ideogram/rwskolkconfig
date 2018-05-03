@@ -1,4 +1,4 @@
-<svg id="b3cea410-a347-420b-89d7-92529d3a8333" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="144" height="480" viewBox="0 0 144 480">
+<svg id="50fd6239-16be-4ac6-87d4-64f33aa4c2c3" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="144" height="480" viewBox="0 0 144 480">
   <title>puntdeur-links-hwk</title>
   <path d="M0,168H144V312H0Z" fill="#d9ebf7"/>
   <path d="M24,312H0M0,168H24M144,312H120m0-144h24" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
@@ -15,7 +15,4 @@
   <path d="M114,156v6h6v6" fill="none" stroke="#9fceea" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
   <path d="M24,168V156h90" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
   <circle cx="114" cy="162" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
-  <g id="e09b35ce-6a80-425f-bbe4-75f1ea433201" data-name="hwk">
-    <text transform="translate(41 22.4)" font-size="26" fill="#ca005d" font-family="Helvetica-Bold, Helvetica" font-weight="700" style="isolation: isolate">HWK</text>
-  </g>
 </svg>

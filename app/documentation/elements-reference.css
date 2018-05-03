@@ -1,0 +1,51 @@
+body{
+    font-family: sans-serif;
+}
+
+pre{
+    font-family: Menlo;
+}
+
+div{
+    width: 250px;
+    height: 500px;
+    float: left;
+    margin: 10px;
+    border: 1px solid silver;
+    position: relative;
+    text-align: center;
+    padding-bottom: 90px;
+}
+
+pre{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+}
+
+span{
+    background-color: #ffd300;
+    font-size: 24px;
+    padding: 0.25em;
+    line-height: 1.5em;
+}
+
+label{
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    width: 100%;
+    text-align: 100%;
+    background-color: white;
+    line-height: 3em;
+    font-size: 80%;
+}
+
+img{
+    margin: 5%;
+    max-width: 90%;
+    box-sizing: border-box;
+    outline: 1px solid #f0f0f0;
+}

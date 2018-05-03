@@ -1,4 +1,4 @@
-<svg id="7d3674d8-7947-4cc3-8c57-b637eff934bf" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="168" height="480" viewBox="0 0 168 480">
+<svg id="d8c1b53a-1fda-47c1-aafd-26513091b8a0" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="168" height="480" viewBox="0 0 168 480">
   <title>puntdeur-dubbelkerend-enkelvoudig-rechts-hwk</title>
   <path d="M168,168H0V312H168Z" fill="#d9ebf7"/>
   <path d="M144,312h24m0-144H144M0,312H48m0-144H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
@@ -28,7 +28,4 @@
   <path d="M18,162l45,30" fill="none" stroke="#154573" stroke-miterlimit="10" stroke-width="2"/>
   <circle cx="18" cy="162" r="2.3" fill="#154573"/>
   <circle cx="63" cy="192" r="2.3" fill="#154573"/>
-  <g id="d1826f32-780f-44cf-9e45-7c5acc629188" data-name="hwk">
-    <text transform="translate(53 22.4)" font-size="26" fill="#ca005d" font-family="Helvetica-Bold, Helvetica" font-weight="700" style="isolation: isolate">HWK</text>
-  </g>
 </svg>
