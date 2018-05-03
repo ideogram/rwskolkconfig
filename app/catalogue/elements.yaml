@@ -311,8 +311,8 @@
   tooltip: 'Hangroldeur, naar onder sluitend'
   type: Deur
   deltay: 0
-  top: 0
-  bottom: 15
+  top: 5
+  bottom: 20
   label: true
   direction: 'N'
 
@@ -321,8 +321,8 @@
   tooltip: 'Hangroldeur, naar boven sluitend'
   type: Deur
   deltay: 0
-  top: 5
-  bottom: 20
+  top: 0
+  bottom: 15
   label: true
   direction: 'N'
 
@@ -505,8 +505,8 @@
   tooltip: 'Hangroldeur, naar onder sluitend met hoogwaterkerende functie (“stormdeur”)'
   type: Deur
   deltay: 0
-  top: 0
-  bottom: 15
+  top: 5
+  bottom: 20
   label: true
   direction: 'N'
 
@@ -516,8 +516,8 @@
   tooltip: 'Hangroldeur, naar boven sluitend met hoogwaterkerende functie (“stormdeur”)'
   type: Deur
   deltay: 0
-  top: 5
-  bottom: 20
+  top: 0
+  bottom: 15
   label: true
   direction: 'N'
 
@@ -527,8 +527,8 @@
   tooltip: 'Roldeur, naar onder sluitend met hoogwaterkerende functie (“stormdeur”)'
   type: Deur
   deltay: 0
-  top: 0
-  bottom: 14
+  top: 6
+  bottom: 20
   label: true
   direction: 'N'
 
@@ -538,8 +538,8 @@
   tooltip: 'Roldeur, naar boven sluitend met hoogwaterkerende functie (“stormdeur”)'
   type: Deur
   deltay: 0
-  top: 6
-  bottom: 20
+  top: 0
+  bottom: 14
   label: true
   direction: 'N'
 
