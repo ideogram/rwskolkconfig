@@ -1,8 +1,8 @@
-<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="120" height="480" viewBox="0 0 120 480">
-    <title>
-        brugdeel-vast
-    </title>
-    <path d="M24 72h72v336H24z" fill="#e6e6e6" opacity=".5" style="isolation:isolate"/>
-    <path d="M24 72v336M96 72v336" fill="none" stroke="#999" stroke-miterlimit="10" stroke-width="2"/>
-    <path d="M3 102l18 18v240L3 378m114-276l-18 18v240l18 18" fill="none" stroke="#535353" stroke-miterlimit="10" stroke-width="4"/>
+<svg id="f724cae0-b24a-418d-b567-e02804e54618" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="120" height="480" viewBox="0 0 120 480">
+  <title>brugdeel-vast</title>
+  <g id="a78804fb-5ef2-495a-8df4-745633ca14c0" data-name="overlay">
+    <path d="M24,72H96V408H24Z" fill="#e6e6e6" opacity="0.5" style="isolation: isolate"/>
+    <path d="M24,72V408M96,72V408" fill="none" stroke="#999" stroke-miterlimit="10" stroke-width="2"/>
+    <path d="M3,102l18,18V360L3,378M117,102,99,120V360l18,18" fill="none" stroke="#535353" stroke-miterlimit="10" stroke-width="4"/>
+  </g>
 </svg>

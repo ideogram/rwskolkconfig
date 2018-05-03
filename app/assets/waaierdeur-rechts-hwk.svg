@@ -1,30 +1,25 @@
-<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="120" height="480" viewBox="0 0 120 480">
-    <title>
-        waaierdeur-rechts-hwk
-    </title>
-    <path d="M95.6 312.4c0 39.8-32.7 72-73.2 72v-72zM22.4 314h-6.1v72h6.1zm0-218h-6.1v72h6.1zm73.2 71.9c0-39.8-32.7-72.1-73.2-72.1v72.1zm24.4.1H0v144h120z" fill="#d9ebf7"/>
-    <path d="M32 169.1l14.3 71L32 311.2" fill="none" stroke="#ca005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
-    <path d="M92.2 310.3a66.9 66.9 0 0 0-54.5-65.7" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="7"/>
-    <path d="M23.2 386.1a74 74 0 0 0 74-74" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-width="3.08"/>
-    <path d="M120 168H98.7M120 312H98.7M18 312H0m18-144H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M18 167.8V94.2h6" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2.99"/>
-    <path d="M24 168h70m-70 0l60.6 35M24 168l35 60.6" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
-    <path d="M92.2 169.5a66.9 66.9 0 0 1-54.7 65.7" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="7"/>
-    <path d="M24 168l60.6 35M24 168l35 60.6" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M92.2 169.5a66.9 66.9 0 0 1-54.1 65.6" fill="none" stroke="#000" stroke-linecap="square" stroke-width="3.5"/>
-    <path d="M24 168h70" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M30 167.5H18l14 72h12z" fill="#ffb612" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="24" cy="168" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M97.2 168.1a74 74 0 0 0-74-74" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-width="3.08"/>
-    <path d="M18 312v74h6" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M24 312h70m-70 0l60.6-35M24 312l35-60.6" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
-    <path d="M24 312l60.6-35M24 312l35-60.6" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M92.2 310.3a66.8 66.8 0 0 0-54.6-65.7" fill="none" stroke="#000" stroke-linecap="square" stroke-width="3.5"/>
-    <path d="M24 312h70" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M44 240.5H32l-14 72h12z" fill="#ffb612" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M23.2 94.3a74 74 0 0 1 74 74" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-width="3.08"/>
-    <circle cx="24" cy="312" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
-    <g style="isolation:isolate" fill="#ca005d">
-        <path d="M30.9 420v-18.7h3.9v7.1h7.3v-7.1H46V420h-3.9v-8.4h-7.3v8.4zM52.3 401.3l2.4 10.7.6 3 .5-2.9 2.1-10.8H62l2.3 10.7.5 3 .6-2.9 2.5-10.8h4L66.6 420h-3.7l-2.3-10.9-.6-3.7-.7 3.7L57 420h-3.6l-5.3-18.7zM74.3 401.3h3.9v7.7l7.2-7.7h5l-7.6 7.7 8 11h-5l-5.8-8.2-1.8 1.9v6.3h-3.9z"/>
-    </g>
+<svg id="84dbc020-4e2c-424b-b139-c185e91723ea" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="120" height="480" viewBox="0 0 120 480">
+  <title>waaierdeur-rechts-hwk</title>
+  <path d="M95.6,312.4c0,39.8-32.7,72-73.2,72v-72ZM22.4,314H16.3v72h6.1Zm0-218H16.3v72h6.1Zm73.2,71.9c0-39.8-32.7-72.1-73.2-72.1v72.1Zm24.4.1H0V312H120Z" fill="#d9ebf7"/>
+  <path d="M32,169.1l14.3,71L32,311.2" fill="none" stroke="#ca005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  <path d="M92.2,310.3a66.9,66.9,0,0,0-54.5-65.7" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="7"/>
+  <path d="M23.2,386.1a74,74,0,0,0,74-74" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-width="3.08"/>
+  <path d="M120,168H98.7M120,312H98.7M18,312H0M18,168H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M18,167.8V94.2h6" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2.99"/>
+  <path d="M24,168H94m-70,0,60.6,35M24,168l35,60.6" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
+  <path d="M92.2,169.5a66.9,66.9,0,0,1-54.7,65.7" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="7"/>
+  <path d="M24,168l60.6,35M24,168l35,60.6" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M92.2,169.5a66.9,66.9,0,0,1-54.1,65.6" fill="none" stroke="#000" stroke-linecap="square" stroke-width="3.5"/>
+  <path d="M24,168H94" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M30,167.5H18l14,72H44Z" fill="#ffb612" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="24" cy="168" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M97.2,168.1a74,74,0,0,0-74-74" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-width="3.08"/>
+  <path d="M18,312v74h6" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M24,312H94m-70,0,60.6-35M24,312l35-60.6" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
+  <path d="M24,312l60.6-35M24,312l35-60.6" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M92.2,310.3a66.8,66.8,0,0,0-54.6-65.7" fill="none" stroke="#000" stroke-linecap="square" stroke-width="3.5"/>
+  <path d="M24,312H94" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M44,240.5H32l-14,72H30Z" fill="#ffb612" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M23.2,94.3a74,74,0,0,1,74,74" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-width="3.08"/>
+  <circle cx="24" cy="312" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
 </svg>

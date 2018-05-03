@@ -1,7 +1,5 @@
-<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="72" height="480" viewBox="0 0 72 480">
-    <title>
-        kolkovergang-rond-breed-smal-midden
-    </title>
-    <path d="M12 120a48 48 0 0 1 48 48h12v144H60a48 48 0 0 1-48 48H0V120z" fill="#d9ebf7"/>
-    <path d="M72 312H60a48 48 0 0 1-48 48H0m72-191.7H60a48 48 0 0 0-48-48H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+<svg id="083cccdd-5cc2-458f-b36b-e8b7c44531c8" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="72" height="480" viewBox="0 0 72 480">
+  <title>kolkovergang-rond-breed-smal-midden</title>
+  <path d="M12,120a48,48,0,0,1,48,48H72V312H60a48,48,0,0,1-48,48H0V120Z" fill="#d9ebf7"/>
+  <path d="M72,312H60a48,48,0,0,1-48,48H0M72,168.3H60a48,48,0,0,0-48-48H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
 </svg>

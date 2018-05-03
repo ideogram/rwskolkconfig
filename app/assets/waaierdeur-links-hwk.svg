@@ -1,29 +1,24 @@
-<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="120" height="480" viewBox="0 0 120 480">
-    <title>
-        waaierdeur-links-hwk
-    </title>
-    <path d="M24.4 312.4c0 39.8 32.7 72 73.2 72v-72zm73.2 1.6h6.1v72h-6.1zm0-218h6.1v72h-6.1zm-73.2 71.9c0-39.8 32.7-72.1 73.2-72.1v72.1zM0 168h120v144H0z" fill="#d9ebf7"/>
-    <path d="M96.8 386.1a74 74 0 0 1-74-74" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-width="3.08"/>
-    <path d="M0 168h21.3M0 312h21.3m80.7 0h18m-18-144h18" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M102 167.8V94.2h-6" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2.99"/>
-    <path d="M87 169l-14.3 71 14.2 71" fill="none" stroke="#ca005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
-    <path d="M27.8 310.3a66.9 66.9 0 0 1 54.5-65.7" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="7"/>
-    <path d="M96 168H26m70 0l-60.6 35M96 168l-35 60.6" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
-    <path d="M27.8 169.5a66.9 66.9 0 0 0 54.7 65.7" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="7"/>
-    <path d="M96 168l-60.6 35M96 168l-35 60.6" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M27.8 169.5a66.9 66.9 0 0 0 54.1 65.6" fill="none" stroke="#000" stroke-linecap="square" stroke-width="3.5"/>
-    <path d="M96 168H26" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M90 167.5h12l-14 72H76z" fill="#ffb612" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="96" cy="168" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M22.8 168.1a74 74 0 0 1 74-74" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-width="3.08"/>
-    <path d="M102 312v74h-6" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M96 312H26m70 0l-60.6-35M96 312l-35-60.6" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
-    <path d="M96 312l-60.6-35M96 312l-35-60.6" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M27.8 310.3a66.8 66.8 0 0 1 54.6-65.7" fill="none" stroke="#000" stroke-linecap="square" stroke-width="3.5"/>
-    <path d="M96 312H26" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M76 240.5h12l14 72H90z" fill="#ffb612" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="96" cy="312" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
-    <g style="isolation:isolate" fill="#ca005d">
-        <path d="M30.9 420v-18.7h3.9v7.1h7.3v-7.1H46V420h-3.9v-8.4h-7.3v8.4zM52.3 401.3l2.4 10.7.6 3 .5-2.9 2.1-10.8H62l2.3 10.7.5 3 .6-2.9 2.5-10.8h4L66.6 420h-3.7l-2.3-10.9-.6-3.7-.7 3.7L57 420h-3.6l-5.3-18.7zM74.3 401.3h3.9v7.7l7.2-7.7h5l-7.6 7.7 8 11h-5l-5.8-8.2-1.8 1.9v6.3h-3.9z"/>
-    </g>
+<svg id="324ffc70-0871-4512-89f5-acfd0e6d03e4" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="120" height="480" viewBox="0 0 120 480">
+  <title>waaierdeur-links-hwk</title>
+  <path d="M24.4,312.4c0,39.8,32.7,72,73.2,72v-72ZM97.6,314h6.1v72H97.6Zm0-218h6.1v72H97.6ZM24.4,167.9c0-39.8,32.7-72.1,73.2-72.1v72.1ZM0,168H120V312H0Z" fill="#d9ebf7"/>
+  <path d="M96.8,386.1a74,74,0,0,1-74-74" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-width="3.08"/>
+  <path d="M0,168H21.3M0,312H21.3m80.7,0h18M102,168h18" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M102,167.8V94.2H96" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2.99"/>
+  <path d="M87,169,72.7,240l14.2,71" fill="none" stroke="#ca005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  <path d="M27.8,310.3a66.9,66.9,0,0,1,54.5-65.7" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="7"/>
+  <path d="M96,168H26m70,0L35.4,203M96,168,61,228.6" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
+  <path d="M27.8,169.5a66.9,66.9,0,0,0,54.7,65.7" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="7"/>
+  <path d="M96,168,35.4,203M96,168,61,228.6" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M27.8,169.5a66.9,66.9,0,0,0,54.1,65.6" fill="none" stroke="#000" stroke-linecap="square" stroke-width="3.5"/>
+  <path d="M96,168H26" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M90,167.5h12l-14,72H76Z" fill="#ffb612" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="96" cy="168" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M22.8,168.1a74,74,0,0,1,74-74" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-width="3.08"/>
+  <path d="M102,312v74H96" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M96,312H26m70,0L35.4,277M96,312,61,251.4" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
+  <path d="M96,312,35.4,277M96,312,61,251.4" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M27.8,310.3a66.8,66.8,0,0,1,54.6-65.7" fill="none" stroke="#000" stroke-linecap="square" stroke-width="3.5"/>
+  <path d="M96,312H26" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M76,240.5H88l14,72H90Z" fill="#ffb612" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="96" cy="312" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
 </svg>

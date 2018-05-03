@@ -1,0 +1,12 @@
+<svg id="9db3c4e1-a3a6-433a-89a5-28ecce189fbe" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="216" height="480" viewBox="0 0 216 480">
+  <title>draaideur-linksboven</title>
+  <path d="M0,312V168H12v12H24V168H216V312" fill="#d9ebf7"/>
+  <path d="M0,312H31m185,0H192" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M192,324H33v-8.1L26,317v-6.5H192Z" fill="#d9ebf7"/>
+  <path d="M192,312v12H33.6" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M26,316H38V170H26Z" fill="#ffb612" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M0,168H12" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M12,168v12H24V168m24,0H24" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M216,168H48" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+  <circle cx="32" cy="318" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
+</svg>

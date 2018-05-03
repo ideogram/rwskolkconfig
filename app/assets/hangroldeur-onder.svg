@@ -1,22 +1,20 @@
-<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="72" height="480" viewBox="0 0 72 480">
-    <title>
-        hangroldeur-onder
-    </title>
-    <path d="M0 312V168h24v-24h24v24h24v144H48v162H24V312z" fill="#d9ebf7"/>
-    <path d="M12 312H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M60 312H48v162H24V312H12" fill="none" stroke="#7d7d7d" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M72 312H60m0-144h12" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M12 168h12v-24h24v24h12" fill="none" stroke="#7d7d7d" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M0 168h12" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M29 319h14V161H29z" fill="#ffb612" stroke="#154573" stroke-miterlimit="10"/>
-    <path d="M36 465.8V144" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
-    <circle cx="36" cy="240" r="3" fill="#154573" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
-    <circle cx="36" cy="216" r="3" fill="#154573" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
-    <circle cx="36" cy="192" r="3" fill="#154573" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
-    <circle cx="36" cy="168" r="3" fill="#154573" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
-    <circle cx="36" cy="264" r="3" fill="#154573" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
-    <circle cx="36" cy="288" r="3" fill="#154573" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
-    <circle cx="36" cy="312" r="3" fill="#154573" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
-    <path d="M36 468V144" fill="#154573" stroke="#154573" stroke-miterlimit="10" stroke-width="2"/>
-    <path d="M27 156.5h18v-18H27zM27 479h18v-18H27z"/>
+<svg id="7d45b6e7-e91a-4179-b082-fa877cb6f925" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="72" height="480" viewBox="0 0 72 480">
+  <title>hangroldeur-onder</title>
+  <path d="M0,312V168H24V144H48v24H72V312H48V474H24V312Z" fill="#d9ebf7"/>
+  <path d="M12,312H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M60,312H48V474H24V312H12" fill="none" stroke="#7d7d7d" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M72,312H60m0-144H72" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M12,168H24V144H48v24H60" fill="none" stroke="#7d7d7d" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M0,168H12" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M29,319H43V161H29Z" fill="#ffb612" stroke="#154573" stroke-miterlimit="10"/>
+  <path d="M36,465.8V144" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
+  <circle cx="36" cy="240" r="3" fill="#154573" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+  <circle cx="36" cy="216" r="3" fill="#154573" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+  <circle cx="36" cy="192" r="3" fill="#154573" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+  <circle cx="36" cy="168" r="3" fill="#154573" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+  <circle cx="36" cy="264" r="3" fill="#154573" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+  <circle cx="36" cy="288" r="3" fill="#154573" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+  <circle cx="36" cy="312" r="3" fill="#154573" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+  <path d="M36,468V144" fill="#154573" stroke="#154573" stroke-miterlimit="10" stroke-width="2"/>
+  <path d="M27,156.5H45v-18H27ZM27,479H45V461H27Z"/>
 </svg>

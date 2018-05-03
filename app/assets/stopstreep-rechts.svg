@@ -1,18 +1,16 @@
-<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="120" height="480" viewBox="0 0 120 480">
-    <title>
-        stopstreep-rechts
-    </title>
-    <path d="M27.5 139.5h17l-1.3 14.2H28.8l-1.3-14.2" fill="#e17000"/>
-    <path d="M28.8 153.7h14.4L42.1 165H29.9l-1.1-11.3" fill="#fff4dc"/>
-    <path d="M29.9 165h12.2l-.7 7.7H30.6l-.7-7.7" fill="#e17000"/>
-    <path d="M30.6 172.7h10.8l-.6 6.7h-9.6l-.6-6.7" fill="#fff4dc"/>
-    <path d="M44.5 340.4h-17l1.3-14.2h14.4l1.3 14.2" fill="#e17000"/>
-    <path d="M43.2 326.2H28.8l1.1-11.3h12.2l1.1 11.3" fill="#fff4dc"/>
-    <path d="M42.1 314.9H29.9l.7-7.7h10.8l.7 7.7" fill="#e17000"/>
-    <path d="M41.4 307.2H30.6l.6-6.7h9.6l.6 6.7" fill="#fff4dc"/>
-    <path d="M120 168H0v144h120z" fill="#d9ebf7"/>
-    <path d="M27.5 340.4h17l-3.7-39.9h-9.6zm17-200.9h-17l3.7 39.9h9.6z" fill="none" stroke="#999" stroke-miterlimit="10"/>
-    <path d="M36 168v144" stroke="#9fceea" stroke-miterlimit="6" stroke-width="2" stroke-dasharray="8 4"/>
-    <path d="M120 168H0m120 144H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M67 168l-19 19v9.9L76.9 168zm24 0l-43 43v9.9l52.9-52.9zm24 0l-67 67v9.9l72-71.9v-5zm5 19.1L48 259v9.9l2.5-2.4L120 197v-9.9zm0 24L48 283v9.9l72-71.9v-9.9zm0 24l-2.5 2.4L48 307v5h5l67-67v-9.9zm-.2 23.5l-53 52.9.5.5h9l43.7-43.7v-9.5zm0 24L90.4 312h9.9l19.7-19.7v-9.5z" fill="#e17000"/>
+<svg id="1981b997-69c1-427a-be3c-388f7763d55a" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="120" height="480" viewBox="0 0 120 480">
+  <title>stopstreep-rechts</title>
+  <path d="M27.5,139.5h17l-1.3,14.2H28.8l-1.3-14.2" fill="#e17000"/>
+  <path d="M28.8,153.7H43.2L42.1,165H29.9l-1.1-11.3" fill="#fff4dc"/>
+  <path d="M29.9,165H42.1l-.7,7.7H30.6l-.7-7.7" fill="#e17000"/>
+  <path d="M30.6,172.7H41.4l-.6,6.7H31.2l-.6-6.7" fill="#fff4dc"/>
+  <path d="M44.5,340.4h-17l1.3-14.2H43.2l1.3,14.2" fill="#e17000"/>
+  <path d="M43.2,326.2H28.8l1.1-11.3H42.1l1.1,11.3" fill="#fff4dc"/>
+  <path d="M42.1,314.9H29.9l.7-7.7H41.4l.7,7.7" fill="#e17000"/>
+  <path d="M41.4,307.2H30.6l.6-6.7h9.6l.6,6.7" fill="#fff4dc"/>
+  <path d="M120,168H0V312H120Z" fill="#d9ebf7"/>
+  <path d="M27.5,340.4h17l-3.7-39.9H31.2Zm17-200.9h-17l3.7,39.9h9.6Z" fill="none" stroke="#999" stroke-miterlimit="10"/>
+  <path d="M36,168V312" stroke="#9fceea" stroke-miterlimit="6" stroke-width="2" stroke-dasharray="8 4"/>
+  <path d="M120,168H0M120,312H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M67,168,48,187v9.9L76.9,168Zm24,0L48,211v9.9L100.9,168Zm24,0L48,235v9.9L120,173v-5Zm5,19.1L48,259v9.9l2.5-2.4L120,197v-9.9Zm0,24L48,283v9.9L120,221v-9.9Zm0,24-2.5,2.4L48,307v5h5l67-67v-9.9Zm-.2,23.5-53,52.9.5.5h9L120,268.3v-9.5Zm0,24L90.4,312h9.9L120,292.3v-9.5Z" fill="#e17000"/>
 </svg>

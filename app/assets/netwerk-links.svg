@@ -1,0 +1,11 @@
+<svg id="9c514a5d-6077-4efe-9801-6f6ac9ebb2d9" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <title>netwerk-links</title>
+  <g>
+    <line x1="20.2" y1="12" x2="6.2" y2="12" fill="none" stroke="#999" stroke-miterlimit="10" stroke-width="1.5"/>
+    <g>
+      <circle cx="20.1" cy="12" r="1.7" fill="#fff"/>
+      <path d="M20.1,10.1A1.8,1.8,0,0,0,18.2,12a1.8,1.8,0,0,0,1.9,1.9,1.9,1.9,0,0,0,0-3.8Zm0,3.4A1.5,1.5,0,1,1,21.6,12a1.5,1.5,0,0,1-1.5,1.5Z" fill="#999"/>
+    </g>
+    <polygon points="2 12 8 9.6 6.6 12 8 14.4 2 12" fill="#999"/>
+  </g>
+</svg>

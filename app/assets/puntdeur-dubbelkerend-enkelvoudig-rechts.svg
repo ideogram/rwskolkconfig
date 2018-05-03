@@ -1,31 +1,29 @@
-<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="168" height="480" viewBox="0 0 168 480">
-    <title>
-        puntdeur-dubbelkerend-enkelvoudig-rechts
-    </title>
-    <path d="M168 168H0v144h168z" fill="#d9ebf7"/>
-    <path d="M144 312h24m0-144h-24M0 312h48m0-144H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M144 312H48v12h96zM48 168h96v-12H54z" fill="#d9ebf7"/>
-    <path d="M54 156v6h-6v6" fill="none" stroke="#9fceea" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
-    <path d="M48 312h96v12H54z" fill="#d9ebf7"/>
-    <path d="M49 318l24-78h10l-24 78z" fill="#ffb612" stroke="#000" stroke-miterlimit="10"/>
-    <path d="M54 324v-6h-6v-6" fill="none" stroke="#9fceea" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
-    <path d="M144 312v12H54" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
-    <circle cx="54" cy="318" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M18 318l45-30" fill="#fff"/>
-    <path d="M18 318l45-30" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4"/>
-    <circle cx="63" cy="288" r="3.3" transform="rotate(-33.7 62.918 287.96)" fill="#fff"/>
-    <path d="M18 318l45-30" fill="none" stroke="#154573" stroke-miterlimit="10" stroke-width="2"/>
-    <circle cx="18" cy="318.1" r="2.3" transform="rotate(-33.7 17.965 317.961)" fill="#154573"/>
-    <circle cx="63" cy="288" r="2.3" transform="rotate(-33.7 62.918 287.96)" fill="#154573"/>
-    <path d="M48 168h96v-12H54z" fill="#d9ebf7"/>
-    <path d="M49 162l24 78h10l-24-78z" fill="#ffb612" stroke="#000" stroke-miterlimit="10"/>
-    <path d="M54 156v6h-6v6" fill="none" stroke="#9fceea" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
-    <path d="M144 168v-12H54" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
-    <circle cx="54" cy="162" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M18 162l45 30" fill="#fff"/>
-    <path d="M18 162l45 30" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4"/>
-    <circle cx="63" cy="192" r="3.3" fill="#fff"/>
-    <path d="M18 162l45 30" fill="none" stroke="#154573" stroke-miterlimit="10" stroke-width="2"/>
-    <circle cx="18.1" cy="161.9" r="2.3" fill="#154573"/>
-    <circle cx="63" cy="192" r="2.3" fill="#154573"/>
+<svg id="3b17e7fb-aabd-4c5a-a5e0-52c9e196ec03" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="168" height="480" viewBox="0 0 168 480">
+  <title>puntdeur-dubbelkerend-enkelvoudig-rechts</title>
+  <path d="M168,168H0V312H168Z" fill="#d9ebf7"/>
+  <path d="M144,312h24m0-144H144M0,312H48m0-144H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M144,312H48v12h96ZM48,168h96V156H54Z" fill="#d9ebf7"/>
+  <path d="M54,156v6H48v6" fill="none" stroke="#9fceea" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
+  <path d="M48,312h96v12H54Z" fill="#d9ebf7"/>
+  <path d="M49,318l24-78H83L59,318Z" fill="#ffb612" stroke="#000" stroke-miterlimit="10"/>
+  <path d="M54,324v-6H48v-6" fill="none" stroke="#9fceea" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
+  <path d="M144,312v12H54" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
+  <circle cx="54" cy="318" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M18,318l45-30" fill="#fff"/>
+  <path d="M18,318l45-30" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4"/>
+  <circle cx="63" cy="288" r="3.3" transform="translate(-149.2 83.3) rotate(-33.7)" fill="#fff"/>
+  <path d="M18,318l45-30" fill="none" stroke="#154573" stroke-miterlimit="10" stroke-width="2"/>
+  <circle cx="18" cy="318.1" r="2.3" transform="translate(-173.4 63.4) rotate(-33.7)" fill="#154573"/>
+  <circle cx="63" cy="288" r="2.3" transform="translate(-149.2 83.3) rotate(-33.7)" fill="#154573"/>
+  <path d="M48,168h96V156H54Z" fill="#d9ebf7"/>
+  <path d="M49,162l24,78H83L59,162Z" fill="#ffb612" stroke="#000" stroke-miterlimit="10"/>
+  <path d="M54,156v6H48v6" fill="none" stroke="#9fceea" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
+  <path d="M144,168V156H54" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
+  <circle cx="54" cy="162" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M18,162l45,30" fill="#fff"/>
+  <path d="M18,162l45,30" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4"/>
+  <circle cx="63" cy="192" r="3.3" fill="#fff"/>
+  <path d="M18,162l45,30" fill="none" stroke="#154573" stroke-miterlimit="10" stroke-width="2"/>
+  <circle cx="18.1" cy="161.9" r="2.3" fill="#154573"/>
+  <circle cx="63" cy="192" r="2.3" fill="#154573"/>
 </svg>

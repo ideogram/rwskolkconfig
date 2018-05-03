@@ -1,7 +1,5 @@
-<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="72" height="480" viewBox="0 0 72 480">
-    <title>
-        kolkovergang-schuin-smal-boven-breed
-    </title>
-    <path d="M0 312V168h72v240H48l-24-96z" fill="#d9ebf7"/>
-    <path d="M72 408H48l-24-96H0m0-144h72" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+<svg id="9d4a90ca-da6b-4ddf-bf1c-a2fa45e69b48" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="72" height="480" viewBox="0 0 72 480">
+  <title>kolkovergang-schuin-smal-boven-breed</title>
+  <path d="M0,312V168H72V408H48L24,312Z" fill="#d9ebf7"/>
+  <path d="M72,408H48L24,312H0M0,168H72" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
 </svg>

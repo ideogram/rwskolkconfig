@@ -1,30 +1,28 @@
-<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="480" viewBox="0 0 120 480">
-    <defs>
-        <symbol id="a" data-name="a" viewBox="0 0 15 15">
-            <circle cx="7.5" cy="7.5" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
-        </symbol>
-    </defs>
-    <title>
-        waaierdeur-rechts
-    </title>
-    <path d="M95.6 312.4c0 39.8-32.7 72-73.2 72v-72zM22.4 314h-6.1v72h6.1zm0-218h-6.1v72h6.1zm73.2 71.9c0-39.8-32.7-72.1-73.2-72.1v72.1zm24.4.1H0v144h120z" fill="#d9ebf7"/>
-    <path d="M92.2 310.3a66.9 66.9 0 0 0-54.5-65.7" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="7"/>
-    <path d="M23.2 386.1a74 74 0 0 0 74-74" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-width="3.08"/>
-    <path d="M120 168H98.7M120 312H98.7M18 312H0m18-144H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M18 167.8V94.2h6" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2.99"/>
-    <path d="M24 168h70m-70 0l60.6 35M24 168l35 60.6" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
-    <path d="M92.2 169.5a66.9 66.9 0 0 1-54.7 65.7" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="7"/>
-    <path d="M24 168l60.6 35M24 168l35 60.6" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M92.2 169.5a66.9 66.9 0 0 1-54.1 65.6" fill="none" stroke="#000" stroke-linecap="square" stroke-width="3.5"/>
-    <path d="M24 168h70" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M30 167.5H18l14 72h12z" fill="#ffb612" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
-    <use width="15" height="15" transform="rotate(180 15.75 87.75)" xlink:href="#a"/>
-    <path d="M97.2 168.1a74 74 0 0 0-74-74" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-width="3.08"/>
-    <path d="M18 312v74h6" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M24 312h70m-70 0l60.6-35M24 312l35-60.6" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
-    <path d="M24 312l60.6-35M24 312l35-60.6" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M92.2 310.3a66.8 66.8 0 0 0-54.6-65.7" fill="none" stroke="#000" stroke-linecap="square" stroke-width="3.5"/>
-    <path d="M24 312h70" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M44 240.5H32l-14 72h12z" fill="#ffb612" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
-    <use width="15" height="15" transform="matrix(-1 0 0 1 31.5 304.5)" xlink:href="#a"/>
+<svg id="ce71eece-49cc-49f7-9f9c-d66246ecb347" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="480" viewBox="0 0 120 480">
+  <defs>
+    <symbol id="062883cd-01e4-4bdb-bdd8-9596eb5e8cac" data-name="a" viewBox="0 0 15 15">
+      <circle cx="7.5" cy="7.5" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
+    </symbol>
+  </defs>
+  <title>waaierdeur-rechts</title>
+  <path d="M95.6,312.4c0,39.8-32.7,72-73.2,72v-72ZM22.4,314H16.3v72h6.1Zm0-218H16.3v72h6.1Zm73.2,71.9c0-39.8-32.7-72.1-73.2-72.1v72.1Zm24.4.1H0V312H120Z" fill="#d9ebf7"/>
+  <path d="M92.2,310.3a66.9,66.9,0,0,0-54.5-65.7" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="7"/>
+  <path d="M23.2,386.1a74,74,0,0,0,74-74" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-width="3.08"/>
+  <path d="M120,168H98.7M120,312H98.7M18,312H0M18,168H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M18,167.8V94.2h6" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2.99"/>
+  <path d="M24,168H94m-70,0,60.6,35M24,168l35,60.6" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
+  <path d="M92.2,169.5a66.9,66.9,0,0,1-54.7,65.7" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="7"/>
+  <path d="M24,168l60.6,35M24,168l35,60.6" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M92.2,169.5a66.9,66.9,0,0,1-54.1,65.6" fill="none" stroke="#000" stroke-linecap="square" stroke-width="3.5"/>
+  <path d="M24,168H94" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M30,167.5H18l14,72H44Z" fill="#ffb612" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+  <use width="15" height="15" transform="translate(31.5 175.5) rotate(180)" xlink:href="#062883cd-01e4-4bdb-bdd8-9596eb5e8cac"/>
+  <path d="M97.2,168.1a74,74,0,0,0-74-74" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-width="3.08"/>
+  <path d="M18,312v74h6" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M24,312H94m-70,0,60.6-35M24,312l35-60.6" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
+  <path d="M24,312l60.6-35M24,312l35-60.6" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M92.2,310.3a66.8,66.8,0,0,0-54.6-65.7" fill="none" stroke="#000" stroke-linecap="square" stroke-width="3.5"/>
+  <path d="M24,312H94" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M44,240.5H32l-14,72H30Z" fill="#ffb612" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+  <use width="15" height="15" transform="matrix(-1, 0, 0, 1, 31.5, 304.5)" xlink:href="#062883cd-01e4-4bdb-bdd8-9596eb5e8cac"/>
 </svg>

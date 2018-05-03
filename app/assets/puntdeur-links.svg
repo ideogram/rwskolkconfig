@@ -1,23 +1,21 @@
-<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="144" height="480" viewBox="0 0 144 480">
-    <defs>
-        <symbol id="a" data-name="a" viewBox="0 0 15 15">
-            <circle cx="7.5" cy="7.5" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
-        </symbol>
-    </defs>
-    <title>
-        puntdeur-links
-    </title>
-    <path d="M0 168h144v144H0z" fill="#d9ebf7"/>
-    <path d="M24 312H0m0-144h24m120 144h-24m0-144h24" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M24 312h96v12H24z" fill="#d9ebf7"/>
-    <path d="M120 312H24v12h90z" fill="#d9ebf7"/>
-    <path d="M119 318l-24-78H85l24 78z" fill="#ffb612" stroke="#000" stroke-miterlimit="10"/>
-    <path d="M114 324v-6h6v-6" fill="none" stroke="#9fceea" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
-    <path d="M24 312v12h90" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
-    <use width="15" height="15" transform="translate(106.5 310.5)" xlink:href="#a"/>
-    <path d="M24 169.2V156h90l6 13.2z" fill="#d9ebf7"/>
-    <path d="M119 162l-24 78H85l24-78z" fill="#ffb612" stroke="#000" stroke-miterlimit="10"/>
-    <path d="M114 156v6h6v6" fill="none" stroke="#9fceea" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
-    <path d="M24 168v-12h90" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
-    <circle cx="114" cy="162" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
+<svg id="9214ddc8-4d78-4c36-978f-3670fe72da80" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="144" height="480" viewBox="0 0 144 480">
+  <defs>
+    <symbol id="1e86a9ef-c687-4166-9fc5-ca13367cadc2" data-name="a" viewBox="0 0 15 15">
+      <circle cx="7.5" cy="7.5" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
+    </symbol>
+  </defs>
+  <title>puntdeur-links</title>
+  <path d="M0,168H144V312H0Z" fill="#d9ebf7"/>
+  <path d="M24,312H0M0,168H24M144,312H120m0-144h24" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M24,312h96v12H24Z" fill="#d9ebf7"/>
+  <path d="M120,312H24v12h90Z" fill="#d9ebf7"/>
+  <path d="M119,318,95,240H85l24,78Z" fill="#ffb612" stroke="#000" stroke-miterlimit="10"/>
+  <path d="M114,324v-6h6v-6" fill="none" stroke="#9fceea" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
+  <path d="M24,312v12h90" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
+  <use width="15" height="15" transform="translate(106.5 310.5)" xlink:href="#1e86a9ef-c687-4166-9fc5-ca13367cadc2"/>
+  <path d="M24,169.2V156h90l6,13.2Z" fill="#d9ebf7"/>
+  <path d="M119,162,95,240H85l24-78Z" fill="#ffb612" stroke="#000" stroke-miterlimit="10"/>
+  <path d="M114,156v6h6v6" fill="none" stroke="#9fceea" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
+  <path d="M24,168V156h90" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
+  <circle cx="114" cy="162" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
 </svg>

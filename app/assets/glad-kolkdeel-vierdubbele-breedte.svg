@@ -1,7 +1,5 @@
-<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="72" height="480" viewBox="0 0 72 480">
-    <title>
-        glad-kolkdeel-vierdubbele-breedte
-    </title>
-    <path d="M0 168h72v144H0z" fill="#d9ebf7"/>
-    <path d="M0 168h72M0 312h72" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+<svg id="bf2a29ae-e81c-4539-9b6c-6757c4a6f3a0" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="72" height="480" viewBox="0 0 72 480">
+  <title>glad-kolkdeel-vierdubbele-breedte</title>
+  <path d="M0,168H72V312H0Z" fill="#d9ebf7"/>
+  <path d="M0,168H72M0,312H72" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
 </svg>

@@ -1,12 +1,10 @@
-<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="48" height="480" viewBox="0 0 48 480">
-    <title>
-        vanginrichting
-    </title>
-    <path d="M0 168h48v144H0z" fill="#d9ebf7"/>
-    <path d="M0 168h48M0 312h48" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M24 279a2.9 2.9 0 0 1 3 3v6a3 3 0 0 1-6 0v-6a2.9 2.9 0 0 1 3-3zm0-108a2.9 2.9 0 0 1 3 3v6a3 3 0 0 1-6 0v-6a2.9 2.9 0 0 1 3-3zm0 18a2.9 2.9 0 0 1 3 3v6a3 3 0 0 1-6 0v-6a2.9 2.9 0 0 1 3-3zm0 108a2.9 2.9 0 0 1 3 3v6a3 3 0 0 1-6 0v-6a2.9 2.9 0 0 1 3-3zm0-36a2.9 2.9 0 0 1 3 3v6a3 3 0 0 1-6 0v-6a2.9 2.9 0 0 1 3-3zm0-36a2.9 2.9 0 0 1 3 3v6a3 3 0 0 1-6 0v-6a2.9 2.9 0 0 1 3-3zm0-18a2.9 2.9 0 0 1 3 3v6a3 3 0 0 1-6 0v-6a2.9 2.9 0 0 1 3-3z" fill="none" stroke="#4d4d4d" stroke-linejoin="round" stroke-width="2"/>
-    <path d="M24 180v12m0-30v12m0 24v12m0 24v12m0-30v12m0 24v12m0 6v12m0 6v12m0 6v12" fill="none" stroke="#d9ebf7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-    <path d="M24 270v12m0-102v12m0-30v12" fill="#4d4d4d" stroke="#4d4d4d" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-    <path d="M24 243a2.9 2.9 0 0 1 3 3v6a3 3 0 0 1-6 0v-6a2.9 2.9 0 0 1 3-3z" fill="none" stroke="#4d4d4d" stroke-linejoin="round" stroke-width="2"/>
-    <path d="M24 198v12m0 24v12m0-30v12m0 24v12m0 24v12m0 6v12" fill="#4d4d4d" stroke="#4d4d4d" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+<svg id="b6bcfae6-5b34-4dbc-ad01-f832650830c4" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="48" height="480" viewBox="0 0 48 480">
+  <title>vanginrichting</title>
+  <path d="M0,168H48V312H0Z" fill="#d9ebf7"/>
+  <path d="M0,168H48M0,312H48" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M24,279a2.9,2.9,0,0,1,3,3v6a3,3,0,0,1-6,0v-6A2.9,2.9,0,0,1,24,279Zm0-108a2.9,2.9,0,0,1,3,3v6a3,3,0,0,1-6,0v-6A2.9,2.9,0,0,1,24,171Zm0,18a2.9,2.9,0,0,1,3,3v6a3,3,0,0,1-6,0v-6A2.9,2.9,0,0,1,24,189Zm0,108a2.9,2.9,0,0,1,3,3v6a3,3,0,0,1-6,0v-6A2.9,2.9,0,0,1,24,297Zm0-36a2.9,2.9,0,0,1,3,3v6a3,3,0,0,1-6,0v-6A2.9,2.9,0,0,1,24,261Zm0-36a2.9,2.9,0,0,1,3,3v6a3,3,0,0,1-6,0v-6A2.9,2.9,0,0,1,24,225Zm0-18a2.9,2.9,0,0,1,3,3v6a3,3,0,0,1-6,0v-6A2.9,2.9,0,0,1,24,207Z" fill="none" stroke="#4d4d4d" stroke-linejoin="round" stroke-width="2"/>
+  <path d="M24,180v12m0-30v12m0,24v12m0,24v12m0-30v12m0,24v12m0,6v12m0,6v12m0,6v12" fill="none" stroke="#d9ebf7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <path d="M24,270v12m0-102v12m0-30v12" fill="#4d4d4d" stroke="#4d4d4d" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <path d="M24,243a2.9,2.9,0,0,1,3,3v6a3,3,0,0,1-6,0v-6A2.9,2.9,0,0,1,24,243Z" fill="none" stroke="#4d4d4d" stroke-linejoin="round" stroke-width="2"/>
+  <path d="M24,198v12m0,24v12m0-30v12m0,24v12m0,24v12m0,6v12" fill="#4d4d4d" stroke="#4d4d4d" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
 </svg>

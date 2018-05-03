@@ -19,8 +19,6 @@
             folderImages: 'ui-images/',
         },
 
-        arrOptions: ['network-direction', 'gates-names-direction','upstream-downstream'],
-
         // Defaults
         default: {
             networkDirection : "N",
@@ -33,19 +31,15 @@
         scale: 3,
 
         // Variables
-        diagramTool: {},
         $toolbar: null,
         $diagram: null,
         observer: null,
-        $compassRoseLeft: null,
-        $compassRoseRight: null,
         buoyage: null,
         extraImagesCount: 0,
         overlayNames: [],
         elementCatalogue : [],
         countElementsRendered : 0,
         countElementsLoaded: null,
-        $diagramElement: null,
         element : [],
         arr$SVG : [],
         shifts : [],
@@ -53,12 +47,10 @@
         L : 0,
         strConfig: "",
         height: null,
-        svgArrowLeft: null,
-        svgArrowRight: null,
+        extraImages: [],
 
         // UI Images
         ui_images : [
-            ["#diagram",["network-n-z.svg","rood-groen.svg","omlaag.svg"]],
             [".btn-remove","delete-forever.svg"],
             [".btn-remove:hover","delete-forever-hover.svg"],
 
@@ -227,7 +219,7 @@
 
         /**
          * Re-build and return the configuration string
-         * @returns {string} String containig kolk-id, network direction, gate numbering, chamber configuration and comment
+         * @returns {string} String containing network-direction, flow-direction, buoyage and symbols
          * @memberof libConfig
          */
         getConfigString: function () {
@@ -377,7 +369,7 @@
         },
 
         /**
-         * Set the configuration string. The network direction and gate numbering are also set
+         * Set the configuration string.
          * @param {string} strConfig A complete configuration string
          * @memberof libConfig
          */
@@ -588,7 +580,7 @@
             // With this information, we can do a series of manipulations:
             l.shiftElements();
             l.moveDiagramUp();
-            l.annotateGates();
+            l.fillLabels();
             l.alignAnnotations();
         },
 
@@ -612,18 +604,25 @@
                     l.overlayNames.push(val.name);
                 }
 
-                var $li = $('<li class="element"></li>' ).
-                    appendTo(libConfig.$toolbar)
+                // If the element is a symbol, load it into the toolbar.
+                // ... otherwise, load it into an array
+
+                if (val.symbol === false ) {
+                    $.get( l.path.folderAssets + id + ".svg", function(data){
+                        l.extraImages[id] = data;
+                    }, "html" );
+                    l.extraImagesCount++;
+                } else {
+                    $li = $('<li class="element"></li>').appendTo(l.$toolbar)
                         .attr({"title": tooltip, "data-ref": key})
                         .addClass(val.name)
                         .disableSelection()
                         .draggable(l.draggableOptions)
-                        .load(l.path.folderAssets + id + ".svg", libConfig.elementLoaded);
+                        .load(l.path.folderAssets + id + ".svg", l.elementLoaded);
 
-                console.log(l.path.folderAssets + id + ".svg");
-
-                // After the SVG is rendered, rework the SVG
-                libConfig.observer.observe($li[0], {childList: true});
+                    // rework the SVG after all the SVG's are rendered
+                    l.observer.observe($li[0], {childList: true});
+                }
             });
         },
 
@@ -635,9 +634,50 @@
             if (l.countElementsLoaded == (l.elementCatalogue.length - l.extraImagesCount )){
 
                 if ( l.strConfig != null ){
+                    l.addTextToElements();
                     l.drawDiagram();
                 }
             }
+        },
+
+        // Add labels and HWK to some of the elements.
+        // Because of some idiosyncrasies of Adobe Illustrator, it's easier
+        // to do it this way, rather then exporting the text from A.I.
+        addTextToElements: function(){
+            var l = libConfig;
+            var ref;
+
+            l.$toolbar.find("li").each(function(){
+                var svg;
+                var ref;
+                var elmntText;
+                ref = $(this).attr("data-ref");
+                svg = $(this).find("svg")[0];
+
+                // Add label:
+                if (l.elementCatalogue[ref].label === true) {
+                    w = svg.getAttribute("width") * l.scale;
+                    elmntText = document.createElementNS("http://www.w3.org/2000/svg", 'text');
+                    elmntText.setAttribute("x", parseInt(w/2));
+                    elmntText.setAttribute("class", "label");
+                    elmntText.setAttribute("style","fill : #000;  font-size : 48px; font-weight: bold; text-anchor: middle; font-family: Arial, Helvetica Neue, Helvetica, sans-serif");
+
+                    svg.appendChild(elmntText);
+                };
+
+                // Add HWK:
+                if (l.elementCatalogue[ref].hwk === true) {
+                    w = svg.getAttribute("width") * l.scale;
+                    elmntText = document.createElementNS("http://www.w3.org/2000/svg", 'text');
+                    elmntText.setAttribute("x", parseInt(w/2));
+                    elmntText.setAttribute("class", "hwk");
+                    elmntText.setAttribute("style","fill : #ca005d;  font-size : 36px; font-weight: bold; text-anchor: middle; font-family: Arial, Helvetica Neue, Helvetica, sans-serif");
+                    elmntText.innerHTML = "HWK"
+                    svg.appendChild(elmntText);
+                };
+
+
+            });
         },
 
         // Loads all the separate elements into an array and add them to the toolbar
@@ -689,7 +729,7 @@
             // With this information, we can do a series of manipulations:
             l.shiftElements();
             l.moveDiagramUp();
-            l.annotateGates();
+            l.fillLabels();
             l.alignAnnotations();
         },
 
@@ -700,12 +740,16 @@
 
         // Preparing an element for it's life inside the diagram
         prepareForDiagramLife: function( $target ){
+            var newElement;
             var l = libConfig;
+            var element;
+            var ref;
+            var w;
 
             // Add a button to erase the element from the diagram again
             var $btnRemove = $("<a></a>").appendTo($target).addClass("btn-remove");
 
-            $btnRemove.on("click", l.removeElement );
+            $btnRemove.on("click", l.removeElement);
 
             // Concatenate all overlay names into one big css selector
             var strOverlaysSelector = "." + l.overlayNames.join(", .");
@@ -714,7 +758,7 @@
             $target.droppable(
                 {
                     drop: l.receiveDropOnElement,
-                    accept:strOverlaysSelector
+                    accept: strOverlaysSelector
                 }
             );
         },
@@ -783,7 +827,6 @@
 
             // ... ... Next, move all elements up to the top
             for (i = 0; i < l.L; i++) {
-                var gate = l.element[i]['gate'];
                 var $svg = l.arr$SVG[i];
                 var viewBox = $svg.attr("viewBox");
 
@@ -798,35 +841,30 @@
 
         },
 
-        // Put a label under each gate (sluisdeur)
-        annotateGates: function() {
-            var gateCount = 0;
-            var totalGates = 0;
-            var gate = false;
+        // Put a label under each element with a 'label'-property.
+        fillLabels: function() {
             var l = libConfig;
+            var totalLabels = 0;
+            var label = null;
             var $svg = null;
+            var count = 0;
 
             // First, find the total amount of gates
             for (i = 0; i < l.L; i++) {
-                gate = l.element[i]['gate'];
-                if (gate != false) {
-                    totalGates++;
+                label = l.element[i]['label'];
+                if (label === true) {
+                    totalLabels++;
                 }
             }
 
-            // Fill the text element with the gate number (A, B, C, etc)
+            // Fill the text element with the label number (A, B, C, etc)
             for (i = 0; i < l.L; i++) {
-                gate = l.element[i]['gate'];
+                label = l.element[i]['label'];
                 $svg = l.arr$SVG[i];
 
-                if (gate !== false) {
-
-                    if (l.gateNumbering == "ABC") {
-                        $svg.find("text").not(".hw").html(String.fromCharCode(gateCount + 65));
-                    } else {
-                        $svg.find("text").not(".hw").html(String.fromCharCode(totalGates - gateCount + 65 - 1));
-                    }
-                    gateCount++;
+                if (label !== false) {
+                    $svg.find(".label").html(String.fromCharCode(65 + count ));
+                    count++;
                 }
             }
         },
@@ -841,28 +879,27 @@
 
             // Put al the annotations on the same height
 
-            // ... Loop over the annotations twice.
+            // ... Loop over the annotations twice:
 
             // ... ... First, find the lowest position
             for (i = 0; i < l.L; i++) {
-                // var bridge = l.element[i]['bridge'] ? 17 : 0;
-                var bridge = i in l.bridges ? 17: 0;
+                var overlay = i in l.overlays ? 17: 0;
                 var bottom = l.element[i]['bottom'];
                 shift = l.shifts[i];
-                lowest = Math.max(lowest, bottom + shift, bridge + shift);
+                lowest = Math.max(lowest, bottom + shift, overlay + shift);
             }
 
             // ... ... Next, put annotations on this lowest point
             for (i = 0; i < l.L; i++) {
-                var gate = l.element[i]['gate'];
+                var label = l.element[i]['label'];
 
-                if (gate !== undefined) {
+                if ( label !== undefined) {
                     var $svg = l.arr$SVG[i];
                     shift = l.shifts[i];
-                    $svg.find("text").attr("y", (lowest - shift + 2) * 24);
-                    $svg.find("text.hw").attr("y", (lowest - shift + 3.5) * 24);
+                    $svg.find("text.label").attr("y", (lowest - shift + 2) * 24);
+                    $svg.find("text.hwk").attr("y", (lowest - shift + 3.5) * 24);
 
-                    if ( l.element[i].symbol.indexOf("h") !== -1  ) hasHWK = 1;
+                    if ( l.element[i].symbol.indexOf("hwk") !== -1  ) hasHWK = 1;
                 }
             }
 
@@ -881,20 +918,22 @@
             var l = libConfig;
             var viewBox;
 
+            console.log("Draw overlay");
+
             // Determine the right DOM-elements
             var $svg = $target.find("svg");
-            var $overlayGroup = $overlay.find("g");
+            var $overlayGroup = $overlay.find("[data-name='overlay']");
             var i = $target.index();
 
             // Calculate the position
             var pxTargetWidth = l.scale * parseFloat($svg.attr("width"));
-            var pxBridgeWidth = 5 * 24; // 120;
-            var pxCentre = (pxTargetWidth - pxBridgeWidth) / 2;
+            var pxOverlayWidth = 5 * 24; // 120;
+            var pxCentre = (pxTargetWidth - pxOverlayWidth) / 2;
 
             // Change the DOM of the receiving element
             $svg.append($overlayGroup);
 
-            // ... positioning the bridge nicely in the centre
+            // ... positioning the overlay nicely in the centre
             if (pxCentre != 0 && l.element[i].name != 'stopstreep') {
                 $svg.find("[data-name='overlay']").attr("transform", "translate(" + pxCentre + ",0)");
             }
@@ -902,7 +941,7 @@
             l.overlays[i] =  l.elementCatalogue[$overlay.attr('data-ref')]['symbol'];
 
             // Update drawing
-            libConfig.diagramChanged();
+            l.diagramChanged();
         },
 
         // offer a string containing SVG as download
@@ -1056,40 +1095,33 @@
             var sizes = [];
             var flowIndex = null;
 
-            console.log(l.flowDirection, l.networkDirection, l.buoyage);
-
-
             // Wind points
             if (l.flowDirection !== null ) {
-                flowIndex = ["n", "o", "z", "w"].indexOf(l.flowDirection);
+                flowIndex = [ "w", "n", "o", "z",].indexOf(l.flowDirection);
 
+                // North, East, South, West
                 images = l.arrayRotate(["n.svg", "o.svg", "z.svg", "w.svg"], flowIndex);
                 positions = ["top", "right", "bottom", "left"];
                 sizes = ["24px 24px", "24px 24px", "24px 24px", "24px 24px"];
+
+                // Land-side (binnen), Sea-side (buiten)
+                pushImage("buiten.svg","96px 24px", "center left 24px");
+                pushImage("binnen.svg","96px 24px", "center right 24px");
+
+
 
                 // Buoyns
                 if (l.buoyage !== null && l.buoyage !== "geen"){
                     switch(l.buoyage){
                         case "rood-rechts":
-                            pushImage("betonning-rood-rechts.svg", "contain","center")
-
+                            pushImage("betonning-rood-rechts.svg", "contain","center left 24px");
+                            pushImage("betonning-rood-rechts.svg", "contain","center right 24px");
                             break;
+
                         case "rood-links":
-                            pushImage("betonning-rood-links.svg", "contain","center")
-
+                            pushImage("betonning-rood-links.svg", "contain","center left 24px");
+                            pushImage("betonning-rood-links.svg", "contain","center right 24px");
                             break;
-                    }
-                }
-
-                // "Afvaart" en "Opvaart
-                if (l.buoyage !== null) {
-                    switch (l.buoyage) {
-                        case "geen":
-                        case "rood-rechts":
-                            pushImage("afvaart-omhoog.svg", "96px 24px", "left 40% bottom 6px");
-                            break;
-                        case "rood-links":
-                            pushImage("afvaart-omlaag.svg", "96px 24px", "left 40% bottom 6px");
                     }
                 }
             }
@@ -1097,14 +1129,14 @@
             // Network Direction
             if (l.networkDirection !== null && l.flowDirection !== null) {
                 if (l.networkDirection == l.flowDirection) {
-                    pushImage("netwerk-omlaag.svg", "24px 24px", "right 10px top 10px");
+                    pushImage("netwerk-rechts.svg", "24px 24px", "right 10px top 10px");
                 } else {
-                    pushImage("netwerk-omhoog.svg", "24px 24px", "right 10px top 10px");
+                    pushImage("netwerk-links.svg", "24px 24px", "right 10px top 10px");
                 }
             }
 
             // Flow direction
-            pushImage("stroomafwaarts.svg","168px 24px","right 35% bottom 6px");
+            pushImage("stroomrichting.svg","168px 48px","right 35% bottom 6px");
 
             l.$diagram.css({
                 "background-image": images.map(l.getCssAssetsUrl).join((", ")),
@@ -1194,6 +1226,7 @@
 
             // other browser
             return false;
-        }
+        },
+
     }
 })(window);

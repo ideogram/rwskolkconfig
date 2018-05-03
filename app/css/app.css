@@ -48,10 +48,10 @@ body {
       background-color: white; }
 
 #diagram {
-  box-shadow: inset 0px 0px 45px 0px rgba(0, 0, 0, 0.13);
+  box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.13);
   height: 240px;
   float: left;
-  width: calc(100% - 328px);
+  width: 100%;
   background-repeat: no-repeat;
   background-position: center 10px;
   margin-top: 0;

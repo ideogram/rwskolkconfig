@@ -1,3 +1,12 @@
+- name: vaarweg-buiten-kolk
+  symbol: I91
+  tooltip: Vaarweg buiten de kolk
+  type: Informatief onderdeel
+  deltay: 0
+  top: 4
+  bottom: 6
+  label: false
+
 - name: glad-kolkdeel-enkele-breedte
   symbol: A02
   tooltip: Glad kolkdeel volle tekenbreedte
@@ -5,7 +14,7 @@
   deltay: 0
   top: 7
   bottom: 13
-  gate: false
+  label: false
 
 #- name: glad-kolkdeel-halve-tekenbreedte
 #  symbol: A03
@@ -14,7 +23,7 @@
 #  deltay: 0
 #  top: 7
 #  bottom: 13
-#  gate: false
+#  label: false
 
 - name: kolkdeel-verbreed-enkele-breedte
   symbol: A04
@@ -23,7 +32,7 @@
   deltay: 0
   top: 7
   bottom: 13
-  gate: false
+  label: false
 
 - name: kolkovergang-recht-smal-boven-breed
   symbol: B01
@@ -32,7 +41,7 @@
   deltay: 2
   top: 7
   bottom: 13
-  gate: false
+  label: false
 
 - name: kolkovergang-recht-smal-midden-breed
   symbol: B02
@@ -41,7 +50,7 @@
   deltay: 0
   top: 5
   bottom: 15
-  gate: false
+  label: false
 
 - name: kolkovergang-recht-smal-onder-breed
   symbol: B03
@@ -50,7 +59,7 @@
   deltay: -2
   top: 3
   bottom: 15
-  gate: false
+  label: false
 
 - name: kolkovergang-schuin-smal-boven-breed
   symbol: B11
@@ -59,7 +68,7 @@
   deltay: 2
   top: 7
   bottom: 13
-  gate: false
+  label: false
 
 - name: kolkovergang-schuin-smal-onder-breed
   symbol: B13
@@ -68,7 +77,7 @@
   deltay: -2
   top: 3
   bottom: 15
-  gate: false
+  label: false
 
 - name: kolkovergang-schuin-smal-midden-breed
   symbol: B90
@@ -77,7 +86,7 @@
   deltay: -2
   top: 3
   bottom: 15
-  gate: false
+  label: false
 
 - name: kolkovergang-rond-smal-boven-breed
   symbol: B21
@@ -86,7 +95,7 @@
   deltay: 2
   top: 7
   bottom: 13
-  gate: false
+  label: false
 
 - name: kolkovergang-rond-smal-midden-breed
   symbol: B22
@@ -95,7 +104,7 @@
   deltay: 0
   top: 5
   bottom: 15
-  gate: false
+  label: false
 
 - name: kolkovergang-rond-smal-onder-breed
   symbol: B23
@@ -104,7 +113,7 @@
   deltay: -2
   top: 3
   bottom: 15
-  gate: false
+  label: false
 
 - name: kolkovergang-recht-breed-smal-boven
   symbol: C01
@@ -113,7 +122,7 @@
   deltay: -2
   top: 5
   bottom: 17
-  gate: false
+  label: false
 
 - name: kolkovergang-recht-breed-smal-midden
   symbol: C02
@@ -122,7 +131,7 @@
   deltay: 0
   top: 5
   bottom: 15
-  gate: false
+  label: false
 
 - name: kolkovergang-recht-breed-smal-onder
   symbol: C03
@@ -131,7 +140,7 @@
   deltay: 2
   top: 5
   bottom: 17
-  gate: false
+  label: false
 
 - name: kolkovergang-schuin-breed-smal-boven
   symbol: C11
@@ -140,7 +149,7 @@
   deltay: -2
   top: 5
   bottom: 17
-  gate: false
+  label: false
 
 - name: kolkovergang-schuin-breed-smal-midden
   symbol: C90
@@ -149,7 +158,7 @@
   deltay: -2
   top: 5
   bottom: 17
-  gate: false
+  label: false
 
 - name: kolkovergang-schuin-breed-smal-onder
   symbol: C13
@@ -158,7 +167,7 @@
   deltay: -2
   top: 3
   bottom: 15
-  gate: false
+  label: false
 
 - name: kolkovergang-rond-breed-smal-boven
   symbol: C21
@@ -167,7 +176,7 @@
   deltay: -2
   top: 5
   bottom: 17
-  gate: false
+  label: false
 
 - name: kolkovergang-rond-breed-smal-midden
   symbol: C22
@@ -176,7 +185,7 @@
   deltay: 0
   top: 5
   bottom: 15
-  gate: false
+  label: false
 
 - name: kolkovergang-rond-breed-smal-onder
   symbol: C23
@@ -185,7 +194,7 @@
   deltay: 2
   top: 5
   bottom: 17
-  gate: false
+  label: false
 
 - name: puntdeur-links
   symbol: D01
@@ -194,7 +203,7 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: true
+  label: true
   direction: <
 
 - name: puntdeur-rechts
@@ -204,7 +213,7 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: true
+  label: true
   direction: '>'
 
 - name: puntdeur-dubbelkerend-pin-links
@@ -214,7 +223,7 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: true
+  label: true
   direction: 'N'
 
 - name: puntdeur-dubbelkerend-pin-rechts
@@ -224,7 +233,7 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: true
+  label: true
   direction: 'N'
 
 - name: puntdeur-dubbelkerend-enkelvoudig-links
@@ -234,7 +243,7 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: true
+  label: true
   direction: 'N'
 
 - name: puntdeur-dubbelkerend-enkelvoudig-rechts
@@ -244,7 +253,7 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: true
+  label: true
   direction: 'N'
 
 - name: draaideur-rechtsonder
@@ -254,7 +263,7 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: true
+  label: true
   direction: <
 
 - name: draaideur-rechtsboven
@@ -264,7 +273,7 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: true
+  label: true
   direction: <
 
 - name: draaideur-linksonder
@@ -274,7 +283,7 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: true
+  label: true
   direction: <
 
 - name: draaideur-linksboven
@@ -284,7 +293,7 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: true
+  label: true
   direction: '>'
 
 - name: hefdeur
@@ -294,7 +303,7 @@
   deltay: 0
   top: 5
   bottom: 15
-  gate: true
+  label: true
   direction: 'N'
 
 - name: hangroldeur-onder
@@ -304,7 +313,7 @@
   deltay: 0
   top: 0
   bottom: 15
-  gate: true
+  label: true
   direction: 'N'
 
 - name: hangroldeur-boven
@@ -314,7 +323,7 @@
   deltay: 0
   top: 5
   bottom: 20
-  gate: true
+  label: true
   direction: 'N'
 
 - name: roldeur-onder
@@ -322,9 +331,9 @@
   tooltip: 'Roldeur, naar onder sluitend'
   type: Deur
   deltay: 0
-  top: 0
-  bottom: 14
-  gate: true
+  top: 6
+  bottom: 20
+  label: true
   direction: 'N'
 
 - name: roldeur-boven
@@ -332,9 +341,9 @@
   tooltip: 'Roldeur, naar boven sluitend'
   type: Deur
   deltay: 0
-  top: 6
-  bottom: 20
-  gate: true
+  top: 0
+  bottom: 14
+  label: true
   direction: 'N'
 
 - name: waaierdeur-rechts
@@ -344,7 +353,7 @@
   deltay: 0
   top: 4
   bottom: 16
-  gate: true
+  label: true
   direction: <
 
 - name: waaierdeur-links
@@ -354,50 +363,55 @@
   deltay: 0
   top: 4
   bottom: 16
-  gate: true
+  label: true
   direction: '>'
 
 - name: puntdeur-links-hwk
+  hwk: true
   symbol: D51
   tooltip: 'Puntdeur naar links, met hoogwaterkerende functie (“stormdeur”)'
   type: Deur
   deltay: 0
   top: 6
   bottom: 14
-  gate: true
+  label: true
   direction: <
 
 - name: puntdeur-rechts-hwk
+  hwk: true
   symbol: D52
   tooltip: 'Puntdeur naar rechts, met hoogwaterkerende functie (“stormdeur”)'
   type: Deur
   deltay: 0
   top: 6
   bottom: 14
-  gate: true
+  label: true
   direction: '>'
 
 - name: puntdeur-dubbelkerend-pin-links-hwk
+  hwk: true
   symbol: D53
   tooltip: Puntdeur met pin naar links hoogwaterkerende functie (“stormdeur”)
   type: Deur
   deltay: 0
   top: 6
   bottom: 14
-  gate: true
+  label: true
   direction: 'N'
 
 - name: puntdeur-dubbelkerend-pin-rechts-hwk
+  hwk: true
   symbol: D54
   tooltip: Puntdeur met pin naar rechts hoogwaterkerende functie (“stormdeur”)
   type: Deur
   deltay: 0
   top: 6
   bottom: 14
-  gate: true
+  label: true
   direction: 'N'
 
 - name: puntdeur-dubbelkerend-enkelvoudig-links-hwk
+  hwk: true
   symbol: D55
   tooltip: >-
     Dubbelkerende enkelvoudige puntdeur, naar links en met hoogwaterkerende
@@ -406,10 +420,11 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: true
+  label: true
   direction: 'N'
 
 - name: puntdeur-dubbelkerend-enkelvoudig-rechts-hwk
+  hwk: true
   symbol: D56
   tooltip: >-
     Dubbelkerende enkelvoudige puntdeur, naar rechts en met hoogwaterkerende
@@ -418,10 +433,11 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: true
+  label: true
   direction: 'N'
 
 - name: draaideur-rechtsonder-hwk
+  hwk: true
   symbol: D57
   tooltip: >-
     Draaideur sluitend naar rechtsonder met hoogwaterkerende functie
@@ -430,10 +446,11 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: true
+  label: true
   direction: <
 
 - name: draaideur-rechtsboven-hwk
+  hwk: true
   symbol: D58
   tooltip: >-
     Draaideur sluitend naar rechtsboven met hoogwaterkerende functie
@@ -442,10 +459,11 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: true
+  label: true
   direction: <
 
 - name: draaideur-linksonder-hwk
+  hwk: true
   symbol: D59
   tooltip: >-
     Draaideur sluitend naar linksonder met hoogwaterkerende functie
@@ -454,10 +472,11 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: true
+  label: true
   direction: '>'
 
 - name: draaideur-linksboven-hwk
+  hwk: true
   symbol: D60
   tooltip: >-
     Draaideur sluitend naar linksboven met hoogwaterkerende functie
@@ -466,77 +485,84 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: true
+  label: true
   direction: '>'
 
 - name: hefdeur-hwk
+  hwk: true
   symbol: D61
   tooltip: Hefdeur met hoogwaterkerende functie (“stormdeur”)
   type: Deur
   deltay: 0
   top: 5
   bottom: 15
-  gate: true
+  label: true
   direction: 'N'
 
 - name: hangroldeur-onder-hwk
+  hwk: true
   symbol: D62
   tooltip: 'Hangroldeur, naar onder sluitend met hoogwaterkerende functie (“stormdeur”)'
   type: Deur
   deltay: 0
   top: 0
   bottom: 15
-  gate: true
+  label: true
   direction: 'N'
 
 - name: hangroldeur-boven-hwk
+  hwk: true
   symbol: D63
   tooltip: 'Hangroldeur, naar boven sluitend met hoogwaterkerende functie (“stormdeur”)'
   type: Deur
   deltay: 0
   top: 5
   bottom: 20
-  gate: true
+  label: true
   direction: 'N'
 
 - name: roldeur-onder-hwk
+  hwk: true
   symbol: D64
   tooltip: 'Roldeur, naar onder sluitend met hoogwaterkerende functie (“stormdeur”)'
   type: Deur
   deltay: 0
   top: 0
   bottom: 14
-  gate: true
+  label: true
   direction: 'N'
 
 - name: roldeur-boven-hwk
+  hwk: true
   symbol: D65
   tooltip: 'Roldeur, naar boven sluitend met hoogwaterkerende functie (“stormdeur”)'
   type: Deur
   deltay: 0
   top: 6
   bottom: 20
-  gate: true
+  label: true
   direction: 'N'
 
 - name: waaierdeur-rechts-hwk
+  hwk: true
   symbol: D66
   tooltip: 'Waaierdeur, naar rechts sluitend met hoogwaterkerende functie (“stormdeur”)'
   type: Deur
   deltay: 0
   top: 4
   bottom: 16
-  gate: true
+  label: true
   direction: <
 
 - name: waaierdeur-links-hwk
+  hwk: true
   symbol: D67
   tooltip: 'Waaierdeur, naar links sluitend met hoogwaterkerende functie (“stormdeur”)'
   type: Deur
   deltay: 0
   top: 4
   bottom: 16
-  gate: true
+  label: true
   direction: '>'
 
 - name: stopstreep-links
@@ -546,7 +572,7 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: false
+  label: false
 
 - name: stopstreep-rechts
   symbol: I02
@@ -555,7 +581,7 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: false
+  label: false
 
 - name: afsluitingsschot
   symbol: I11
@@ -564,7 +590,7 @@
   deltay: 0
   top: 6
   bottom: 15
-  gate: false
+  label: false
 
 - name: afsluitingsschot-verbreed-kolkdeel
   symbol: I12
@@ -573,7 +599,7 @@
   deltay: 0
   top: 5
   bottom: 18
-  gate: false
+  label: false
 
 - name: vanginrichting
   symbol: I21
@@ -582,16 +608,7 @@
   deltay: 0
   top: 6
   bottom: 14
-  gate: false
-
-- name: vaarweg-buiten-kolk
-  symbol: I91
-  tooltip: Vaarweg buiten de kolk
-  type: Informatief onderdeel
-  deltay: 0
-  top: 4
-  bottom: 6
-  gate: false
+  label: false
 
 - name: brugdeel-vast
   symbol: O21
@@ -600,7 +617,7 @@
   deltay: 0
   top: 4
   bottom: 16
-  gate: false
+  label: false
   overlay: true
 
 - name: brugdeel-bedienbaar
@@ -610,7 +627,7 @@
   deltay: 0
   top: 4
   bottom: 6
-  gate: false
+  label: false
   overlay: true
 
 
@@ -623,7 +640,40 @@
   deltay: 0
   top: 4
   bottom: 6
-  gate: false
+  label: false
   overlay: true
 
+#-------------------------------------------------------------
 
+- name: stroomrichting
+  symbol: false
+
+- name: opvaart-omlaag
+  symbol: false
+
+- name: afvaart-omlaag
+  symbol: false
+
+- name: betonning-rood-links
+  symbol: false
+
+- name: betonning-rood-rechts
+  symbol: false
+
+- name: n
+  symbol: false
+
+- name: o
+  symbol: false
+
+- name: z
+  symbol: false
+
+- name: w
+  symbol: false
+
+- name: netwerk-links
+  symbol: false
+
+- name: netwerk-rechts
+  symbol: false

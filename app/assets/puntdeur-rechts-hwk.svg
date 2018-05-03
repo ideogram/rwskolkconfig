@@ -1,21 +1,19 @@
-<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="144" height="480" viewBox="0 0 144 480">
-    <title>
-        puntdeur-rechts-hwk
-    </title>
-    <path d="M24 312h96v12H30zm96-142.8V156H30l-6 13.2z" fill="#d9ebf7"/>
-    <path d="M0 168h144v144H0z" fill="#d9ebf7"/>
-    <path d="M24 312H0m0-144h24m120 144h-24m0-144h24" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
-    <path d="M120 312H24v12h96z" fill="#d9ebf7"/>
-    <path d="M37.8 160.6l24 80-24 80" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="9"/>
-    <path d="M36 159.5l24 80.6-24 80.5" fill="none" stroke="#ca005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
-    <path d="M25 318l24-78h10l-24 78z" fill="#ffb612" stroke="#000" stroke-linejoin="round"/>
-    <path d="M30 324v-6h-6v-6" fill="none" stroke="#9fceea" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
-    <path d="M25 162l24 78h10l-24-78z" fill="#ffb612" stroke="#000" stroke-linejoin="round"/>
-    <path d="M30 156v6h-6v6" fill="none" stroke="#9fceea" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
-    <path d="M120 312v12H30m90-156v-12H30" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
-    <circle cx="30" cy="162" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
-    <circle cx="30" cy="318.1" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
-    <g style="isolation:isolate" fill="#ca005d">
-        <path d="M42.9 420v-18.7h3.9v7.1h7.3v-7.1H58V420h-3.9v-8.4h-7.3v8.4zM64.3 401.3l2.4 10.7.6 3 .5-2.9 2.1-10.8H74l2.3 10.7.5 3 .6-2.9 2.5-10.8h4L78.6 420h-3.7l-2.3-10.9-.6-3.7-.7 3.7L69 420h-3.6l-5.3-18.7zM86.3 401.3h3.9v7.7l7.2-7.7h5l-7.6 7.7 8 11h-5l-5.8-8.2-1.8 1.9v6.3h-3.9z"/>
-    </g>
+<svg id="374c6372-7e76-42e7-ab5d-969eb2f5f32e" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="144" height="480" viewBox="0 0 144 480">
+  <title>puntdeur-rechts-hwk</title>
+  <path d="M24,312h96v12H30Zm96-142.8V156H30l-6,13.2Z" fill="#d9ebf7"/>
+  <path d="M0,168H144V312H0Z" fill="#d9ebf7"/>
+  <path d="M24,312H0M0,168H24M144,312H120m0-144h24" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M120,312H24v12h96Z" fill="#d9ebf7"/>
+  <path d="M37.8,160.6l24,80-24,80" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="9"/>
+  <path d="M36,159.5l24,80.6L36,320.6" fill="none" stroke="#ca005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  <path d="M25,318l24-78H59L35,318Z" fill="#ffb612" stroke="#000" stroke-linejoin="round"/>
+  <path d="M30,324v-6H24v-6" fill="none" stroke="#9fceea" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
+  <path d="M25,162l24,78H59L35,162Z" fill="#ffb612" stroke="#000" stroke-linejoin="round"/>
+  <path d="M30,156v6H24v6" fill="none" stroke="#9fceea" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
+  <path d="M120,312v12H30m90-156V156H30" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
+  <circle cx="30" cy="162" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
+  <circle cx="30" cy="318.1" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
+  <g id="62eff8ed-b298-453f-a39b-42af17792cef" data-name="hwk">
+    <text transform="translate(41 22.4)" font-size="26" fill="#ca005d" font-family="Helvetica-Bold, Helvetica" font-weight="700" style="isolation: isolate">HWK</text>
+  </g>
 </svg>
