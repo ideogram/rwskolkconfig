@@ -1,5 +1,5 @@
 /**
- * Created by M. H. van der Velde (ideogram.nl) on 08/09/2017.
+ * Created by M. H. van der Velde (templatemaker.nl) on 08/09/2017.
  */
 
 
@@ -202,9 +202,11 @@
 
         // Create  invisible div containing the SVG just before it gets downloaded
         createResultWrapper: function(){
+            var l = libConfig;
+
             var $resultWrapper =
-                $('<div id="bridges-result"></div>')
-                    .insertAfter("#bridges-diagram-wrapper");
+                $('<div id="result"></div>')
+                    .insertAfter("#diagram-wrapper");
 
             var svgElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
             l.$result = $(svgElement);
@@ -215,6 +217,7 @@
                     "xmlns": "http://www.w3.org/2000/svg",
                     "xmlns:xlink": "http://www.w3.org/1999/xlink"
                 });
+
         },
 
         /**
@@ -255,16 +258,8 @@
          */
         composeSVG: function(strFileName) {
             var l = libConfig;
-            var margin = 120;
+            var margin = 36;
             var h = l.height + 2*margin;
-            var strLeft, strRight, $streamLeft, $streamRight;
-
-            var textStyle = {
-                "font-family": "sans-serif",
-                "font-size": 24,
-                "text-anchor": "middle",
-                "fill": "#9ACAE8"
-            };
 
             // Fill the result-SVG-DOM  with the lock-elements
             l.$result.html("");
@@ -295,9 +290,9 @@
             // Add some extra images
             // ... wind points
 
-            flowIndex = ["n", "o", "z", "w"].indexOf(l.flowDirection);
+            flowIndex = ["n", "o","z", "w"].indexOf(l.flowDirection);
 
-            images = l.arrayRotate(["n", "o", "z", "w"], flowIndex);
+            images = l.arrayRotate([ "o", "z", "w", "n"], flowIndex);
 
             windPoints = {
                 $top: $(l.extraImages[images[0]]).appendTo(l.$result),
@@ -316,13 +311,31 @@
             windPoints.$left.attr({x: 6, y: h/2});
 
             // ... flow direction
-            $(l.extraImages['stroomafwaarts']).appendTo(l.$result).attr({
+            $(l.extraImages['stroomrichting']).appendTo(l.$result).attr({
                 x: 0.60*w-84,
-                y: h-24-6,
+                y: h-48-6,
                 width: 168,
+                height: 48
+            });
+
+            console.log(l.extraImages);
+
+            // ... "Binnen" en "buiten"
+            $(l.extraImages['buiten']).appendTo(l.$result).attr({
+                x: 0,
+                y: h-48,
+                width: 96,
                 height: 24
             });
 
+            $(l.extraImages['binnen']).appendTo(l.$result).attr({
+                x: w-96,
+                y: h-48,
+                width: 96,
+                height: 24
+            });
+
+            /*
             // ..."Afvaart" en "Opvaart
             if (l.buoyage !== null) {
                 switch (l.buoyage) {
@@ -341,7 +354,9 @@
                 width: 96,
                 height: 24
             });
+            */
 
+            /*
             // ... buoyns
             if (l.buoyage !== null && l.buoyage !== "geen"){
                 switch(l.buoyage){
@@ -360,6 +375,7 @@
                 width: 360,
                 height: 720
             });
+            */
 
             // Adjust width and height
             l.$result.attr("viewBox",[0,0,w,h].join(" ") );
@@ -415,7 +431,6 @@
                 }
 
                 // ... .. flow direction
-                console.log(arrParts[1], l.networkDirection);
                 if ( arrParts.length > 1 ){
                     l.flowDirection = {
                         'mee': {
@@ -660,7 +675,7 @@
                     elmntText = document.createElementNS("http://www.w3.org/2000/svg", 'text');
                     elmntText.setAttribute("x", parseInt(w/2));
                     elmntText.setAttribute("class", "label");
-                    elmntText.setAttribute("style","fill : #000;  font-size : 48px; font-weight: bold; text-anchor: middle; font-family: Arial, Helvetica Neue, Helvetica, sans-serif");
+                    elmntText.setAttribute("style","fill : #000;  font-size : 36px; font-weight: bold; text-anchor: middle; font-family: Arial, Helvetica Neue, Helvetica, sans-serif");
                     svg.appendChild(elmntText);
                 };
 
@@ -950,7 +965,6 @@
             downloadLink.download = fileName + ".svg";
             document.body.appendChild(downloadLink);
             downloadLink.click();
-            // document.body.removeChild(downloadLink);
         },
 
         // Set the configuration strings options

@@ -696,18 +696,6 @@
 - name: stroomrichting
   symbol: false
 
-- name: opvaart-omlaag
-  symbol: false
-
-- name: afvaart-omlaag
-  symbol: false
-
-- name: betonning-rood-links
-  symbol: false
-
-- name: betonning-rood-rechts
-  symbol: false
-
 - name: n
   symbol: false
 
@@ -723,5 +711,10 @@
 - name: netwerk-links
   symbol: false
 
+- name: binnen
+  symbol: false
 - name: netwerk-rechts
+  symbol: false
+
+- name: buiten
   symbol: false
