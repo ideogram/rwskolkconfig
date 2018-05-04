@@ -1,6 +1,6 @@
-<svg id="559808df-cb2d-45c9-a6f4-f712e5e1ced8" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="144" height="480" viewBox="0 0 144 480">
+<svg id="b8233f26-a230-43f8-b09e-df7a7fd41b8b" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="144" height="480" viewBox="0 0 144 480">
   <defs>
-    <symbol id="425c4447-fa29-4390-9c5d-c19c60999148" data-name="a" viewBox="0 0 15 15">
+    <symbol id="5a4862be-6ae9-47fc-a7ff-84dae4225887" data-name="a" viewBox="0 0 15 15">
       <circle cx="7.5" cy="7.5" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
     </symbol>
   </defs>
@@ -12,7 +12,7 @@
   <path d="M119,318,95,240H85l24,78Z" fill="#ffb612" stroke="#000" stroke-miterlimit="10"/>
   <path d="M114,324v-6h6v-6" fill="none" stroke="#9fceea" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
   <path d="M24,312v12h90" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>
-  <use width="15" height="15" transform="translate(106.5 310.5)" xlink:href="#425c4447-fa29-4390-9c5d-c19c60999148"/>
+  <use width="15" height="15" transform="translate(106.5 310.5)" xlink:href="#5a4862be-6ae9-47fc-a7ff-84dae4225887"/>
   <path d="M24,169.2V156h90l6,13.2Z" fill="#d9ebf7"/>
   <path d="M119,162,95,240H85l24-78Z" fill="#ffb612" stroke="#000" stroke-miterlimit="10"/>
   <path d="M114,156v6h6v6" fill="none" stroke="#9fceea" stroke-linecap="square" stroke-linejoin="round" stroke-width="3"/>

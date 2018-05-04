@@ -385,7 +385,7 @@
   label: true
   direction: R
 
-- name: klapdeur-linkskerend
+- name: segmentdeur-linkskerend
   symbol: DIL
   tooltip: Klapdeur, linkskerend
   type: Deur
@@ -395,7 +395,7 @@
   label: true
   direction: L
 
-- name: klapdeur-rechtskerend
+- name: segmentdeur-rechtskerend
   symbol: DIR
   tooltip: Klapdeur, rechtskerend
   type: Deur

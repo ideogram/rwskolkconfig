@@ -1,10 +1,10 @@
-<svg id="e3436806-c503-4811-aa67-aa1a134df14c" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="168" height="48" viewBox="0 0 168 48">
+<svg id="e60de45e-0b3b-4f2f-b76a-86f1b54eda7e" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="168" height="48" viewBox="0 0 168 48">
   <title>stroomrichting</title>
   <g>
-    <path d="M126,40.5c-5.6,0-5.6-6.7-11.1-6.7s-5.6,6.7-11.1,6.7-5.6-6.7-11.2-6.7-5.5,6.7-11.1,6.7-5.6-6.7-11.1-6.7-5.6,6.7-11.2,6.7" fill="none" stroke="#59a9db" stroke-miterlimit="10" stroke-width="1.5"/>
+    <path d="M123,40.5c-5.6,0-5.6-6.7-11.1-6.7s-5.6,6.7-11.1,6.7-5.6-6.7-11.2-6.7-5.5,6.7-11.1,6.7-5.6-6.7-11.1-6.7-5.6,6.7-11.2,6.7" fill="none" stroke="#59a9db" stroke-miterlimit="10" stroke-width="1.5"/>
     <g>
-      <line x1="59.2" y1="40.5" x2="48.5" y2="40.5" fill="none" stroke="#59a9db" stroke-miterlimit="10" stroke-width="1.5"/>
-      <polygon points="49.8 36 42 40.5 49.8 45 49.8 36" fill="#59a9db"/>
+      <line x1="56.2" y1="40.5" x2="51.5" y2="40.5" fill="none" stroke="#59a9db" stroke-miterlimit="10" stroke-width="1.5"/>
+      <polygon points="52.8 36 45 40.5 52.8 45 52.8 36" fill="#59a9db"/>
     </g>
   </g>
   <g>
