@@ -337,6 +337,21 @@
             // Adjust width and height
             l.$result.attr("viewBox",[0,0,w,h].join(" ") );
 
+            // Cleanup: remove unneeded ID's:
+            // (These id's come from Adobe Illustrator media export.
+            // The SVG will still render if this cleaning-up is omitted
+            // but the resulting SVG invalid and/or unnecessarily  large )
+            l.$result.find("g[id],svg[id], use[id]").removeAttr("id");
+            l.$result.find("[data-name]").removeAttr("data-name");
+
+            // Cleanup nested namespace declarations:
+            l.$result.find("svg").removeAttr('xmlns');
+
+            // Cleanup: remove double def's:
+            l.$result.find("symbol[id='baken-groen']:gt(0)").remove();
+            l.$result.find("symbol[id='baken-rood']:gt(0)").remove();
+
+
             // Offer the download
             l.offerDownload(l.$result[0].outerHTML, strFileName );
         },
