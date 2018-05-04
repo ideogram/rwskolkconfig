@@ -967,8 +967,8 @@
                         $haystack.find("[id^='vaarweg-baken-onder']").attr("xlink:href","#baken-rood");
                         break;
                     case "geen":
-                        $haystack.find("[id^='vaarweg-baken-boven']").removeAttr("xlink:href","#baken-groen");
-                        $haystack.find("[id^='vaarweg-baken-onder']").removeAttr("xlink:href","#baken-rood");
+                        $haystack.find("[id^='vaarweg-baken-boven']").attr("xlink:href","#");
+                        $haystack.find("[id^='vaarweg-baken-onder']").attr("xlink:href","#");
                         break;
                 }
             }
@@ -987,8 +987,6 @@
             if (l.disableNetworkDirection === true ){
                 $("#network-direction").addClass("readonly");
             }
-
-
 
             // Flow direction
             var flow=  l.flowDirection;
@@ -1099,23 +1097,6 @@
                 // Land-side (binnen), Sea-side (buiten)
                 pushImage("buiten.svg","96px 24px", "center left 24px");
                 pushImage("binnen.svg","96px 24px", "center right 24px");
-
-
-
-                // Buoyns
-                if (l.buoyage !== null && l.buoyage !== "geen"){
-                    switch(l.buoyage){
-                        case "rood-rechts":
-                            pushImage("betonning-rood-rechts.svg", "contain","center left 24px");
-                            pushImage("betonning-rood-rechts.svg", "contain","center right 24px");
-                            break;
-
-                        case "rood-links":
-                            pushImage("betonning-rood-links.svg", "contain","center left 24px");
-                            pushImage("betonning-rood-links.svg", "contain","center right 24px");
-                            break;
-                    }
-                }
             }
 
             // Network Direction
