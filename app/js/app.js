@@ -259,7 +259,7 @@
          */
         composeSVG: function(strFileName) {
             var l = libConfig;
-            var margin = 36;
+            var margin = 48;
             var h = l.height + 2*margin;
 
             // Fill the result-SVG-DOM  with the lock-elements
@@ -272,15 +272,18 @@
                 var w = l.scale * parseFloat($svg.attr("width"));
                 var viewBox = $svg.attr("viewBox");
                 var y = 0;
-                // Remove the viewbox and wrap the element in a <g>-tag instead
+                // Remove the viewbox and re-wrap the element in a <svg>-tag
                 if (viewBox !== undefined) {
                     viewBox = viewBox.split(" ");
                     y = viewBox[1];
 
-                    $g = $("<g>" + html + "</g>").appendTo(l.$result);
+                    $g = $("<svg>" + html + "</svg>").appendTo(l.$result);
 
-                    $g.attr("transform", "translate(" + (x - i + margin ) + "," + (-y+margin) + ")");
-                    // ( We substract i from x to make the elements overlap by one pixel )
+                    $g.attr("x",x-1+margin);
+                    $g.attr("y",-y+margin);
+                    $g.attr("width",viewBox[2]);
+                    $g.attr("height",viewBox[3]);
+                    // ( We subtract i from x to make the elements overlap by one pixel )
 
                 }
                 x += (w-1);
@@ -344,12 +347,17 @@
             l.$result.find("g[id],svg[id], use[id]").removeAttr("id");
             l.$result.find("[data-name]").removeAttr("data-name");
 
-            // Cleanup nested namespace declarations:
-            l.$result.find("svg").removeAttr('xmlns');
+            // Cleanup nested namespace declarations and viewboxes
+            l.$result.find("svg")
+                .removeAttr('xmlns')
+                .removeAttr('xmlns:xlink')
+                .removeAttr('viewBox');
+
 
             // Cleanup: remove double def's:
             l.$result.find("symbol[id='baken-groen']:gt(0)").remove();
             l.$result.find("symbol[id='baken-rood']:gt(0)").remove();
+
 
 
             // Offer the download
