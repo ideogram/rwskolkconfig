@@ -193,6 +193,7 @@
                     // Update the GUI to reflect settings from the configstring
                     l.setGUIState();
                     l.updateGUI();
+                    l.updateDiagram();
 
                 });
             });
@@ -318,8 +319,6 @@
                 height: 48
             });
 
-            console.log(l.extraImages);
-
             // ... "Binnen" en "buiten"
             $(l.extraImages['buiten']).appendTo(l.$result).attr({
                 x: 0,
@@ -334,48 +333,6 @@
                 width: 96,
                 height: 24
             });
-
-            /*
-            // ..."Afvaart" en "Opvaart
-            if (l.buoyage !== null) {
-                switch (l.buoyage) {
-                    case "geen":
-                    case "rood-rechts":
-                        $afvaart = $(l.extraImages['afvaart-omhoog']).appendTo(l.$result);
-                        break;
-                    case "rood-links":
-                        $afvaart = $(l.extraImages['afvaart-omlaag']).appendTo(l.$result);
-                }
-            }
-
-            $afvaart.attr({
-                x: 0.4*w-48,
-                y: h-24-6,
-                width: 96,
-                height: 24
-            });
-            */
-
-            /*
-            // ... buoyns
-            if (l.buoyage !== null && l.buoyage !== "geen"){
-                switch(l.buoyage){
-                    case "rood-rechts":
-                        $buoyns = $(l.extraImages['betonning-rood-rechts']).appendTo(l.$result);
-                        break;
-                    case "rood-links":
-                        $buoyns = $(l.extraImages['betonning-rood-links']).appendTo(l.$result);
-                        break;
-                }
-            }
-
-            $buoyns.attr({
-                x: w/2-180,
-                y: margin,
-                width: 360,
-                height: 720
-            });
-            */
 
             // Adjust width and height
             l.$result.attr("viewBox",[0,0,w,h].join(" ") );
@@ -989,7 +946,33 @@
                     l.buoyage = value;
             }
 
+            l.updateDiagram();
             l.updateGUI();
+        },
+
+        updateDiagram: function(){
+            var l = libConfig;
+
+            var $haystack = $("#diagram, #toolbar");
+
+            // ... buoyns
+            if (l.buoyage !== null){
+                switch(l.buoyage){
+                    case "rood-rechts":
+                        $haystack.find("[id='vaarweg-baken-boven']").attr("xlink:href","#baken-rood");
+                        $haystack.find("[id^='vaarweg-baken-onder']").attr("xlink:href","#baken-groen");
+                        break;
+                    case "rood-links":
+                        $haystack.find("[id^='vaarweg-baken-boven']").attr("xlink:href","#baken-groen");
+                        $haystack.find("[id^='vaarweg-baken-onder']").attr("xlink:href","#baken-rood");
+                        break;
+                    case "geen":
+                        $haystack.find("[id^='vaarweg-baken-boven']").removeAttr("xlink:href","#baken-groen");
+                        $haystack.find("[id^='vaarweg-baken-onder']").removeAttr("xlink:href","#baken-rood");
+                        break;
+                }
+            }
+
         },
 
         setGUIState: function () {

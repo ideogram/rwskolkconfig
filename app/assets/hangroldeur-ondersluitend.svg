@@ -1,0 +1,20 @@
+<svg id="6b9bee7b-3cd9-40cf-b69c-3dcfd436ee07" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="72" height="480" viewBox="0 0 72 480">
+  <title>hangroldeur-ondersluitend</title>
+  <path d="M0,168V312H24v24H48V312H72V168H48V6H24V168Z" fill="#d9ebf7"/>
+  <path d="M12,168H0" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M60,168H48V6H24V168H12" fill="none" stroke="#7d7d7d" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M72,168H60m0,144H72" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M12,312H24v24H48V312H60" fill="none" stroke="#7d7d7d" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M0,312H12" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M29,161H43V319H29Z" fill="#ffb612" stroke="#154573" stroke-miterlimit="10"/>
+  <path d="M36,14.2V336" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
+  <circle cx="36" cy="240" r="3" fill="#154573" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+  <circle cx="36" cy="264" r="3" fill="#154573" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+  <circle cx="36" cy="288" r="3" fill="#154573" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+  <circle cx="36" cy="312" r="3" fill="#154573" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+  <circle cx="36" cy="216" r="3" fill="#154573" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+  <circle cx="36" cy="192" r="3" fill="#154573" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+  <circle cx="36" cy="168" r="3" fill="#154573" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+  <path d="M36,12V336" fill="#154573" stroke="#154573" stroke-miterlimit="10" stroke-width="2"/>
+  <path d="M27,323.5H45v18H27ZM27,1H45V19H27Z"/>
+</svg>
