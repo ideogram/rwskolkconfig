@@ -3,7 +3,7 @@
  */
 /* Run using node.js from the CLI from the 'documentation' folder.  */
 
-yaml = require("../vendor/js-yaml.min");
+yaml = require("../app/vendor/js-yaml.min");
 fs   = require('fs');
 
 
@@ -11,7 +11,7 @@ polyfill();
 
 // Get document, or throw exception on error
 try {
-    var doc = yaml.safeLoad(fs.readFileSync('../catalogue/elements.yaml', 'utf8'));
+    var doc = yaml.safeLoad(fs.readFileSync('../app/catalogue/elements.yaml', 'utf8'));
     makeDoc(doc);
 } catch (e) {
     console.log(e);
@@ -39,7 +39,7 @@ function makeDoc(doc){
 
             tile.push("<div>");
 
-            tile.push("<img src='" + '../documentation/png/' + element.name + ".png' />");
+            tile.push("<img src='" + 'png/assets_' + element.name + ".png' />")
             tile.push("<pre><span>"+element.symbol+"</span></pre>");
             tile.push("<label>"+element.name + "</label>");
 
