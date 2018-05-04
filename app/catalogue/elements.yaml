@@ -9,7 +9,7 @@
 
 - name: kolkdeel-smal-enkele-lengte
   symbol: KS1
-  tooltip: Glad kolkdeel volle tekenbreedte
+  tooltip: Smal (“glad”) kolkdeel
   type: Kolkdeel
   deltay: 0
   top: 7
@@ -18,7 +18,7 @@
 
 - name: kolkdeel-breed-enkele-lengte
   symbol: KB1
-  tooltip: Verbreed glad kolkdeel
+  tooltip: Verbreed kolkdeel
   type: Kolkdeel
   deltay: 0
   top: 7
@@ -26,8 +26,8 @@
   label: false
 
 - name: kolkdeel-smal-vierdubbele-lengte
-  symbol: KB4
-  tooltip: Glad kolkdeel volle tekenbreedte
+  symbol: KS4
+  tooltip: Smal (“glad”) kolkdeel, viervoudige lengte
   type: Kolkdeel
   deltay: 0
   top: 7
@@ -36,7 +36,7 @@
 
 - name: kolkdeel-breed-vierdubbele-lengte
   symbol: KB4
-  tooltip: Verbreed glad kolkdeel
+  tooltip: Verbreed kolkdeel, viervoudige lengte
   type: Kolkdeel
   deltay: 0
   top: 7
@@ -315,7 +315,6 @@
   label: true
   direction: R
 
-
 - name: hefdeur
   symbol: DEN
   tooltip: Hefdeur
@@ -385,6 +384,27 @@
   bottom: 16
   label: true
   direction: R
+
+- name: klapdeur-linkskerend
+  symbol: DIL
+  tooltip: Klapdeur, linkskerend
+  type: Deur
+  deltay: 0
+  top: 6
+  bottom: 14
+  label: true
+  direction: L
+
+- name: klapdeur-rechtskerend
+  symbol: DIR
+  tooltip: Klapdeur, rechtskerend
+  type: Deur
+  deltay: 0
+  top: 6
+  bottom: 14
+  label: true
+  direction: R
+
 
 #Hoogwaterkerende deuren
 
