@@ -182,8 +182,6 @@
                     .prependTo("#diagram-wrapper");
 
             // ...load a series of partials into the options-div
-
-
             $.get(l.path.folderPartials + "option-network-direction.partial.html", function (data) {
                 $(data).appendTo(l.$options)
                     .find("input").on("change", l.optionChanged); // set event handler for the on-change event
@@ -1006,16 +1004,16 @@
             if (l.buoyage !== null){
                 switch(l.buoyage){
                     case "rood-rechts":
-                        $haystack.find("[id='vaarweg-baken-boven']").attr("xlink:href","#baken-rood");
-                        $haystack.find("[id^='vaarweg-baken-onder']").attr("xlink:href","#baken-groen");
+                        $haystack.find("[id='baken-boven']").attr("xlink:href","#baken-rood");
+                        $haystack.find("[id^='baken-onder']").attr("xlink:href","#baken-groen");
                         break;
                     case "rood-links":
-                        $haystack.find("[id^='vaarweg-baken-boven']").attr("xlink:href","#baken-groen");
-                        $haystack.find("[id^='vaarweg-baken-onder']").attr("xlink:href","#baken-rood");
+                        $haystack.find("[id^='baken-boven']").attr("xlink:href","#baken-groen");
+                        $haystack.find("[id^='baken-onder']").attr("xlink:href","#baken-rood");
                         break;
                     case "geen":
-                        $haystack.find("[id^='vaarweg-baken-boven']").attr("xlink:href","#");
-                        $haystack.find("[id^='vaarweg-baken-onder']").attr("xlink:href","#");
+                        $haystack.find("[id^='baken-boven']").attr("xlink:href","#");
+                        $haystack.find("[id^='baken-onder']").attr("xlink:href","#");
                         break;
                 }
             }
