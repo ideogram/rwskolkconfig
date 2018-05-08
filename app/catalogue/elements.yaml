@@ -1,3 +1,4 @@
+---
 - name: vaarweg
   symbol: VRW
   tooltip: Vaarweg buiten de kolk
@@ -158,7 +159,7 @@
 #Ronde kolkovergangen
 
 - name: kolkovergang-rond-smal-boven-breed
-  symbol: OR1
+  symbol: OA1
   tooltip: Ronde ingangsadaptor boven
   type: Kolkovergang
   deltay: 2
@@ -167,7 +168,7 @@
   label: false
 
 - name: kolkovergang-rond-smal-midden-breed
-  symbol: OR2
+  symbol: OA2
   tooltip: Ronde ingangsadaptor midden
   type: Kolkovergang
   deltay: 0
@@ -176,7 +177,7 @@
   label: false
 
 - name: kolkovergang-rond-smal-onder-breed
-  symbol: OR3
+  symbol: OA3
   tooltip: Ronde ingangsadaptor onder
   type: Kolkovergang
   deltay: -2
@@ -185,7 +186,7 @@
   label: false
 
 - name: kolkovergang-rond-breed-smal-boven
-  symbol: OR4
+  symbol: OA4
   tooltip: Ronde uitgangsadaptor boven
   type: Kolkovergang
   deltay: -2
@@ -194,7 +195,7 @@
   label: false
 
 - name: kolkovergang-rond-breed-smal-midden
-  symbol: OR5
+  symbol: OA5
   tooltip: Ronde uitgangsadaptor midden
   type: Kolkovergang
   deltay: 0
@@ -203,7 +204,7 @@
   label: false
 
 - name: kolkovergang-rond-breed-smal-onder
-  symbol: OR6
+  symbol: OA6
   tooltip: Ronde uitgangsadaptor onder
   type: Kolkovergang
   deltay: 2
@@ -412,7 +413,7 @@
   symbol: HAL
   hwk: true
   tooltip: Puntdeur naar links, met hoogwaterkerende functie (“stormdeur”)
-  type: Deur
+  type: Deur met hoogwaterkerende functie
   deltay: 0
   top: 6
   bottom: 14
@@ -423,7 +424,7 @@
   hwk: true
   symbol: HAB
   tooltip: Puntdeur naar rechts, met hoogwaterkerende functie (“stormdeur”)
-  type: Deur
+  type: Deur met hoogwaterkerende functie
   deltay: 0
   top: 6
   bottom: 14
@@ -434,7 +435,7 @@
   hwk: true
   symbol: HBL
   tooltip: Puntdeur met pin naar links hoogwaterkerende functie (“stormdeur”)
-  type: Deur
+  type: Deur met hoogwaterkerende functie
   deltay: 0
   top: 6
   bottom: 14
@@ -445,7 +446,7 @@
   hwk: true
   symbol: HBR
   tooltip: Puntdeur met pin naar rechts hoogwaterkerende functie (“stormdeur”)
-  type: Deur
+  type: Deur met hoogwaterkerende functie
   deltay: 0
   top: 6
   bottom: 14
@@ -458,7 +459,7 @@
   tooltip: >-
     Dubbelkerende enkelvoudige puntdeur, naar links en met hoogwaterkerende
     functie (“stormdeur”)
-  type: Deur
+  type: Deur met hoogwaterkerende functie
   deltay: 0
   top: 6
   bottom: 14
@@ -471,7 +472,7 @@
   tooltip: >-
     Dubbelkerende enkelvoudige puntdeur, naar rechts en met hoogwaterkerende
     functie (“stormdeur”)
-  type: Deur
+  type: Deur met hoogwaterkerende functie
   deltay: 0
   top: 6
   bottom: 14
@@ -484,7 +485,7 @@
   tooltip: >-
     Draaideur sluitend naar rechtsboven met hoogwaterkerende functie
     (“stormdeur”)
-  type: Deur
+  type: Deur met hoogwaterkerende functie
   deltay: 0
   top: 6
   bottom: 14
@@ -497,7 +498,7 @@
   tooltip: >-
     Draaideur sluitend naar rechtsonder met hoogwaterkerende functie
     (“stormdeur”)
-  type: Deur
+  type: Deur met hoogwaterkerende functie
   deltay: 0
   top: 6
   bottom: 14
@@ -510,7 +511,7 @@
   tooltip: >-
     Draaideur sluitend naar linksboven met hoogwaterkerende functie
     (“stormdeur”)
-  type: Deur
+  type: Deur met hoogwaterkerende functie
   deltay: 0
   top: 6
   bottom: 14
@@ -523,7 +524,7 @@
   tooltip: >-
     Draaideur sluitend naar linksonder met hoogwaterkerende functie
     (“stormdeur”)
-  type: Deur
+  type: Deur met hoogwaterkerende functie
   deltay: 0
   top: 6
   bottom: 14
@@ -535,7 +536,7 @@
   hwk: true
   symbol: HEN
   tooltip: Hefdeur met hoogwaterkerende functie (“stormdeur”)
-  type: Deur
+  type: Deur met hoogwaterkerende functie
   deltay: 0
   top: 5
   bottom: 15
@@ -546,7 +547,7 @@
   hwk: true
   symbol: HFN
   tooltip: 'Hangroldeur, naar boven sluitend met hoogwaterkerende functie (“stormdeur”)'
-  type: Deur
+  type: Deur met hoogwaterkerende functie
   deltay: 0
   top: 5
   bottom: 20
@@ -557,7 +558,7 @@
   hwk: true
   symbol: HfN
   tooltip: 'Hangroldeur, naar onder sluitend met hoogwaterkerende functie (“stormdeur”)'
-  type: Deur
+  type: Deur met hoogwaterkerende functie
   deltay: 0
   top: 0
   bottom: 15
@@ -568,7 +569,7 @@
   hwk: true
   symbol: HGN
   tooltip: 'Roldeur, naar boven sluitend met hoogwaterkerende functie (“stormdeur”)'
-  type: Deur
+  type: Deur met hoogwaterkerende functie
   deltay: 0
   top: 5
   bottom: 20
@@ -579,7 +580,7 @@
   hwk: true
   symbol: HgN
   tooltip: 'Roldeur, naar onder sluitend met hoogwaterkerende functie (“stormdeur”)'
-  type: Deur
+  type: Deur met hoogwaterkerende functie
   deltay: 0
   top: 0
   bottom: 15
@@ -591,7 +592,7 @@
   hwk: true
   symbol: HHL
   tooltip: 'Waaierdeur, naar links sluitend met hoogwaterkerende functie (“stormdeur”)'
-  type: Deur
+  type: Deur met hoogwaterkerende functie
   deltay: 0
   top: 4
   bottom: 16
@@ -602,7 +603,7 @@
   hwk: true
   symbol: HHR
   tooltip: 'Waaierdeur, naar rechts sluitend met hoogwaterkerende functie (“stormdeur”)'
-  type: Deur
+  type: Deur met hoogwaterkerende functie
   deltay: 0
   top: 4
   bottom: 16

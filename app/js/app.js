@@ -182,6 +182,8 @@
                     .prependTo("#diagram-wrapper");
 
             // ...load a series of partials into the options-div
+
+
             $.get(l.path.folderPartials + "option-network-direction.partial.html", function (data) {
                 $(data).appendTo(l.$options)
                     .find("input").on("change", l.optionChanged); // set event handler for the on-change event
@@ -198,7 +200,29 @@
                 });
             });
 
+            // Add filters to the toolbar
+            $.get(l.path.folderPartials + "option-filters.partial.html", function (data) {
+                $(data).prependTo(l.$toolbar.parent()).find("input").on("change", l.filterChanged)
+            });
+
             l.createResultWrapper();
+        },
+
+        // Show or hide elements from the toolbar depending on the filter-settings
+        filterChanged: function(){
+            $('#element-filters input').each(function(){
+                var l =libConfig;
+                var $me = $(this);
+                var name = $me.attr("name");
+                var selector = "[data-type='"+name +"']";
+
+                if ($me.prop("checked") === true) {
+                    l.$toolbar.find(selector).removeClass("hidden");
+                } else {
+                    l.$toolbar.find(selector).addClass("hidden");
+                }
+
+            });
         },
 
         // Create  invisible div containing the SVG just before it gets downloaded
@@ -609,7 +633,7 @@
                     l.extraImagesCount++;
                 } else {
                     $li = $('<li class="element"></li>').appendTo(l.$toolbar)
-                        .attr({"title": tooltip, "data-ref": key})
+                        .attr({"title": tooltip, "data-ref": key, "data-type": val.type })
                         .addClass(val.name)
                         .disableSelection()
                         .draggable(l.draggableOptions)

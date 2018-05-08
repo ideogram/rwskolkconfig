@@ -3,8 +3,8 @@
     <symbol id="baken-groen" data-name="baken-groen" viewBox="0 0 18 16">
       <polygon points="18 16 0 16 9 0 18 16" fill="#39870c"/>
     </symbol>
-    <symbol id="baken-rood" data-name="baken-rood" viewBox="0 0 18 12">
-      <rect width="18" height="12" fill="#d52b1e"/>
+    <symbol id="baken-rood" data-name="baken-rood" viewBox="0 0 13 13">
+      <rect width="13" height="13" fill="#d52b1e"/>
     </symbol>
   </defs>
   <title>vaarweg</title>
@@ -12,5 +12,5 @@
   <path d="M0,168H288V312H0Z" fill="#d9ebf7"/>
   <path d="M0,168H288M0,312H288" fill="none" stroke="#abcc98" stroke-miterlimit="10" stroke-width="3"/>
   <use id="baken-onder" width="18" height="16" transform="translate(125 296.1) scale(2.11)" xlink:href="#baken-groen"/>
-  <use id="baken-boven" width="18" height="12" transform="translate(126 154) scale(2)" xlink:href="#baken-rood"/>
+  <use id="baken-boven" width="13" height="13" transform="translate(131 153) scale(2)" xlink:href="#baken-rood"/>
 </svg>

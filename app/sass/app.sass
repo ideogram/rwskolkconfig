@@ -50,6 +50,9 @@ body
       box-shadow: 0px 0px 4px #222
       background-color: white
 
+    &.hidden
+      display: none
+
 #diagram
   box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.13)
   height: 240px
@@ -107,6 +110,19 @@ svg
 
 $labelSize: 72px
 
+//Filter elements
+
+#element-filters
+  justify-content: center
+  list-style: none
+  display: block
+  text-align: center
+
+  li
+    display: inline-block
+    margin: 0 0.5em
+
+//Options
 #options
   list-style: none inside none
   text-align: center

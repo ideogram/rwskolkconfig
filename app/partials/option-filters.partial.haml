@@ -1,0 +1,9 @@
+%ul#element-filters
+  %li
+    %legend Toon:
+  - ['Informatief onderdeel','Kolkdeel','Kolkovergang','Deur','Deur met hoogwaterkerende functie','Overliggend onderdeel'].each do |category|
+    %li
+      - caption = category
+      - id = category
+      %input{:type=>"checkbox", :id => "filter-#{id}", :value => "show", :name=>"#{id}", :checked => "checked" }
+      %label{:for => "filter-#{id}"} #{caption}
