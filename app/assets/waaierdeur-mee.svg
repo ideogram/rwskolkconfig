@@ -1,0 +1,28 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="480" viewBox="0 0 120 480">
+  <defs>
+    <symbol id="a-2" data-name="a" viewBox="0 0 15 15">
+      <circle cx="7.5" cy="7.5" r="6" stroke="#474747" stroke-miterlimit="10" stroke-width="3"/>
+    </symbol>
+  </defs>
+  <title>waaierdeur-mee</title>
+  <path d="M24.4,312.4c0,39.8,32.7,72,73.2,72v-72ZM97.6,314h6.1v72H97.6Zm0-218h6.1v72H97.6ZM24.4,167.9c0-39.8,32.7-72.1,73.2-72.1v72.1ZM0,168H120V312H0Z" fill="#d9ebf7"/>
+  <path d="M27.8,310.3a66.9,66.9,0,0,1,54.5-65.7" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="7"/>
+  <path d="M96.8,386.1a74,74,0,0,1-74-74" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-width="3.08"/>
+  <path d="M0,168H21.3M0,312H21.3m80.7,0h18M102,168h18" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M102,167.8V94.2H96" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2.99"/>
+  <path d="M96,168H26m70,0L35.4,203M96,168,61,228.6" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
+  <path d="M27.8,169.5a66.9,66.9,0,0,0,54.7,65.7" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="7"/>
+  <path d="M96,168,35.4,203M96,168,61,228.6" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M27.8,169.5a66.9,66.9,0,0,0,54.1,65.6" fill="none" stroke="#000" stroke-linecap="square" stroke-width="3.5"/>
+  <path d="M96,168H26" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M90,167.5h12l-14,72H76Z" fill="#ffb612" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+  <use width="15" height="15" transform="matrix(1, 0, 0, -1, 88.5, 175.5)" xlink:href="#a-2"/>
+  <path d="M22.8,168.1a74,74,0,0,1,74-74" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-width="3.08"/>
+  <path d="M102,312v74H96" fill="none" stroke="#7d7d7d" stroke-linecap="square" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M96,312H26m70,0L35.4,277M96,312,61,251.4" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
+  <path d="M96,312,35.4,277M96,312,61,251.4" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M27.8,310.3a66.8,66.8,0,0,1,54.6-65.7" fill="none" stroke="#000" stroke-linecap="square" stroke-width="3.5"/>
+  <path d="M96,312H26" fill="none" stroke="#94710a" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M76,240.5H88l14,72H90Z" fill="#ffb612" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+  <use width="15" height="15" transform="translate(88.5 304.5)" xlink:href="#a-2"/>
+</svg>

@@ -6,7 +6,7 @@ pre{
     font-family: Menlo;
 }
 
-div{
+.tile{
     width: 250px;
     height: 500px;
     float: left;
@@ -14,15 +14,24 @@ div{
     border: 1px solid silver;
     position: relative;
     text-align: center;
-    padding-bottom: 90px;
+    padding-bottom: 180px;
 }
 
-pre{
+img{
+    margin: 5%;
+    max-width: 90%;
+    box-sizing: border-box;
+    outline: 1px solid #f0f0f0;
+}
+.symbol{
     position: absolute;
-    bottom: 30px;
+    bottom: 90px;
     width: 100%;
     text-align: center;
     background-color: white;
+    font-family: "Fira Mono";
+    letter-spacing: 0.1em;
+
 }
 
 span{
@@ -32,20 +41,28 @@ span{
     line-height: 1.5em;
 }
 
-label{
+.filename{
     position: absolute;
-    bottom: 0px;
+    bottom: 50px;
     display: block;
     width: 100%;
-    text-align: 100%;
+    text-align: center;
     background-color: white;
-    line-height: 3em;
-    font-size: 80%;
+    font-size: 11px;
+    font-family: "Fira Mono";
 }
 
-img{
-    margin: 5%;
-    max-width: 90%;
-    box-sizing: border-box;
-    outline: 1px solid #f0f0f0;
+
+.tooltip{
+    display: block;
+    background-color: #f0f0f0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 45px;
+    font-size: 12.5px;
+    display:flex;
+    align-items: center; /* Vertical center alignment */
+    justify-content: center; /* Horizontal center alignment */
 }

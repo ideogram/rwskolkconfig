@@ -1,0 +1,16 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="72" height="484.5" viewBox="0 0 72 484.5">
+  <title>afsluitingsschot-verbreed-kolksegment</title>
+  <path d="M24,108v12H0V360H24v11H48V360H72V120H48V108Z" fill="#d9ebf7"/>
+  <path d="M12,120H0m72,0H60" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M60,360H72" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M12,360H24v12H48V360H60" fill="none" stroke="#7d7d7d" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M0,360H12" fill="none" stroke="#9fceea" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M12,120H24V108H48v12H60" fill="none" stroke="#7d7d7d" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="M35.9,383.7a9.7,9.7,0,0,0-9.7,9.8v3.3H25v16H47v-16H45.7v-3.3a9.7,9.7,0,0,0-9.6-9.8Zm0,2.4h.2a7.3,7.3,0,0,1,7.2,7.4v3.3H28.6v-3.3A7.3,7.3,0,0,1,35.9,386.1Z" fill="#ca005d"/>
+  <path d="M28,307.6H44v-16H28Zm0,29.8H44v-16H28Zm0,29.8H44v-16H28Zm0-238.5H43.9v-16H28.1Zm0,29.8H44v-16H28Zm0,29.8H44v-16H28Zm0,29.8H44v-16H28Zm0,29.8H44v-16H28Zm0,29.9H44v-16H28Z" fill="#ca005d"/>
+  <g style="isolation: isolate">
+    <path d="M6.9,472V453.3h3.9v7.1h7.3v-7.1H22V472H18.1v-8.4H10.8V472Z" fill="#ca005d"/>
+    <path d="M28.3,453.3,30.7,464l.6,3,.5-2.9,2.1-10.8H38L40.3,464l.5,3,.6-2.9,2.5-10.8h4L42.6,472H38.9l-2.3-10.9-.6-3.7-.7,3.7L33,472H29.4l-5.3-18.7Z" fill="#ca005d"/>
+    <path d="M50.3,453.3h3.9V461l7.2-7.7h5L58.8,461l8,11h-5L56,463.8l-1.8,1.9V472H50.3Z" fill="#ca005d"/>
+  </g>
+</svg>

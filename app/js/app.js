@@ -19,13 +19,6 @@
             folderImages: 'ui-images/',
         },
 
-        // Defaults
-        default: {
-            networkDirection : "N",
-            gateNumbering : "ABC",
-            stream: "up-down"
-        },
-
         // Behaviour
         draggableOptions : {connectToSortable: null, helper: "clone", revert: "invalid"},
         scale: 3,
@@ -48,6 +41,7 @@
         strConfig: "",
         height: null,
         extraImages: [],
+        disableNetworkDirection: false,
 
         // UI Images
         ui_images : [
@@ -176,10 +170,15 @@
             l.$diagram.wrap('<div id="diagram-wrapper" />');
             l.$diagramWrapper = l.$diagram.find("#diagram-wrapper");
 
+            // Add filters to the toolbar
+            $.get(l.path.folderPartials + "option-filters.partial.html", function (data) {
+                $(data).insertBefore("#toolbar").find("input").on("change", l.filterChanged)
+            });
+
             // ... #options: contains a series of options that can be set on the diagram
             l.$options =
                 $("<ul id='options' />")
-                    .prependTo("#diagram-wrapper");
+                    .prependTo("#toolbar-wrapper");
 
             // ...load a series of partials into the options-div
             $.get(l.path.folderPartials + "option-network-direction.partial.html", function (data) {
@@ -196,11 +195,6 @@
                     l.updateDiagram();
 
                 });
-            });
-
-            // Add filters to the toolbar
-            $.get(l.path.folderPartials + "option-filters.partial.html", function (data) {
-                $(data).prependTo(l.$toolbar.parent()).find("input").on("change", l.filterChanged)
             });
 
             l.createResultWrapper();
@@ -418,8 +412,8 @@
 
                 // From the first part,
                 // ... remove the spaces and convert to lower case
-                strPre = strPre.replace("(", "");
-                strPre = strPre.replace(")", "");
+                // strPre = strPre.replace("(", "");
+                // strPre = strPre.replace(")", "");
                 strPre = strPre.toLowerCase();
 
                 // .. split into parts
