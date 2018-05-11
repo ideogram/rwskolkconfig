@@ -590,7 +590,7 @@
 - name: afsluitingsschot
   symbol: AFS
   tooltip: Afsluitingsschot
-  type: afsluitingsschot
+  type: hoogwaterkering
   deltay: 0
   top: 6
   bottom: 15
@@ -599,7 +599,7 @@
 - name: afsluitingsschot-verbreed-kolksegment
   symbol: AFB
   tooltip: Afsluitingsschot verbreed kolksegment
-  type: afsluitingsschot
+  type: hoogwaterkering
   deltay: 0
   top: 5
   bottom: 18
@@ -619,7 +619,7 @@
 - name: brugdeel-vast
   symbol: XBV
   tooltip: Vast Brugdeel
-  type: Brug of weg
+  type: brug of weg
   deltay: 0
   top: 4
   bottom: 16
@@ -629,7 +629,7 @@
 - name: brugdeel-bedienbaar
   symbol: XBB
   tooltip: Bedienbaar Brugdeel
-  type: Brug of weg
+  type: brug of weg
   deltay: 0
   top: 4
   bottom: 6
@@ -641,7 +641,7 @@
   tooltip: >-
     Weg over een Sluisdeur; een weg die sluit en opent met de stand van de
     betreffende deur.
-  type: Brug of weg
+  type: brug of weg
   deltay: 0
   top: 4
   bottom: 6

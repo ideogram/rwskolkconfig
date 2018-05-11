@@ -411,13 +411,15 @@
                 strConfig = strConfig.replace(strPre, "");
 
                 // From the first part,
-                // ... remove the spaces and convert to lower case
-                // strPre = strPre.replace("(", "");
-                // strPre = strPre.replace(")", "");
+                // ... remove the brackets and convert to lower case
+                strPre = strPre.replace("(", "");
+                strPre = strPre.replace(")", "");
                 strPre = strPre.toLowerCase();
 
                 // .. split into parts
                 arrParts = strPre.split(" ");
+
+                console.log(arrParts);
 
                 // ... and extract the fairway options:
                 // ... ... network direction

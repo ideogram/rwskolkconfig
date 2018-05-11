@@ -17,7 +17,7 @@ body {
   text-align: center;
   overflow: hidden;
   display: block;
-  padding: 24px 0 0 0;
+  padding: 0;
   background-color: white; }
   #toolbar li, #diagram li {
     height: auto;
@@ -30,7 +30,7 @@ body {
 
 #toolbar {
   height: auto;
-  margin-top: 10px; }
+  margin-top: 0px; }
   #toolbar li {
     margin: 2px;
     outline: 1px solid silver;
@@ -92,7 +92,9 @@ body {
   height: 40px;
   border: 1px solid silver;
   background-color: white;
-  font-size: 18px; }
+  font-size: 18px;
+  position: absolute;
+  right: 10px; }
   #download:hover {
     background-color: #f8f8f8; }
 
@@ -107,7 +109,8 @@ svg {
   justify-content: center;
   list-style: none;
   display: block;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 0; }
   #element-filters li {
     display: inline-block;
     margin: 0 0.5em; }
@@ -159,7 +162,8 @@ svg {
 #network-direction.readonly label {
   border-radius: 9px;
   background-color: white;
-  box-shadow: inset 2px 2px 2px 1px rgba(0, 0, 0, 0.18); }
+  border-color: transparent;
+  box-shadow: none; }
 #network-direction.readonly input:not(:checked) + label {
   display: none; }
 
@@ -176,7 +180,8 @@ svg {
     overflow: hidden; }
   #flow-and-buoyage-direction > ul label {
     display: block;
-    float: left; }
+    float: left;
+    height: 48px; }
 
 #label-flow-direction-n, #label-flow-direction-o {
   border-top-left-radius: 9px; }
