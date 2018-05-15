@@ -1,6 +1,6 @@
 ---
 - name: vaarweg
-  symbol: VRW
+  symbol: Vrw
   tooltip: Vaarweg buiten de kolk
   type: vaarweg
   deltay: 0
@@ -570,7 +570,7 @@
   label: true
 
 - name: stopstreep-stroomafwaarts
-  symbol: STA
+  symbol: StA
   tooltip: Stopstreep, deur stroomafwaarts
   type: stopstreep
   deltay: 0
@@ -579,7 +579,7 @@
   label: false
 
 - name: stopstreep-stroomopwaarts
-  symbol: STO
+  symbol: StO
   tooltip: Stopstreep, deur stroomopwaarts
   type: stopstreep
   deltay: 0
@@ -588,7 +588,7 @@
   label: false
 
 - name: afsluitingsschot
-  symbol: AFS
+  symbol: AfS
   tooltip: Afsluitingsschot
   type: hoogwaterkering
   deltay: 0
@@ -597,7 +597,7 @@
   label: false
 
 - name: afsluitingsschot-verbreed-kolksegment
-  symbol: AFB
+  symbol: AfB
   tooltip: Afsluitingsschot verbreed kolksegment
   type: hoogwaterkering
   deltay: 0
@@ -606,8 +606,8 @@
   label: false
 
 - name: vanginrichting
-  symbol: VAN
-  tooltip: Vanginrichting; Ter bescherming van de Sluisdeur tegen aanvaringen.
+  symbol: Vng
+  tooltip: Vanginrichting; Ter bescherming van de sluisdeur tegen aanvaringen.
   type: vanginrichting
   deltay: 0
   top: 6
