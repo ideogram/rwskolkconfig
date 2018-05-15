@@ -249,7 +249,7 @@
 
             l.strConfig = [
                 "(",
-                l.networkDirection,
+                l.networkDirection.toUpperCase(),
                 l.networkDirection === l.flowDirection ? "tegen" : "mee",
                 l.buoyage,
                 ")"
@@ -389,7 +389,7 @@
             var l = libConfig;
             var arrPre;
             var strPre = "";
-            var flowChoice;
+            var arrParts;
 
             // Check if the config string is empty. If so, re-install defaults.
             if (strConfig == "") {
@@ -403,7 +403,7 @@
 
             arrPre = strConfig.match(/\((.*?)\)/g);
 
-            // Split the string into two parts: the pre fix and the sequence of symbols
+            // Split the string into two parts: the prefix and the sequence of symbols
             if (arrPre.length > 0) {
                 strPre = arrPre[0];
 
@@ -416,20 +416,21 @@
                 strPre = strPre.replace(")", "");
                 strPre = strPre.toLowerCase();
 
-                // .. split into parts
+                // ... split into parts
                 arrParts = strPre.split(" ");
 
-                console.log(arrParts);
+                // ... remove empty parts caused by spaces
+                arrParts = arrParts.filter(function(n){ return n != "" });
 
                 // ... and extract the fairway options:
                 // ... ... network direction
-                if ( arrParts.length > 0 ) {
+                if (arrParts.length > 0) {
                     l.networkDirection = arrParts[0];
                     l.disableNetworkDirection = true;
                 }
 
                 // ... .. flow direction
-                if ( arrParts.length > 1 ){
+                if (arrParts.length > 1) {
                     l.flowDirection = {
                         'mee': {
                             'n': 'z',
@@ -446,7 +447,7 @@
                     }[arrParts[1]][l.networkDirection];
                 }
 
-                if (  arrParts.length > 2 ) {
+                if (arrParts.length > 2) {
                     l.buoyage = arrParts[2];
                 }
             }
