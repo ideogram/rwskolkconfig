@@ -416,40 +416,55 @@
                 strPre = strPre.replace(")", "");
                 strPre = strPre.toLowerCase();
 
-                // ... split into parts
-                arrParts = strPre.split(" ");
 
-                // ... remove empty parts caused by spaces
-                arrParts = arrParts.filter(function(n){ return n != "" });
 
                 // ... and extract the fairway options:
                 // ... ... network direction
-                if (arrParts.length > 0) {
-                    l.networkDirection = arrParts[0];
+                // (find an occurrence of a windpoint surrounded by a space or a bracket )
+                networkDirection = strPre.match(/[\s\(]([nozw])[\s\)]/);
+
+                if (networkDirection !== null ){
+                    l.networkDirection = networkDirection[1];
                     l.disableNetworkDirection = true;
+                } else {
+                    l.networkDirection = null;
                 }
 
-                // ... .. flow direction
-                if (arrParts.length > 1) {
+                // ... .. flow direction:
+                var meeTegen = strPre.match(/(mee|tegen)/);
+
+                if (meeTegen !== null && l.networkDirection !== null) {
+                    meeTegen = meeTegen[0];
+
                     l.flowDirection = {
-                        'mee': {
+                        'tegen': {
                             'n': 'z',
                             'o': 'w',
                             'z': 'n',
                             'w': 'o'
                         },
-                        'tegen': {
+                        'mee': {
                             'n': 'n',
                             'o': 'o',
                             'z': 'z',
                             'w': 'w'
                         }
-                    }[arrParts[1]][l.networkDirection];
+                    }[meeTegen][l.networkDirection];
+                } else {
+                    l.flowDirection = null;
                 }
 
-                if (arrParts.length > 2) {
-                    l.buoyage = arrParts[2];
+                // ... ... buoyage:
+                var buoyage = strPre.match(/(rood-rechts|rood-links|geen)/);
+
+                if (meeTegen !== null && l.networkDirection !== null && buoyage !== null) {
+                    l.buoyage = buoyage[0];
+                } else {
+                    l.buoyage = null;
                 }
+
+                console.log(l.networkDirection, l.disableNetworkDirection, l.flowDirection, l.buoyage);
+
             }
 
             // What remains is the 'actual' config string, the part
