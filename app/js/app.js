@@ -462,9 +462,6 @@
                 } else {
                     l.buoyage = null;
                 }
-
-                console.log(l.networkDirection, l.disableNetworkDirection, l.flowDirection, l.buoyage);
-
             }
 
             // What remains is the 'actual' config string, the part
@@ -1042,7 +1039,7 @@
             }
 
             if (l.disableNetworkDirection === true ){
-                $("#network-direction").addClass("readonly");
+                $("#network-direction").hide()
             }
 
             // Flow direction
