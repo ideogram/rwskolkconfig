@@ -58,17 +58,17 @@
             ["#label-flow-direction-z","flow-direction-z.svg"],
             ["#label-flow-direction-w","flow-direction-w.svg"],
 
-            ["#label-buoyage-direction-n-rood-rechts","buoyage-direction-n-rood-rechts.svg"],
-            ["#label-buoyage-direction-n-rood-links","buoyage-direction-n-rood-links.svg"],
+            ["#label-buoyage-direction-n-rood-rechts","buoyage-direction-rood-rechts.svg"],
+            ["#label-buoyage-direction-n-rood-links","buoyage-direction-rood-links.svg"],
             ["#label-buoyage-direction-n-geen","buoyage-direction-geen.svg"],
-            ["#label-buoyage-direction-o-rood-rechts","buoyage-direction-o-rood-rechts.svg"],
-            ["#label-buoyage-direction-o-rood-links","buoyage-direction-o-rood-links.svg"],
+            ["#label-buoyage-direction-o-rood-rechts","buoyage-direction-rood-rechts.svg"],
+            ["#label-buoyage-direction-o-rood-links","buoyage-direction-rood-links.svg"],
             ["#label-buoyage-direction-o-geen","buoyage-direction-geen.svg"],
-            ["#label-buoyage-direction-z-rood-rechts","buoyage-direction-z-rood-rechts.svg"],
-            ["#label-buoyage-direction-z-rood-links","buoyage-direction-z-rood-links.svg"],
+            ["#label-buoyage-direction-z-rood-rechts","buoyage-direction-rood-rechts.svg"],
+            ["#label-buoyage-direction-z-rood-links","buoyage-direction-rood-links.svg"],
             ["#label-buoyage-direction-z-geen","buoyage-direction-geen.svg"],
-            ["#label-buoyage-direction-w-rood-rechts","buoyage-direction-w-rood-rechts.svg"],
-            ["#label-buoyage-direction-w-rood-links","buoyage-direction-w-rood-links.svg"],
+            ["#label-buoyage-direction-w-rood-rechts","buoyage-direction-rood-rechts.svg"],
+            ["#label-buoyage-direction-w-rood-links","buoyage-direction-rood-links.svg"],
             ["#label-buoyage-direction-w-geen","buoyage-direction-geen.svg"],
         ],
 
@@ -1156,9 +1156,9 @@
             // Network Direction
             if (l.networkDirection !== null && l.flowDirection !== null) {
                 if (l.networkDirection == l.flowDirection) {
-                    pushImage("netwerk-rechts.svg", "24px 24px", "right 10px top 10px");
+                    pushImage("netwerk-links.svg", "96px 24px", "right 10px top 10px");
                 } else {
-                    pushImage("netwerk-links.svg", "24px 24px", "right 10px top 10px");
+                    pushImage("netwerk-rechts.svg", "96px 24px", "right 10px top 10px");
                 }
             }
 
