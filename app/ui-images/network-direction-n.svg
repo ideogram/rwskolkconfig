@@ -1,8 +1,6 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
   <title>network-direction-n</title>
-  <g style="isolation: isolate">
-    <path d="M37,18.3,33.6,8.8h-.1v9.5h-2V6.5H35l3.4,9.6h.1V6.5h2.1V18.3Z"/>
-  </g>
+  <text transform="translate(30 18.3)" font-size="18" font-family="RijksoverheidSansWebText-Bold, RijksoverheidSansWebText" font-weight="700" style="isolation: isolate">N</text>
   <g>
     <line x1="36" y1="60" x2="36" y2="33.9" fill="none" stroke="#999" stroke-miterlimit="10" stroke-width="2"/>
     <g>

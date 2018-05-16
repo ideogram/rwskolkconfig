@@ -571,21 +571,21 @@
 
 - name: stopstreep-stroomafwaarts
   symbol: StA
-  tooltip: Stopstreep, deur stroomafwaarts
+  tooltip: Stopstreep,sroomafwaarts t.o.v. deur
   type: stopstreep
   deltay: 0
   top: 6
   bottom: 14
-  label: false
+  label: true
 
 - name: stopstreep-stroomopwaarts
   symbol: StO
-  tooltip: Stopstreep, deur stroomopwaarts
+  tooltip: Stopstreep, stroomopwaarts tov deur
   type: stopstreep
   deltay: 0
   top: 6
   bottom: 14
-  label: false
+  label: true
 
 - name: afsluitingsschot
   symbol: AfS

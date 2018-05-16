@@ -1,8 +1,6 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
   <title>network-direction-z</title>
-  <g style="isolation: isolate">
-    <path d="M32.2,56.1V54.2H40V56l-5.4,8h5.5v2H31.9V64.1l5.4-7.9H32.2Z"/>
-  </g>
+  <text transform="translate(31.4 66)" font-size="18" font-family="RijksoverheidSansWebText-Bold, RijksoverheidSansWebText" font-weight="700" style="isolation: isolate">Z</text>
   <g>
     <line x1="36" y1="12" x2="36" y2="38.1" fill="none" stroke="#999" stroke-miterlimit="10" stroke-width="2"/>
     <g>
