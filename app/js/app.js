@@ -342,14 +342,14 @@
             $(l.extraImages['buiten']).appendTo(l.$result).attr({
                 x: 0,
                 y: h-48,
-                width: 96,
+                width: 148,
                 height: 24
             });
 
             $(l.extraImages['binnen']).appendTo(l.$result).attr({
-                x: w-96,
+                x: w-148,
                 y: h-48,
-                width: 96,
+                width: 148,
                 height: 24
             });
 
@@ -701,6 +701,18 @@
                     svg.appendChild(elmntText);
                 };
 
+                // Add label to Stopstreep
+                if (l.elementCatalogue[ref].type === "stopstreep") {
+                    w = svg.getAttribute("width") * l.scale;
+                    elmntText = document.createElementNS("http://www.w3.org/2000/svg", 'text');
+                    elmntText.setAttribute("x", parseInt(w/2));
+                    elmntText.setAttribute("y", 120 );
+                    elmntText.setAttribute("class", "stopstreep");
+                    elmntText.setAttribute("style","fill : #e17000;  font-size : 32px; font-weight: bold; text-anchor: middle; font-family: Arial, Helvetica Neue, Helvetica, sans-serif");
+                    elmntText.innerHTML = "S"
+                    svg.appendChild(elmntText);
+                };
+
 
             });
         },
@@ -888,6 +900,16 @@
 
                 if (label !== false) {
                     $svg.find(".label").html(String.fromCharCode(65 + count ));
+
+                    // label stopstrepen
+                    if (l.element[i-1].name === "stopstreep-stroomafwaarts"){
+                        l.arr$SVG[i-1].find("text").html(String.fromCharCode(65 + count ));
+                    }
+
+                    if (l.element[i+1].name === "stopstreep-stroomopwaarts"){
+                        l.arr$SVG[i+1].find("text").html(String.fromCharCode(65 + count ));
+                    }
+
                     count++;
                 }
             }
@@ -1149,8 +1171,8 @@
                 sizes = ["24px 24px", "24px 24px", "24px 24px", "24px 24px"];
 
                 // Land-side (binnen), Sea-side (buiten)
-                pushImage("buiten.svg","96px 24px", "center left 24px");
-                pushImage("binnen.svg","96px 24px", "center right 24px");
+                pushImage("buiten.svg","148px 24px", "center left 24px");
+                pushImage("binnen.svg","148px 24px", "center right 24px");
             }
 
             // Network Direction
@@ -1178,7 +1200,6 @@
                 positions.push(position);
             }
         },
-
 
         // --- HELPER FUNCTIONS ---
 

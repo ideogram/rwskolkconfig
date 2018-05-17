@@ -15,12 +15,12 @@
 <pre><code>&quot;(&quot;,&quot;N&quot;|&quot;O&quot;|&quot;Z&quot;|&quot;W&quot;,&quot;mee&quot;|&quot;tegen&quot;,&quot;rood-links|rood-rechts&quot;,&quot;)&quot;,symbol+</code></pre>
 <p>waarbij voor <code>symbol</code> een tekencombinatie gebruikt wordt uit de tabel, zie <strong>Symbolen</strong></p>
 <p>Beschrijvend:</p>
-<pre><code>( [ingang-volgens-netwerk-richting] [stroomrichting tov netwerkrichting] [betonningsrichting] ) Configuratiestring</code></pre>
-<p>Bijvoorbeeld</p>
+<pre><code>( [netwerkrichting] [stroomrichting t.o.v. netwerkrichting] [betonningsrichting] ) Configuratiestring</code></pre>
+<h3 id="voorbeeld">Voorbeeld</h3>
 <p>Voor een kolk:</p>
-<pre><code>( O mee rood-rechts ) Vrw DAM StA DAT StA KS4 StA DAM StA StO DAT StO KS4 StO DAM StO DAT Vrw</code></pre>
+<pre><code>( N mee rood-rechts ) Vrw DAM StO DAT StO KS4 StA DAM StB DAT StO KS4 StA DAM StA DAT Vrw</code></pre>
 <p>Voor een brug:</p>
-<pre><code>( n tegen rood-rechts ) Wal WlL BLN BEN BVN BHN WlR Wal</code></pre>
+<pre><code>(N tegen rood-rechts ) Wal WlL BLN BEN BVN BHN WlR Wal</code></pre>
 <p>De configuratiestring bestaat uit twee delen: een deel tussen haakjes aan het begin, gevolgd door een reeks symbolen.</p>
 <p>In het eerste gedeelte, tussen haakjes, staat achtereenvolgens:</p>
 <ul>
@@ -31,15 +31,14 @@
 <li><p>derde symbool: “rood-rechts&quot;, &quot;rood-links&quot; of &quot;geen”.</p>
 <p>Geeft de richting van de betonning aan, stroomafwaarts kijkend. Hierbij volgen we de IALA/SIGNI (*) definitie. Indien hier 'geen' staat, wordt geen betonning getoond in het diagram en wordt de afvaart in dezelfde richting verondersteld als de stroomrichting.</p></li>
 </ul>
-<p>(*) IALA/SIGNI definitie van stroomrichting.<br />
-&gt; op rivieren stroomafwaarts (in getijdegebieden met de ebstroom mee);<br />
-&gt; op kanalen van hoog naar laag;<br />
-&gt; op zijvaarten en in geulen in de richting van de hoofdvaarweg of hoofdgeul;<br />
-&gt; op meren in de richting van de uitgang naar zee of ander open water;<br />
-&gt; op de randmeren gerekend vanaf de Hollandse Brug in oostelijke richting;<br />
-&gt; in zeegaten en aansluitende hoofdgeulen in de richting van de Noordzee.</p>
+<p>(*) IALA/SIGNI definitie van stroomrichting:</p>
+<pre><code>op rivieren stroomafwaarts (in getijdegebieden met de ebstroom mee);
+op kanalen van hoog naar laag;
+op zijvaarten en in geulen in de richting van de hoofdvaarweg of hoofdgeul;
+op meren in de richting van de uitgang naar zee of ander open water;
+op de randmeren gerekend vanaf de Hollandse Brug in oostelijke richting;</code></pre>
 <p>Na het gedeelte tussen haakjes volgt een reeks symbolen. Deze symbolen staan voor kolkelementen of doorvaartopeningen.</p>
 <p>Bij <em>bruggen</em> beschouwen we de brug in stroomafwaartse richting. De linkerzijde van de configuratiestring komt dan overeen met de linkerzijde van de brug.</p>
-<p>Bij <em>sluizen</em> komt de linkerzijde van de configuratiestring overeen met de stroomopwaartse zijde van de kolk. Dit is contraintuïtief, want de stroomrichting van het water is tegengesteld aan de leesrichting. Hier wordt echter de conventie gevolgd dat bij de naamgeving van sluisdeuren, stroomafwaarts wordt begonnen.</p>
+<p>Bij <em>sluizen</em> komt de linkerzijde van de configuratiestring overeen met de stroomafwaartse zijde van de kolk. Hier wordt de conventie gevolgd dat bij de naamgeving van sluisdeuren stroomafwaarts wordt begonnen met tellen: het sluishoofd bij de ingang aan de lage kant (ook wel “buiten” genoemd bij getijdesluizen) wordt met &quot;A&quot; aangeduid. Derhalve ‘stroomt‘ het water in de configuratiestring tegen de leesrichting in: van rechts-naar-links.</p>
 </body>
 </html>

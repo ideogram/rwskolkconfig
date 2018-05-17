@@ -1,6 +1,6 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="120" height="480" viewBox="0 0 120 480">
+<svg id="e3720af1-68ed-45d2-86db-facb61f8eed8" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="120" height="480" viewBox="0 0 120 480">
   <title>brugdeel-bedienbaar</title>
-  <g id="overlay">
+  <g id="a5cf9179-0c66-4494-b281-1ffcec1278c5" data-name="overlay">
     <path d="M24,72H96V408H24Z" fill="#e6e6e6" opacity="0.5" style="isolation: isolate"/>
     <path d="M24,324v84m72-84v84" fill="none" stroke="#999" stroke-miterlimit="10" stroke-width="2"/>
     <path d="M21,324v36L3,378" fill="none" stroke="#535353" stroke-miterlimit="10" stroke-width="4"/>

@@ -234,7 +234,7 @@
 
 - name: puntdeur-dubbelkerend-pin-mee
   symbol: DBM
-  tooltip: Puntdeur met pin, stroomafwaarts
+  tooltip: Dubbelkerende puntdeur met pin, stroomafwaarts
   type: deur
   deltay: 0
   top: 6
@@ -243,7 +243,7 @@
 
 - name: puntdeur-dubbelkerend-pin-tegen
   symbol: DBT
-  tooltip: Puntdeur met pin, stroomopwaarts
+  tooltip: Puntdeur met pin, dubbelkerend, stroomopwaarts
   type: deur
   deltay: 0
   top: 6
@@ -574,18 +574,27 @@
   tooltip: Stopstreep,sroomafwaarts t.o.v. deur
   type: stopstreep
   deltay: 0
-  top: 6
+  top: 2
   bottom: 14
-  label: true
+  label: false
 
 - name: stopstreep-stroomopwaarts
   symbol: StO
   tooltip: Stopstreep, stroomopwaarts tov deur
   type: stopstreep
   deltay: 0
-  top: 6
+  top: 2
   bottom: 14
-  label: true
+  label: false
+
+- name: stopstreep-beide
+  symbol: StB
+  tooltip: Stopstreep, deur aan beide kanten
+  type: stopstreep
+  deltay: 0
+  top: 2
+  bottom: 14
+  label: false
 
 - name: afsluitingsschot
   symbol: AfS
@@ -617,7 +626,7 @@
 # wegen
 
 - name: brugdeel-vast
-  symbol: XBV
+  symbol: BrV
   tooltip: Vast Brugdeel
   type: brug of weg
   deltay: 0
@@ -627,7 +636,7 @@
   overlay: true
 
 - name: brugdeel-bedienbaar
-  symbol: XBB
+  symbol: BrB
   tooltip: Bedienbaar Brugdeel
   type: brug of weg
   deltay: 0
@@ -637,7 +646,7 @@
   overlay: true
 
 - name: weg-over-sluisdeur
-  symbol: XBW
+  symbol: BrW
   tooltip: >-
     Weg over een Sluisdeur; een weg die sluit en opent met de stand van de
     betreffende deur.

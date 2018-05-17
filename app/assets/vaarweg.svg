@@ -1,10 +1,10 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="288" height="480" viewBox="0 0 288 480">
+<svg id="61d156cb-1895-4b47-9bd5-dc629fcf0915" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="288" height="480" viewBox="0 0 288 480">
   <defs>
-    <symbol id="baken-rood" data-name="baken-rood" viewBox="0 0 36 32">
+    <symbol id="9939b8c9-3b34-403c-a346-84e8abe75030" data-name="baken-rood" viewBox="0 0 36 32">
       <rect x="5" y="3" width="26" height="26" fill="#d52b1e"/>
       <rect width="36" height="32" fill="none"/>
     </symbol>
-    <symbol id="baken-groen" data-name="baken-groen" viewBox="0 0 36 32">
+    <symbol id="8dcf82d7-a6e4-4403-ac82-61971a9d6aa4" data-name="baken-groen" viewBox="0 0 36 32">
       <polygon points="36 32 0 32 18 0 36 32" fill="#39870c"/>
     </symbol>
   </defs>
@@ -12,6 +12,6 @@
   <path d="M0,144H288V336H0Z" fill="#edf4e9"/>
   <path d="M0,168H288V312H0Z" fill="#d9ebf7"/>
   <path d="M0,168H288M0,312H288" fill="none" stroke="#abcc98" stroke-miterlimit="10" stroke-width="3"/>
-  <use id="baken-boven" width="36" height="32" transform="translate(126 151.5)" xlink:href="#baken-rood"/>
-  <use id="baken-onder" width="36" height="32" transform="translate(126 294.3)" xlink:href="#baken-groen"/>
+  <use id="8382990f-fa0b-478b-8135-58833efe7d7e" data-name="baken-boven" width="36" height="32" transform="translate(126 151.5)" xlink:href="#9939b8c9-3b34-403c-a346-84e8abe75030"/>
+  <use id="dcf6eba4-dde9-4113-ac70-2b8a510fdf17" data-name="baken-onder" width="36" height="32" transform="translate(126 294.3)" xlink:href="#8dcf82d7-a6e4-4403-ac82-61971a9d6aa4"/>
 </svg>

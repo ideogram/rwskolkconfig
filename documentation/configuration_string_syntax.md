@@ -14,20 +14,20 @@ gebruikt wordt uit de tabel, zie **Symbolen**
 Beschrijvend:
 
 ```
-( [ingang-volgens-netwerk-richting] [stroomrichting tov netwerkrichting] [betonningsrichting] ) Configuratiestring
+( [netwerkrichting] [stroomrichting t.o.v. netwerkrichting] [betonningsrichting] ) Configuratiestring
 ```
 
-Bijvoorbeeld
+### Voorbeeld
 
 Voor een kolk:
 
 ```
-( N tegen rood-rechts ) Vrw DAM StA DAT StA KS4 StO DAM StA StO DAT StO KS4 StO DAM StO DAT Vrw
+( N mee rood-rechts ) Vrw DAM StO DAT StO KS4 StA DAM StB DAT StO KS4 StA DAM StA DAT Vrw
 ```
 
 Voor een brug:
 ```
-( n tegen rood-rechts ) Wal WlL BLN BEN BVN BHN WlR Wal
+(N tegen rood-rechts ) Wal WlL BLN BEN BVN BHN WlR Wal
 ```
 
 De configuratiestring bestaat uit twee delen: een deel tussen
@@ -51,13 +51,14 @@ In het eerste gedeelte, tussen haakjes, staat achtereenvolgens:
     in het diagram en wordt de afvaart in dezelfde richting verondersteld als de
     stroomrichting.
      
-(*) IALA/SIGNI definitie van stroomrichting.  
-> op rivieren stroomafwaarts (in getijdegebieden met de ebstroom mee);    
-> op kanalen van hoog naar laag;    
-> op zijvaarten en in geulen in de richting van de hoofdvaarweg of hoofdgeul;    
-> op meren in de richting van de uitgang naar zee of ander open water;    
-> op de randmeren gerekend vanaf de Hollandse Brug in oostelijke richting;    
-> in zeegaten en aansluitende hoofdgeulen in de richting van de Noordzee.    
+(*) IALA/SIGNI definitie van stroomrichting:  
+    
+    op rivieren stroomafwaarts (in getijdegebieden met de ebstroom mee);
+    op kanalen van hoog naar laag;
+    op zijvaarten en in geulen in de richting van de hoofdvaarweg of hoofdgeul;
+    op meren in de richting van de uitgang naar zee of ander open water;
+    op de randmeren gerekend vanaf de Hollandse Brug in oostelijke richting;
+    
   
 Na het gedeelte tussen haakjes volgt een reeks symbolen. Deze symbolen staan
 voor kolkelementen of doorvaartopeningen.
@@ -66,7 +67,9 @@ Bij _bruggen_ beschouwen we de brug in stroomafwaartse richting.
 De linkerzijde van de configuratiestring komt dan overeen met de linkerzijde 
 van de brug.
 
-Bij _sluizen_ komt de linkerzijde van de configuratiestring overeen met de stroomopwaartse
-zijde van de kolk. Dit is contraintuïtief, want de stroomrichting van het water
-is tegengesteld aan de leesrichting. Hier wordt echter de conventie gevolgd
-dat bij de naamgeving van sluisdeuren, stroomafwaarts wordt begonnen.  
+Bij _sluizen_ komt de linkerzijde van de configuratiestring overeen met de
+stroomafwaartse zijde van de kolk. Hier wordt de conventie gevolgd dat
+bij de naamgeving van sluisdeuren stroomafwaarts wordt begonnen met tellen: het
+sluishoofd bij de ingang aan de lage kant (ook wel “buiten” genoemd bij
+getijdesluizen) wordt met "A" aangeduid. Derhalve ‘stroomt‘ het water in de
+configuratiestring tegen de leesrichting in: van rechts-naar-links.
