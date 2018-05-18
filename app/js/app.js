@@ -322,13 +322,13 @@
             };
 
             $.each(windPoints, function(index, $windpoint){
-                $windpoint.attr({width: 24, height: 24});
+                $windpoint.attr({width: 36, height: 36});
             });
 
-            windPoints.$top.attr({x: w/2-12, y: 6});
-            windPoints.$right.attr({x: w-30, y: h/2});
-            windPoints.$bottom.attr({x: w/2-12, y: h-30});
-            windPoints.$left.attr({x: 6, y: h/2});
+            windPoints.$top.attr({x: w/2-18, y: 0});
+            windPoints.$right.attr({x: w-36, y: h/2-18});
+            windPoints.$bottom.attr({x: w/2-18, y: h-36});
+            windPoints.$left.attr({x: 0, y: h/2-18});
 
             // ... flow direction
             $(l.extraImages['stroomrichting']).appendTo(l.$result).attr({
