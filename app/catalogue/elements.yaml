@@ -574,7 +574,7 @@
   tooltip: Stopstreep,sroomafwaarts t.o.v. deur
   type: stopstreep
   deltay: 0
-  top: 2
+  top: 0
   bottom: 14
   label: false
 
@@ -583,7 +583,7 @@
   tooltip: Stopstreep, stroomopwaarts tov deur
   type: stopstreep
   deltay: 0
-  top: 2
+  top: 0
   bottom: 14
   label: false
 
@@ -592,7 +592,7 @@
   tooltip: Stopstreep, deur aan beide kanten
   type: stopstreep
   deltay: 0
-  top: 2
+  top: 0
   bottom: 14
   label: false
 

@@ -496,7 +496,8 @@
          */
         drawDiagram: function () {
             var l = libConfig;
-            var s = l.strConfig;
+            var catalogue;
+            var configString = l.strConfig;
             var elements = [];
             var fill = "";
             var pos = "";
@@ -504,6 +505,7 @@
             var name = "";
             var htmlDiagram = "";
             var i;
+            var index = 0;
 
             // Pre-flight check
             if (!(l.$diagram instanceof jQuery)) {
@@ -519,16 +521,13 @@
             l.$diagram.html("");
             l.element = [];
             l.shifts = [];
-            l.bridges = [];
+            l.overlays = [];
 
             // Make a local copy of the catalogue
-            var c = l.elementCatalogue.slice();
+            catalogue = l.elementCatalogue.slice();
 
             // Sort the local catalogue by string length of the symbol, from long to small
-            // (This is needed for the case in which the symbols don't have the same length,
-            //  and contain the same characters )
-
-            c.sort(compare);
+            catalogue.sort(compare);
 
             function compare(a,b) {
                 if (a.symbol.length > b.symbol.length)
@@ -539,29 +538,30 @@
             }
 
             // Find occurrences of every symbol in the config-string and store them in an array
-            for (i=0; i<c.length; i++ ){
+            for (i=0; i<catalogue.length; i++ ){
 
-                symbol = c[i].symbol;
-                name = c[i].name;
+                symbol = catalogue[i].symbol;
+                name = catalogue[i].name;
 
-                pos = s.indexOf( symbol );
+                pos = configString.indexOf( symbol );
 
                 while (pos !== -1) {
-                    elements[pos] = c[i];
+                    elements[pos] = catalogue[i];
                     elements[pos]['ref'] = i;
                     fill = "".padStart(symbol.length," ");
-                    s = s.replace( symbol, fill );
-                    pos = s.indexOf(symbol, pos + 1 );
+                    configString = configString.replace( symbol, fill );
+                    pos = configString.indexOf(symbol, pos + 1 );
                 }
             }
 
             var index = 0;
 
             // Copy the array to the global elements array, removing empty slots on the fly
+            index = 0;
             $.each(elements, function (i, value) {
                 if (value !== undefined) {
-                    if ( value.symbol == "O21" || value.symbol == "O22" || value.symbol == "O29" ) {
-                        l.bridges[index-1] = value.symbol;
+                    if ( value.overlay === true) {
+                        l.overlays[index-1] = value.symbol;
                     } else {
                         l.element.push(value);
                         index++;
@@ -581,23 +581,23 @@
             l.$diagramElements = l.$diagram.find(".element");
 
             l.$diagramElements.each(function (i) {
-                var $me = $(this);
+                var $me = $(this), $overlay;
                 l.arr$SVG[i] = $me.find("svg");
                 libConfig.prepareForDiagramLife($me);
 
-                if (l.bridges[i] == "O21"){
-                    $bridge = l.$toolbar.find(".vast-brugdeel").clone();
-                    libConfig.drawOverlay($me, $bridge);
+                if (l.overlays[i] == "BrV"){
+                    $overlay = l.$toolbar.find(".brugdeel-vast").clone();
+                    libConfig.drawOverlay($me, $overlay);
                 }
 
-                if (l.bridges[i] == "O22"){
-                    $bridge = l.$toolbar.find(".bedienbaar-brugdeel").clone();
-                    libConfig.drawOverlay($me, $bridge);
+                if (l.overlays[i] == "BrB"){
+                    $overlay = l.$toolbar.find(".brugdeel-bedienbaar").clone();
+                    libConfig.drawOverlay($me, $overlay);
                 }
 
-                if (l.bridges[i] == "O29"){
-                    $bridge = l.$toolbar.find(".weg-over-sluisdeur").clone();
-                    libConfig.drawOverlay($me, $bridge);
+                if (l.overlays[i] == "BrW"){
+                    $overlay = l.$toolbar.find(".weg-over-sluisdeur").clone();
+                    libConfig.drawOverlay($me, $overlay);
                 }
             });
 
@@ -676,7 +676,7 @@
             l.$toolbar.find("li").each(function(){
                 var svg;
                 var ref;
-                var elmntText;
+                var elmntText, elemntGroup;
                 ref = $(this).attr("data-ref");
                 svg = $(this).find("svg")[0];
 
@@ -701,18 +701,43 @@
                     svg.appendChild(elmntText);
                 };
 
+
                 // Add label to Stopstreep
-                if (l.elementCatalogue[ref].type === "stopstreep") {
-                    w = svg.getAttribute("width") * l.scale;
-                    elmntText = document.createElementNS("http://www.w3.org/2000/svg", 'text');
-                    elmntText.setAttribute("x", parseInt(w/2));
-                    elmntText.setAttribute("y", 120 );
-                    elmntText.setAttribute("class", "stopstreep");
-                    elmntText.setAttribute("style","fill : #e17000;  font-size : 32px; font-weight: bold; text-anchor: middle; font-family: Arial, Helvetica Neue, Helvetica, sans-serif");
-                    elmntText.innerHTML = "S"
-                    svg.appendChild(elmntText);
+                if (['StA','StO'].indexOf(l.elementCatalogue[ref].symbol ) !== -1 ) {
+
+                    var w = svg.getAttribute("width") * l.scale;
+                    var y = 120;
+                    var x = parseInt(w/2);
+                    var props = {
+                        x: x,
+                        y: y,
+                        transform:"rotate(270 "+ x + " " + y + ")",
+                        class: 'stopstreep',
+                        style: "fill : #e17000;  font-size : 32px; font-weight: bold; text-anchor: start; font-family: Arial, sans-serif"
+                    };
+                    l.appendSVGElement("text",svg, props);
                 };
 
+                if (['StB'].indexOf(l.elementCatalogue[ref].symbol ) !== -1 ) {
+                    var w = svg.getAttribute("width") * l.scale;
+                    var y = 120;
+                    var x1 = parseInt(0.33*w + 7);
+                    var x2 = parseInt(0.67*w + 7);
+
+                    var props = {
+                        x: x1,
+                        y: y,
+                        transform:"rotate(270 "+ x1 + " " + y + ")",
+                        class: 'stopstreep',
+                        style: "fill : #e17000;  font-size : 32px; font-weight: bold; text-anchor: start; font-family: Arial, sans-serif"
+                    };
+                    l.appendSVGElement("text",svg, props);
+
+                    props.x = x2;
+                    props.transform = "rotate(270 "+ x2 + " " + y + ")";
+                    l.appendSVGElement("text",svg, props);
+
+                }
 
             });
         },
@@ -812,7 +837,7 @@
                 delete l.overlays[i];
             } else {
                 // remove the element
-                l.bridges.splice(i,1);
+                l.overlays.splice(i,1);
                 $li.remove();
                 l.diagramChanged();
             }
@@ -901,13 +926,30 @@
                 if (label !== false) {
                     $svg.find(".label").html(String.fromCharCode(65 + count ));
 
+                    char = String.fromCharCode(65 + count );
+
                     // label stopstrepen
                     if (l.element[i-1].name === "stopstreep-stroomafwaarts"){
-                        l.arr$SVG[i-1].find("text").html(String.fromCharCode(65 + count ));
+                        l.arr$SVG[i-1].find("text").html("St " + char + " af");
+                    }
+
+                    if (i>1 && l.element[i-2].name === "stopstreep-stroomafwaarts"){
+                        l.arr$SVG[i-2].find("text").html("St " + char + " af");
                     }
 
                     if (l.element[i+1].name === "stopstreep-stroomopwaarts"){
-                        l.arr$SVG[i+1].find("text").html(String.fromCharCode(65 + count ));
+                        l.arr$SVG[i+1].find("text").html("St " + char + " op");
+                    }
+
+                    if (i<(l.L-2) && l.element[i+2].name === "stopstreep-stroomopwaarts"){
+                        l.arr$SVG[i+2].find("text").html("St " + char + " op");
+                    }
+
+                    if (l.element[i+1].name === "stopstreep-beide"){
+                        char1 = char;
+                        char2 = String.fromCharCode(65 + count + 1 );
+                        l.arr$SVG[i+1].find("text").eq(0).html("St " + char1 + " op");
+                        l.arr$SVG[i+1].find("text").eq(1).html("St " + char2 + " af");
                     }
 
                     count++;
@@ -977,10 +1019,10 @@
             $svg.append($overlayGroup);
 
             // ... positioning the overlay nicely in the centre
-            if (pxCentre != 0 && l.element[i].name != 'stopstreep') {
+            if (pxCentre != 0 && l.element[i].type != 'stopstreep') {
                 $svg.find("[data-name='overlay']").attr("transform", "translate(" + pxCentre + ",0)");
             }
-            // Change the 'overlay' value of the element
+            // ... add the element to the overlays array
             l.overlays[i] =  l.elementCatalogue[$overlay.attr('data-ref')]['symbol'];
 
             // Update drawing
@@ -1171,8 +1213,8 @@
                 sizes = ["24px 24px", "24px 24px", "24px 24px", "24px 24px"];
 
                 // Land-side (binnen), Sea-side (buiten)
-                pushImage("buiten.svg","148px 24px", "center left 24px");
-                pushImage("binnen.svg","148px 24px", "center right 24px");
+                pushImage("buiten.svg","148px 48px", "left 24px bottom 6px");
+                pushImage("binnen.svg","148px 48px", "right 24px bottom 6px");
             }
 
             // Network Direction
@@ -1244,6 +1286,18 @@
         // Helper function to rotate an array
         arrayRotate: function(array, n) {
             return array.slice(n, array.length).concat(array.slice(0, n));
+        },
+
+        // Helper function to add an SVG element to the DOM
+        // (This can't be done using jQuery )
+        appendSVGElement: function(tag,target, attributes){
+            var element = document.createElementNS("http://www.w3.org/2000/svg", tag);
+            for (var attribute in attributes) {
+                if (attributes.hasOwnProperty(attribute)) {
+                    element.setAttribute(attribute, attributes[attribute]);
+                }
+            }
+            target.appendChild(element);
         },
 
         /**
