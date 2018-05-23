@@ -33,18 +33,16 @@ function makeDoc(doc){
 
         tile = [];
 
-
-
         if (element.symbol !== false) {
 
             symbol = "`" + element.symbol + "`";
 
-            tile.push("<div class='tile'>");
+            tile.push("<div id='"+element.name+"' class='tile'>");
 
-            tile.push("<img src='" + 'png/assets_' + element.name + ".png' />")
-            tile.push("<div class='symbol'><span>"+element.symbol+"</span></div>");
-            tile.push("<div class='filename'>"+element.name + "</div>");
-            tile.push("<div class='tooltip'>" + element.tooltip + "</div>")
+            tile.push("  <img src='" + 'png/assets_' + element.name + ".png' />")
+            tile.push("  <div class='symbol'><span>"+element.symbol+"</span></div>");
+            tile.push("  <div class='filename'>"+element.name + "</div>");
+            tile.push("  <div class='tooltip'>" + element.tooltip + "</div>")
 
             tile.push("</div>");
         }

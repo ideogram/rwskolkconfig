@@ -946,8 +946,8 @@
                     }
 
                     if (l.element[i+1].name === "stopstreep-beide"){
-                        char1 = char;
-                        char2 = String.fromCharCode(65 + count + 1 );
+                        char1 = String.fromCharCode(65 + count + 1 );
+                        char2 = char;
                         l.arr$SVG[i+1].find("text").eq(0).html("St " + char1 + " op");
                         l.arr$SVG[i+1].find("text").eq(1).html("St " + char2 + " af");
                     }
