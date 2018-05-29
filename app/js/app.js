@@ -132,6 +132,17 @@
             libConfig.$toolbar.find("li").disableSelection();
         },
 
+
+        createToolbarInMemory: function () {
+            var dummyToolbar = $('<div id="dummyToolbar"></div>');
+            this.setToolbar(dummyToolbar);
+            this.addElementsToToolbar();
+        },
+
+        createDiagramInMemory: function () {
+            var dummyDiagram = $('<div id="dummyDiagram"></div>');
+            this.setDiagram(dummyDiagram);
+        },
         /**
          * Initiate the drawing GUI by loading the catalogue and all the assets.
          * @memberof libConfig
@@ -275,8 +286,9 @@
          */
         composeSVG: function(strFileName) {
             var l = libConfig;
-            var margin = 48;
-            var h = l.height + 2*margin;
+            var margin = 120;
+            var marginMultiplied = 2 * margin;
+            var h = l.height + marginMultiplied;
 
             // Fill the result-SVG-DOM  with the lock-elements
             l.$result.html("");
@@ -377,7 +389,8 @@
 
 
             // Offer the download
-            l.offerDownload(l.$result[0].outerHTML, strFileName );
+            //l.offerDownload(l.$result[0].outerHTML, strFileName );
+            return l.$result[0].outerHTML;
         },
 
         /**
@@ -911,7 +924,7 @@
             var count = 0;
 
             // First, find the total amount of gates
-            for (i = 0; i < l.L; i++) {
+            for (var i = 0; i < l.L; i++) {
                 label = l.element[i]['label'];
                 if (label === true) {
                     totalLabels++;
@@ -919,9 +932,9 @@
             }
 
             // Fill the text element with the label number (A, B, C, etc)
-            for (i = 0; i < l.L; i++) {
-                label = l.element[i]['label'];
-                $svg = l.arr$SVG[i];
+            for (var j = 0; j < l.L; j++) {
+                label = l.element[j]['label'];
+                $svg = l.arr$SVG[j];
 
                 if (label !== false) {
                     $svg.find(".label").html(String.fromCharCode(65 + count ));
@@ -929,28 +942,31 @@
                     char = String.fromCharCode(65 + count );
 
                     // label stopstrepen
-                    if (l.element[i-1].name === "stopstreep-stroomafwaarts"){
-                        l.arr$SVG[i-1].find("text").html("St " + char + " af");
+                    if(j > 2 && j < l.L + 2){
+                        if (l.element[j-1].name === "stopstreep-stroomafwaarts"){
+                            l.arr$SVG[j-1].find("text").html("St " + char + " af");
+                        }
+
+                        if (j>1 && l.element[j-2].name === "stopstreep-stroomafwaarts"){
+                            l.arr$SVG[j-2].find("text").html("St " + char + " af");
+                        }
+
+                        if (l.element[j+1].name === "stopstreep-stroomopwaarts"){
+                            l.arr$SVG[j+1].find("text").html("St " + char + " op");
+                        }
+
+                        if (j<(l.L-2) && l.element[j+2].name === "stopstreep-stroomopwaarts"){
+                            l.arr$SVG[j+2].find("text").html("St " + char + " op");
+                        }
+
+                        if (l.element[j+1].name === "stopstreep-beide"){
+                            char1 = String.fromCharCode(65 + count + 1 );
+                            char2 = char;
+                            l.arr$SVG[j+1].find("text").eq(0).html("St " + char1 + " op");
+                            l.arr$SVG[j+1].find("text").eq(1).html("St " + char2 + " af");
+                        }
                     }
 
-                    if (i>1 && l.element[i-2].name === "stopstreep-stroomafwaarts"){
-                        l.arr$SVG[i-2].find("text").html("St " + char + " af");
-                    }
-
-                    if (l.element[i+1].name === "stopstreep-stroomopwaarts"){
-                        l.arr$SVG[i+1].find("text").html("St " + char + " op");
-                    }
-
-                    if (i<(l.L-2) && l.element[i+2].name === "stopstreep-stroomopwaarts"){
-                        l.arr$SVG[i+2].find("text").html("St " + char + " op");
-                    }
-
-                    if (l.element[i+1].name === "stopstreep-beide"){
-                        char1 = String.fromCharCode(65 + count + 1 );
-                        char2 = char;
-                        l.arr$SVG[i+1].find("text").eq(0).html("St " + char1 + " op");
-                        l.arr$SVG[i+1].find("text").eq(1).html("St " + char2 + " af");
-                    }
 
                     count++;
                 }
