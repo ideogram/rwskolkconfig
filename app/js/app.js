@@ -132,7 +132,6 @@
             libConfig.$toolbar.find("li").disableSelection();
         },
 
-
         createToolbarInMemory: function () {
             var dummyToolbar = $('<div id="dummyToolbar"></div>');
             this.setToolbar(dummyToolbar);
@@ -922,6 +921,7 @@
             var label = null;
             var $svg = null;
             var count = 0;
+            var char = "";
 
             // First, find the total amount of gates
             for (var i = 0; i < l.L; i++) {
@@ -937,34 +937,33 @@
                 $svg = l.arr$SVG[j];
 
                 if (label !== false) {
-                    $svg.find(".label").html(String.fromCharCode(65 + count ));
 
-                    char = String.fromCharCode(65 + count );
+                    $svg.find(".label").html(String.fromCharCode(65 + count));
+
+                    char = String.fromCharCode(65 + count);
 
                     // label stopstrepen
-                    if(j > 2 && j < l.L + 2){
-                        if (l.element[j-1].name === "stopstreep-stroomafwaarts"){
-                            l.arr$SVG[j-1].find("text").html("St " + char + " af");
-                        }
+                    if ( (j-1)>=0 && l.element[j - 1].name === "stopstreep-stroomafwaarts") {
+                        l.arr$SVG[j - 1].find("text").html("St " + char + " af");
+                    }
 
-                        if (j>1 && l.element[j-2].name === "stopstreep-stroomafwaarts"){
-                            l.arr$SVG[j-2].find("text").html("St " + char + " af");
-                        }
+                    if ( (j-2)>=0  && l.element[j - 2].name === "stopstreep-stroomafwaarts") {
+                        l.arr$SVG[j - 2].find("text").html("St " + char + " af");
+                    }
 
-                        if (l.element[j+1].name === "stopstreep-stroomopwaarts"){
-                            l.arr$SVG[j+1].find("text").html("St " + char + " op");
-                        }
+                    if ( (j+1)<l.L && l.element[j + 1].name === "stopstreep-stroomopwaarts") {
+                        l.arr$SVG[j + 1].find("text").html("St " + char + " op");
+                    }
 
-                        if (j<(l.L-2) && l.element[j+2].name === "stopstreep-stroomopwaarts"){
-                            l.arr$SVG[j+2].find("text").html("St " + char + " op");
-                        }
+                    if ( (j+2)<l.L  && l.element[j + 2].name === "stopstreep-stroomopwaarts") {
+                        l.arr$SVG[j + 2].find("text").html("St " + char + " op");
+                    }
 
-                        if (l.element[j+1].name === "stopstreep-beide"){
-                            char1 = String.fromCharCode(65 + count + 1 );
-                            char2 = char;
-                            l.arr$SVG[j+1].find("text").eq(0).html("St " + char1 + " op");
-                            l.arr$SVG[j+1].find("text").eq(1).html("St " + char2 + " af");
-                        }
+                    if ( (j+1)<l.L && l.element[j + 1].name === "stopstreep-beide") {
+                        char1 = String.fromCharCode(65 + count + 1);
+                        char2 = char;
+                        l.arr$SVG[j + 1].find("text").eq(0).html("St " + char1 + " op");
+                        l.arr$SVG[j + 1].find("text").eq(1).html("St " + char2 + " af");
                     }
 
 
